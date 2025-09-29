@@ -1,0 +1,20 @@
+name: Manual CVC Checklist
+
+on:
+  workflow_dispatch:
+    inputs:
+      ev_path:
+        description: 'Ruta al directorio de la Entidad de Valor (EV)'
+        required: true
+        default: 'ejemplos/ev-alpha'
+
+jobs:
+  check-cvc:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run CVC checklist script
+        run: ./scripts/check-cvc.sh "${{ github.event.inputs.ev_path }}"

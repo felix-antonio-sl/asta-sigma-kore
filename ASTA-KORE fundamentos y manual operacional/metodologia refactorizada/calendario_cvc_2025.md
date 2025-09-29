@@ -85,4 +85,4 @@ Reglas generales:
 Referencias:
 
 - Protocolo del CVC: ver `protocolos.md` > Cap. 2.3
-- Protocolo de Evolución del Marco (PEM): [../protocolo_evolucion.md](../protocolo_evolucion.md)
+- Protocolo de Evolución del Marco (PEM): [./protocolo_evolucion.md](./protocolo_evolucion.md)

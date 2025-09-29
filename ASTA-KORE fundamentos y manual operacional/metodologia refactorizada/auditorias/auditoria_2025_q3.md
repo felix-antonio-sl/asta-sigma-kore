@@ -28,7 +28,7 @@ La propuesta de solución original fue reordenada para priorizar la coherencia s
 ### Fase 1: Solidificar el Núcleo Semántico (0-30 días)
 
 * **1.1 (Higiene Fundamental):** Normalizar toda la nomenclatura de archivos, corregir enlaces rotos y eliminar contenido duplicado.
-* **1.2 (Canonización de Contratos):** Definir la especificación `YAML` canónica para el `Contrato de Proceso` y asegurar que todos los contratos tengan un [README.md](cci:7://file:///Users/felixsanhueza/fx_maquineando/asta-sigma-kore/ASTA-KORE%20fundamentos%20y%20manual%20operacional/README.md:0:0-0:0) explicativo.
+* **1.2 (Canonización de Contratos):** Definir la especificación `YAML` canónica para el `Contrato de Proceso` y asegurar que todos los contratos tengan un [README.md](../../README.md) explicativo.
 * **1.3 (Rituales Tangibles):** Publicar un `calendario_gobernanza.md` con las fechas de los CVCs para el año siguiente.
 
 ### Fase 2: Construir el Motor de Trazabilidad (30-90 días)

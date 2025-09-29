@@ -79,7 +79,7 @@ flowchart LR
 
 ## Policy‑as‑Contract (principio operativo)
 
-- La gobernanza vive en los pipelines: las políticas automatizadas validan la existencia y validez de contratos versionados (p.ej., [contrato_proceso.yml](cci:7://file:///Users/felixsanhueza/fx_maquineando/asta-sigma-kore/ASTA-KORE%20fundamentos%20y%20manual%20operacional/contratos/contrato_proceso.yml:0:0-0:0)).
+- La gobernanza vive en los pipelines: las políticas automatizadas validan la existencia y validez de contratos versionados (p.ej., [contrato_proceso.yml](./contratos/contrato_proceso.yml)).
 - Los catálogos y paneles son vistas materializadas de lo que declaran esos contratos en los repositorios.
 
 ---

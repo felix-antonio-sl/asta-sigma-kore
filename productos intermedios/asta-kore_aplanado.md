@@ -1,35 +1,42 @@
-# asta-kore_aplanado
+# ASTA-CORE plained 01
 
 ## Project Structure
 
 ```
-├── manual operacional
-│   ├── guias decision
-│   │   ├── gd_arquitectura_nexus.md
-│   │   ├── gd_automatizacion_proceso.md
-│   │   ├── gd_datos.md
-│   │   ├── gd_experiencia_usuario.md
-│   │   ├── gd_know.md
-│   │   └── gd_sistemas_cognitivos.md
-│   ├── guias tecnicas
-│   │   ├── gt_arquitectura_nexus.md
-│   │   ├── gt_diseno_ux.md
-│   │   ├── gt_gestion_conocimiento.md
-│   │   ├── gt_ingenieria_datos.md
-│   │   ├── gt_ingenieria_ia.md
-│   │   └── gt_ingenieria_software.md
-│   ├── metodologia refactorizada
-│   │   ├── adopcion.md
-│   │   ├── catalogo.md
-│   │   ├── ontologia.md
-│   │   └── protocolos.md
-│   ├── ASTA-Kore_Manifiesto_Estrategico.md
-│   └── README.md
+ASTA-KORE fundamentos y manual operacional
+├── contratos
+│   ├── contrato_proceso.md
+│   └── contrato_proceso.yml
+├── guias decision
+│   ├── gd_arquitectura_nexus.md
+│   ├── gd_automatizacion_proceso.md
+│   ├── gd_datos.md
+│   ├── gd_experiencia_usuario.md
+│   ├── gd_know.md
+│   └── gd_sistemas_cognitivos.md
+├── guias tecnicas
+│   ├── gt_arquitectura_nexus.md
+│   ├── gt_diseno_ux.md
+│   ├── gt_gestion_conocimiento.md
+│   ├── gt_ingenieria_datos.md
+│   ├── gt_ingenieria_ia.md
+│   └── gt_ingenieria_software.md
+├── metodologia refactorizada
+│   ├── auditorias
+│   │   └── auditoria_2025_q3.md
+│   ├── adopcion.md
+│   ├── calendario_cvc_2025.md
+│   ├── catalogo.md
+│   ├── ontologia.md
+│   ├── protocolo_evolucion.md
+│   └── protocolos.md
+├── ASTA-Kore_Manifiesto_Estrategico.md
+└── README.md
 ```
 
 ## File Contents
 
-### manual operacional/ASTA-Kore_Manifiesto_Estrategico.md
+### ASTA-KORE fundamentos y manual operacional/ASTA-Kore_Manifiesto_Estrategico.md
 
 ```markdown
 # Un Marco para la Acción Coherente en Organizaciones Complejas
@@ -66,10 +73,10 @@ Más allá de la crisis general de complejidad, ΑΣ-K está diseñado para atac
 
 | Dolor (El Síntoma Observable) | Causa Raíz Sistémica | Cómo Responde KORE |
 | :--- | :--- | :--- |
-| **"Nuestros proyectos de TI tardan años, cuestan el doble y, cuando se entregan, ya no son lo que necesitábamos."** | **El paradigma del "Proyecto"**: Equipos temporales que se disuelven, conocimiento que se pierde y un enfoque en entregar *outputs* (alcance) en lugar de *outcomes* (valor). | **#NoProjects y Entidades de Valor (EVs)**: Se reemplazan los proyectos por productos vivos (EVs) con equipos estables. La gobernanza (CVC) se enfoca en medir el valor entregado cada trimestre, permitiendo pivotar o detener iniciativas que no demuestran impacto. |
-| **"El equipo de estrategia define un plan brillante, pero los equipos de desarrollo parecen estar trabajando en otra cosa."** | **Desconexión entre capas organizacionales**: Falta de un lenguaje y un mapa compartidos que conecten el "porqué" estratégico con el "qué" y el "cómo" operacional. | **La Matriz de Coherencia**: Actúa como un "mapa del metro" organizacional. Los OKRs anuales (Δ-E) se descomponen en OKRs trimestrales para cada EV (Δ-T), que a su vez guían el trabajo diario (Δ-O). La trazabilidad es explícita y visible para todos. |
-| **"Nadie se atreve a tocar los sistemas 'legacy' por miedo a romper algo. La innovación es lenta y riesgosa."** | **Acoplamiento y falta de fronteras claras**: Los sistemas son "cajas negras" monolíticas donde un cambio en una parte puede tener consecuencias impredecibles en otra. | **Contratos Conversacionales y Plataforma Nexus**: Se obsesiona con definir fronteras explícitas (`Contratos`). Esto permite desacoplar los sistemas y modernizarlos de forma incremental (ej. Patrón Estrangulador), reduciendo el riesgo de cada cambio y acelerando la innovación. |
-| **"Para cualquier decisión, necesitamos la aprobación de tres comités diferentes. La gobernanza es un cuello de botella."** | **Gobernanza centralizada y basada en el control**: Se asume que un grupo central de expertos debe aprobar cada detalle para mitigar el riesgo, lo que ralentiza toda la organización. | **Autonomía con Alineamiento**: Se distribuye la toma de decisiones. Las `Guías de Decisión` empoderan a los equipos para que tomen decisiones locales rápidas, mientras que la Plataforma Nexus automatiza la gobernanza (`Policy-as-Code`), verificando el cumplimiento sin intervención humana. |
+| **"Nuestros proyectos de TI tardan años, cuestan el doble y el presupuesto anual nos ahoga."** | Desfase entre el ciclo de inversión (anual, rígido) y el ciclo de aprendizaje (continuo, rápido). | **#NoProjects y Gobernanza de Portafolio de Capacidades:** El presupuesto anual no financia "proyectos", sino que aprovisiona un **"Portafolio de Capacidades"** (`Σ-E`). El `CVC` actúa como un comité de inversión ágil que asigna dinámicamente esos fondos cada trimestre a las `EVs` que demuestran mayor impacto y aprendizaje, dentro de los límites del presupuesto ya aprobado. |
+| **"El equipo de estrategia define un plan brillante, pero los equipos de desarrollo parecen estar trabajando en otra cosa."** | Desconexión entre capas organizacionales: Falta de un lenguaje y un mapa compartidos que conecten el "porqué" estratégico con el "qué" y el "cómo" operacional. | **La Matriz de Coherencia**: Actúa como un "mapa del metro" organizacional. Los OKRs anuales (Δ-E) se descomponen en OKRs trimestrales para cada EV (Δ-T), que a su vez guían el trabajo diario (Δ-O). La trazabilidad es explícita y visible para todos. |
+| **"Nadie se atreve a tocar los sistemas 'legacy' por miedo a romper algo. La innovación es lenta y riesgosa."** | Acoplamiento y falta de fronteras claras: Los sistemas son "cajas negras" monolíticas donde un cambio en una parte puede tener consecuencias impredecibles en otra. | **Contratos Conversacionales y Plataforma Nexus**: Se obsesiona con definir fronteras explícitas (`Contratos`). Esto permite desacoplar los sistemas y modernizarlos de forma incremental (ej. Patrón Estrangulador), reduciendo el riesgo de cada cambio y acelerando la innovación. |
+| **"Para cualquier decisión, necesitamos la aprobación de tres comités diferentes. La gobernanza es un cuello de botella."** | Gobernanza centralizada y basada en el control, junto a una cultura de aversión al riesgo donde "fallar" no es una opción. | **Gobernanza Federada y Léxico de Valor Público:** Se distribuye la toma de decisiones. El `CVC` toma decisiones de inversión ágiles. Se reemplaza el lenguaje de fracaso: **"Pivotar"** es **"Reorientar basado en evidencia"** y **"Cerrar"** es **"Concluir para reinvertir"**. El éxito se mide por el **aprendizaje validado**, no solo por el cumplimiento de un plan. |
 | **"Cuando un funcionario clave se va, perdemos años de conocimiento. Dependemos de 'héroes' para que las cosas funcionen."** | **Conocimiento tácito y no externalizado**: El "cómo" y el "porqué" de las decisiones y el diseño de los sistemas viven en la cabeza de unas pocas personas. | **Memoria Organizacional Explícita**: Artefactos como el `Canvas de EV` y las `Bitácoras de Decisión (ADRs)` están diseñados para externalizar el conocimiento. El diseño de un servicio y el razonamiento detrás de una decisión crítica se convierten en activos explícitos de la organización, no en pasivos personales. |
 
 ## Parte I: El Principio de la Parsimonia Cognitiva
@@ -237,101 +244,269 @@ En resumen, la adopción de ΑΣ-K busca una transformación medible:
 
 En esencia, ΑΣ-K es una invitación a dejar de construir mapas del tesoro cada vez más detallados y, en su lugar, empezar a construir brújulas compartidas que todos en la organización puedan usar para navegar juntos hacia el mismo norte.
 
-En esencia, ΑΣ-K es una invitación a dejar de construir mapas del tesoro cada vez más detallados y, en su lugar, empezar a construir brújulas compartidas que todos en la organización puedan usar para navegar juntos hacia el mismo norte.
-
-## Parte V: Glosario para Líderes y Ejemplos Prácticos
-
-Para un líder, los conceptos solo importan si resuelven problemas. Este glosario traduce la terminología del marco en su significado práctico y su valor estratégico.
-
-### Glosario Esencial: De la Jerga al Valor
-
-* **Matriz de Coherencia (Σ/Δ, E/T/O)**
-  * **Qué es:** Un mapa simple de 2x3 que organiza todo el trabajo y conocimiento de la organización en dos dimensiones (Diseño vs. Operación) y tres horizontes de tiempo (Estratégico, Táctico, Operacional).
-  * **Por qué importa:** Evita la confusión al dar a todos un "mapa del metro" compartido. Permite ver instantáneamente cómo una decisión técnica en el día a día se conecta con un objetivo estratégico anual, garantizando el alineamiento.
-
-* **Entidad de Valor (EV)**
-  * **Qué es:** La unidad fundamental de trabajo. En lugar de "proyectos" o "sistemas", pensamos en "Entidades de Valor": productos o servicios vivos (con su equipo, tecnología y presupuesto) que tienen un propósito claro y medible.
-  * **Por qué importa:** Cambia el enfoque de "terminar proyectos" a "entregar valor continuamente". Evita la disolución del conocimiento que ocurre cuando los proyectos terminan y los equipos se desarman.
-
-* **OKRs (Objetivos y Resultados Clave)**
-  * **Qué es:** Un método para definir metas. Los **Objetivos** son cualitativos e inspiradores (el "qué"). Los **Resultados Clave** son cuantitativos y miden el progreso hacia el objetivo (el "cómo sabremos que llegamos").
-  * **Por qué importa:** Enfocan a la organización en los **resultados** (ej. "reducir el tiempo de espera del ciudadano") en lugar de en las **tareas** (ej. "implementar el software X"). Fomentan una cultura de impacto medible.
-
-* **Ciclo de Valor y Capacidad (CVC)**
-  * **Qué es:** El principal ritual de gobernanza de ASTA-Kore. Una reunión trimestral, breve y basada en evidencia, donde un equipo demuestra el valor que ha generado y el liderazgo toma una decisión explícita de inversión sobre esa EV (Continuar, Expandir, Reducir o Cerrar).
-  * **Por qué importa:** Reemplaza los comités lentos y los reportes de estado interminables por un diálogo de inversión ágil. Hace que la asignación de recursos sea una decisión dinámica basada en el rendimiento real, no en planes estáticos.
-
-* **Contrato Conversacional**
-  * **Qué es:** Un acuerdo explícito que define la interacción entre dos equipos o sistemas. Es el resultado de una conversación guiada, no un documento legalista. Su implementación técnica puede ser un `Contrato de API`, un `Contrato de Datos`, etc.
-  * **Por qué importa:** Elimina la fricción y los malentendidos entre equipos ("yo pensé que tú me enviarías eso"). Hace que las dependencias sean explícitas y confiables, permitiendo que la organización funcione como una red de servicios robusta.
-
-* **Bitácora de Decisión (ADR)**
-  * **Qué es:** Un documento breve que registra una decisión de diseño o arquitectura importante, su contexto y sus consecuencias.
-  * **Por qué importa:** Es la cura para la "amnesia organizacional". Evita que los equipos se pregunten constantemente "¿por qué hicimos esto así?" y previene que se repitan los mismos errores. Convierte el conocimiento tácito de los expertos en un activo explícito de la organización.
-
-* **Plataforma Nexus**
-  * **Qué es:** La arquitectura técnica de referencia de ASTA-Kore. Es el conjunto de herramientas, patrones y estándares (las "carreteras pavimentadas") que los equipos de ingeniería usan para construir Entidades de Valor.
-  * **Por qué importa:** Garantiza que, aunque los equipos tengan autonomía, no creen caos. La seguridad, la calidad y la interoperabilidad vienen "de fábrica", acelerando la entrega de valor de forma segura y sostenible.
-
-### Ejemplo en Acción: Modernizando un Servicio de Postulación
-
-**Escenario:** Una organización tiene un sistema antiguo y engorroso para que los ciudadanos postulen a un subsidio. El proceso es lento, propenso a errores y frustrante.
-
-1. **Calibración Estratégica (Ciclo Anual):**
-    * El liderazgo, usando el `Mapa de Capacidades` (Σ-E), identifica "Gestión de Subsidios" como una capacidad de alta criticidad pero baja madurez.
-    * Se define un **OKR** Anual (Δ-E): "Transformar la experiencia de postulación a subsidios para ser simple y transparente".
-
-2. **Navegación Táctica (Ciclo Trimestral):**
-    * Se asigna un equipo a la **Entidad de Valor** "Servicio de Postulación Unificado".
-    * El equipo realiza un taller y plasma su diseño en el `Canvas de EV` (Σ-T). Identifican que necesitan datos del Registro Civil y que deben notificar al Ministerio de Finanzas.
-    * Formulan su **OKR** Trimestral (Δ-T): "Reducir el tiempo de postulación promedio de 45 a 10 minutos".
-    * Usan una **Guía de Decisión** `gd_arquitectura_nexus` para evaluar si construir un nuevo monolito o usar microservicios. Dado que el sistema debe ser escalable, eligen un enfoque basado en microservicios.
-
-3. **Implementación con Nexus (Ciclos de Entrega):**
-    * La decisión los lleva a la **Guía Técnica** `gt_ingenieria_software` que les indica cómo construir servicios en la **Plataforma Nexus**.
-    * Negocian un **Contrato Conversacional** (Σ-O) con el equipo del Registro Civil para definir cómo consumirán sus datos.
-    * Registran la decisión de usar microservicios en una **Bitácora de Decisión (ADR)** (Δ-O).
-
-4. **Gobernanza del Valor (Fin del Trimestre):**
-    * En la reunión del **CVC** (Δ-E), el equipo presenta su `Informe de CVC`: el tiempo de postulación se redujo a 15 minutos y una demo del nuevo flujo.
-    * Basado en esta evidencia, el liderazgo decide **"Expandir"** la inversión en la EV para el siguiente trimestre.
-
-Este ciclo virtuoso, que va de la estrategia a la ejecución y de vuelta a la estrategia, es el motor que ASTA-Kore busca instalar en el corazón de la organización.
 
 ```
 
-### manual operacional/README.md
+### ASTA-KORE fundamentos y manual operacional/README.md
 
 ```markdown
-# Manual Operacional ASTA-Kore
+# ASTA‑Kore — Fundamentos y Manual Operacional
 
-## Punto de Partida: El Manifiesto
+> Un marco parsimonioso para la acción coherente en organizaciones complejas.
 
-Antes de explorar la estructura de directorios, se recomienda encarecidamente comenzar con la lectura del **`ASTA-Kore_Manifiesto_Estrategico.md`**. 
+- **Qué es:** Arquitectura Socio‑Técnica Adaptativa. “Kore” alude al núcleo esencial: el mínimo de principios, artefactos y rituales que habilitan coherencia y aprendizaje continuo.
+- **Para quién:** Líderes, arquitectos, equipos de producto/servicio (EVs) y gobernanza.
+- **Cómo se usa:** Como un sistema operativo organizacional: modelo mental compartido + protocolos + guías + plataforma (Nexus) + contratos.
 
-Este documento es la puerta de entrada conceptual al marco. Explica el **"porqué"** detrás de ASTA-Kore, los problemas que resuelve y los principios fundamentales que lo sustentan. Es la pieza clave para entender la filosofía del sistema antes de sumergirse en los detalles operacionales.
+---
 
-1. **`./metodologia refactorizada/`**
-    * **Propósito:** Contiene los pilares conceptuales e inmutables de KORE. Es el **"Sistema Operativo"** del marco.
-    * **Contenidos Clave:**
-        * `ontologia.md`: El vocabulario y modelo conceptual formal.
-        * `protocolos.md`: Los rituales y ciclos de trabajo.
-        * `catalogo.md`: Las plantillas de artefactos.
-        * `adopcion.md`: La guía para la implementación gradual.
+## Mapa mental en 30 segundos
 
-2. **`./guias decision/` (GD)**
-    * **Propósito:** Documentos estratégicos y de alto nivel que ayudan a tomar decisiones clave. Responden al **"porqué"**.
-    * **Uso:** Se utilizan para guiar la conversación en los talleres de diseño y estrategia. Enlazan a las Guías Técnicas para los detalles de implementación.
+La realidad se observa en dos ejes (Σ diseño / Δ operación) y tres niveles (E estratégico / T táctico / O operacional).
 
-3. **`./guias tecnicas/` (GT)**
-    * **Propósito:** Documentos de implementación detallados que establecen patrones, prácticas y tecnologías. Responden al **"cómo"**.
-    * **Uso:** Sirven como la fuente de verdad técnica para los equipos de ingeniería y desarrollo al construir `Entidades de Valor`.
+```mermaid
+flowchart LR
+  subgraph Sigma[Σ — Diseño]
+    SE[Σ‑E<br>Diseño Estratégico]
+    ST[Σ‑T<br>Diseño Táctico]
+    SO[Σ‑O<br>Diseño Operacional]
+  end
+  subgraph Delta[Δ — Operación]
+    DE[Δ‑E<br>Flujo Estratégico]
+    DT[Δ‑T<br>Flujo Táctico]
+    DO[Δ‑O<br>Flujo Operacional]
+  end
 
-Esta estructura asegura que cada pieza de conocimiento tenga un lugar y un propósito claro, facilitando la navegación y la aplicación coherente de la metodología.
+  SE --- DE
+  ST --- DT
+  SO --- DO
+```
+
+- Modelo completo: [Manifiesto](./ASTA-Kore_Manifiesto_Estrategico.md)
+
+---
+
+## Navegación del repositorio
+
+- **Manifiesto (el porqué y el modelo):** [./ASTA-Kore_Manifiesto_Estrategico.md](./ASTA-Kore_Manifiesto_Estrategico.md)
+- **Protocolos (el sistema operativo):** [./metodologia refactorizada/protocolos.md](./metodologia refactorizada/protocolos.md)  
+  - Calendario CVC 2025: [./metodologia refactorizada/calendario_cvc_2025.md](./metodologia refactorizada/calendario_cvc_2025.md)  
+  - PEM (Meta‑protocolo de evolución): [./metodologia refactorizada/protocolo_evolucion.md](./metodologia refactorizada/protocolo_evolucion.md)
+- **Auditorías del marco:** [./metodologia refactorizada/auditorias/](./metodologia refactorizada/auditorias/)  
+  - Ejemplo: [Auditoría Q3 2025](./metodologia refactorizada/auditorias/auditoria_2025_q3.md)
+- **Guías de Decisión (estratégicas):** [./guias decision/](./guias decision/)  
+  - Ej.: [gd_arquitectura_nexus.md](./guias decision/gd_arquitectura_nexus.md), [gd_automatizacion_proceso.md](./guias decision/gd_automatizacion_proceso.md)
+- **Guías Técnicas (implementación):** [./guias tecnicas/](./guias tecnicas/)  
+  - Ej.: [gt_arquitectura_nexus.md](./guias tecnicas/gt_arquitectura_nexus.md), [gt_ingenieria_software.md](./guias tecnicas/gt_ingenieria_software.md)
+- **Contratos (fuente única de verdad operable):** [./contratos/](./contratos/)  
+  - Contrato de Proceso (Especificación): [./contratos/contrato_proceso.md](./contratos/contrato_proceso.md)  
+  - Contrato de Proceso (Plantilla YAML): [./contratos/contrato_proceso.yml](./contratos/contrato_proceso.yml)
+- **Ontología y adopción:** [./metodologia refactorizada/ontologia.md](./metodologia refactorizada/ontologia.md) · [./metodologia refactorizada/adopcion.md](./metodologia refactorizada/adopcion.md)
+- **Catálogo (artefactos, EVs, tableros):** [./metodologia refactorizada/catalogo.md](./metodologia refactorizada/catalogo.md)
+
+---
+
+## Qué hacer según tu rol
+
+- **Líderes y Gobernanza**
+  - Leer el [Manifiesto](./ASTA-Kore_Manifiesto_Estrategico.md) y Cap. 1–2 de [Protocolos](./metodologia refactorizada/protocolos.md).
+  - Usar el [Calendario CVC 2025](./metodologia refactorizada/calendario_cvc_2025.md) para planificar y exigir evidencia en las decisiones.
+
+- **Equipos de EV**
+  - Modelar su EV en el `Canvas` y formular OKRs trimestrales. Ver Cap. 2 de [Protocolos](./metodologia refactorizada/protocolos.md) y [Catálogo](./metodologia refactorizada/catalogo.md).
+  - Si tu flujo es automatizado, acompañarlo con [Contrato de Proceso](./contratos/contrato_proceso.md) + [YAML](./contratos/contrato_proceso.yml).
+
+- **Arquitectos/Ingeniería**
+  - Decidir con Guías de Decisión (p.ej. [gd_arquitectura_nexus.md](./guias decision/gd_arquitectura_nexus.md)).
+  - Implementar con Guías Técnicas (p.ej. [gt_ingenieria_software.md](./guias tecnicas/gt_ingenieria_software.md)).
+
+---
+
+## CVC: el ritual que cierra el bucle
+
+- Ritmo trimestral, evidencia primero (OKRs, demo, salud del sistema). Decisión explícita de inversión por el NFG.
+- Referencias: Cap. 2.3 en [Protocolos](./metodologia refactorizada/protocolos.md) y [Calendario CVC 2025](./metodologia refactorizada/calendario_cvc_2025.md).
+
+---
+
+## Policy‑as‑Contract (principio operativo)
+
+- La gobernanza vive en los pipelines: las políticas automatizadas validan la existencia y validez de contratos versionados (p.ej., [contrato_proceso.yml](cci:7://file:///Users/felixsanhueza/fx_maquineando/asta-sigma-kore/ASTA-KORE%20fundamentos%20y%20manual%20operacional/contratos/contrato_proceso.yml:0:0-0:0)).
+- Los catálogos y paneles son vistas materializadas de lo que declaran esos contratos en los repositorios.
+
+---
+
+## Evolución del marco (PEM)
+
+- El marco se audita y adapta con un ciclo anual formal (y on‑demand por evidencia).
+- Ver: [PEM](./metodologia refactorizada/protocolo_evolucion.md) y registros en [auditorías](./metodologia refactorizada/auditorias/).
+
+---
+
+## Empezar en 30 minutos
+
+1. Leer el [Manifiesto](./ASTA-Kore_Manifiesto_Estrategico.md) (Σ/Δ × E/T/O).
+2. Crear/actualizar el `Canvas` de tu EV y formular 1–2 OKRs trimestrales. Ver [Protocolos](./metodologia refactorizada/protocolos.md) → Cap. 2.
+3. Si tu flujo es automatizado, generar [Contrato de Proceso](./contratos/contrato_proceso.md) + [YAML](./contratos/contrato_proceso.yml) y enlazarlo en tu repo.
+
+---
+
+## Glosario mínimo
+
+- **EV (Entidad de Valor):** unidad sociotécnica con propósito, fronteras contractuales y métricas de desempeño.
+- **Contrato:** acuerdo explícito que rige una interacción (Datos, Proceso, Agente, Conocimiento).
+- **ADR:** bitácora de decisión arquitectónica concisa y versionada.
+- **Nexus:** arquitectura de referencia que materializa las “carreteras pavimentadas”.
+
+---
+
+¿Sugerencias o mejoras al marco? Usa el [PEM](./metodologia refactorizada/protocolo_evolucion.md) y registra tu auditoría en `./metodologia refactorizada/auditorias/`.
+```
+
+### ASTA-KORE fundamentos y manual operacional/contratos/contrato_proceso.md
+
+```markdown
+# Guía del Contrato de Proceso
+
+**ID:** `CONTRATO-PROCESO-V1`
+**Estado:** Activo
+
+## 1. Propósito
+
+El `Contrato de Proceso` es un artefacto de diseño sociotécnico que formaliza el acuerdo sobre cómo opera un flujo de valor automatizado de punta a punta. Su objetivo es hacer explícitas las garantías de rendimiento, los puntos de intervención humana y la lógica de resiliencia de un proceso de negocio.
+
+Este contrato es la fuente única de verdad para la gobernanza y la auditoría de un proceso automatizado. Debe ser negociado y acordado entre el equipo dueño del proceso, los arquitectos y los stakeholders de negocio.
+
+## 2. Estructura y Campos Clave
+
+El contrato se define en un archivo `contrato_proceso.yml` versionado junto al código de la `Entidad de Valor` que lo implementa. A continuación se describe el significado de cada campo.
+
+### `id` (Obligatorio)
+
+* **Descripción:** Identificador único y legible del proceso.
+* **Formato:** `dominio.nombre_proceso`.
+* **Ejemplo:** `subsidios.asignacion_automatica`.
+
+### `owner` (Obligatorio)
+
+* **Descripción:** El equipo responsable del ciclo de vida de este proceso.
+* **Ejemplo:** `equipo-alpha`.
+
+### `version` (Obligatorio)
+
+* **Descripción:** Versión semántica (SemVer) del contrato.
+* **Ejemplo:** `1.0.0`.
+
+### `purpose` (Obligatorio)
+
+* **Descripción:** Una explicación concisa del valor de negocio que entrega este proceso.
+* **Ejemplo:** "Orquesta la validación, cálculo y notificación de la asignación de un subsidio de forma automática."
+
+### `sla` (Obligatorio)
+
+* **Descripción:** Los Acuerdos de Nivel de Servicio que el proceso garantiza.
+* **Campos:**
+  * `cycle_time_p95_minutes`: El percentil 95 del tiempo que tarda un caso en completarse desde que inicia hasta que termina.
+  * `success_rate_target_pct`: El porcentaje de ejecuciones que deben terminar exitosamente sin intervención manual.
+
+### `hitl` (Opcional)
+
+* **Descripción:** Define los puntos de intervención Humano-en-el-Bucle (Human-in-the-Loop).
+* **Campos:**
+  * `checkpoints`: Una lista de puntos de control donde el proceso puede requerir una acción humana. Cada checkpoint tiene un nombre y una descripción del tipo de decisión requerida.
+  * `escalation_rules`: Reglas que definen cuándo una ejecución debe ser escalada a un checkpoint humano.
+
+### `saga` (Opcional)
+
+* **Descripción:** Define la lógica de compensación para procesos de larga duración que requieren mantener la consistencia (Patrón Saga).
+* **Campos:**
+  * `steps`: Una lista de los pasos transaccionales del proceso. Cada paso define su acción principal (`invoke`) y la acción de compensación (`compensate`) que se debe ejecutar si un paso posterior falla.
+
+### `events` (Obligatorio)
+
+* **Descripción:** Declara los eventos de negocio que el proceso emite y consume, definiendo su rol en el ecosistema.
+* **Campos:**
+  * `emitted`: Lista de eventos que este proceso produce.
+  * `consumed`: Lista de eventos que este proceso necesita para operar.
+
+### `observability` (Obligatorio)
+
+* **Descripción:** Define los Indicadores de Nivel de Servicio (SLIs) clave que deben ser medidos para monitorear la salud del proceso.
+* **Ejemplo:** `success_rate`, `latency_p95`, `dead_letter_rate`.
+
+## 3. Relacionado con
+
+* **Guía Técnica: Ingeniería de Aplicaciones y Procesos:** [../guias tecnicas/gt_ingenieria_software.md](../guias tecnicas/gt_ingenieria_software.md)
+* **Guía Técnica: Arquitectura de Referencia Nexus:** [../guias tecnicas/gt_arquitectura_nexus.md](../guias tecnicas/gt_arquitectura_nexus.md)
+* **Plantilla YAML del contrato:** [./contrato_proceso.yml](./contrato_proceso.yml)
 
 ```
 
-### manual operacional/guias decision/gd_arquitectura_nexus.md
+### ASTA-KORE fundamentos y manual operacional/contratos/contrato_proceso.yml
+
+```yaml
+# Contrato de Proceso - Especificación Canónica v1.0
+# Este archivo es la fuente única de verdad para la gobernanza de un flujo de valor.
+# Debe ser versionado junto al código de la Entidad de Valor que lo implementa.
+
+id: "dominio.nombre_proceso"
+owner: "nombre-del-equipo"
+version: "1.0.0"
+purpose: "Descripción concisa del valor de negocio que entrega este proceso."
+
+# Acuerdos de Nivel de Servicio (SLA) que el proceso garantiza.
+sla:
+  # El percentil 95 del tiempo (en minutos) que tarda un caso en completarse.
+  cycle_time_p95_minutes: 180
+  # El porcentaje de ejecuciones que deben terminar exitosamente sin intervención manual.
+  success_rate_target_pct: 99.5
+
+# Puntos de intervención Humano-en-el-Bucle (Human-in-the-Loop). Opcional.
+hitl:
+  checkpoints:
+    - name: "revision_casos_excepcionales"
+      description: "Revisión manual para casos que no cumplen las reglas automáticas."
+    - name: "aprobacion_monto_superior"
+      description: "Aprobación por un supervisor para montos que exceden el umbral automático."
+  escalation_rules:
+    - condition: "monto_subsidio > 2000"
+      checkpoint: "aprobacion_monto_superior"
+    - condition: "score_riesgo > 0.8"
+      checkpoint: "revision_casos_excepcionales"
+
+# Lógica de compensación para mantener la consistencia (Patrón Saga). Opcional.
+saga:
+  steps:
+    - name: "validar_postulante"
+      invoke: "servicio_validacion.validar"
+      # No hay compensación para una validación de solo lectura.
+    - name: "reservar_fondos"
+      invoke: "servicio_financiero.reservar"
+      compensate: "servicio_financiero.liberar"
+    - name: "notificar_aprobacion"
+      invoke: "servicio_notificaciones.enviar"
+      compensate: "servicio_notificaciones.retractar"
+
+# Eventos de negocio que el proceso emite y consume.
+events:
+  emitted:
+    - "proceso.iniciado"
+    - "proceso.completado"
+    - "proceso.fallido"
+  consumed:
+    - "postulacion.recibida"
+    - "validacion_identidad.completada"
+
+# Indicadores de Nivel de Servicio (SLIs) clave para monitorear la salud.
+observability:
+  slis:
+    - "success_rate"
+    - "latency_p95"
+    - "dead_letter_rate"
+    - "escalation_rate"
+```
+
+### ASTA-KORE fundamentos y manual operacional/guias decision/gd_arquitectura_nexus.md
 
 ```markdown
 # Guía de Decisión: Arquitectura de Entidades de Valor con la Plataforma Nexus
@@ -371,7 +546,7 @@ Una vez definidos los límites de la EV en el `Canvas de EV`, utilice la siguien
 Advertencia: La complejidad operacional de los sistemas distribuidos (Microservicios, EDA) es alta. No los adopte a menos que los beneficios superen claramente los costos. Empiece simple.
 ```
 
-### manual operacional/guias decision/gd_automatizacion_proceso.md
+### ASTA-KORE fundamentos y manual operacional/guias decision/gd_automatizacion_proceso.md
 
 ```markdown
 # Guía de Decisión: Automatización de Procesos de Negocio
@@ -419,7 +594,7 @@ La decisión de implementar RPA DEBE ser documentada en una `Bitácora de Decisi
 
 ```
 
-### manual operacional/guias decision/gd_datos.md
+### ASTA-KORE fundamentos y manual operacional/guias decision/gd_datos.md
 
 ```markdown
 # Guía de Decisión: Diseño de Productos de Datos
@@ -461,7 +636,7 @@ Para una inmersión profunda en la implementación de estos patrones, incluyendo
 
 ```
 
-### manual operacional/guias decision/gd_experiencia_usuario.md
+### ASTA-KORE fundamentos y manual operacional/guias decision/gd_experiencia_usuario.md
 
 ```markdown
 # Guía de Decisión: Diseño de Experiencia de Usuario (UX)
@@ -503,7 +678,7 @@ Para una inmersión profunda en la implementación de estos patrones, incluyendo
 
 ```
 
-### manual operacional/guias decision/gd_know.md
+### ASTA-KORE fundamentos y manual operacional/guias decision/gd_know.md
 
 ```markdown
 # Guía de Decisión: Gestión del Conocimiento
@@ -531,7 +706,7 @@ Para una inmersión profunda en la implementación de un sistema de gestión del
 
 ```
 
-### manual operacional/guias decision/gd_sistemascognitivos.md
+### ASTA-KORE fundamentos y manual operacional/guias decision/gd_sistemas_cognitivos.md
 
 ```markdown
 # Guía de Decisión: Diseño de Sistemas Cognitivos (IA)
@@ -572,7 +747,7 @@ Las decisiones sobre la arquitectura y el rol del agente deben ser documentadas 
 Para una inmersión profunda en la implementación de estos patrones, incluyendo la arquitectura de referencia para aplicaciones de LLM, el diseño de `Contratos de Agente` y las prácticas de MLOps/LLMOps, consulte la `gt_ingenieria_ia.md`.
 ```
 
-### manual operacional/guias tecnicas/gt_arquitectura_nexus.md
+### ASTA-KORE fundamentos y manual operacional/guias tecnicas/gt_arquitectura_nexus.md
 
 ```markdown
 # Guía Técnica: Arquitectura de Referencia Nexus
@@ -587,7 +762,7 @@ Audiencia: Arquitectos de Soluciones, Líderes Técnicos, Ingenieros Senior.
 
 Relación con KORE:
 
-* Guía de Decisión Relacionada: `gd_arquitectura_aplicacion.md`
+* Guía de Decisión Relacionada: `gd_arquitectura_nexus.md`
 * Artefactos KORE Gobernados: `Canvas de EV`, `Mapa de Capacidades`, `Contratos Conversacionales`, `ADRs`.
 
 ---
@@ -607,13 +782,13 @@ Estos principios son la traducción de la filosofía KORE en directivas de ingen
 
 Esta arquitectura define el `Mapa de Capacidades` de la plataforma tecnológica que soporta el ecosistema KORE.
 
-| Capa de Nexus | Propósito en el Ecosistema KORE | Capacidades Clave | Tecnologías de Referencia |
-| :--- | :--- | :--- | :--- |
-| Capa de Valor y Gobierno | Define las "reglas del juego" estratégicas. | Gestión de Políticas (Policy-as-Code), Ética y Riesgo, CoE, FinOps. | OPA, Cedar, Jira, PowerBI. |
-| Capa Semántica Común | Provee el vocabulario compartido y la interoperabilidad. | Ontología KORE (SHACL/OWL), Glosario de Negocio, Plantillas de `Contratos`. | VocBench, Schema.org, Git. |
-| Tejidos de Ejecución | Materializa las `Entidades de Valor` en dominios específicos. | Tejido de Conocimiento (RAG), Tejido de Datos (Data Mesh), Tejido de Procesos (BPM), Tejido de Agentes (IA). | Ver Guías Técnicas de cada dominio. |
-| Plataforma de Ingeniería | Provee las herramientas para construir y operar con calidad. | CI/CD, Infraestructura como Código (IaC), Observabilidad, Seguridad (SAST/DAST/SCA). | GitLab CI, Terraform, Prometheus, Grafana, SonarQube, Vault. |
-| Capa de Integración | Permite que las `Entidades de Valor` se comuniquen. | API Gateway, Bus de Mensajes, Catálogos de Servicios y Datos. | Kong, Kafka, Backstage, Amundsen. |
+| Capa de Nexus | Propósito en el Ecosistema KORE | Capacidades Clave | Ejemplos de Implementación | **Alternativas Soberanas / Open-Source** |
+| :--- | :--- | :--- | :--- | :--- |
+| Capa de Valor y Gobierno | Define las "reglas del juego" estratégicas. | Gestión de Políticas (Policy-as-Code), Ética y Riesgo, CoE, FinOps. | OPA, Cedar, Jira, PowerBI. | **OPA, Kyverno, GitLab Issues, Superset** |
+| Capa Semántica Común | Provee el vocabulario compartido y la interoperabilidad. | Ontología KORE (SHACL/OWL), Glosario de Negocio, Plantillas de `Contratos`. | VocBench, Schema.org, Git. | **Git, Open-source web editors** |
+| Tejidos de Ejecución | Materializa las `Entidades de Valor` en dominios específicos. | Tejido de Conocimiento (RAG), Tejido de Datos (Data Mesh), Tejido de Procesos (BPM), Tejido de Agentes (IA). | Ver Guías Técnicas de cada dominio. | **(Ver Guías Técnicas específicas)** |
+| Plataforma de Ingeniería | Provee las herramientas para construir y operar con calidad. | CI/CD, Infraestructura como Código (IaC), Observabilidad, Seguridad (SAST/DAST/SCA). | GitLab CI, Terraform, Prometheus, Grafana, SonarQube, Vault. | **Jenkins, OpenTofu, VictoriaMetrics, Trivy, Vault** |
+| Capa de Integración | Permite que las `Entidades de Valor` se comuniquen. | API Gateway, Bus de Mensajes, Catálogos de Servicios y Datos. | Kong, Kafka, Backstage, Amundsen. | **Apache APISIX, RabbitMQ, NATS, Backstage** |
 
 ## 3. El Sistema de Contratos de Nexus
 
@@ -627,7 +802,7 @@ La Plataforma Nexus define cuatro tipos de `Contratos` técnicos que son la impl
 * `Contrato de Proceso`:
   * Gobierna: Un `Flujo de Valor` automatizado.
   * Asegura: SLAs de rendimiento, puntos de HITL y lógica de compensación.
-  * Referencia: `gt_ingenieria_software.md`
+  * Referencia: `gt_ingenieria_software.md` — Especificación: [../contratos/contrato_proceso.md](../contratos/contrato_proceso.md) · Plantilla: [../contratos/contrato_proceso.yml](../contratos/contrato_proceso.yml)
 
 * `Contrato de Agente`:
   * Gobierna: Un `Sistema Cognitivo` (Agente de IA).
@@ -646,7 +821,7 @@ La ontología de Nexus es el `Modelo Conceptual` formal de KORE. Define las enti
 
 ```
 
-### manual operacional/guias tecnicas/gt_diseno_ux.md
+### ASTA-KORE fundamentos y manual operacional/guias tecnicas/gt_diseno_ux.md
 
 ```markdown
 # Guía Técnica: Diseño de Experiencia de Usuario (UX)
@@ -727,7 +902,7 @@ Un Sistema de Diseño es la fuente única de verdad para la UX/UI. Es un product
 
 ```
 
-### manual operacional/guias tecnicas/gt_gestion_conocimiento.md
+### ASTA-KORE fundamentos y manual operacional/guias tecnicas/gt_gestion_conocimiento.md
 
 ```markdown
 # Guía Técnica: Gestión del Conocimiento y Curación para RAG
@@ -821,7 +996,7 @@ serving_policy:
 
 ```
 
-### manual operacional/guias tecnicas/gt_ingenieria_datos.md
+### ASTA-KORE fundamentos y manual operacional/guias tecnicas/gt_ingenieria_datos.md
 
 ```markdown
 # Guía Técnica: Ingeniería de Datos Orientada a Productos
@@ -938,7 +1113,7 @@ La seguridad de los datos es por diseño, no por accidente.
 
 ```
 
-### manual operacional/guias tecnicas/gt_ingenieria_ia.md
+### ASTA-KORE fundamentos y manual operacional/guias tecnicas/gt_ingenieria_ia.md
 
 ```markdown
 # Guía Técnica: Ingeniería de Sistemas Cognitivos (IA)
@@ -1034,7 +1209,7 @@ hitl_checkpoints: # Cuándo escalar a un humano
 
 ```
 
-### manual operacional/guias tecnicas/gt_ingenieria_software.md
+### ASTA-KORE fundamentos y manual operacional/guias tecnicas/gt_ingenieria_software.md
 
 ```markdown
 # Guía Técnica: Ingeniería de Aplicaciones y Procesos
@@ -1049,8 +1224,8 @@ Audiencia: Arquitectos de Soluciones, Ingenieros de Software, Ingenieros de Auto
 
 Relación con KORE:
 
-* Guías de Decisión Relacionadas: `gd_arquitectura_aplicacion.md`, `gd_automatizacion_proceso.md`
-* Contrato Nexus Implementado: `Contrato de Proceso`
+* Guías de Decisión Relacionadas: `gd_arquitectura_nexus.md`, `gd_automatizacion_proceso.md`
+* Contrato Nexus Implementado: `Contrato de Proceso` — Especificación: [../contratos/contrato_proceso.md](../contratos/contrato_proceso.md) — Plantilla: [../contratos/contrato_proceso.yml](../contratos/contrato_proceso.yml)
 
 ---
 
@@ -1114,6 +1289,8 @@ Una solución de BPA es un sistema compuesto que orquesta diferentes tipos de `E
 
 Este `Contrato Nexus` formaliza los compromisos de un proceso automatizado. Debe ser un artefacto versionado que acompaña al modelo BPMN.
 
+Referencia: [Especificación](../contratos/contrato_proceso.md) · [Plantilla YAML](../contratos/contrato_proceso.yml)
+
 Atributos Clave:
 *   `sla`: Objetivos de Nivel de Servicio (ej. `cycle_time_p95_minutes: 180`).
 *   `stp_target_pct`: Porcentaje objetivo de casos procesados sin intervención humana (Straight-Through Processing).
@@ -1132,7 +1309,7 @@ La seguridad es una responsabilidad del equipo de desarrollo, integrada en el SD
 
 ```
 
-### manual operacional/metodologia refactorizada/adopcion.md
+### ASTA-KORE fundamentos y manual operacional/metodologia refactorizada/adopcion.md
 
 ```markdown
 # Guía de Adopción Incremental de A-K
@@ -1231,7 +1408,156 @@ Al completar estos cuatro pasos, la organización habrá instalado un "sistema i
 
 ```
 
-### manual operacional/metodologia refactorizada/catalogo.md
+### ASTA-KORE fundamentos y manual operacional/metodologia refactorizada/auditorias/auditoria_2025_q3.md
+
+```markdown
+# Informe de Auditoría del Marco ASTA-Kore - Q3 2025
+
+**ID de Auditoría:** A-K-AUDIT-2025-Q3-01
+**Fecha:** 2025-09-29
+**Auditor Principal (Referencia):** "Colega Auditor"
+**Revisión y Refinamiento:** "Arquitecto Cognitivo-Semántico"
+
+---
+
+## 1. Veredicto Global
+
+La auditoría concluye que ASTA-Kore posee un **modelo conceptual robusto y parsimonioso (Score: 4.5/5)**, pero presenta una **brecha crítica entre la doctrina y la plataforma operable (Score: 2.5/5)**. El marco es una "doctrina con plantillas", pero carece de las "carreteras pavimentadas" necesarias para una adopción escalable y de baja fricción.
+
+El principal riesgo identificado es la **"Falacia del Ingeniero de Plataforma"**: la tentación de construir herramientas y automatización antes de solidificar la coherencia semántica de los `Contratos` y el modelo de trazabilidad.
+
+## 2. Hallazgos Críticos
+
+1. **Inconsistencia Documental:** Se identificaron múltiples enlaces rotos, duplicados y nomenclaturas inconsistentes, erosionando la confianza y usabilidad del marco.
+2. **Brecha de "Carretera Pavimentada":** Ausencia de artefactos operables como repositorios `template`, `pipelines` de CI/CD de referencia y `scaffolding` para la creación de `Entidades de Valor`.
+3. **Contrato de Proceso Débil:** A diferencia de otros contratos, el `Contrato de Proceso` carece de una especificación canónica (YAML), impidiendo la gobernanza homogénea de los flujos de valor.
+4. **Trazabilidad Proclamada, no Viva:** La Matriz Σ/Δ funciona como un modelo mental para humanos, pero no existe un mecanismo automático para visualizar la trazabilidad de los artefactos (OKR ↔ Backlog ↔ ADR ↔ SLO).
+5. **Desconexión con el Sector Público:** Falta un mecanismo formal (`Proyecto Espejo`) para traducir el modelo de operación continua basado en capacidades a los ciclos presupuestarios y de compra anuales del sector público.
+
+## 3. Plan de Acción Refinado y Jerarquizado
+
+La propuesta de solución original fue reordenada para priorizar la coherencia semántica sobre la construcción de herramientas, siguiendo una estrategia de capas.
+
+### Fase 1: Solidificar el Núcleo Semántico (0-30 días)
+
+* **1.1 (Higiene Fundamental):** Normalizar toda la nomenclatura de archivos, corregir enlaces rotos y eliminar contenido duplicado.
+* **1.2 (Canonización de Contratos):** Definir la especificación `YAML` canónica para el `Contrato de Proceso` y asegurar que todos los contratos tengan un [README.md](cci:7://file:///Users/felixsanhueza/fx_maquineando/asta-sigma-kore/ASTA-KORE%20fundamentos%20y%20manual%20operacional/README.md:0:0-0:0) explicativo.
+* **1.3 (Rituales Tangibles):** Publicar un `calendario_gobernanza.md` con las fechas de los CVCs para el año siguiente.
+
+### Fase 2: Construir el Motor de Trazabilidad (30-90 días)
+
+* **2.1 (Modelo de Metadatos):** Diseñar el esquema de metadatos unificado que conectará los artefactos KORE (ej. etiquetas para vincular KRs a commits).
+* **2.2 (Scaffolder Mínimo Viable):** Crear un `scaffolder` (vía Backstage o similar) que genere nuevas `EVs` inyectando los metadatos de trazabilidad desde el inicio.
+* **2.3 (Tablero de Coherencia v0.1):** Implementar un panel simple que lea los `Contratos.yaml` y `ADR.md` de los repositorios para probar la capacidad de leer el estado real del sistema.
+
+### Fase 3: Pavimentar las Carreteras Basado en la Semántica (90-180 días)
+
+* **3.1 (Policy-as-Contract):** Implementar las primeras políticas automatizadas en los `pipelines` de CI/CD, comenzando por la validación de la existencia y corrección de los `Contratos.yaml`.
+* **3.2 (Plataforma Anclada a Contratos):** Desarrollar componentes de la Plataforma Nexus (Linaje de Datos, métricas de IA, Design System) cuya función principal sea verificar y visualizar el cumplimiento de los contratos correspondientes.
+* **3.3 (Traductor Financiero):** Implementar el artefacto `Proyecto Espejo` y el glosario que mapea las decisiones del CVC a los programas y centros de costo presupuestarios.
+
+## 4. Estado de la Auditoría
+
+**Estado:** Cerrada.
+**Resultado:** Los hallazgos han sido aceptados y el plan de acción refinado ha sido integrado en el `Protocolo de Evolución del Marco (PEM)` como la hoja de ruta para la siguiente versión de ASTA-Kore.
+
+```
+
+### ASTA-KORE fundamentos y manual operacional/metodologia refactorizada/calendario_cvc_2025.md
+
+```markdown
+# Calendario Anual de CVCs — 2025
+
+Este calendario define las ventanas trimestrales para la ejecución del Ciclo de Valor y Capacidad (CVC) de todas las Entidades de Valor (EVs). Incluye fechas de preparación, deadline de informe y las jornadas de decisión.
+
+Reglas generales:
+
+- Cada EV debe presentar un Informe de CVC conciso (≤ 3 páginas) con evidencia (OKRs, métricas, demo).
+- Las decisiones del NFG deben quedar registradas al cierre de la sesión.
+- Cambios relevantes en el marco se canalizan vía PEM.
+
+## Q1 2025
+
+- Ventana de preparación: 24–28 mar 2025
+- Deadline Informe CVC (entrega a Secretaría): 02 abr 2025
+- Sesiones CVC (por EV): 08–10 abr 2025
+- Publicación de decisiones: 11 abr 2025
+
+## Q2 2025
+
+- Ventana de preparación: 23–27 jun 2025
+- Deadline Informe CVC: 02 jul 2025
+- Sesiones CVC: 08–10 jul 2025
+- Publicación de decisiones: 11 jul 2025
+
+## Q3 2025
+
+- Ventana de preparación: 22–26 sep 2025
+- Deadline Informe CVC: 01 oct 2025
+- Sesiones CVC: 07–09 oct 2025
+- Publicación de decisiones: 10 oct 2025
+
+## Q4 2025
+
+- Ventana de preparación: 15–19 dic 2025
+- Deadline Informe CVC: 23 dic 2025
+- Sesiones CVC (corte anual): 07–09 ene 2026
+- Publicación de decisiones: 10 ene 2026
+
+---
+
+## Roles y responsabilidades
+
+- Secretaría de Gobernanza:
+  - Convoca, consolida agenda, verifica informes recibidos y registra decisiones.
+- Equipo de la EV:
+  - Prepara Informe CVC, coordina demo, define hipótesis y próxima apuesta de valor.
+- Nodo Federado de Gobernanza (NFG):
+  - Revisa evidencia, conduce discusión y emite decisión de inversión (Continuar/Pivotar, Expandir, Reducir, Cerrar).
+
+## Insumos requeridos (por EV)
+
+- OKRs del trimestre con evidencia de avance (métricas, KR status).
+- Demo de valor (enlace o credenciales temporales).
+- Salud del sistema (SLOs/SLIs clave, incidentes relevantes).
+- ADRs relevantes creados/modificados en el trimestre.
+
+## Salidas esperadas
+
+- Decisión explícita de inversión del NFG.
+- Ajustes a OKRs del siguiente trimestre (si aplica).
+- Acciones de mejora y dueños.
+
+---
+
+## Plantillas mínimas
+
+### Agenda CVC (60 minutos)
+
+1. Progreso de OKRs y Aprendizaje (20 min)
+2. Demostración de Valor (15 min)
+3. Salud del Sistema y del Equipo (10 min)
+4. Próxima Apuesta de Valor y Decisión (15 min)
+
+### Informe CVC — Estructura sugerida (≤ 3 páginas)
+
+- Resumen ejecutivo (1 párrafo)
+- Estado de OKRs (tabla O/KR con métricas)
+- Evidencia y aprendizaje (gráficos, enlaces a demo)
+- Salud del sistema (SLOs/SLIs, incidentes, deuda crítica)
+- Propuesta de próxima apuesta (hipótesis, riesgos, requerimientos)
+- Decisión solicitada al NFG
+
+---
+
+Referencias:
+
+- Protocolo del CVC: ver `protocolos.md` > Cap. 2.3
+- Protocolo de Evolución del Marco (PEM): [../protocolo_evolucion.md](../protocolo_evolucion.md)
+
+```
+
+### ASTA-KORE fundamentos y manual operacional/metodologia refactorizada/catalogo.md
 
 ```markdown
 # Catálogo de Artefactos Parsimoniosos de A-K
@@ -1327,9 +1653,11 @@ Ejemplo: "Nuestra misión fue reducir la fricción en el proceso de postulación
 
 ---
 
-### 5. Próxima Apuesta de Valor (Propuesta para el Siguiente Trimestre)
+### 5. Recomendación de Asignación de Recursos (Propuesta para el Siguiente Trimestre)
 
-*Basado en nuestros aprendizajes, esta es nuestra recomendación para el próximo trimestre.*
+*Basado en nuestro aprendizaje, esta es nuestra recomendación para la asignación de recursos desde el Portafolio de Capacidad "[Nombre del Portafolio]".*
+
+Recomendación: [Elegir una: Continuar Inversión / Reorientar hacia Nuevo Objetivo / Expandir para Escalar Impacto / Concluir y Transferir Recursos]
 
 Objetivo Propuesto: [El nuevo Objetivo para el próximo Q]
 
@@ -1337,31 +1665,39 @@ Objetivo Propuesto: [El nuevo Objetivo para el próximo Q]
 | :--- | :--- |
 | KR 1: [Descripción del nuevo KR] | Creemos que [acción] impactará en [métrica] porque [razonamiento]. |
 | KR 2: [Descripción del nuevo KR] | Creemos que [acción] impactará en [métrica] porque [razonamiento]. |
-
-Petición a la Gobernanza: Solicitamos la aprobación para [Continuar / Pivotar / Expandir] con este nuevo conjunto de OKRs.
 ```
-
-## A.2. Plantillas de Nivel Táctico (Σ-T / Δ-T)
 
 ### Plantilla A.2.1: Canvas de Entidad de Valor (EV) (Σ-T)
 
 Instrucciones: Este no es un documento para ser rellenado en solitario. Utilice este canvas en una sesión de taller colaborativo (físico o digital) con todos los miembros del equipo de la EV y stakeholders clave. Use post-its y marcadores. El objetivo es generar diálogo, visualizar el sistema como un todo y crear un entendimiento compartido. El resultado es un mapa vivo, no un documento estático.
+
+El canvas se estructura en dos partes: La Anatomía del Valor (el núcleo del sistema) y El Contexto Operacional (sus restricciones y medidas).
 
 ```markdown
 # Canvas de Entidad de Valor: [Nombre de la EV]
 
 ID: `EV-XXX` | Versión: `1.0` | Equipo Dueño: `<Nombre del Equipo>` | Fecha: `YYYY-MM-DD`
 
-| 1. Propósito y Valor Público | 2. Actores y Experiencia | 3. Flujo de Valor y Proceso Principal |
+---
+
+### Parte 1: La Anatomía del Valor
+
+| 1. Propósito y Valor Público | 2. Actores y Experiencia | 3. Flujo de Valor Principal |
 | :--- | :--- | :--- |
-| Pregunta Clave: ¿POR QUÉ existe esta EV? | Pregunta Clave: ¿PARA QUIÉN estamos diseñando? | Pregunta Clave: ¿CÓMO funciona de punta a punta? |
-| • Propósito Esencial: (Verbo + Qué + Para Qué)<br>• Alineamiento Estratégico: (OKR Anual al que contribuye)<br>• Problema/Oportunidad: (Dolor del ciudadano o fricción interna que resuelve) | • Clientes/Usuarios: (Beneficiarios finales)<br>• Participantes Internos: (Funcionarios que operan el sistema)<br>• Experiencia (Journey): (Frustraciones y motivaciones del actor principal) | • Evento de Inicio: (Detonante del flujo)<br>• Etapas Macro: (Flujo simple de 3-5 pasos)<br>• Resultado Final: (Producto, servicio o decisión generada) |
-| 4. Capacidades y Servicios Expuestos | 5. Datos Clave (Consumidos y Producidos) | 6. Tecnología y Plataformas de Soporte |
-| Pregunta Clave: ¿Qué VALOR produce para otros? | Pregunta Clave: ¿Qué INFORMACIÓN necesita y genera? | Pregunta Clave: ¿Sobre qué CIMIENTOS se construye? |
-| • Capacidades de Negocio: (Habilidades que realiza)<br>• Servicios Expuestos (APIs): (Servicios reutilizables que ofrece)<br>• Consumidores: (Otras EVs que consumen estos servicios) | • Datos Consumidos: (Productos de Datos que necesita)<br>• Datos Producidos: (Productos de Datos que genera)<br>• Fuente de Verdad: (Dónde reside la fuente autoritativa) | • Aplicaciones y Componentes: (Portal Web, API Gateway, etc.)<br>• Plataformas Transversales: (Plataforma de Identidad, Bus de Eventos, etc.)<br>• Stack Tecnológico: (Lenguajes, frameworks, BBDD) |
-| 7. Dependencias (Internas y Externas) | 8. Gobernanza, Riesgo y Mandato Regulatorio | 9. Métricas de Éxito (KRs y SLOs) |
-| Pregunta Clave: ¿El éxito DEPENDE de alguien más? | Pregunta Clave: ¿Cuáles son las REGLAS DEL JUEGO? | Pregunta Clave: ¿Cómo sabremos que estamos GANANDO? |
-| • Dependencias Internas: (Otras EVs de las que dependemos)<br>• Dependencias Externas: (Proveedores, otros servicios públicos)<br>• Riesgos de Dependencia: (Principal riesgo si una dependencia falla) | • Dueño de Producto/Servicio: (Persona con autoridad final)<br>• Mandato Regulatorio: (Leyes, decretos, normativas)<br>• Nivel de Riesgo: (Bajo, Medio, Alto) | • Resultados Clave (KRs): (2-3 métricas de *outcome*)<br>• Objetivos de Nivel de Servicio (SLOs): (2-3 compromisos de fiabilidad y calidad)<br>• Métricas de Experiencia (UX): (CSAT, Tasa de Éxito de Tarea) |
+| ¿POR QUÉ existe esta EV? | ¿PARA QUIÉN diseñamos? | ¿CÓMO funciona de punta a punta? |
+| • Propósito Esencial: (Verbo + Qué + Para Qué)<br>• Alineamiento Estratégico: (OKR Anual al que contribuye)<br>• Problema/Oportunidad: (Dolor que resuelve) | • Clientes/Usuarios: (Beneficiarios finales)<br>• Participantes Internos: (Funcionarios que operan el sistema)<br>• Experiencia (Journey): (Frustraciones y motivaciones) | • Evento de Inicio: (Detonante del flujo)<br>• Etapas Macro: (Flujo simple de 3-5 pasos)<br>• Resultado Final: (Producto, servicio o decisión) |
+| 4. Capacidades y Servicios Expuestos | 5. Datos Clave (Consumidos y Producidos) | 6. Componentes Tecnológicos |
+| ¿Qué VALOR produce para otros? | ¿Qué INFORMACIÓN necesita y genera? | ¿Sobre qué CIMIENTOS se construye? |
+| • Capacidades de Negocio: (Habilidades que realiza)<br>• Servicios Expuestos (APIs): (Servicios reutilizables que ofrece)<br>• Consumidores: (Otras EVs que consumen) | • Datos Consumidos: (Productos de Datos que necesita)<br>• Datos Producidos: (Productos de Datos que genera)<br>• Fuente de Verdad: (Dónde reside la autoridad) | • Componentes Principales: (Portal Web, API Gateway, etc.)<br>• Plataformas Transversales: (Identidad, Bus de Eventos, etc.)<br>• Stack Tecnológico: (Lenguajes, BBDD) |
+
+---
+
+### Parte 2: El Contexto Operacional
+
+| 7. Dependencias y Riesgos | 8. Gobernanza y Cumplimiento | 9. Métricas de Éxito |
+| :--- | :--- | :--- |
+| ¿El éxito DEPENDE de alguien más? | ¿Cuáles son las REGLAS DEL JUEGO? | ¿Cómo sabremos que estamos GANANDO? |
+| • Dependencias Internas: (Otras EVs de las que dependemos)<br>• Dependencias Externas: (Proveedores, otros servicios)<br>• Riesgos de Dependencia: (Principal riesgo si una dependencia falla) | • Nodo Federado de Gobernanza (NFG): (¿Quién toma las decisiones de inversión?)<br>• Dueño de Producto/Servicio: (Persona con autoridad final)<br>• Anclaje Regulatorio (Overlays): (Leyes y normativas clave) | • Resultados Clave (KRs): (2-3 métricas de *outcome*)<br>• Objetivos de Nivel de Servicio (SLOs): (2-3 compromisos de fiabilidad)<br>• Métricas de Experiencia (UX): (CSAT, Tasa de Éxito de Tarea) |
 ```
 
 ### Guía A.2.2: Mapeo de Historias (Story Mapping) (Δ-T)
@@ -1500,7 +1836,7 @@ Instrucciones: Estas no son plantillas de documentos a rellenar, sino agendas pa
 
 ```
 
-### manual operacional/metodologia refactorizada/ontologia.md
+### ASTA-KORE fundamentos y manual operacional/metodologia refactorizada/ontologia.md
 
 ```markdown
 # Ontología Formal de la Metodología ASTA-Kore (A-K)
@@ -1572,6 +1908,27 @@ Estos son los elementos irreductibles que estructuran todo el marco.
   * `materializa` -> una o más `Capacidades`.
   * `es gestionada en` -> un `Portafolio de EVs`.
 
+### 1.7. `Contrato Conversacional`
+
+* Descripción: Un acuerdo explícito que define la interacción entre dos `Entidades de Valor`. Es el resultado de una conversación guiada, no un documento legalista. Su implementación técnica se materializa en los `Contratos Nexus` (`de Datos`, `de Proceso`, `de Agente`, etc.).
+
+### 1.8. `Nodo de Gobernanza`
+
+* Descripción: Una entidad (persona o comité) responsable de la toma de decisiones estratégicas sobre un conjunto de `Entidades de Valor`.
+* Subtipos:
+  * `Nodo Central de Gobernanza (NCG)`: Responsable de la estrategia, estándares y plataformas compartidas de todo el ecosistema. *Relación:* `coordina` múltiples `Nodos Federados`.
+  * `Nodo Federado de Gobernanza (NFG)`: Responsable de la implementación de la estrategia y la gestión del portafolio en un dominio o institución específica. *Relación:* `implementa directrices de` un `NCG`.
+
+### 1.9. `Overlay Regulatorio`
+
+* Descripción: Un conjunto de axiomas y restricciones derivados de un marco normativo (leyes, decretos) que se aplican a una o más `Entidades de Valor`.
+* Relación: Una `EV` `debe cumplir con` uno o más `Overlays Regulatorios`.
+
+### 1.10. `Proyecto Espejo`
+
+* Descripción: Un artefacto administrativo auxiliar. Es la representación de un ciclo de inversión trimestral de una `EV`, utilizada para la comunicación y cumplimiento con sistemas de gobernanza externos (ej. control presupuestario). Su alcance está definido por un `OKR Trimestral`.
+* Relación: Un `Ciclo de Valor y Capacidad (CVC)` `puede generar` un `Proyecto Espejo`.
+
 ---
 
 ## 2. Taxonomía de Artefactos
@@ -1641,7 +1998,80 @@ Ahora tenemos una estructura de tres capas:
 
 ```
 
-### manual operacional/metodologia refactorizada/protocolos.md
+### ASTA-KORE fundamentos y manual operacional/metodologia refactorizada/protocolo_evolucion.md
+
+```markdown
+# Protocolo de Evolución del Marco (PEM)
+
+**Versión:** 1.0
+**Propósito:** Este protocolo define el mecanismo formal y recurrente para la auditoría, adaptación y evolución del propio marco ASTA-Kore. Es el sistema inmunológico del marco, diseñado para mantenerlo parsimonioso, coherente y alineado con las necesidades del terreno.
+
+---
+
+## 1. Principios Fundamentales de la Evolución
+
+La evolución de ASTA-Kore se rige por axiomas que previenen la burocratización y la complejidad accidental.
+
+1. **Semántica antes que Herramientas:** La solidez de los `Contratos` y la `Ontología` precede a la construcción de `pipelines` o `paneles`. La automatización debe verificar la coherencia semántica, no reemplazarla.
+2. **Mínima Carga Cognitiva:** Cada nuevo concepto, artefacto o protocolo debe justificar su existencia demostrando que reduce más complejidad de la que introduce.
+3. **Fuente Única de Verdad en el Código:** Los artefactos de diseño (`Contratos.yml`, `ADR.md`) viven junto al código. Los catálogos y paneles son **vistas materializadas** de esta verdad, no bases de datos independientes.
+4. **Reflexividad:** El propio proceso de evolución del marco debe seguir los principios de ASTA-Kore (basado en evidencia, iterativo, con artefactos parsimoniosos).
+
+## 2. El Ciclo de Evolución del Marco (Ritmo Anual)
+
+El marco se somete a un ciclo formal de revisión y adaptación una vez al año, o cuando la evidencia de fricción significativa lo justifique.
+
+### Fase 1: Auditoría Holística
+
+* **Propósito:** Evaluar la salud y efectividad del marco en la práctica.
+* **Protocolo:**
+    1. **Recopilación de Evidencia:**
+        * **Entrevistas y Encuestas:** Dialogar con equipos de `EVs`, líderes y `Nodos de Gobernanza` para identificar puntos de fricción, cuellos de botella y artefactos de bajo valor.
+        * **Análisis de Artefactos:** Muestrear y analizar la calidad, consistencia y utilidad real de los `Canvas de EV`, `Contratos`, `Informes de CVC` y `ADRs` generados en el ciclo.
+        * **Métricas de Plataforma:** Analizar métricas objetivas como `lead time` de las `EVs`, tasa de fallo de `pipelines` de la Plataforma Nexus, frecuencia de `override` de `guardrails` y uso de `templates`.
+    2. **Evaluación con el Scorecard de Salud:** Utilizar el siguiente scorecard para puntuar cada dimensión del marco, generando un diagnóstico objetivo.
+
+#### Scorecard de Salud del Marco ASTA-Kore
+
+| Dimensión | Pregunta Clave de Auditoría |
+| :--- | :--- |
+| **1. Modelo Mental** | ¿Sigue siendo el modelo (Matriz Σ/Δ, EV) parsimonioso y de baja carga cognitiva para los nuevos equipos? |
+| **2. Trazabilidad Σ/Δ** | ¿Podemos conectar un KR a un commit y a un ADR de forma automática y verificable? ¿O sigue siendo un ejercicio manual? |
+| **3. Gobernanza (CVC)** | ¿Las decisiones del CVC se basan en evidencia (métricas, demos) o han degenerado en reportes de estado? |
+| **4. Contratos** | ¿Son los contratos la fuente de verdad? ¿Están completos, son consistentes y se usan para guiar las conversaciones de diseño? |
+| **5. Plataforma Nexus** | ¿Las "carreteras pavimentadas" (pipelines, templates) aceleran o constriñen a los equipos? ¿Los `guardrails` son claros y explicables? |
+| **6. Adopción y Disciplina** | ¿Se siguen los protocolos (ADRs, CVCs) por convicción o solo por cumplimiento? ¿Cuál es la tasa de "bypass" de los `guardrails`? |
+| **7. Higiene Documental** | ¿El cuerpo de conocimiento del marco está libre de inconsistencias, duplicados y enlaces rotos? ¿Inspira confianza? |
+
+### Fase 2: Propuesta de Refinamiento
+
+* **Propósito:** Traducir los hallazgos de la auditoría en un plan de acción jerarquizado y accionable.
+* **Protocolo:**
+    1. **Síntesis de Hallazgos:** Consolidar los resultados del scorecard y la evidencia cualitativa en un informe de auditoría conciso.
+    2. **Jerarquización del Backlog de Evolución:** Priorizar las acciones de mejora usando la siguiente jerarquía de dependencias conceptuales:
+        * **Nivel 1 (Fundamento Semántico):** Cambios en la `Ontología`, el `Manifiesto` o la estructura canónica de los `Contratos`.
+        * **Nivel 2 (Motor de Trazabilidad):** Mejoras en el modelo de metadatos y los mecanismos de `scaffolding` que aseguran la conexión entre artefactos.
+        * **Nivel 3 (Carreteras Pavimentadas):** Desarrollo o mejora de `pipelines`, `paneles`, `templates` y otras herramientas de la Plataforma Nexus.
+    3. **Formulación del Plan de Acción:** Documentar el plan en un formato de hoja de ruta (ej. 90/180/365 días), asegurando que cada iniciativa esté justificada por un hallazgo de la auditoría.
+
+### Fase 3: Implementación y Comunicación
+
+* **Propósito:** Ejecutar los cambios en el marco de forma controlada y comunicar eficazmente la nueva versión.
+* **Protocolo:**
+    1. **Implementación por Capas:** Ejecutar el plan de acción respetando el orden jerárquico definido en la fase anterior.
+    2. **Versionado Semántico:** Incrementar la versión del marco (ej. de v1.1 a v1.2) según la magnitud del cambio.
+    3. **Actualización del `CHANGELOG.md`:** Cada cambio significativo en un artefacto del marco (guía, contrato, protocolo) debe ser registrado con una descripción clara de la mejora y su impacto.
+    4. **Comunicación Activa:** Anunciar la nueva versión a la comunidad de práctica, explicando no solo el "qué" sino el "porqué" del cambio, conectándolo a los hallazgos de la auditoría que lo motivaron.
+
+---
+
+## Anexo: Registro de Auditorías
+
+* **[Auditoría Q3 2025](./auditorias/auditoria_2025_q3.md):** Veredicto: Marco conceptualmente robusto pero con brecha crítica entre doctrina y plataforma operable. Plan de acción enfocado en solidificar el núcleo semántico.
+
+```
+
+### ASTA-KORE fundamentos y manual operacional/metodologia refactorizada/protocolos.md
 
 ```markdown
 # Libro de Protocolos de ΑΣ-K
@@ -1650,7 +2080,7 @@ Ahora tenemos una estructura de tres capas:
 
 ## CAPÍTULO 1: EL CICLO ANUAL — CALIBRACIÓN ESTRATÉGICA (Σ-E / Δ-E)
 
-> Este es el protocolo de más bajo ritmo y más alto impacto, donde la organización define su dirección y calibra su portafolio de capacidades.
+> Un protocolo de alto nivel donde el `Nodo Central de Gobernanza (NCG)` diagnostica las capacidades del ecosistema (`Mapa de Capacidades`), aprovisiona el financiamiento para los "Portafolios de Capacidades" y declara el propósito a través de `OKRs Anuales`.
 
 ### 1.1. Fase 1: Diagnóstico de Capacidades (Protocolo Σ-E)
 
@@ -1688,7 +2118,7 @@ Propósito: Traducir el diagnóstico en una dirección estratégica clara a trav
 
 Propósito: Alinear la inversión y la estructura (el `Portafolio de EVs`) con la nueva estrategia.
 
-#### Protocolo de Decisión:
+#### Protocolo de Decisión
 
 1. Preparación:
     * Crear un inventario de todas las `Entidades de Valor (EVs)` existentes, mapeando cada una a las `Capacidades` que materializa y su costo operacional.
@@ -1699,7 +2129,7 @@ Propósito: Alinear la inversión y la estructura (el `Portafolio de EVs`) con l
 
 ## CAPÍTULO 2: EL CICLO TRIMESTRAL — NAVEGACIÓN TÁCTICA (Σ-T / Δ-T / Δ-E)
 
-> El corazón del modelo de gobernanza adaptativa. Conecta el diseño, la planificación y la toma de decisiones basada en evidencia para cada `Entidad de Valor`.
+> El corazón del modelo. Cada equipo de una `EV` diseña su anatomía (usando el `Canvas de EV`, identificando los `Overlays Regulatorios` aplicables), planifica su evolución a través de `OKRs Trimestrales`, y rinde cuentas en el `Ciclo de Valor y Capacidad (CVC)` ante su `Nodo Federado de Gobernanza (NFG)`. Opcionalmente, el resultado del CVC se formaliza en un `Proyecto Espejo` para cumplimiento externo.
 
 ### 2.1. Fase 1: Diseño de la Entidad de Valor (Protocolo Σ-T)
 
@@ -1739,6 +2169,8 @@ Artefacto Asociado: `catalogo.md`
 
 #### Protocolo del Ritual: Ciclo de Valor y Capacidad (CVC)
 
+Referencia operativa: [calendario_cvc_2025.md](./calendario_cvc_2025.md)
+
 1. Preparación:
     * El equipo de la EV prepara un `Informe de CVC` conciso y basado en evidencia (progreso de OKRs, salud del sistema, aprendizaje).
 2. Ejecución (Reunión de 60 min):
@@ -1771,7 +2203,7 @@ Artefacto Asociado: `catalogo.md`
 Propósito: Maximizar el flujo de valor usando Xanpan.
 Artefacto Asociado: `catalogo.md`
 
-#### Protocolos de Flujo:
+#### Protocolos de Flujo
 
 1. Diseño del `Tablero de Flujo (Xanpan)`:
     * Definir las columnas que modelan el flujo de trabajo.
@@ -1824,5 +2256,13 @@ Escenario: Un proceso que requiere la colaboración de múltiples entidades.
 2. Negociación: Orquestar la definición de `Contratos Conversacionales` entre las EVs para reemplazar los traspasos informales por acuerdos de servicio explícitos.
 3. Orquestación: Diseñar una `EV Orquestadora` ligera cuyo único propósito es gestionar el flujo de valor de punta a punta, llamando a los servicios de las otras EVs según los contratos.
 
-```
+## CAPÍTULO 5: EL META-PROTOCOLO — EVOLUCIÓN DEL MARCO
 
+> ASTA-Kore se aplica a sí mismo. Este capítulo define el mecanismo formal y recurrente para la auditoría y adaptación del propio marco.
+
+### 5.1. Protocolo de Evolución del Marco (PEM)
+
+* Propósito: Asegurar que el marco ASTA-Kore se mantenga parsimonioso, coherente y alineado con las necesidades del terreno a lo largo del tiempo.
+* Referencia Detallada: `protocolo_evolucion.md`
+
+```

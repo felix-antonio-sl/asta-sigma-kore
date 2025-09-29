@@ -11,7 +11,7 @@ Audiencia: Arquitectos de Soluciones, Ingenieros de Software, Ingenieros de Auto
 Relación con KORE:
 
 * Guías de Decisión Relacionadas: `gd_arquitectura_nexus.md`, `gd_automatizacion_proceso.md`
-* Contrato Nexus Implementado: `Contrato de Proceso` — Especificación: [../contratos/contrato_proceso.md](../contratos/contrato_proceso.md) — Plantilla: [../contratos/contrato_proceso.yml](../contratos/contrato_proceso.yml)
+* Contrato Nexus Implementado: `Contrato de Proceso` — [Especificación](../contratos/contrato_proceso.md) · [Plantilla](../contratos/contrato_proceso.yml)
 
 ---
 

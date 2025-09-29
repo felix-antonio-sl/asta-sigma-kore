@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ASTA‑Kore · Brochure — Luz y Trazo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ——————————————————— Tokens (Ruta: Luz y Trazo) ——————————————————— */
+      :root {
+        --paper: #ffffff;
+        --ink: #0e1b4d;
+        --muted: #4b5563;
+        --line: #e6eaf2;
+        --brand: #6366f1;
+        --brand-2: #06b6d4;
+        --accent: #06b6d4;
+        --surface: #f7f9ff;
+        --shadow: 0 10px 30px rgba(10, 18, 40, 0.1);
+        --radius: 20px;
+        --gap: 24px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        background: radial-gradient(
+            1200px 800px at 15% -10%,
+            #eef2ff 0%,
+            transparent 55%
+          ),
+          radial-gradient(900px 700px at 120% 20%, #e6fffb 0%, transparent 55%),
+          var(--surface);
+        color: var(--ink);
+        font: 16px/1.55 Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+      h1,
+      h2 {
+        font-family: "Space Grotesk", Inter, system-ui;
+      }
+      h1 {
+        font-size: clamp(40px, 6vw, 88px);
+        letter-spacing: -0.02em;
+        line-height: 1.05;
+        margin: 0 0 0.6rem;
+      }
+      h2 {
+        font-size: clamp(26px, 3vw, 40px);
+        margin: 0 0 0.6rem;
+      }
+      h3 {
+        font-size: 18px;
+        margin: 0.2rem 0 0.4rem;
+        color: var(--muted);
+      }
+      p {
+        margin: 0.55rem 0;
+      }
+      .lead {
+        font-size: 20px;
+      }
+      .muted {
+        color: var(--muted);
+      }
+      .eyebrow {
+        font: 700 0.85rem/1 Inter;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--brand);
+      }
+
+      /* ——————————————————— Layout ——————————————————— */
+      .page {
+        max-width: 1000px;
+        margin: 28px auto;
+        background: var(--paper);
+        border-radius: var(--radius);
+        padding: 72px;
+        box-shadow: var(--shadow);
+        position: relative;
+        overflow: hidden;
+      }
+      .page + .page {
+        margin-top: 40px;
+      }
+      .brandbar {
+        position: absolute;
+        inset: auto 0 0 0;
+        height: 6px;
+        background: linear-gradient(90deg, var(--brand), var(--brand-2));
+      }
+      .pageno {
+        position: absolute;
+        right: 32px;
+        bottom: 16px;
+        font-size: 0.82rem;
+        color: var(--muted);
+      }
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--gap);
+      }
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--gap);
+      }
+      .split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--gap);
+      }
+
+      /* ——————————————————— Cover ——————————————————— */
+      .cover {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: var(--gap);
+        min-height: 540px;
+      }
+      .hero {
+        position: relative;
+        border-left: 6px solid var(--accent);
+        border: 1px solid var(--line);
+        background: linear-gradient(180deg, #ffffff, #fbfdff);
+        border-radius: 18px;
+        padding: 28px;
+        overflow: hidden;
+      }
+      .logo {
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        font-size: 0.95rem;
+        color: var(--brand);
+        text-transform: uppercase;
+      }
+      .subtitle {
+        background: linear-gradient(90deg, var(--brand), var(--accent));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font-weight: 800;
+      }
+      .badge {
+        position: absolute;
+        top: 18px;
+        right: 18px;
+        background: #0b1220;
+        color: #fff;
+        padding: 0.5rem 0.75rem;
+        border-radius: 10px;
+        font-size: 0.8rem;
+        opacity: 0.92;
+      }
+      .svg-wrap {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+      }
+
+      /* ——————————————————— Lists ——————————————————— */
+      ul {
+        padding-left: 1.2rem;
+        margin: 0.25rem 0 0;
+      }
+      ul li {
+        position: relative;
+        margin: 0.5rem 0;
+        padding-left: 1.6rem;
+      }
+      ul li::before {
+        content: "";
+        position: absolute;
+        left: 0.2rem;
+        top: 0.6rem;
+        width: 0.55rem;
+        height: 0.55rem;
+        border-radius: 50%;
+        background: var(--accent);
+      }
+
+      /* ——————————————————— Cards ——————————————————— */
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 18px;
+        background: linear-gradient(180deg, #ffffff, #f8fbff);
+      }
+      .card h3 {
+        color: var(--ink);
+      }
+      .icon {
+        width: 28px;
+        height: 28px;
+        border-radius: 8px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 8px;
+        background: linear-gradient(135deg, var(--brand), var(--brand-2));
+        color: #fff;
+        font-weight: 800;
+      }
+
+      /* ——————————————————— CTA ——————————————————— */
+      .cta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        border: 1px solid var(--line);
+        background: linear-gradient(90deg, #eef2ff, #f8ffff);
+        border-radius: 16px;
+        padding: 18px 20px;
+      }
+      .btn {
+        appearance: none;
+        border: 0;
+        border-radius: 14px;
+        padding: 1rem 1.25rem;
+        font-weight: 800;
+        letter-spacing: 0.02em;
+        cursor: pointer;
+        background: linear-gradient(90deg, var(--brand), var(--brand-2));
+        color: #fff;
+      }
+      .btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+      }
+      .btn.secondary {
+        background: transparent;
+        color: var(--brand);
+        border: 1px solid var(--brand);
+      }
+
+      /* ——————————————————— Form ——————————————————— */
+      form {
+        display: grid;
+        grid-template-columns: 1fr 1fr auto;
+        gap: 12px;
+      }
+      input {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 0.9rem 0.9rem;
+        font: 600 1rem Inter;
+        color: var(--ink);
+        background: #fff;
+      }
+      input::placeholder {
+        color: #98a2b3;
+      }
+
+      /* ——————————————————— Responsive ——————————————————— */
+      @media (max-width: 980px) {
+        .page {
+          padding: 32px;
+        }
+        .cover {
+          grid-template-columns: 1fr;
+        }
+        .grid-2,
+        .grid-3,
+        .split {
+          grid-template-columns: 1fr;
+        }
+        form {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ——————————————————— Dark mode opcional ——————————————————— */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --paper: #0b1220;
+          --ink: #f6f7fb;
+          --muted: #aab1bf;
+          --line: #1b2233;
+          --surface: #091226;
+        }
+        .page {
+          background: var(--paper);
+        }
+        .card {
+          background: #0f172a;
+        }
+        .badge {
+          background: #111827;
+        }
+        input {
+          background: #0f172a;
+          color: #e5e7eb;
+        }
+      }
+
+      /* ——————————————————— Motion reduce ——————————————————— */
+      @media (prefers-reduced-motion: no-preference) {
+        .fade-in {
+          opacity: 0;
+          transform: translateY(8px);
+          animation: fade 0.6s ease 0.05s forwards;
+        }
+        @keyframes fade {
+          to {
+            opacity: 1;
+            transform: none;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ———————————————— PÁGINA 1: PORTADA ———————————————— -->
+    <section class="page" aria-label="Portada">
+      <div class="cover">
+        <div class="hero fade-in">
+          <div class="badge">Brochure</div>
+          <div class="logo">ASTA‑Kore</div>
+          <h1>Menos fricción.<br />Más decisión.</h1>
+          <p class="subtitle">Sistema Operativo para la Acción Coherente</p>
+          <div class="svg-wrap" aria-hidden="true">
+            <!-- Gráfica abstracta: red coherente de nodos -->
+            <svg
+              width="100%"
+              height="100%"
+              viewBox="0 0 1200 700"
+              preserveAspectRatio="xMidYMid slice"
+              role="img"
+              aria-label="Red de nodos conectados"
+            >
+              <defs>
+                <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+                  <stop offset="0" stop-color="#6366f1" />
+                  <stop offset="1" stop-color="#06b6d4" />
+                </linearGradient>
+                <radialGradient id="dot" cx="50%" cy="50%" r="50%">
+                  <stop offset="0" stop-color="#ffffff" />
+                  <stop offset="1" stop-color="#c7d2fe" />
+                </radialGradient>
+                <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="3" result="b" />
+                </filter>
+              </defs>
+              <g opacity=".75">
+                <g stroke="url(#g)" stroke-width="1.5" opacity=".6">
+                  <path d="M80,580 C300,520 200,420 420,380" />
+                  <path d="M420,380 C600,340 640,260 820,240" />
+                  <path d="M820,240 C980,220 1020,320 1100,360" />
+                  <path d="M300,160 C520,200 620,180 820,240" />
+                  <path d="M200,320 C340,340 380,360 420,380" />
+                  <path d="M540,520 C640,420 780,360 960,420" />
+                  <path d="M540,520 C480,480 360,520 280,560" />
+                </g>
+                <g>
+                  <circle
+                    cx="80"
+                    cy="580"
+                    r="7"
+                    fill="url(#dot)"
+                    stroke="#6366f1"
+                  />
+                  <circle
+                    cx="300"
+                    cy="160"
+                    r="9"
+                    fill="url(#dot)"
+                    stroke="#6366f1"
+                  />
+                  <circle
+                    cx="200"
+                    cy="320"
+                    r="8"
+                    fill="url(#dot)"
+                    stroke="#6366f1"
+                  />
+                  <circle
+                    cx="420"
+                    cy="380"
+                    r="11"
+                    fill="url(#dot)"
+                    stroke="#6366f1"
+                  />
+                  <circle
+                    cx="540"
+                    cy="520"
+                    r="10"
+                    fill="url(#dot)"
+                    stroke="#6366f1"
+                  />
+                  <circle
+                    cx="820"
+                    cy="240"
+                    r="12"
+                    fill="url(#dot)"
+                    stroke="#6366f1"
+                  />
+                  <circle
+                    cx="960"
+                    cy="420"
+                    r="9"
+                    fill="url(#dot)"
+                    stroke="#6366f1"
+                  />
+                  <circle
+                    cx="1100"
+                    cy="360"
+                    r="8"
+                    fill="url(#dot)"
+                    stroke="#6366f1"
+                  />
+                </g>
+                <g filter="url(#soft)" opacity=".35">
+                  <ellipse cx="820" cy="240" rx="220" ry="90" fill="#93c5fd" />
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="fade-in" style="animation-delay: 0.12s">
+          <div class="card" style="height: 100%">
+            <div class="eyebrow">Promesa</div>
+            <h2>
+              Conecte estrategia y ejecución con un lenguaje común y ciclos de
+              evidencia.
+            </h2>
+            <p class="lead muted">
+              Instale coherencia operacional en semanas, no años.
+            </p>
+            <div
+              style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px"
+            >
+              <span class="icon" aria-hidden="true">Σ</span>
+              <span class="icon" aria-hidden="true">Δ</span>
+              <span class="icon" aria-hidden="true">⌁</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="brandbar"></div>
+      <div class="pageno">1</div>
+    </section>
+
+    <!-- ———————————————— PÁGINA 2: EL DOLOR ———————————————— -->
+    <section class="page" aria-label="El Dolor">
+      <div class="eyebrow">Problema</div>
+      <h2>Si todo es urgente, nada avanza.</h2>
+      <ul>
+        <li>
+          <strong>Brecha estrategia‑realidad:</strong> planes brillantes,
+          ejecución dislocada.
+        </li>
+        <li>
+          <strong>Gobernanza lenta:</strong> más comités que decisiones útiles.
+        </li>
+        <li>
+          <strong>Legacy como ancla:</strong> miedo a tocar lo crítico, deuda
+          que crece.
+        </li>
+      </ul>
+      <div class="card" style="margin-top: 16px">
+        <p class="lead">
+          <strong>Crisis de Complejidad:</strong> documentar se volvió más
+          importante que mejorar. ASTA‑Kore revierte esa lógica.
+        </p>
+      </div>
+      <div class="brandbar"></div>
+      <div class="pageno">2</div>
+    </section>
+
+    <!-- ———————————————— PÁGINA 3: LA SOLUCIÓN ———————————————— -->
+    <section class="page" aria-label="La Solución">
+      <div class="eyebrow">Solución</div>
+      <h2>ASTA‑Kore. Menos mapa, más brújula.</h2>
+      <p>
+        Un <strong>sistema operativo parsimonioso</strong> para decidir antes y
+        mejor. Pregunta central:
+        <strong
+          >¿Qué es lo mínimo que necesitamos saber para tomar la próxima
+          decisión coherente, más rápido?</strong
+        >
+      </p>
+      <div class="card" style="margin-top: 14px">
+        <p class="lead">
+          <strong>De silos a ecosistema:</strong> lenguaje compartido + ritmo de
+          aprendizaje verificable.
+        </p>
+      </div>
+      <div class="brandbar"></div>
+      <div class="pageno">3</div>
+    </section>
+
+    <!-- ———————————————— PÁGINA 4: PILARES ———————————————— -->
+    <section class="page" aria-label="Pilares">
+      <div class="eyebrow">Cómo funciona</div>
+      <h2>3 palancas para mover el sistema</h2>
+      <div class="grid-3" style="margin-top: 12px">
+        <div class="card">
+          <div style="display: flex; align-items: center">
+            <span class="icon" aria-hidden="true">1</span>
+            <h3>Modelo mental compartido</h3>
+          </div>
+          <p>
+            Una página tipo “mapa de metro” (Matriz Σ/Δ) para alinear de CEO a
+            ingeniería.
+          </p>
+          <p>
+            <strong>Qué cambia:</strong> decisiones con visión completa de
+            impacto.
+          </p>
+        </div>
+        <div class="card">
+          <div style="display: flex; align-items: center">
+            <span class="icon" aria-hidden="true">2</span>
+            <h3>Rituales de alto valor</h3>
+          </div>
+          <p>
+            Ciclo trimestral <strong>CVC</strong> basado en evidencia. Software
+            funcionando y métricas.
+          </p>
+          <p>
+            <strong>Qué cambia:</strong> inversión dinámica en lo que demuestra
+            impacto.
+          </p>
+        </div>
+        <div class="card">
+          <div style="display: flex; align-items: center">
+            <span class="icon" aria-hidden="true">3</span>
+            <h3>Contratos y carreteras</h3>
+          </div>
+          <p>
+            Acuerdos explícitos y plataforma <strong>Nexus</strong> que
+            automatiza calidad, seguridad y cumplimiento.
+          </p>
+          <p>
+            <strong>Qué cambia:</strong> equipos autónomos con guardrails
+            comunes.
+          </p>
+        </div>
+      </div>
+      <div class="brandbar"></div>
+      <div class="pageno">4</div>
+    </section>
+
+    <!-- ———————————————— PÁGINA 5: RESULTADO ———————————————— -->
+    <section class="page" aria-label="Resultado">
+      <div class="eyebrow">Valor</div>
+      <h2>Así se siente operar con ASTA‑Kore</h2>
+      <div class="split" style="margin-top: 8px">
+        <div class="card">
+          <h3>De</h3>
+          <ul>
+            <li>Parálisis por análisis y sobre‑documentación.</li>
+            <li>Proyectos eternos con equipos temporales.</li>
+            <li>Silos organizacionales y tecnológicos.</li>
+            <li>Gobernanza lenta basada en opiniones.</li>
+            <li>Deuda técnica y arquitectónica incontrolada.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>A</h3>
+          <ul>
+            <li>Decisiones rápidas con la mínima información necesaria.</li>
+            <li>
+              Productos vivos (<code>Entidades de Valor</code>) con equipos
+              estables.
+            </li>
+            <li>Ecosistema coherente de servicios interoperables.</li>
+            <li>Gobernanza ágil basada en evidencia y ciclos cortos.</li>
+            <li>Gestión explícita de arquitectura y conocimiento.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card" style="margin-top: 14px">
+        <p class="lead">
+          <strong>No es una transformación de TI.</strong> Es una actualización
+          del sistema operativo del negocio.
+        </p>
+      </div>
+      <div class="brandbar"></div>
+      <div class="pageno">5</div>
+    </section>
+
+    <!-- ———————————————— PÁGINA 6: CTA ———————————————— -->
+    <section class="page" aria-label="Llamada a la acción">
+      <div class="eyebrow">Prueba en 30 días</div>
+      <h2>30 días para probarlo en producción</h2>
+      <div class="grid-3" style="margin-top: 10px">
+        <div class="card">
+          <h3>1 · Diagnóstico (1 semana)</h3>
+          <p>
+            Elegimos una <code>Entidad de Valor</code> crítica y definimos el
+            cuello de botella.
+          </p>
+        </div>
+        <div class="card">
+          <h3>2 · Modelado (1 semana)</h3>
+          <p>
+            Taller con <strong>Canvas de EV</strong> para una anatomía
+            compartida y accionable.
+          </p>
+        </div>
+        <div class="card">
+          <h3>3 · Hipótesis de Valor (2 semanas)</h3>
+          <p>
+            Formulación de <strong>OKR trimestral</strong> y plan mínimo para
+            impacto medible en el próximo CVC.
+          </p>
+        </div>
+      </div>
+
+      <div class="cta" style="margin-top: 18px">
+        <div>
+          <h3>Hablemos 30 minutos</h3>
+          <p class="small muted">
+            Evaluemos encaje, métrica a mover y primer piloto.
+          </p>
+        </div>
+        <div>
+          <a href="#contacto" class="btn">Solicitar sesión</a>
+        </div>
+      </div>
+
+      <div id="contacto" style="margin-top: 18px" class="card">
+        <form aria-label="Formulario de contacto">
+          <input type="text" placeholder="Nombre" aria-label="Nombre" />
+          <input type="email" placeholder="Email" aria-label="Email" />
+          <button class="btn" type="button">Enviar</button>
+        </form>
+        <p class="small muted" style="margin-top: 8px">
+          También puede escribirnos a <strong>[email@empresa.cl]</strong> o
+          visitar <strong>[www.empresa.cl]</strong>.
+        </p>
+      </div>
+
+      <div class="brandbar"></div>
+      <div class="pageno">6</div>
+    </section>
+  </body>
+</html>
