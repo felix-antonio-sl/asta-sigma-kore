@@ -1,0 +1,59 @@
+# Contrato de Proceso - Especificación Canónica v1.0
+# Este archivo es la fuente única de verdad para la gobernanza de un flujo de valor.
+# Debe ser versionado junto al código de la Entidad de Valor que lo implementa.
+
+id: "dominio.nombre_proceso"
+owner: "nombre-del-equipo"
+version: "1.0.0"
+purpose: "Descripción concisa del valor de negocio que entrega este proceso."
+
+# Acuerdos de Nivel de Servicio (SLA) que el proceso garantiza.
+sla:
+  # El percentil 95 del tiempo (en minutos) que tarda un caso en completarse.
+  cycle_time_p95_minutes: 180
+  # El porcentaje de ejecuciones que deben terminar exitosamente sin intervención manual.
+  success_rate_target_pct: 99.5
+
+# Puntos de intervención Humano-en-el-Bucle (Human-in-the-Loop). Opcional.
+hitl:
+  checkpoints:
+    - name: "revision_casos_excepcionales"
+      description: "Revisión manual para casos que no cumplen las reglas automáticas."
+    - name: "aprobacion_monto_superior"
+      description: "Aprobación por un supervisor para montos que exceden el umbral automático."
+  escalation_rules:
+    - condition: "monto_subsidio > 2000"
+      checkpoint: "aprobacion_monto_superior"
+    - condition: "score_riesgo > 0.8"
+      checkpoint: "revision_casos_excepcionales"
+
+# Lógica de compensación para mantener la consistencia (Patrón Saga). Opcional.
+saga:
+  steps:
+    - name: "validar_postulante"
+      invoke: "servicio_validacion.validar"
+      # No hay compensación para una validación de solo lectura.
+    - name: "reservar_fondos"
+      invoke: "servicio_financiero.reservar"
+      compensate: "servicio_financiero.liberar"
+    - name: "notificar_aprobacion"
+      invoke: "servicio_notificaciones.enviar"
+      compensate: "servicio_notificaciones.retractar"
+
+# Eventos de negocio que el proceso emite y consume.
+events:
+  emitted:
+    - "proceso.iniciado"
+    - "proceso.completado"
+    - "proceso.fallido"
+  consumed:
+    - "postulacion.recibida"
+    - "validacion_identidad.completada"
+
+# Indicadores de Nivel de Servicio (SLIs) clave para monitorear la salud.
+observability:
+  slis:
+    - "success_rate"
+    - "latency_p95"
+    - "dead_letter_rate"
+    - "escalation_rate"

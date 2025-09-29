@@ -93,6 +93,8 @@ Artefacto Asociado: `catalogo.md`
 
 #### Protocolo del Ritual: Ciclo de Valor y Capacidad (CVC)
 
+Referencia operativa: [calendario_cvc_2025.md](./calendario_cvc_2025.md)
+
 1. Preparación:
     * El equipo de la EV prepara un `Informe de CVC` conciso y basado en evidencia (progreso de OKRs, salud del sistema, aprendizaje).
 2. Ejecución (Reunión de 60 min):

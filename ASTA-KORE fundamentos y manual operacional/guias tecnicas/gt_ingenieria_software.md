@@ -10,8 +10,8 @@ Audiencia: Arquitectos de Soluciones, Ingenieros de Software, Ingenieros de Auto
 
 Relación con KORE:
 
-* Guías de Decisión Relacionadas: `gd_arquitectura_aplicacion.md`, `gd_automatizacion_proceso.md`
-* Contrato Nexus Implementado: `Contrato de Proceso`
+* Guías de Decisión Relacionadas: `gd_arquitectura_nexus.md`, `gd_automatizacion_proceso.md`
+* Contrato Nexus Implementado: `Contrato de Proceso` — Especificación: [../contratos/contrato_proceso.md](../contratos/contrato_proceso.md) — Plantilla: [../contratos/contrato_proceso.yml](../contratos/contrato_proceso.yml)
 
 ---
 
@@ -74,6 +74,8 @@ Una solución de BPA es un sistema compuesto que orquesta diferentes tipos de `E
 ### 3.3. El `Contrato de Proceso`
 
 Este `Contrato Nexus` formaliza los compromisos de un proceso automatizado. Debe ser un artefacto versionado que acompaña al modelo BPMN.
+
+Referencia: [Especificación](../contratos/contrato_proceso.md) · [Plantilla YAML](../contratos/contrato_proceso.yml)
 
 Atributos Clave:
 *   `sla`: Objetivos de Nivel de Servicio (ej. `cycle_time_p95_minutes: 180`).

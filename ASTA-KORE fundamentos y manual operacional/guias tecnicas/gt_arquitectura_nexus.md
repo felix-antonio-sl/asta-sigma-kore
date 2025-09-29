@@ -50,7 +50,7 @@ La Plataforma Nexus define cuatro tipos de `Contratos` técnicos que son la impl
 * `Contrato de Proceso`:
   * Gobierna: Un `Flujo de Valor` automatizado.
   * Asegura: SLAs de rendimiento, puntos de HITL y lógica de compensación.
-  * Referencia: `gt_ingenieria_software.md`
+  * Referencia: `gt_ingenieria_software.md` — Especificación: [../contratos/contrato_proceso.md](../contratos/contrato_proceso.md) · Plantilla: [../contratos/contrato_proceso.yml](../contratos/contrato_proceso.yml)
 
 * `Contrato de Agente`:
   * Gobierna: Un `Sistema Cognitivo` (Agente de IA).
