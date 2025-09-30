@@ -75,7 +75,7 @@ Artefacto Asociado: `catalogo.md`
 Propósito: Formular una `Hipótesis de Valor` para el trimestre y un plan para validarla.
 Artefacto Asociado: `catalogo.md`
 
-Secuencia de Protocolos:
+#### Secuencia de Protocolos
 
 1. Formulación de `OKRs Trimestrales`:
     * Principio OKR-First: El backlog se subordina a los OKRs. Primero se define el resultado (KR), luego se crea el trabajo.
@@ -152,33 +152,53 @@ Artefacto Asociado: `catalogo.md`
 3. Inmutabilidad:
     * Un ADR publicado no se edita. Si la decisión cambia, se crea un nuevo ADR que reemplaza al antiguo, creando un historial trazable.
 
-## CAPÍTULO 4: PROTOCOLOS DE INSTANCIACIÓN AVANZADA
+## CAPÍTULO 4: Libro de Recetas: Protocolos para Escenarios Complejos
 
-> "Recetas" que orquestan los protocolos básicos para abordar escenarios de transformación complejos.
+> "Recetas" que orquestan los protocolos básicos para abordar escenarios de transformación complejos del mundo real.
 
-### 4.1. Protocolo "Génesis" (Para Creación de Valor)
+### 4.1. Protocolo "Génesis" (Para Creación de Valor desde Cero)
 
-Escenario: Una nueva idea de servicio digital.
+Escenario: Una nueva idea de servicio digital o una hipótesis de valor que no encaja en una `EV` existente.
 
-1. Ignición: Conectar la idea a un `OKR Anual` y formar un Equipo Mínimo Viable (MVT) para validar la hipótesis de valor.
-2. Validación: El MVT ejecuta un ciclo rápido de `Canvas de EV` y `Mapeo de Historias` para definir y construir un `Esqueleto Andante`.
-3. Escalado: El MVT presenta su aprendizaje y demo en un `CVC`. Si la evidencia es positiva, la gobernanza aprueba la inversión para escalar la iniciativa a una EV formal.
+1. Fase de Ignición:
+    * Se conecta la idea a un `OKR Anual` estratégico para asegurar el alineamiento.
+    * Se forma un Equipo Mínimo Viable (MVT), un equipo pequeño y multidisciplinario, cuya única misión es validar o invalidar la hipótesis de valor en el menor tiempo posible.
 
-### 4.2. Protocolo "Metamorfosis" (Para Modernización de Legacy)
+2. Fase de Validación:
+    * El MVT ejecuta un ciclo rápido de `Canvas de EV` (para modelar la hipótesis) y `Mapeo de Historias` (para definir el trabajo).
+    * El objetivo es construir un `Esqueleto Andante`: la mínima funcionalidad que permite a un usuario real completar el viaje de punta a punta y así obtener aprendizaje validado.
 
-Escenario: Un sistema monolítico crítico y obsoleto.
+3. Fase de Escalado:
+    * El MVT presenta su aprendizaje, métricas y demo en un `CVC`.
+    * Si la evidencia es positiva, la gobernanza aprueba la inversión para escalar la iniciativa, convirtiendo al MVT en una `EV` formal con un equipo estable y financiación recurrente.
 
-1. Arqueología: Usar el `Canvas de EV` para modelar el sistema legacy "As-Is" y entender su rol actual.
-2. Estrangulamiento: Identificar la primera capacidad a extraer. Definir su nueva interfaz con un `Contrato de Servicio (API)`. Formular un `OKR Trimestral` para la migración del primer consumidor.
-3. Coexistencia: Construir el nuevo microservicio. Redirigir el flujo de valor hacia él. Repetir el ciclo, "estrangulando" gradualmente el legacy.
+### 4.2. Protocolo "Metamorfosis" (Para Modernización de Sistemas Legacy)
 
-### 4.3. Protocolo "Simbiosis" (Para Ecosistemas)
+Escenario: Un sistema monolítico crítico, frágil y obsoleto que frena la innovación.
 
-Escenario: Un proceso que requiere la colaboración de múltiples entidades.
+1. Fase de Arqueología:
+    * Se utiliza el `Canvas de EV` para modelar el sistema legacy "As-Is". El objetivo no es documentarlo exhaustivamente, sino entender su propósito, sus actores y sus fronteras actuales.
 
-1. Mapeo Federado: Modelar a cada actor del ecosistema como una `EV` independiente usando el `Canvas de EV`.
-2. Negociación: Orquestar la definición de `Contratos Conversacionales` entre las EVs para reemplazar los traspasos informales por acuerdos de servicio explícitos.
-3. Orquestación: Diseñar una `EV Orquestadora` ligera cuyo único propósito es gestionar el flujo de valor de punta a punta, llamando a los servicios de las otras EVs según los contratos.
+2. Fase de Estrangulamiento (Strangler Fig Pattern):
+    * Se identifica la primera capacidad de negocio a extraer del monolito.
+    * Se define la nueva interfaz de esta capacidad a través de un `Contrato de Servicio (API)` claro.
+    * Se formula un `OKR Trimestral` para construir el nuevo microservicio y migrar al primer consumidor para que lo utilice, desviando el tráfico del antiguo sistema.
+
+3. Fase de Coexistencia y Migración:
+    * El nuevo servicio y el monolito operan en paralelo. Se repite el ciclo, extrayendo capacidad por capacidad, "estrangulando" gradualmente el sistema legacy hasta que pueda ser desmantelado de forma segura.
+
+### 4.3. Protocolo "Simbiosis" (Para Orquestación de Ecosistemas)
+
+Escenario: Un proceso de negocio de alto valor que requiere la colaboración de múltiples entidades, sistemas o departamentos, cada uno con sus propias prioridades.
+
+1. Fase de Mapeo Federado:
+    * Se modela a cada actor clave del ecosistema como una `EV` independiente, utilizando el `Canvas de EV` para clarificar su rol, propósito y servicios.
+
+2. Fase de Negociación:
+    * Se orquesta la definición de `Contratos Conversacionales` explícitos entre las EVs. Esto reemplaza los traspasos informales, las reuniones y los correos electrónicos por acuerdos de servicio predecibles y automatizables (ej. APIs).
+
+3. Fase de Orquestación:
+    * Se diseña una `EV Orquestadora` ligera. Su único propósito es gestionar el flujo de valor de punta a punta, llamando a los servicios de las otras EVs según lo definido en los contratos. Esta EV no contiene lógica de negocio, solo la lógica del flujo.
 
 ## CAPÍTULO 5: EL META-PROTOCOLO — EVOLUCIÓN DEL MARCO
 
@@ -188,3 +208,44 @@ Escenario: Un proceso que requiere la colaboración de múltiples entidades.
 
 * Propósito: Asegurar que el marco ASTA-Kore se mantenga parsimonioso, coherente y alineado con las necesidades del terreno a lo largo del tiempo.
 * Referencia Detallada: `protocolo_evolucion.md`
+
+### 5.2. Principios de Adopción y Cultura
+
+> El marco es un sistema sociotécnico. Su éxito depende tanto de la rigurosidad de sus protocolos como del entorno cultural en el que se implementa.
+
+* Creación de Seguridad Psicológica: El rol del liderazgo es crear un entorno donde los equipos puedan presentar malas noticias (ej. un KR en rojo) sin temor a represalias. Un KR en rojo no es un fracaso, es un dato valioso que gatilla una conversación estratégica sobre si la hipótesis era incorrecta o si la táctica debe cambiar. Sin seguridad psicológica, las métricas se "maquillan" y el aprendizaje se detiene.
+
+* Gestión Explícita de la Capacidad (Objetivo Cero): Los equipos deben poder dedicar un porcentaje explícito de su capacidad (ej. 20%) a actividades no directamente ligadas a los OKRs del trimestre, como la reducción de deuda técnica, la exploración de nuevas tecnologías o la mejora de sus herramientas (el "Objetivo Cero"). Esto asegura la sostenibilidad a largo plazo y previene el agotamiento del sistema.
+
+* Desvinculación de OKRs de la Compensación: Los OKRs son una herramienta de alineamiento y aprendizaje, no de evaluación de desempeño individual. Vincularlos a bonos o promociones incentiva la creación de objetivos poco ambiciosos ("sandbagging") y el miedo a fallar, destruyendo su poder como motor de innovación.
+
+---
+
+## CAPÍTULO 6: Guía de Campo: Heurísticas y Anti-Patrones
+
+> Conocimiento práctico destilado para acelerar la curva de aprendizaje y evitar errores comunes en la aplicación del marco.
+
+### Guía 6.1: Heurísticas para OKRs
+
+* Foco en Outcomes, no Outputs: Un buen KR mide un cambio en el comportamiento del usuario o en el desempeño del negocio (ej. "Reducir el tiempo de postulación de 15 a 5 minutos"), no la entrega de una funcionalidad (ej. "Entregar el nuevo formulario de postulación").
+* Aspiracionales vs. Utilitarios: Diferenciar entre OKRs "lunares" (aspiracionales, donde llegar al 70% es un gran éxito) y OKRs "terrenales" (utilitarios, que se espera cumplir al 100%, como un SLO de disponibilidad).
+* Menos es Más: Un equipo no debería tener más de 1-2 Objetivos y 2-4 Resultados Clave por trimestre. El exceso de OKRs diluye el foco.
+* Anti-Patrón: El KR como Lista de Tareas: Si tus KRs son una lista de funcionalidades a entregar, no son KRs, son un backlog. Vuelve a preguntar: "¿Qué resultado de negocio esperamos lograr al entregar estas funcionalidades?".
+
+### Guía 6.2: Heurísticas para Historias de Usuario
+
+* Pequeñas y con Beneficio: Una buena historia debe ser lo suficientemente pequeña para ser completada en pocos días y debe entregar un incremento de valor observable, por mínimo que sea.
+* INVEST: Usar el acrónimo INVEST como checklist: Independiente, Negociable, Valiosa, Estimable, Pequeña (Small), Testeable.
+* Anti-Patrón: La Historia Técnica sin Valor de Usuario: Evitar historias como "Crear la tabla de usuarios". En su lugar, enmarcarla en valor: "Como nuevo usuario, puedo registrarme en el sistema para acceder a sus funcionalidades", aunque la primera implementación solo guarde el email en una tabla simple.
+
+### Guía 6.3: Heurísticas para el Flujo (Xanpan)
+
+* Gestionar el Flujo, no las Personas: El tablero y los límites WIP gestionan el flujo de trabajo. El objetivo del equipo es "desatascar" el trabajo de derecha a izquierda, no mantener a cada persona "ocupada".
+* El Dolor de los Límites WIP es una Señal: Si un límite WIP se excede constantemente, no es una señal para aumentar el límite, sino para investigar el cuello de botella sistémico que está causando la acumulación.
+* Anti-Patrón: El Tablero como "Cementerio de Tickets": Si los ítems entran al tablero pero rara vez salen, o si las columnas de "En Progreso" crecen indefinidamente, el sistema no está funcionando. El foco debe ser terminar trabajo, no empezar trabajo nuevo.
+
+### Guía 6.4: Heurísticas para Arquitectura y Deuda Técnica
+
+* La Última Milla Responsable: La decisión arquitectónica más importante es dónde trazar las fronteras entre sistemas (`Contratos`). Una buena frontera permite que los equipos trabajen de forma autónoma.
+* La Deuda Técnica es como un Préstamo: No toda la deuda es mala. A veces, tomar un atajo consciente para validar una hipótesis rápido es una buena decisión de negocio. Lo importante es que el "préstamo" sea explícito y se planifique su "pago" (refactorización) antes de que los "intereses" (costo del cambio) se vuelvan impagables.
+* Anti-Patrón: El ADR como Burocracia: Un ADR no es para documentar cada decisión trivial. Se usa para decisiones significativas: aquellas que son costosas de revertir, que tienen un impacto estructural o que fueron el resultado de un debate con múltiples alternativas viables. Su propósito es combatir la amnesia organizacional, no crear burocracia.

@@ -105,6 +105,8 @@ Objetivo Propuesto: [El nuevo Objetivo para el próximo Q]
 | KR 2: [Descripción del nuevo KR] | Creemos que [acción] impactará en [métrica] porque [razonamiento]. |
 ```
 
+## A.2. Plantillas de Nivel Táctico (Σ-T / Δ-T)
+
 ### Plantilla A.2.1: Canvas de Entidad de Valor (EV) (Σ-T)
 
 Instrucciones: Este no es un documento para ser rellenado en solitario. Utilice este canvas en una sesión de taller colaborativo (físico o digital) con todos los miembros del equipo de la EV y stakeholders clave. Use post-its y marcadores. El objetivo es generar diálogo, visualizar el sistema como un todo y crear un entendimiento compartido. El resultado es un mapa vivo, no un documento estático.
@@ -221,14 +223,16 @@ Ejemplo: "Decidimos adoptar la opción 3: integraremos un servicio de identidad 
 *¿Cuáles son los resultados positivos y los compromisos o riesgos que estamos aceptando?*
 
 ### Positivas
-*   Desacoplamiento: La autenticación se convierte en un servicio centralizado.
-*   Seguridad Mejorada: Delegamos la gestión de credenciales a un sistema especializado.
-*   Experiencia de Usuario (SSO): Habilita el Single Sign-On.
 
-### Negativas / Compromisos
-*   Dependencia Externa: Introducimos una dependencia crítica en el proveedor de identidad.
-*   Curva de Aprendizaje: El equipo necesita capacitarse en OIDC.
-*   Costo de Migración: Requerirá un esfuerzo para migrar las aplicaciones existentes.
+*   Centraliza la gestión de identidades, mejorando la seguridad y la experiencia del usuario.
+*   Permite la integración futura de nuevos servicios de forma rápida y estandarizada.
+*   Reduce la carga de mantenimiento de lógica de autenticación en cada aplicación.
+
+### Negativas
+
+*   Introduce una nueva dependencia crítica en el proveedor de identidad.
+*   Requiere una migración coordinada de todos los servicios existentes.
+*   Aumenta la complejidad inicial del flujo de autenticación.
 ```
 
 ## A.4. Checklists de Contratos Conversacionales
