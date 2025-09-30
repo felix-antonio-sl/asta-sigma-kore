@@ -1,0 +1,30 @@
+# Contrato de Agente - Plantilla v1.0
+id: "dominio.nombre_agente"
+owner: "nombre-del-equipo"
+version: "1.0.0"
+purpose: "Descripción de la función principal del agente y el valor que aporta."
+
+# Capacidades (Tools & Knowledge)
+capabilities:
+  tools_enabled:
+    - "tool_api_1"
+    - "tool_function_2"
+  knowledge_collections:
+    - "id_coleccion_conocimiento_1"
+
+# Guardarraíles y Comportamiento
+behavioral_guardrails:
+  persona: "Asistente experto en X, formal y preciso."
+  safety_policy: "no_pii | no_financial_advice"
+  hallucination_mitigation: "grounding_check | low_temperature"
+
+# Rendimiento (SLOs)
+performance_slos:
+  response_time_p90_ms: 2500
+  accuracy_target_pct: 95 # Medido contra un benchmark específico
+  cost_per_interaction_usd: 0.01
+
+# Observabilidad
+observability:
+  metrics_dashboard: "url_al_dashboard_de_grafana"
+  traces_endpoint: "jaeger_collector_url"

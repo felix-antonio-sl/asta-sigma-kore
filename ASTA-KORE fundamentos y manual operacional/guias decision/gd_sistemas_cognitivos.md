@@ -28,9 +28,9 @@ Las decisiones sobre la arquitectura y el rol del agente deben ser documentadas 
 
 | Si su objetivo es... | Considere el patrón/rol... | Porque... | Guía Técnica de Referencia |
 | :--- | :--- | :--- | :--- |
-| Responder preguntas sobre un corpus de conocimiento privado y confiable. | Generación Aumentada por Recuperación (RAG) | Permite a los LLMs generar respuestas basadas en sus datos, con citas, reduciendo la alucinación. | `gt_ingenieria_ia.md`, `gt_gestion_conocimiento.md` |
+| Responder preguntas sobre un corpus de conocimiento privado y confiable. | Generación Aumentada por Recuperación (RAG) | Permite a los LLMs generar respuestas basadas en sus datos, con citas, reduciendo la alucinación. | `gt_gestion_conocimiento.md` |
 | Permitir que la IA interactúe con otros sistemas para ejecutar acciones. | Llamado a Herramientas (Tool Calling) | Expone APIs de negocio de forma segura para que el agente las invoque y realice tareas en el mundo real. | `gt_ingenieria_ia.md` |
-| Orquestar múltiples `EVs` (datos, IA, APIs) en un flujo de negocio complejo. | Un Agente Orquestador que sigue un `Contrato de Proceso`. | Centraliza la lógica del flujo de valor, invocando otras capacidades a través de sus `Contratos`. | `gt_ingenieria_software.md`, `gt_arquitectura_sigma.md` |
+| Orquestar múltiples `EVs` (datos, IA, APIs) en un flujo de negocio complejo. | Un Agente Orquestador que sigue un `Contrato de Proceso`. | Centraliza la lógica del flujo de valor, invocando otras capacidades a través de sus `Contratos`. | `gt_ingenieria_software.md`, `gt_arquitectura_nexus.md` |
 | Definir los límites y capacidades de un agente de IA. | Implementar un `Contrato de Agente` explícito. | Formaliza el nivel de autonomía, las herramientas permitidas y los `Guardrails` del agente. | `gt_ingenieria_ia.md` |
 
 Para una inmersión profunda en la implementación de estos patrones, incluyendo la arquitectura de referencia para aplicaciones de LLM, el diseño de `Contratos de Agente` y las prácticas de MLOps/LLMOps, consulte la `gt_ingenieria_ia.md`.

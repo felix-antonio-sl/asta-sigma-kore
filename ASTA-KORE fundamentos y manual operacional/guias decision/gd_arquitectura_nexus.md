@@ -18,9 +18,10 @@ Toda `Entidad de Valor` construida bajo el marco KORE debe adoptar los siguiente
 
 | Si su objetivo es... | Debe adoptar el componente Nexus... | Porque... | Guía Técnica de Referencia |
 | :--- | :--- | :--- | :--- |
-| Asegurar la coherencia en el diseño. | Los Principios de la Plataforma Nexus. | Son la traducción de la filosofía KORE en directivas de ingeniería no negociables. | `gt_arquitectura_nexus.md` |
+| Asegurar la coherencia en el diseño. | Los principios de la Plataforma Nexus. | Son la traducción de la filosofía KORE en directivas de ingeniería no negociables. | `gt_arquitectura_nexus.md` |
 | Garantizar la interoperabilidad robusta. | El Sistema de Contratos Nexus. | Son la implementación técnica de los `Contratos Conversacionales` de KORE. | `gt_arquitectura_nexus.md` |
 | Construir sobre una base sólida. | La Plataforma de Ingeniería Nexus. | Provee las herramientas (CI/CD, IaC, Observabilidad) para construir con calidad y velocidad. | `gt_arquitectura_nexus.md` |
+| Gestionar el conocimiento para IA de forma canónica. | El Marco de curación y gestión del conocimiento consumible por IA | Es la implementación de referencia del pipeline de curación de conocimiento para RAG. | `gt_gestion_conocimiento.md` |
 
 ### Parte 2: Selección del Patrón Arquitectónico para la Aplicación
 

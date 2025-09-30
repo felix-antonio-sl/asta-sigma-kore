@@ -30,27 +30,24 @@ La gestión del conocimiento en KORE no es un proceso pasivo de archivo, sino un
 
 Este es el proceso técnico para transformar documentos no estructurados (normativas, manuales, informes) en una base de conocimiento consultable por una IA. El objetivo es garantizar respuestas verificables, actuales y trazables.
 
-1. Ingesta y Normalización:
-    * Acción: Capturar documentos desde fuentes oficiales (ECM, repositorios). Verificar integridad (hash), realizar OCR de alta fidelidad y estandarizar a formatos como PDF/A.
-    * Guardrail: Rechazar documentos sin metadatos mínimos (fuente, fecha).
+**Nota de Implementación Canónica:** El siguiente pipeline es un modelo conceptual. Su implementación técnica, obligatoria para todo el ecosistema KORE, está definida por el "Marco de curación y gestión del conocimiento consumible por IA". Este marco está compuesto por las siguientes guías maestras:
 
-2. Enriquecimiento Semántico:
-    * Acción: Clasificar el documento según una taxonomía controlada. Usar NER (Named Entity Recognition) para extraer entidades clave (personas, fechas, montos). Resolver referencias entre documentos.
-    * Guardrail: Validar que los metadatos extraídos cumplan con un esquema predefinido.
+* guide_core_006_sts-master_sts.md (STS): Define el lenguaje de formato para los artefactos.
+* guide_core_005_sfd-master_sts.md (SFD): Define la extensión para la transcripción de formularios.
+* guide_core_003_khm-master_sts.md (KHM): Define el sistema de gestión del ciclo de vida de los artefactos.
 
-3. Decomposición (Chunking) Estructural:
-    * Acción: Dividir los documentos en `Chunks` (fragmentos) que respeten los límites semánticos (párrafos, artículos, secciones). Cada `Chunk` debe heredar los metadatos del documento padre y añadir su propia ubicación (ej. `página: 5, sección: 3.1`).
-    * Guardrail: Los `Chunks` no deben exceder un tamaño máximo para caber en el contexto del LLM.
+La conformidad con el pipeline se mide por la conformidad de estas guías.
 
-4. Indexación Híbrida:
-    * Acción: Crear dos índices para cada `Chunk`:
-        * Índice Vectorial: Un embedding (vector numérico) que captura el significado semántico del `Chunk`.
-        * Índice Lexical (BM25): Un índice de palabras clave para búsquedas exactas.
-    * Guardrail: El acceso al índice debe estar protegido por políticas que filtren los resultados según los permisos del usuario (`ACLs`).
+El pipeline conceptual se mapea directamente al ciclo de vida de artefactos definido en la guía `guide_core_003_khm-master_sts.md`, de la siguiente manera:
 
-5. Servicio de Recuperación (Retrieval):
-    * Acción: Cuando un usuario pregunta, el sistema primero busca en ambos índices para encontrar los `Chunks` más relevantes. Un paso de `re-ranking` refina los resultados. El contexto final que se envía al LLM incluye el texto de los `Chunks` y sus metadatos de citación.
-    * Guardrail: La respuesta final del LLM debe incluir citas exactas al documento, sección y página de donde se extrajo la información.
+| Fase Conceptual del Pipeline | Fase de Implementación en KHM | Propósito | 
+| :--- | :--- | :--- |
+| 1. Ingesta y Normalización | `Fase 1: Sourcing` y `Fase 2: Staging` | Identificar y preparar las fuentes de conocimiento en bruto. |
+| 2. Enriquecimiento Semántico | `Fase 2: Staging & Transformation` | Aplicar los estándares `STS` y `SFD` para refactorizar el contenido. |
+| 3. Decomposición Estructural | `Fase 2: Staging & Transformation` | Estructurar el artefacto para optimizar su consumo por RAG. |
+| 4. Indexación y Recuperación | - | Es una capacidad de la infraestructura de IA, no del ciclo de vida del artefacto. |
+
+La gobernanza del proceso completo, incluyendo la auditoría y publicación, está normada por la guía `KHM`.
 
 ## 3. El `Contrato de Conocimiento`
 

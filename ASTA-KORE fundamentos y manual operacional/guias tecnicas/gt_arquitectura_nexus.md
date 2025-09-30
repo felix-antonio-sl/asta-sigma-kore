@@ -34,7 +34,7 @@ Esta arquitectura define el `Mapa de Capacidades` de la plataforma tecnológica 
 | :--- | :--- | :--- | :--- | :--- |
 | Capa de Valor y Gobierno | Define las "reglas del juego" estratégicas. | Gestión de Políticas (Policy-as-Code), Ética y Riesgo, CoE, FinOps. | OPA, Cedar, Jira, PowerBI. | **OPA, Kyverno, GitLab Issues, Superset** |
 | Capa Semántica Común | Provee el vocabulario compartido y la interoperabilidad. | Ontología KORE (SHACL/OWL), Glosario de Negocio, Plantillas de `Contratos`. | VocBench, Schema.org, Git. | **Git, Open-source web editors** |
-| Tejidos de Ejecución | Materializa las `Entidades de Valor` en dominios específicos. | Tejido de Conocimiento (RAG), Tejido de Datos (Data Mesh), Tejido de Procesos (BPM), Tejido de Agentes (IA). | Ver Guías Técnicas de cada dominio. | **(Ver Guías Técnicas específicas)** |
+| Tejidos de Ejecución | Materializa las `Entidades de Valor` en dominios específicos. | Tejido de Conocimiento (RAG), Tejido de Datos (Data Mesh), Tejido de Procesos (BPM), Tejido de Agentes (IA). | La implementación del Tejido de Conocimiento está normada por la `gt_gestion_conocimiento.md`. La del Tejido de Agentes, por la `gt_ingenieria_ia.md`. | **(Ver Guías Técnicas específicas)** |
 | Plataforma de Ingeniería | Provee las herramientas para construir y operar con calidad. | CI/CD, Infraestructura como Código (IaC), Observabilidad, Seguridad (SAST/DAST/SCA). | GitLab CI, Terraform, Prometheus, Grafana, SonarQube, Vault. | **Jenkins, OpenTofu, VictoriaMetrics, Trivy, Vault** |
 | Capa de Integración | Permite que las `Entidades de Valor` se comuniquen. | API Gateway, Bus de Mensajes, Catálogos de Servicios y Datos. | Kong, Kafka, Backstage, Amundsen. | **Apache APISIX, RabbitMQ, NATS, Backstage** |
 
@@ -50,7 +50,7 @@ La Plataforma Nexus define cuatro tipos de `Contratos` técnicos que son la impl
 * `Contrato de Proceso`:
   * Gobierna: Un `Flujo de Valor` automatizado.
   * Asegura: SLAs de rendimiento, puntos de HITL y lógica de compensación.
-  * Referencia: `gt_ingenieria_software.md` — [Especificación](../contratos/contrato_proceso.md) · [Plantilla](../contratos/contrato_proceso.yml)
+  * Referencia: `gt_ingenieria_software.md` — [Especificación](../plantillas_contratos/procesos/contrato_proceso.md) · [Plantilla](../plantillas_contratos/procesos/contrato_proceso.yml)
 
 * `Contrato de Agente`:
   * Gobierna: Un `Sistema Cognitivo` (Agente de IA).

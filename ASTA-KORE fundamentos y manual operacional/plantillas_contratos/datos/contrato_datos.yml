@@ -1,0 +1,31 @@
+# Contrato de Datos - Plantilla v1.0
+id: "dominio.nombre_dataset"
+owner: "nombre-del-equipo"
+version: "1.0.0"
+purpose: "Descripción del conjunto de datos y su rol en el negocio."
+
+# Esquema y Semántica
+schema:
+  format: "avro | protobuf | json-schema"
+  registry_url: "http://schema-registry/path/to/schema"
+
+# Calidad de Datos (SLOs)
+quality_slos:
+  freshness: "24h"
+  completeness_pct: 99.9
+  uniqueness_pct: 100
+  validity_pct: 100
+
+# Linaje
+lineage:
+  sources:
+    - "id_proceso_origen_1"
+    - "id_dataset_origen_2"
+
+# Política de Acceso
+access_policy:
+  classification: "public | internal | confidential | restricted"
+  serving_tier: "batch | real-time"
+  roles_allowed:
+    - "rol_analista_datos"
+    - "rol_cientifico_datos"

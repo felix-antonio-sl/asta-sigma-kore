@@ -1,0 +1,29 @@
+# Contrato de Conocimiento - Plantilla v1.0
+id: "dominio.nombre_coleccion"
+owner: "nombre-del-equipo"
+version: "1.0.0"
+purpose: "Descripción de la colección de conocimiento y su audiencia objetivo."
+
+# Fuente y Autoridad
+authority_level: "gold | silver | bronze"
+
+# Contenido y Estructura
+metadata_schema: "dublin-core | custom-json-schema"
+chunking_strategy:
+  type: "recursive | token-based | semantic"
+  size: 512
+  overlap: 64
+indexing_strategy:
+  model: "text-embedding-ada-002"
+
+# Operación y Calidad (SLOs)
+freshness_slo: "7d"
+
+# Política de Servicio
+serving_policy:
+  citation_policy: "require_citation | best_effort"
+  access_control:
+    classification: "public | internal | confidential"
+    roles_allowed:
+      - "rol_agente_ia"
+      - "rol_experto_dominio"

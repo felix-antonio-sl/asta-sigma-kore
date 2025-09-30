@@ -50,6 +50,13 @@ Esta arquitectura de 4 capas permite construir aplicaciones de IA de forma segur
 
 Este `Contrato Nexus` define la "personalidad", las capacidades y los límites de un agente de IA.
 
+Nota de Implementación Canónica: Para asistentes de IA conversacionales y declarativos, la implementación de este contrato se realiza utilizando el "Marco de Ingeniería de Asistentes de IA (MIA)". Este marco provee:
+
+* `Agent Lifecycle Management (ALM)`: El proceso de ciclo de vida para el diseño, desarrollo y mantenimiento del agente.
+* `Agent Definition Protocol (ADP)`: El lenguaje YAML declarativo para escribir la instancia del `Contrato de Agente` como código fuente.
+
+La implementación de referencia del MIA se encuentra en `implementaciones/marco_ingenieria_asistentes_ai_conversacionales_declarativos/`.
+
 Estructura Mínima del Contrato:
 
 ```yaml

@@ -47,8 +47,8 @@ flowchart LR
 - **Guías Técnicas (implementación):** [./guias tecnicas/](./guias tecnicas/)  
   - Ej.: [gt_arquitectura_nexus.md](./guias tecnicas/gt_arquitectura_nexus.md), [gt_ingenieria_software.md](./guias tecnicas/gt_ingenieria_software.md)
 - **Contratos (fuente única de verdad operable):** [./contratos/](./contratos/)  
-  - Contrato de Proceso (Especificación): [./contratos/contrato_proceso.md](./contratos/contrato_proceso.md)  
-  - Contrato de Proceso (Plantilla YAML): [./contratos/contrato_proceso.yml](./contratos/contrato_proceso.yml)
+  - Contrato de Proceso (Especificación): [./contratos/contrato_proceso.md](contratos/procesos/contrato_proceso.md)  
+  - Contrato de Proceso (Plantilla YAML): [./contratos/contrato_proceso.yml](contratos/procesos/contrato_proceso.yml)
 - **Ontología y adopción:** [./metodologia refactorizada/ontologia.md](./metodologia refactorizada/ontologia.md) · [./metodologia refactorizada/adopcion.md](./metodologia refactorizada/adopcion.md)
 - **Catálogo (artefactos, EVs, tableros):** [./metodologia refactorizada/catalogo.md](./metodologia refactorizada/catalogo.md)
 
@@ -62,7 +62,7 @@ flowchart LR
 
 - **Equipos de EV**
   - Modelar su EV en el `Canvas` y formular OKRs trimestrales. Ver Cap. 2 de [Protocolos](./metodologia refactorizada/protocolos.md) y [Catálogo](./metodologia refactorizada/catalogo.md).
-  - Si tu flujo es automatizado, acompañarlo con [Contrato de Proceso](./contratos/contrato_proceso.md) + [YAML](./contratos/contrato_proceso.yml).
+  - Si tu flujo es automatizado, acompañarlo con [Contrato de Proceso](contratos/procesos/contrato_proceso.md) + [YAML](contratos/procesos/contrato_proceso.yml).
 
 - **Arquitectos/Ingeniería**
   - Decidir con Guías de Decisión (p.ej. [gd_arquitectura_nexus.md](./guias decision/gd_arquitectura_nexus.md)).
@@ -79,7 +79,7 @@ flowchart LR
 
 ## Policy‑as‑Contract (principio operativo)
 
-- La gobernanza vive en los pipelines: las políticas automatizadas validan la existencia y validez de contratos versionados (p.ej., [contrato_proceso.yml](./contratos/contrato_proceso.yml)).
+- La gobernanza vive en los pipelines: las políticas automatizadas validan la existencia y validez de contratos versionados (p.ej., [contrato_proceso.yml](contratos/procesos/contrato_proceso.yml)).
 - Los catálogos y paneles son vistas materializadas de lo que declaran esos contratos en los repositorios.
 
 ---
@@ -95,7 +95,7 @@ flowchart LR
 
 1. Leer el [Manifiesto](./ASTA-Kore_Manifiesto_Estrategico.md) (Σ/Δ × E/T/O).
 2. Crear/actualizar el `Canvas` de tu EV y formular 1–2 OKRs trimestrales. Ver [Protocolos](./metodologia refactorizada/protocolos.md) → Cap. 2.
-3. Si tu flujo es automatizado, generar [Contrato de Proceso](./contratos/contrato_proceso.md) + [YAML](./contratos/contrato_proceso.yml) y enlazarlo en tu repo.
+3. Si tu flujo es automatizado, generar [Contrato de Proceso](contratos/procesos/contrato_proceso.md) + [YAML](contratos/procesos/contrato_proceso.yml) y enlazarlo en tu repo.
 
 ---
 
