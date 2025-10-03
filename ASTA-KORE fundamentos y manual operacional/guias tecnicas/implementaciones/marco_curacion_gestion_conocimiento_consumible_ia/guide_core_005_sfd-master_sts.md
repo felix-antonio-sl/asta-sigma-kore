@@ -1,13 +1,34 @@
 # Master Guide: Structured Form Definition (SFD) in STS format
 
-ID: GUIDE-SFD-STS-MASTER-01
+ID: GUIDE-SFD-MASTER-01
 Version: 6.0.0
 Status: Published
 Human-Creator: FS
+Human-Editor: FS
 Model-Collaborator: IA-GEMINI
-Creation-Date: 2025-06-28
-Modification-Date: 2025-07-24
-Source: GUIDE-STS-MASTER-01
+Creation-Date: 2025-07-06
+Modification-Date: 2025-07-28
+Source: N/A
+Ctx: GUIDE-STS-MASTER-01
+
+## 2. LLM Parsing Instructions (Defined Component)
+
+ID: GUIDE-SFD-STS-PARSER-01
+Req: Este bloque es obligatorio y sigue a los metadatos del artefacto SFD en formato STS.
+Warn: Estas reglas son SOLO para consumo/razonamiento, no para creación.
+
+---
+BEGIN_LLM_INSTRUCTIONS
+
+You are an AI agent consuming a Structured Telegraphic Style (STS) artifact that contains SFD blocks.
+
+1) Parse STS first (IDs, Ref internos, lenguaje invariante) según GUIDE-STS-PARSER-INSTRUCTIONS-01.
+2) Cuando encuentres `BEGIN_EMBEDDED_BLOCK:: SFD <BLOCK_ID>`, trata su contenido con las reglas SFD de este documento.
+3) No traduzcas EssentialData; los `KeyTerm` de SFD son controlados por este guía dentro del bloque.
+4) `Ref:` dentro del bloque SFD referencia IDs del MISMO bloque; no cruza a otros documentos.
+
+END_LLM_INSTRUCTIONS
+---
 
 ## 0. Meta-Commentary: How to Read This Document
 
@@ -200,7 +221,7 @@ ID: FORM-RISKDEC-S1-JUSTIFY-01
 Field-Label: "Justification for Legal Review"
 Field-Type: TextArea
 Field-Logic: "Cond: (Ref: FORM-RISKDEC-S1-LEGALREV-01.Value == 'true') -> Req: mandatory."
-Field-Constraint: "Req: optional."
+Field-Constraint: "Req: mandatory."
 
 END_EMBEDDED_BLOCK:: RISK-DECLARATION-FORM-01
 

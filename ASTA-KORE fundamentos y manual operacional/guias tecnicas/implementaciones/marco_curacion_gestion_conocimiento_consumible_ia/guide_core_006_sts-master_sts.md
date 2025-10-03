@@ -4,9 +4,12 @@ ID: GUIDE-STS-MASTER-01
 Version: 6.0.0
 Status: Published
 Human-Creator: FS
+Human-Editor: FS
 Model-Collaborator: IA-GEMINI
-Creation-Date: 2025-06-28
-Modification-Date: 2025-07-14
+Creation-Date: 2025-07-06
+Modification-Date: 2025-07-28
+Source: N/A
+Ctx: GUIDE-STS-MASTER-01
 
 ## 0. Meta-Commentary: How to Read This Document
 
@@ -34,10 +37,12 @@ ID: GUIDE-STS-METADATA-FIELDS-01
 |`Version:`|Yes|Document version using Semantic Versioning (MAJOR.MINOR.PATCH).|
 |`Status:`|Yes|Document lifecycle state. Controlled vocabulary: `Draft`, `Review`, `Published`, `Obsolete`.|
 |`Human-Creator:`|Yes|Name or initials of the human who created the first version.|
+|`Human-Editor:`|Yes|Name or initials of the human who last modified the document.|
 |`Model-Collaborator:`|Yes|Name of the language model that collaborated on the last modification.|
 |`Creation-Date:`|Yes|Creation date in `YYYY-MM-DD` format.|
 |`Modification-Date:`|Yes|Date of the last modification in `YYYY-MM-DD` format.|
 |`Source:`|No|URI, document ID, or textual description of the source from which the artifact was derived. Distinct from the inline `Src:` keyword, which cites the origin for a specific data point.|
+|`Ctx:`|Yes|Contextual information or scope of the document. This is a controlled vocabulary.|
 
 ## 2. LLM Parsing Instructions (Defined Component)
 
@@ -46,7 +51,7 @@ Req: This block is mandatory and must follow the Metadata Block. It provides all
 
 ---
 
-**BEGIN_LLM_INSTRUCTIONS**
+BEGIN_LLM_INSTRUCTIONS
 
 You are an AI agent consuming a Structured Telegraphic Style (STS) artifact. Your primary task is to parse and reason over THIS document with absolute fidelity, using only the rules defined below. This artifact is a self-contained source of truth.
 
@@ -97,7 +102,7 @@ You are an AI agent consuming a Structured Telegraphic Style (STS) artifact. You
     - The `Keywords` in the lexicon are a fixed control vocabulary in English.
     - All `EssentialData` (the content following a `Keyword:`) MUST be preserved in its original language. Do not translate it.
 
-**END_LLM_INSTRUCTIONS**
+END_LLM_INSTRUCTIONS
 
 ---
 
@@ -242,7 +247,8 @@ Mdl:
   - `<BLOCK_ID>`. Req: Mandatory. A unique identifier for this block instance within the document.
   - `END_EMBEDDED_BLOCK::`. Def: Closing directive. Resumes normal STS processing.
 - Req: The content within the block is not governed by STS rules.
-- Prohib: Mixing STS syntax within an embedded block.
+- Ctx: The block is opaque to the STS parser. Headers, keywords, or other syntax within the block MUST NOT be interpreted as STS syntax.
+- Prohib: Using STS keywords (e.g., `Purp:`, `Req:`) inside the block. This prohibition does not apply to the native syntax (e.g., Markdown headers) required by the embedded standard itself.
 
 ### 6.5. Unique Identifier (ID) Standard
 
@@ -428,7 +434,7 @@ Source: document: AUDIT-SEC-2025-Q2
 
 You are a parser for Structured Telegraphic Style (STS) artifacts. Your primary task is to interpret THIS document with absolute fidelity according to the rules defined below. This artifact is self-contained.
 1. **Core Objective**: Maintain perfect fidelity to information (`meat`) and structure (`skeleton`). Do not summarize or infer.
-2. **Lexicon Mode & Expansion**: This document uses an **Abbreviated Lexicon**. You MUST expand keywords according to this mapping:
+2. **Lexicon Mode & Expansion**: This document uses an **Abbreviated Lexicon**. You MUST expand keywords according to this mapping (this is an illustrative subset of the official lexicon):
     - `Purp:` -> `Purpose:`
     - `Fnd:` -> `Foundation:`
     - `Req:` -> `Requirement:`

@@ -9,7 +9,7 @@ Model-Collaborator: Kronos ADP
 Creation-Date: 2025-06-29
 Modification-Date: 2025-07-10
 Primary-Source: `guide_core_002_alm-master_sts.md`
-Ref-STS-Guide: `GUIDE-STS-MASTER-01`
+References: `GUIDE-STS-MASTER-01`, `GUIDE-ALM-MASTER-01`
 
 ---
 
@@ -17,14 +17,14 @@ Ref-STS-Guide: `GUIDE-STS-MASTER-01`
 
 |Label|Description|
 |-|-|
-|Mssn|Govern AI-agent definition as *declarative programming* in YAML, maximising behavioural fidelity and eliminating ambiguity.|
+|Mssn|Govern conversational AI-agent definition as *declarative programming* in YAML, maximising behavioural fidelity and eliminating ambiguity.|
 |Dest|Large Language Models (LLMs).|
 |Principle 1 – YAML is Source Code|The `agent.yaml` file is source code; the LLM acts as its interpreter.<br>Req: syntax must be unambiguous, machine-parsable YAML.|
 |Principle 2 – Structure is Meaning|YAML hierarchy and nesting convey context and scope, not just values.|
-|Principle 3 – Protocol / Content Separation|*Protocol language* (ADP keys, e.g. `core.identity.role`) is always English; *content language* (the value) is the agent's operating language (e.g. `es-CL`).|
+|Principle 3 – Protocol / Content Separation|*Protocol language* (ADP keys, e.g. `agent_identity_and_global_configuration.primary_role_objective_and_audience.role`) is always English; *content language* (the value) is the agent's operating language (e.g. `es-CL`).|
 |Principle 4 – Explicit Knowledge Cartography|The agent's reasoning path from a user query to a knowledge artifact MUST be an explicit, deterministic step via the `KB Guidance Pattern`. Implicit retrieval is forbidden, as it is a primary source of factual inconsistency. This transforms knowledge lookup from an unreliable search into a high-fidelity operation.|
 |Principle 5 – Semantic Abstraction|Never expose internals (filenames, model IDs, states). Communicate only in functional, user-centric terms.|
-|Principle 6 – Agent as Formal Category (`ADP-PRINCIPLE-CATEGORY-01`)|*Cat\_Agent*: states under `logic.states` are objects; transitions are morphisms. Workflows demonstrate composition; `meta.self_eval.correction_protocol` can generate morphisms dynamically.|
+|Principle 6 – Agent as Formal Category (`ADP-PRINCIPLE-CATEGORY-01`)|*Cat\_Agent*: states under `public_behavior_workflows_and_states.defined_states` are objects; transitions are morphisms. Workflows demonstrate composition; `self_evaluation_and_correction_mechanisms.correction_protocol` can generate morphisms dynamically.|
 
 ---
 
@@ -34,25 +34,26 @@ Ref-STS-Guide: `GUIDE-STS-MASTER-01`
 
 * ADP is a YAML schema: directives are nested key-value pairs.
 
-  * `top_level_key` → high-level module (`core`, `kb`, `logic`, …).
+  * `top_level_key` → high-level module (e.g., `agent_identity_and_global_configuration`).
   * `nested_key` → functional sub-module or specific directive.
 
 ### 2.2  Block Definition — `ADP-SYNTAX-BLOCK-02`
 
 * Logical blocks (Workflows, States, Cognitive Models) are YAML maps keyed by a unique block ID.
 
-  * `<BLOCK_CONTAINER_KEY>`: parent key grouping the blocks (`states`, `cognitive_models`).
+  * `<BLOCK_CONTAINER_KEY>`: parent key grouping the blocks (`defined_states`, `private_internal_reasoning_processes`).
   * `<BLOCK_ID>`: unique identifier inside the container.
   * Modifier `_meta`: only `_meta: { expose: false }` is allowed to hide internal logic.
+  * Optional fields within `private_internal_reasoning_processes`: `apply_on_trigger` (string) can be used for documentation purposes to indicate which state invokes the model.
 
 ### 2.3 Agent Runtime Directive
 
-- Purp: To provide a standard, machine-readable preamble for all `agent.yaml` files.
-- Req: This directive MUST be the first content in every `agent.yaml` file.
-- Mdl:
-  - `# ADP Definition for <AGENT_NAME>`
-  - `# ID: <AGENT_ID>`
-  - `# Ref-ADP-Guide: GUIDE-ADP-MASTER-02`
+* Purp: To provide a standard, machine-readable preamble for all `agent.yaml` files.
+* Req: This directive MUST be the first content in every `agent.yaml` file.
+* Mdl:
+  * `# ADP Definition for <AGENT_NAME>`
+  * `# ID: <AGENT_ID>`
+  * `# Ref-ADP-Guide: GUIDE-ADP-MASTER-02`
 
 ---
 
@@ -130,7 +131,7 @@ safety_constraints_and_behavioral_guardrails:
 
 |Anti-Pattern|Description|Mitigation|
 |-|-|-|
-|Logic Exposure|Detailed business logic in `public_behavior_workflows_and_states.defined_states.<ID>.process`.|Move to `private_internal_reasoning_processes` with `_meta: { expose: false }`.|
+|Logic Exposure|Detailed business logic in `public_behavior_workflows_and_states.defined_states.<ID>.process`. Rule: Public `process` blocks MUST NOT exceed 5 steps.|Move to `private_internal_reasoning_processes` with `_meta: { expose: false }`.|
 |Implicit Knowledge Retrieval|Auto-choosing docs by semantic similarity.|Implement KB Guidance Pattern.|
 
 ### 5.2  Architectural Patterns
@@ -138,7 +139,8 @@ safety_constraints_and_behavioral_guardrails:
 |Pattern|ID|Core idea|
 |-|-|-|
 |KB Guidance Pattern (Functorial)|`ADP-PATTERN-KB-FUNCTOR-01`|Functor `F: Cat_Query → Cat_KB` preserves structure from user intent ↦ document.|
-|Monadic Process Encapsulation|`ADP-PATTERN-MONADIC-ENCAPSULATION-01`|Public interface (`logic`) + private impl. (`cognitive_models`) ≈ *State Monad*; `process` acts as `>>=`.|
+|Monadic Process Encapsulation|`ADP-PATTERN-MONADIC-ENCAPSULATION-01`|Public interface (`public_behavior_workflows_and_states`) + private impl. (`private_internal_reasoning_processes`) ≈ *State Monad*; `process` acts as `>>=`.|
+|Agent Bootloader Pattern|`ADP-PATTERN-BOOTLOADER-REF-01`|Defines the agent execution model (Direct vs. Indirect) for different platform constraints. Ref: `GUIDE-ALM-MASTER-01`, Anexo E, Pattern-5.|
 
 ---
 
@@ -146,12 +148,13 @@ safety_constraints_and_behavioral_guardrails:
 
 * Principle Compliance
 
+  * P3 Protocol/Content separation verified.
   * P4 explicit routing (`CM-KB-GUIDANCE`).
   * P5 semantic abstraction (checklist + `forbid_internal_jargon`).
   * P6 categorical coherence: states = objects; transitions = morphisms.
 * Security & Encapsulation
 
-  * No Logic Exposure; all `cognitive_models` hidden.
+  * No Logic Exposure; all `private_internal_reasoning_processes` models hidden.
   * Minimum Guard Set present and configured.
 * Syntax / Lexicon
 
@@ -166,6 +169,7 @@ safety_constraints_and_behavioral_guardrails:
 ```yaml
 # ADP Definition for GPT-ASISTENTE-IPR
 # ID: ASIS-IPR-GN-V2-ADP-2.1 (Versión Mejorada)
+## Ref-ADP-Guide: GUIDE-ADP-MASTER-02
 
 # 1. CORE MODULE :: AGENT IDENTITY & PURPOSE
 agent_identity_and_global_configuration:
@@ -183,7 +187,7 @@ knowledge_base_interaction_and_governance_rules:
     source_files:
       - "kb_gn_029_guia_circ33_sts.md"
       - "kb_gn_026_guia_fril_sts.md"
-    uncertainty_protocol: "DECLARE_ABSENCE"
+  uncertainty_protocol: "DECLARE_ABSENCE"
   citation_formatting:
     style: OFFICIAL_SOURCE_NAME
 
@@ -206,7 +210,7 @@ public_behavior_workflows_and_states:
       role: "Refinador de IPR"
       process:
         - "1. Solicitar idea del usuario (problema, objetivos, etc.)."
-        - "2. Aplicar `CM-ANALYSIS-STRATEGIC` internamente."
+        - "2. Realizar un análisis estratégico interno."
         - "3. Entregar resumen de IPR refinada."
       transitions:
         - "IF user confirms refined IPR -> S-SELECTOR"
@@ -215,7 +219,7 @@ public_behavior_workflows_and_states:
       role: "Selector de Mecanismo de Financiamiento"
       process:
         - "1. Tomar como input la IPR refinada."
-        - "2. Aplicar `CM-ANALYSIS-3D` para clasificar la IPR."
+        - "2. Realizar una clasificación interna (3 dimensiones)."
         - "3. Presentar recomendación de vía de financiamiento."
       transitions:
         - "IF financing recommendation is presented -> S-FINALIZATION"
@@ -226,8 +230,14 @@ public_behavior_workflows_and_states:
         - "1. Confirmar que la asesoría ha sido entregada."
         - "2. Preguntar al usuario si desea iniciar un nuevo análisis o finalizar la sesión."
       transitions:
-        - "IF user wants to start a new analysis -> S-REFINER"
-        - "IF user wants to end session -> S-DISPATCHER"
+        - "IF user wants to start a new analysis -> S-DISPATCHER"
+        - "IF user wants to end session -> S-END"
+
+    S-END:
+      role: "Fin de Sesión"
+      process:
+        - "Cerrar interacción con despedida."
+      transitions: []
 
 # 4. COGNITIVE MODELS MODULE :: INTERNAL REASONING
 private_internal_reasoning_processes:

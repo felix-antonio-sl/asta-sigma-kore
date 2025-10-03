@@ -6,10 +6,44 @@ Status: Published
 Human-Creator: FS
 Human-Editor: FS
 Model-Collaborator: IA-GEMINI
-Creation-Date: 2025-07-28
-Modification-Date: 2025-07-06
-Primary-Source: N/A
-Ref-STS-Guide: GUIDE-STS-MASTER-01
+Creation-Date: 2025-07-06
+Modification-Date: 2025-07-28
+Source: N/A
+Ctx: GUIDE-STS-MASTER-01
+
+## 2. LLM Parsing Instructions (Defined Component)
+
+ID: GUIDE-KHM-STS-PARSER-01
+Req: Este bloque es obligatorio y sigue a los metadatos del artefacto.
+Warn: Estas reglas son SOLO para consumo/razonamiento, no para creación.
+
+---
+**BEGIN_LLM_INSTRUCTIONS**
+
+You are an AI agent consuming a Structured Telegraphic Style (STS) artifact.
+
+1) Parse this document according to the master guide `GUIDE-STS-MASTER-01`.
+2) This artifact uses an Abbreviated Lexicon. You MUST expand keywords according to this mapping:
+    - `Purp:` -> `Purpose:`
+    - `Mssn:` -> `Mission:`
+    - `Cpt:` -> `Concept:`
+    - `Def:` -> `Definition:`
+    - `Prohib:` -> `Prohibition:`
+    - `Ref:` -> `Reference:`
+    - `Req:` -> `Requirement:`
+    - `Ex:` -> `Example:`
+    - `Ctx:` -> `Context:`
+    - `Mdl:` -> `Model:`
+    - `Fnd:` -> `Foundation:`
+    - `Proc:` -> `Process:`
+    - `Act:` -> `Action:`
+    - `Instr:` -> `Instruction:`
+    - `Mech:` -> `Mechanism:`
+    - `Res:` -> `Result:`
+3) `Ref:` is for internal cross-references to an `ID:` within this document ONLY.
+
+**END_LLM_INSTRUCTIONS**
+---
 
 ## 1. Philosophy and Core Principles
 
@@ -28,7 +62,7 @@ Mssn: To ensure all knowledge assets are discoverable, auditable, versionable, a
   - Def: The structure, naming, and lifecycle of every knowledge asset are governed exclusively by the rules within this guide and registered in the Knowledge Catalog.
 - Cpt: Principle 5 - ALM Integration.
   - Def: This guide serves as the detailed implementation of the knowledge management layer described within the Agent Lifecycle Management (ALM) framework.
-  - Ref: `guide_core_002_alm-master_sts.md`.
+  - Ctx: `guide_core_002_alm-master_sts.md`.
 
 ## 2. Directory Architecture
 
@@ -71,7 +105,6 @@ Mdl: `{tipo}_{dominio}_{id-num}_{descripcion-corta}_{formato}.md`
 - Cpt: `tipo`. Def: Nature of the artifact.
   - `kb`: A standard knowledge base document.
   - `guide`: A meta-document that governs processes or standards.
-  - `sfd`: A structured form definition artifact.
 - Cpt: `dominio`. Def: Abbreviation of the domain.
   - `core`: Transversal knowledge.
   - `gn`: GORE Ñuble.
@@ -81,14 +114,14 @@ Mdl: `{tipo}_{dominio}_{id-num}_{descripcion-corta}_{formato}.md`
   - Ex: `contexto-regional`, `guia-compras-publicas`.
 - Cpt: `formato`. Def: The structural standard applied to the content.
   - `sts`: Structured Telegraphic Style.
-  - `sfd`: Structured Form Definition.
 - Cpt: Extension.
   - Req: The final name MUST be constructed as `_{formato}.md`.
-  - Ex: `_sts.md`, `_sfd.md`.
+  - Ex: `_sts.md`.
 
 - Ex: Correct-Filename-1. `kb_gn_001_contexto-regional_sts.md`
-- Ex: Correct-Filename-2. `guide_core_001_alm-master_sts.md`
-- Ex: Correct-Filename-3. `sfd_gn_005_formulario-postulacion_sfd.md`
+- Ex: Correct-Filename-2. `guide_core_002_alm-master_sts.md`
+- Ex: Correct-Filename-3. `kb_gn_005_formulario-postulacion_sts.md`
+  - Ctx: This file would contain an embedded SFD block, as SFD is not a standalone file format.
 
 ## 4. The Knowledge Catalog
 
@@ -128,7 +161,8 @@ Proc: 6-Phase-Cycle.
   - Act: Place the raw file(s) into the appropriate subdirectory within `/sources/`.
 - Cpt: Phase 2 - Staging & Transformation.
   - Act: Copy the source file to a working file inside `/staging/`.
-  - Act: Apply the `STS` or `SFD` refactoring methodology. Ref: `GUIDE-STS-MASTER-01`, `GUIDE-SFD-STS-MASTER-01`.
+  - Act: Apply the `STS` or `SFD` refactoring methodology.
+  - Src: `GUIDE-SFD-MASTER-01`.
 - Cpt: Phase 3 - Audit.
   - Act: Perform a compliance audit using the checklist from the relevant guide (`STS` or `SFD`).
   - Req: The artifact MUST pass 100% of the audit checks to proceed.
@@ -157,15 +191,15 @@ Fnd: The "Composition over Ramification" principle. Ref: `GUIDE-KHM-PHILOSOPHY-0
   - Mech: The `KB.GOVERNANCE.SOURCE_FILES` directive lists the exact set of artifacts the agent uses.
   - Res: This approach is declarative, auditable, and maintains the integrity of each individual knowledge artifact. Git is used to version the history of each file, not to manage configuration sets.
 - Mdl: Example.
-  - Cpt: Agent A needs a general circular. `agents/agente_A/agent.yaml`:
-    `KB.GOVERNANCE.SOURCE_FILES:: - "knowledge/gn/kb_gn_029_circular-33-general_sts.md"`
-  - Cpt: Agent B needs a specific version. `agents/agente_B/agent.yaml`:
-    `KB.GOVERNANCE.SOURCE_FILES:: - "knowledge/gn/kb_gn_035_circular-33-especifica_sts.md"`
+  - Cpt: Agent A needs a general circular. `agents/agent_A/agent.yaml`:
+    `KB.GOVERNANCE.SOURCE_FILES:: - "knowledge/domains/gore_nuble/kb_gn_029_circular-33-general_sts.md"`
+  - Cpt: Agent B needs a specific version. `agents/agent_B/agent.yaml`:
+    `KB.GOVERNANCE.SOURCE_FILES:: - "knowledge/domains/gore_nuble/kb_gn_035_circular-33-especifica_sts.md"`
 
 - Cpt: Commit Message Convention.
   - Purp: To ensure a clear, traceable, and machine-readable history of all changes in the mono-repository.
   - Req: All commits MUST adhere to the Conventional Commits specification.
-  - Ref: The full specification is detailed in `guide_core_002_alm-master_sts.md`, ID `GUIDE-ALM-GIT-COMMITS-01`.
+  - Ctx: guide_core_002_alm-master_sts.md (ID: GUIDE-ALM-GIT-COMMITS-01).
   - Instr: For changes exclusively affecting knowledge artifacts, the `kb` type MUST be used.
   - Mdl: `type(scope): subject`
   - Ex: `kb(gn_001): update regional context with 2024 census data`

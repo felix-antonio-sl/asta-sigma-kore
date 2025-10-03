@@ -1,0 +1,1 @@
+/Users/felixsanhueza/fx_maquineando/asta-sigma-kore/ASTA-KORE fundamentos y manual operacional/ASTA-Kore_Manifiesto_Estrategico.md
