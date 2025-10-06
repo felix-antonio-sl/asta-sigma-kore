@@ -200,6 +200,27 @@ Escenario: Un proceso de negocio de alto valor que requiere la colaboración de 
 3. Fase de Orquestación:
     * Se diseña una `EV Orquestadora` ligera. Su único propósito es gestionar el flujo de valor de punta a punta, llamando a los servicios de las otras EVs según lo definido en los contratos. Esta EV no contiene lógica de negocio, solo la lógica del flujo.
 
+#### 4.4. Protocolo "Simbiosis de Ecosistema" (Para Colaboración Entre Entidades Soberanas)
+
+Escenario: Un desafío de ecosistema complejo (ej. cadena de suministro, red de salud, seguridad ciudadana, ventanilla única de trámites) que requiere la colaboración coordinada y la compartición de datos/servicios entre múltiples organizaciones soberanas (ej. agencias gubernamentales a nivel nacional o subnacional, empresas privadas, ONGs). El objetivo es crear un servicio unificado para el usuario final, respetando la autonomía de cada entidad.
+
+1. Fase de Mapeo del Ecosistema Federado (Σ-E y Σ-T):
+    * Se realiza un taller de **`Mapa de Capacidades` Compartido**, donde participan representantes de las organizaciones clave del ecosistema. El objetivo es identificar las capacidades que cada uno aporta y las que se necesitan en conjunto.
+    * Se modela la solución como una **`Entidad de Valor Compartida (EVC)`**. Se facilita un taller de **`Canvas de EV`** con todas las partes para definir el propósito, los actores, el flujo de valor y, crucialmente, las dependencias y la gobernanza.
+    * Cada entidad participante se considera un "stakeholder" clave de la EVC, con roles y responsabilidades definidos.
+
+2. Fase de Negociación de Contratos Inter-Organizacionales (Σ-O):
+    * Se formalizan las interacciones no como acuerdos informales, sino como **`Contratos Conversacionales`** explícitos.
+    * **`Contrato de Datos`:** Define qué datos compartirá cada organización, con qué calidad (`SLOs`), bajo qué clasificación de seguridad y con qué propósito.
+    * **`Contrato de Servicio (API)`:** Si una entidad central provee una capacidad compartida (ej. un servicio de identidad), se define su `SLA` de disponibilidad y rendimiento.
+    * Estos contratos deben incluir explícitamente las responsabilidades operativas y legales de cada parte.
+
+3. Fase de Gobernanza Federada y Ejecución (Δ-E y Δ-O):
+    * Se establece un **`Nodo Federado de Gobernanza (NFG)` del Ecosistema** que actúa como **coordinador**, no como una autoridad central que impone decisiones.
+    * Cada organización participante mantiene su propio **`NFG` Interno**.
+    * Se realiza un **`CVC` del Ecosistema** trimestralmente, donde los representantes de los NFG internos y el equipo de la `EVC` presentan la evidencia de valor generado.
+    * La `EVC` se desarrolla y opera con un equipo mixto o centralizado, y su desempeño se mide con **`OKRs` compartidos** que alinean los incentivos de todas las entidades hacia el valor público o de negocio final.
+
 ## CAPÍTULO 5: EL META-PROTOCOLO — EVOLUCIÓN DEL MARCO
 
 > ASTA-Kore se aplica a sí mismo. Este capítulo define el mecanismo formal y recurrente para la auditoría y adaptación del propio marco.
