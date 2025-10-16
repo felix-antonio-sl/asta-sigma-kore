@@ -88,6 +88,4 @@ Tiempo para Valor: Un trimestre.
 
 Criterio de Salida: La organización ha completado su primer CVC y ha tomado una decisión de inversión explícita sobre el futuro del equipo piloto, basándose en la evidencia presentada.
 
----
-
 Al completar estos cuatro pasos, la organización habrá instalado un "sistema inmunológico" de agilidad y aprendizaje. El `Esqueleto Andante` de la metodología A-K estará operativo, y la organización estará lista para escalar la adopción a otros equipos.

@@ -149,6 +149,14 @@ Estos conceptos se refieren a la ejecución, las reglas y el aprendizaje en el c
 | `Humano-en-el-Bucle (HITL)` | Patrón de diseño sociotécnico donde un agente autónomo (IA) requiere validación humana en puntos críticos. | • `es un atributo de` -> la `Composición Sociotécnica` de una `EV`<br>• `se especifica en` -> el `Contrato de Agente IA` (Σ-O) |
 | `Deuda Técnica` | Metáfora para las consecuencias a largo plazo de tomar atajos en el diseño o la implementación. | • `debe ser gestionada explícitamente` -> asignando un porcentaje de capacidad (ver "Objetivo Cero")<br>• `su pago se planifica como` -> `Historias de Usuario` o `Epics` en el `Mapeo de Historias` |
 
+##### 3.4. Conceptos de Gestión del Cambio
+
+| Concepto | Descripción | Relaciones Clave |
+| :--- | :--- | :--- |
+| `Mapa de Stakeholders` | Artefacto que clasifica a los actores afectados por un cambio según su Poder e Interés, permitiendo diseñar estrategias diferenciadas de adopción. | • `es construido en` -> Protocolo "Adopción Federada" (4.5)<br>• `segmenta actores en` -> 4 cuadrantes (Campeones, Guardianes, Adoptantes Tempranos, Observadores)<br>• `informa la estrategia de` -> Roadmap de Adopción |
+| `Roadmap de Adopción` | Secuencia temporal de adopción de un cambio organizada en Olas (H1, H2, H3), cada una con criterios de paso basados en evidencia. | • `es integrado al` -> `Mapeo de Historias` (Δ-T)<br>• `define` -> Esqueleto Andante del Cambio<br>• `sus criterios de paso se validan en` -> `CVC` |
+| `Observatorio de Adopción` | Dashboard que muestra en tiempo real el progreso de adopción de un cambio (% equipos por ola, KPIs de valor, testimonios). | • `se actualiza en` -> `CVC` trimestral<br>• `implementa el principio de` -> Transparencia Radical<br>• `es un tipo de` -> Tablero de Métricas (Δ-O) |
+
 ---
 
 Ahora tenemos una estructura de tres capas:
@@ -157,9 +165,7 @@ Ahora tenemos una estructura de tres capas:
 2. Taxonomía de Artefactos: Las herramientas tangibles que instancian la meta-ontología.
 3. Léxico de Conceptos Clave: El vocabulario para describir la realidad operacional a través de los artefactos.
 
-
 ---
-
 
 ## Libro de Protocolos de ΑΣ-K
 
@@ -363,6 +369,144 @@ Escenario: Un proceso de negocio de alto valor que requiere la colaboración de 
 3. Fase de Orquestación:
     * Se diseña una `EV Orquestadora` ligera. Su único propósito es gestionar el flujo de valor de punta a punta, llamando a los servicios de las otras EVs según lo definido en los contratos. Esta EV no contiene lógica de negocio, solo la lógica del flujo.
 
+##### 4.4. Protocolo "Simbiosis de Ecosistema" (Para Colaboración Entre Entidades Soberanas)
+
+Escenario: Un desafío de ecosistema complejo (ej. cadena de suministro, red de salud, seguridad ciudadana, ventanilla única de trámites) que requiere la colaboración coordinada y la compartición de datos/servicios entre múltiples organizaciones soberanas (ej. agencias gubernamentales a nivel nacional o subnacional, empresas privadas, ONGs). El objetivo es crear un servicio unificado para el usuario final, respetando la autonomía de cada entidad.
+
+1. Fase de Mapeo del Ecosistema Federado (Σ-E y Σ-T):
+    * Se realiza un taller de **`Mapa de Capacidades` Compartido**, donde participan representantes de las organizaciones clave del ecosistema. El objetivo es identificar las capacidades que cada uno aporta y las que se necesitan en conjunto.
+    * Se modela la solución como una **`Entidad de Valor Compartida (EVC)`**. Se facilita un taller de **`Canvas de EV`** con todas las partes para definir el propósito, los actores, el flujo de valor y, crucialmente, las dependencias y la gobernanza.
+    * Cada entidad participante se considera un "stakeholder" clave de la EVC, con roles y responsabilidades definidos.
+
+2. Fase de Negociación de Contratos Inter-Organizacionales (Σ-O):
+    * Se formalizan las interacciones no como acuerdos informales, sino como **`Contratos Conversacionales`** explícitos.
+    * **`Contrato de Datos`:** Define qué datos compartirá cada organización, con qué calidad (`SLOs`), bajo qué clasificación de seguridad y con qué propósito.
+    * **`Contrato de Servicio (API)`:** Si una entidad central provee una capacidad compartida (ej. un servicio de identidad), se define su `SLA` de disponibilidad y rendimiento.
+    * Estos contratos deben incluir explícitamente las responsabilidades operativas y legales de cada parte.
+
+3. Fase de Gobernanza Federada y Ejecución (Δ-E y Δ-O):
+    * Se establece un **`Nodo Federado de Gobernanza (NFG)` del Ecosistema** que actúa como **coordinador**, no como una autoridad central que impone decisiones.
+    * Cada organización participante mantiene su propio **`NFG` Interno**.
+    * Se realiza un **`CVC` del Ecosistema** trimestralmente, donde los representantes de los NFG internos y el equipo de la `EVC` presentan la evidencia de valor generado.
+    * La `EVC` se desarrolla y opera con un equipo mixto o centralizado, y su desempeño se mide con **`OKRs` compartidos** que alinean los incentivos de todas las entidades hacia el valor público o de negocio final.
+
+##### 4.5. Protocolo "Adopción Federada" (Para Gestión del Cambio Organizacional)
+
+Escenario: Una transformación que afecta a múltiples equipos, divisiones o stakeholders con diferentes niveles de madurez, poder e interés. Requiere orquestar la adopción sin generar resistencia destructiva ni imponer cambios por mandato jerárquico.
+
+Filosofía: El cambio no se "gestiona" mediante comunicación y capacitación (eso es teatro). Se gestiona mediante valor demostrado, autonomía respetada y adopción incremental basada en evidencia. La gestión del cambio es una propiedad emergente de ejecutar correctamente los rituales de ASTA-Kore (CVC, OKRs, Demos), no un proceso paralelo.
+
+###### Fase 1: Mapeo del Ecosistema de Stakeholders (Σ-E)
+
+Propósito: Entender el campo de fuerzas políticas y culturales antes de actuar.
+
+Artefacto: `Mapa de Stakeholders` (plantilla en `catalogo.md`)
+
+Protocolo:
+
+1. Identificar Actores Clave:
+   * Listar personas, equipos o divisiones afectadas por el cambio.
+   * Clasificar por Poder (capacidad de bloquear/habilitar) e Interés (motivación para que suceda).
+
+2. Segmentar en 4 Cuadrantes:
+
+   | Poder/Interés | Alto Interés | Bajo Interés |
+   |:---|:---|:---|
+   | Alto Poder | Campeones (aliados críticos) | Guardianes (pueden bloquear) |
+   | Bajo Poder | Adoptantes Tempranos (evangelistas) | Observadores (mayoría silenciosa) |
+
+3. Estrategia Diferenciada por Segmento:
+   * Campeones: Co-diseño. Involucrarlos en `Canvas de EV` y formulación de `OKRs`. Son co-autores del cambio, no receptores pasivos.
+   * Guardianes: Gestión política. Mostrar cómo el cambio resuelve sus problemas (no solo los tuyos). Negociar `Contratos Conversacionales` explícitos sobre qué cambia y qué no.
+   * Adoptantes Tempranos: Pilotos controlados. Darles acceso temprano, capturar testimonios, convertirlos en embajadores internos.
+   * Observadores: Comunicación pasiva. Transparencia radical (dashboards públicos), pero no forzar adopción hasta que vean valor probado por otros.
+
+Salida: Documento de 1 página con mapa visual y estrategia por segmento.
+
+###### Fase 2: Diseño de la Trayectoria de Valor (Δ-T)
+
+Propósito: Secuenciar el cambio como una serie de incrementos de valor observables, no como un "big bang".
+
+Artefacto: `Roadmap de Adopción` (integrado al `Mapeo de Historias`).
+
+Protocolo:
+
+1. Identificar el "Esqueleto Andante" del Cambio:
+   * ¿Cuál es el mínimo cambio que permite a un stakeholder experimentar valor tangible?
+   * Ejemplo: En lugar de "migrar toda la organización al nuevo sistema", el Esqueleto Andante es "División-A gestiona 10 casos piloto en el nuevo sistema durante 1 trimestre y demuestra reducción del 30% en tiempo de ciclo".
+
+2. Secuenciar Adopción por Olas:
+   * Ola 1 (Horizonte H1): Campeones + Adoptantes Tempranos. Piloto controlado, alta supervisión, aprendizaje rápido.
+   * Ola 2 (Horizonte H2): Mayoría Pragmática. Escalar a equipos que vieron evidencia de valor en Ola 1.
+   * Ola 3 (Horizonte H3): Rezagados. Adopción obligatoria solo cuando el nuevo sistema es claramente superior y el viejo está siendo descontinuado.
+
+3. Definir Criterios de Paso entre Olas:
+   * No avanzar a la siguiente ola hasta que la anterior demuestre KRs cumplidos en un `CVC`.
+   * Ejemplo: "No escalar a toda la División-A hasta que el piloto de 10 casos demuestre KR: Tiempo de ciclo <90 días y CSAT >4.0/5.0".
+
+Salida: Roadmap visual de 3 olas con criterios de éxito explícitos por ola.
+
+###### Fase 3: Ejecución con Transparencia Radical (Δ-O)
+
+Propósito: Gestionar el cambio mediante observabilidad, no mediante persuasión.
+
+Mecanismos:
+
+1. Observatorio de Adopción:
+   * Dashboard público (interno a la organización) que muestra en tiempo real:
+     * % de equipos en cada ola de adopción.
+     * KPIs de valor generado (tiempo ahorrado, errores reducidos, satisfacción de usuarios).
+     * Testimonios de usuarios reales (videos de 2 min explicando cómo les cambió el trabajo).
+   * El dashboard se actualiza trimestralmente en cada `CVC`.
+
+2. Ritual de "Show & Tell" en CVC:
+   * En cada `CVC`, los equipos de la Ola actual demuestran en vivo el nuevo sistema funcionando.
+   * Invitar a stakeholders de la siguiente ola como observadores.
+   * Capturar feedback en tiempo real y ajustar el roadmap si es necesario (Pivotar).
+
+3. Protocolo de Escalamiento de Resistencia:
+   * Si un stakeholder con Alto Poder bloquea activamente (no solo es escéptico, sino que sabotea):
+     * Paso 1: Conversación 1-a-1 con líder de cambio. Entender la objeción real (a menudo es miedo a perder control, no objeción técnica).
+     * Paso 2: Proponer piloto acotado en su dominio con él/ella como co-diseñador. Darle ownership del Canvas de EV de su área.
+     * Paso 3: Si persiste bloqueo, escalar a `Nodo de Gobernanza` para decisión explícita: ¿el cambio es mandatorio o negociable? Documentar la decisión en un `ADR`.
+
+Salida: Dashboard actualizado trimestralmente + registro de resistencias y resoluciones en `ADRs`.
+
+###### Fase 4: Institucionalización (Σ-O)
+
+Propósito: Convertir el cambio en el nuevo normal mediante actualización de contratos y políticas.
+
+Protocolo:
+
+1. Actualizar Contratos Conversacionales:
+   * Una vez que una `EV` nueva alcanza adopción mayoritaria (>50% de usuarios objetivo), actualizar los `Contratos` de las EVs dependientes para que consuman sus servicios por defecto.
+   * Ejemplo: El `Contrato de Datos` de "EV-Consumidora" especifica que consume la API de "EV-Nueva", no archivos compartidos del sistema legacy.
+
+2. Deprecar el Sistema Antiguo:
+   * Declarar fecha de fin de vida del proceso/sistema legacy (6-12 meses de anticipación).
+   * Comunicar con claridad y ofrecer "clínica de migración" para rezagados.
+   * Documentar la decisión de deprecación en un `ADR`.
+
+3. Celebrar el Cierre:
+   * Ritual simbólico de "apagar el servidor viejo" o "archivar el último archivo del sistema legacy".
+   * Reconocimiento público a los equipos que lideraron la adopción.
+   * Capturar el aprendizaje en una retrospectiva final: ¿Qué funcionó? ¿Qué no? ¿Qué haríamos diferente?
+
+Salida: Políticas actualizadas, sistema legacy desmantelado, conocimiento capturado en `ADRs`.
+
+###### Integración con Artefactos Existentes de ASTA-Kore
+
+El Protocolo "Adopción Federada" no introduce rituales nuevos. Orquesta los artefactos existentes del marco para gestionar el cambio como propiedad emergente:
+
+| Artefacto ASTA-Kore | Cómo Soporta Gestión del Cambio |
+|:---|:---|
+| **Canvas de EV** | Define el propósito del cambio y sus beneficiarios. Involucrar a Campeones en su co-creación genera ownership. |
+| **OKRs Trimestrales** | Miden el progreso de adopción (ej. "KR: 50% de División-A usando nuevo sistema hacia Q2"). |
+| **CVC** | Ritual donde se presenta evidencia de valor a stakeholders escépticos. La demo en vivo es más persuasiva que cualquier presentación. |
+| **Mapeo de Historias** | Secuencia el cambio en incrementos (Olas de Adopción). El Esqueleto Andante es el primer incremento de valor. |
+| **ADRs** | Capturan decisiones sobre cómo resolver resistencias o adaptar el cambio basado en feedback. |
+| **Contratos Conversacionales** | Formalizan las nuevas interfaces entre equipos post-cambio, reemplazando procesos informales. |
+
 ### CAPÍTULO 5: EL META-PROTOCOLO — EVOLUCIÓN DEL MARCO
 
 > ASTA-Kore se aplica a sí mismo. Este capítulo define el mecanismo formal y recurrente para la auditoría y adaptación del propio marco.
@@ -381,8 +525,6 @@ Escenario: Un proceso de negocio de alto valor que requiere la colaboración de 
 * Gestión Explícita de la Capacidad (Objetivo Cero): Los equipos deben poder dedicar un porcentaje explícito de su capacidad (ej. 20%) a actividades no directamente ligadas a los OKRs del trimestre, como la reducción de deuda técnica, la exploración de nuevas tecnologías o la mejora de sus herramientas (el "Objetivo Cero"). Esto asegura la sostenibilidad a largo plazo y previene el agotamiento del sistema.
 
 * Desvinculación de OKRs de la Compensación: Los OKRs son una herramienta de alineamiento y aprendizaje, no de evaluación de desempeño individual. Vincularlos a bonos o promociones incentiva la creación de objetivos poco ambiciosos ("sandbagging") y el miedo a fallar, destruyendo su poder como motor de innovación.
-
----
 
 ### CAPÍTULO 6: Guía de Campo: Heurísticas y Anti-Patrones
 
@@ -413,9 +555,25 @@ Escenario: Un proceso de negocio de alto valor que requiere la colaboración de 
 * La Deuda Técnica es como un Préstamo: No toda la deuda es mala. A veces, tomar un atajo consciente para validar una hipótesis rápido es una buena decisión de negocio. Lo importante es que el "préstamo" sea explícito y se planifique su "pago" (refactorización) antes de que los "intereses" (costo del cambio) se vuelvan impagables.
 * Anti-Patrón: El ADR como Burocracia: Un ADR no es para documentar cada decisión trivial. Se usa para decisiones significativas: aquellas que son costosas de revertir, que tienen un impacto estructural o que fueron el resultado de un debate con múltiples alternativas viables. Su propósito es combatir la amnesia organizacional, no crear burocracia.
 
+#### Guía 6.5: Heurísticas para Gestión del Cambio
+
+Heurísticas Correctas:
+
+* Valor Primero, Comunicación Después: No "vender" el cambio con PowerPoints. Construir el `Esqueleto Andante`, demostrarlo en un `CVC`, dejar que el valor hable por sí mismo.
+* Autonomía sobre Mandato: Permitir que equipos elijan cuándo adoptar (dentro de ventanas razonables), no si adoptar. La adopción forzada genera resistencia pasiva.
+* Pilotos Reales, No Teatros: Un piloto debe tener usuarios reales, datos reales, riesgos reales. No demos controladas que "siempre funcionan".
+* Transparencia Radical: Publicar KPIs de adopción y valor generado en un dashboard público interno. La presión de pares ("¿por qué ellos ya lo usan y nosotros no?") es más efectiva que el mandato jerárquico.
+* Co-Diseño con Guardianes: Si alguien con poder puede bloquear, involucrarlo como co-diseñador del `Canvas de EV`. Darle ownership transforma resistencia en compromiso.
+
+Anti-Patrones a Evitar:
+
+* "Change Management Theater": Contratar consultores para hacer talleres de "gestión del cambio" sin cambiar nada estructural. El cambio real viene de sistemas que funcionan, no de talleres motivacionales.
+* Big Bang Obligatorio: Forzar adopción masiva sin pilotos. Genera caos, errores y resistencia organizada.
+* Ignorar a los Guardianes: Asumir que "la autoridad decidió, todos deben obedecer". Los Guardianes tienen poder de veto tácito (pueden sabotear pasivamente). Es mejor negociar que imponer.
+* Comunicación sin Evidencia: Enviar newsletters sobre "los beneficios del cambio" sin mostrar demos funcionando ni KPIs reales. La gente confía en lo que ve, no en lo que le dicen.
+* Adopción sin Criterios de Éxito: Avanzar a la siguiente ola de adopción sin validar que la anterior cumplió sus `KRs`. Esto propaga un sistema que aún no está listo.
 
 ---
-
 
 ## Catálogo de Artefactos Parsimoniosos de A-K
 
@@ -578,6 +736,54 @@ Estructura del Mapa en una Pizarra:
     * Rebanada 1 (Esqueleto Andante / MVP): Es la línea más alta. Contiene el conjunto mínimo de historias de cada actividad para que un usuario pueda completar el viaje de punta a punta.
     * Rebanada 2, 3, ...: Son los siguientes incrementos de valor.
 
+#### Plantilla A.2.3: Mapa de Stakeholders (Σ-T)
+
+Instrucciones: Este artefacto se construye al inicio del Protocolo "Adopción Federada" (Sección 4.5 de Protocolos). El objetivo es mapear el ecosistema político y cultural antes de ejecutar un cambio organizacional. Use esta plantilla en un taller de 1-2 horas con el equipo de cambio para identificar actores clave y diseñar estrategias diferenciadas por segmento.
+
+```markdown
+## Mapa de Stakeholders: [Nombre del Cambio]
+
+Fecha: YYYY-MM-DD
+Equipo de Cambio: [Nombres]
+EV Afectada: [Nombre de la EV]
+
+### Cuadrante 1: Campeones (Alto Poder, Alto Interés)
+
+*Estos son tus aliados críticos. Tienen poder para habilitar el cambio y están motivados para que suceda.*
+
+| Nombre | Rol | Por qué es Campeón | Estrategia de Involucramiento |
+|:---|:---|:---|:---|
+| [Nombre] | [Cargo] | [Motivación: ej. "El cambio resuelve su problema X"] | Co-diseño en Canvas de EV, líder de Ola 1 |
+| [Ejemplo: María López] | [Jefa DIPIR] | [Frustrada con proceso manual de IPR] | Involucrar en formulación de OKRs, usuario piloto |
+
+### Cuadrante 2: Guardianes (Alto Poder, Bajo Interés)
+
+*Tienen poder para bloquear pero no están motivados. Requieren gestión política cuidadosa.*
+
+| Nombre | Rol | Riesgo de Bloqueo | Estrategia de Mitigación |
+|:---|:---|:---|:---|
+| [Nombre] | [Cargo] | [Objeción probable: ej. "Teme perder control"] | Mostrar cómo resuelve su problema X, negociar contrato explícito |
+| [Ejemplo: Juan Pérez] | [Jefe DAF] | [Preocupado por cambio en proceso de rendiciones] | Demostrar reducción de observaciones CGR, darle veto sobre diseño del módulo financiero |
+
+### Cuadrante 3: Adoptantes Tempranos (Bajo Poder, Alto Interés)
+
+*Están motivados pero no tienen poder formal. Son tus evangelistas internos.*
+
+| Nombre | Rol | Por qué Adoptará Temprano | Rol en Piloto |
+|:---|:---|:---|:---|
+| [Nombre] | [Cargo] | [Motivación: ej. "Técnicamente curioso"] | Usuario beta, testimonial en video, embajador en su división |
+| [Ejemplo: Ana Torres] | [Analista DIPIR] | [Frustrada con Excel, quiere aprender nuevas herramientas] | Usuario beta Ola 1, capturar testimonio para CVC |
+
+### Cuadrante 4: Observadores (Bajo Poder, Bajo Interés)
+
+*La mayoría silenciosa. No forzar adopción, usar transparencia pasiva.*
+
+| Segmento | Tamaño Estimado | Estrategia |
+|:---|:---|:---|
+| [Descripción del segmento] | [N personas] | [Estrategia: ej. "Comunicación pasiva, transparencia en dashboard"] |
+| [Ejemplo: Funcionarios de divisiones no afectadas directamente] | [~50 personas] | Newsletter trimestral con resultados del CVC, acceso al Observatorio de Adopción |
+```
+
 ### A.3. Plantillas de Nivel Operacional (Σ-O / Δ-O)
 
 #### Plantilla A.3.1: Reglas del Tablero de Flujo (Xanpan) (Δ-O)
@@ -695,9 +901,7 @@ Instrucciones: Estas no son plantillas de documentos a rellenar, sino agendas pa
 | 3. Guardarraíles y Seguridad | • ¿Qué tipo de acciones tiene estrictamente prohibido realizar?<br>• ¿Existe un "interruptor de apagado" (kill switch)? |
 | 4. Transparencia y Explicabilidad | • ¿Cómo se le informará al usuario que está interactuando con una IA?<br>• Si el agente toma una decisión, ¿cómo se explicará el "porqué"? |
 
-
 ---
-
 
 ## Guía de Adopción Incremental de A-K
 
@@ -795,68 +999,67 @@ Al completar estos cuatro pasos, la organización habrá instalado un "sistema i
 
 ---
 
-
 ## Calendario Anual de CVCs — 2025
 
 Este calendario define las ventanas trimestrales para la ejecución del Ciclo de Valor y Capacidad (CVC) de todas las Entidades de Valor (EVs). Incluye fechas de preparación, deadline de informe y las jornadas de decisión.
 
 Reglas generales:
 
-- Cada EV debe presentar un Informe de CVC conciso (≤ 3 páginas) con evidencia (OKRs, métricas, demo).
-- Las decisiones del NFG deben quedar registradas al cierre de la sesión.
-- Cambios relevantes en el marco se canalizan vía PEM.
+* Cada EV debe presentar un Informe de CVC conciso (≤ 3 páginas) con evidencia (OKRs, métricas, demo).
+* Las decisiones del NFG deben quedar registradas al cierre de la sesión.
+* Cambios relevantes en el marco se canalizan vía PEM.
 
 ### Q1 2025
 
-- Ventana de preparación: 24–28 mar 2025
-- Deadline Informe CVC (entrega a Secretaría): 02 abr 2025
-- Sesiones CVC (por EV): 08–10 abr 2025
-- Publicación de decisiones: 11 abr 2025
+* Ventana de preparación: 24–28 mar 2025
+* Deadline Informe CVC (entrega a Secretaría): 02 abr 2025
+* Sesiones CVC (por EV): 08–10 abr 2025
+* Publicación de decisiones: 11 abr 2025
 
 ### Q2 2025
 
-- Ventana de preparación: 23–27 jun 2025
-- Deadline Informe CVC: 02 jul 2025
-- Sesiones CVC: 08–10 jul 2025
-- Publicación de decisiones: 11 jul 2025
+* Ventana de preparación: 23–27 jun 2025
+* Deadline Informe CVC: 02 jul 2025
+* Sesiones CVC: 08–10 jul 2025
+* Publicación de decisiones: 11 jul 2025
 
 ### Q3 2025
 
-- Ventana de preparación: 22–26 sep 2025
-- Deadline Informe CVC: 01 oct 2025
-- Sesiones CVC: 07–09 oct 2025
-- Publicación de decisiones: 10 oct 2025
+* Ventana de preparación: 22–26 sep 2025
+* Deadline Informe CVC: 01 oct 2025
+* Sesiones CVC: 07–09 oct 2025
+* Publicación de decisiones: 10 oct 2025
 
 ### Q4 2025
 
-- Ventana de preparación: 15–19 dic 2025
-- Deadline Informe CVC: 23 dic 2025
-- Sesiones CVC (corte anual): 07–09 ene 2026
-- Publicación de decisiones: 10 ene 2026
+* Ventana de preparación: 15–19 dic 2025
+* Deadline Informe CVC: 23 dic 2025
+* Sesiones CVC (corte anual): 07–09 ene 2026
+* Publicación de decisiones: 10 ene 2026
 
 ---
 
 ### Roles y responsabilidades
 
-- Secretaría de Gobernanza:
-  - Convoca, consolida agenda, verifica informes recibidos y registra decisiones.
-- Equipo de la EV:
-  - Prepara Informe CVC, coordina demo, define hipótesis y próxima apuesta de valor.
-- Nodo Federado de Gobernanza (NFG):
-  - Revisa evidencia, conduce discusión y emite decisión de inversión (Continuar/Pivotar, Expandir, Reducir, Cerrar).
+* Secretaría de Gobernanza:
+  * Convoca, consolida agenda, verifica informes recibidos y registra decisiones.
+* Equipo de la EV:
+  * Prepara Informe CVC, coordina demo, define hipótesis y próxima apuesta de valor.
+* Nodo Federado de Gobernanza (NFG):
+  * Revisa evidencia, conduce discusión y emite decisión de inversión (Continuar/Pivotar, Expandir, Reducir, Cerrar).
 
 ### Insumos requeridos (por EV)
 
-- OKRs del trimestre con evidencia de avance (métricas, KR status).
-- Demo de valor (enlace o credenciales temporales).
-- Salud del sistema (SLOs/SLIs clave, incidentes relevantes).
-- ADRs relevantes creados/modificados en el trimestre.
+* OKRs del trimestre con evidencia de avance (métricas, KR status).
+* Demo de valor (enlace o credenciales temporales).
+* Salud del sistema (SLOs/SLIs clave, incidentes relevantes).
+* ADRs relevantes creados/modificados en el trimestre.
 
 ### Salidas esperadas
 
-- Decisión explícita de inversión del NFG.
-- Ajustes a OKRs del siguiente trimestre (si aplica).
-- Acciones de mejora y dueños.
+* Decisión explícita de inversión del NFG.
+* Ajustes a OKRs del siguiente trimestre (si aplica).
+* Acciones de mejora y dueños.
 
 ---
 
@@ -871,23 +1074,21 @@ Reglas generales:
 
 #### Informe CVC — Estructura sugerida (≤ 3 páginas)
 
-- Resumen ejecutivo (1 párrafo)
-- Estado de OKRs (tabla O/KR con métricas)
-- Evidencia y aprendizaje (gráficos, enlaces a demo)
-- Salud del sistema (SLOs/SLIs, incidentes, deuda crítica)
-- Propuesta de próxima apuesta (hipótesis, riesgos, requerimientos)
-- Decisión solicitada al NFG
+* Resumen ejecutivo (1 párrafo)
+* Estado de OKRs (tabla O/KR con métricas)
+* Evidencia y aprendizaje (gráficos, enlaces a demo)
+* Salud del sistema (SLOs/SLIs, incidentes, deuda crítica)
+* Propuesta de próxima apuesta (hipótesis, riesgos, requerimientos)
+* Decisión solicitada al NFG
 
 ---
 
 Referencias:
 
-- Protocolo del CVC: ver `protocolos.md` > Cap. 2.3
-- Protocolo de Evolución del Marco (PEM): [./protocolo_evolucion.md](./protocolo_evolucion.md)
-
+* Protocolo del CVC: ver `protocolos.md` > Cap. 2.3
+* Protocolo de Evolución del Marco (PEM): [./protocolo_evolucion.md](./protocolo_evolucion.md)
 
 ---
-
 
 ## Protocolo de Evolución del Marco (PEM)
 
@@ -957,7 +1158,4 @@ El marco se somete a un ciclo formal de revisión y adaptación una vez al año,
 
 * **[Auditoría Q3 2025](./auditorias/auditoria_2025_q3.md):** Veredicto: Marco conceptualmente robusto pero con brecha crítica entre doctrina y plataforma operable. Plan de acción enfocado en solidificar el núcleo semántico.
 
-
 ---
-
-

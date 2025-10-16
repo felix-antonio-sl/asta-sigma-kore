@@ -36,8 +36,6 @@ Reglas generales:
 - Sesiones CVC (corte anual): 07–09 ene 2026
 - Publicación de decisiones: 10 ene 2026
 
----
-
 ## Roles y responsabilidades
 
 - Secretaría de Gobernanza:
@@ -60,8 +58,6 @@ Reglas generales:
 - Ajustes a OKRs del siguiente trimestre (si aplica).
 - Acciones de mejora y dueños.
 
----
-
 ## Plantillas mínimas
 
 ### Agenda CVC (60 minutos)
@@ -79,8 +75,6 @@ Reglas generales:
 - Salud del sistema (SLOs/SLIs, incidentes, deuda crítica)
 - Propuesta de próxima apuesta (hipótesis, riesgos, requerimientos)
 - Decisión solicitada al NFG
-
----
 
 Referencias:
 

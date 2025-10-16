@@ -13,8 +13,6 @@ Relación con KORE:
 * Guía de Decisión Relacionada: `gd_arquitectura_nexus.md`
 * Artefactos KORE Gobernados: `Canvas de EV`, `Mapa de Capacidades`, `Contratos Conversacionales`, `ADRs`.
 
----
-
 ## 1. Principios de la Plataforma Nexus
 
 Estos principios son la traducción de la filosofía KORE en directivas de ingeniería no negociables.

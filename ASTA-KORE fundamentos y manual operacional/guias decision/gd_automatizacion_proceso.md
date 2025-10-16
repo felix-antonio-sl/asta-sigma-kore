@@ -4,8 +4,6 @@ ID: `GD-BPA-001`
 Versión: 1.0
 Propósito: Ayudar a los equipos a decidir la estrategia de automatización correcta para un proceso de negocio, en el contexto de una `Entidad de Valor (EV)`.
 
----
-
 ## Principio KORE: API-First, RPA como Deuda Técnica
 
 La interacción programática a través de un `Contrato de Servicio` (API) es siempre la opción preferida por su robustez y bajo acoplamiento. El uso de RPA para interactuar con la UI de otro sistema debe ser considerado una forma de deuda técnica: una solución táctica y temporal que debe ser explícitamente justificada y gestionada.

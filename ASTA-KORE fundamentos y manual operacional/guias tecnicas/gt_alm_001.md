@@ -19,7 +19,7 @@ Se establece una separación clara entre el marco (la definición de KORE) y la 
 
 La estructura raíz de referencia es la siguiente:
 
-```
+```plain
 /<org-repo>/
 ├─ _framework_asta-kore/      # Submódulo Git apuntando al repo del marco (solo lectura)
 ├─ entidades_de_valor/        # Contiene todas las Entidades de Valor (EVs)
@@ -33,7 +33,7 @@ La estructura raíz de referencia es la siguiente:
 
 Cada EV, sea una aplicación, un proceso o un agente, sigue una estructura interna predecible:
 
-```
+```plain
 /entidades_de_valor/
 └─ ev-<nombre-ev>/
    ├─ contratos/             # Instancias VIVAS de los contratos (ej. contrato_proceso.yml)

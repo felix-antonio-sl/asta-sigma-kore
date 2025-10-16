@@ -3,8 +3,6 @@
 **Versión:** 1.0
 **Propósito:** Este protocolo define el mecanismo formal y recurrente para la auditoría, adaptación y evolución del propio marco ASTA-Kore. Es el sistema inmunológico del marco, diseñado para mantenerlo parsimonioso, coherente y alineado con las necesidades del terreno.
 
----
-
 ## 1. Principios Fundamentales de la Evolución
 
 La evolución de ASTA-Kore se rige por axiomas que previenen la burocratización y la complejidad accidental.

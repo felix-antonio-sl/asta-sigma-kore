@@ -10,10 +10,7 @@ Audiencia: Diseñadores de UX/UI, Dueños de Producto, Desarrolladores Frontend.
 
 Relación con KORE:
 
-* Guía de Decisión Relacionada: `gd_experiencia_usuario.md`
 * Artefactos KORE Informados: `Canvas de EV` (Cajas 2, 3, 9), `Mapeo de Historias`.
-
----
 
 ## 1. Principios de Diseño UX para Entidades de Valor KORE
 
@@ -55,6 +52,34 @@ Un Sistema de Diseño es la fuente única de verdad para la UX/UI. Es un product
 * Gobernanza:
   * Debe existir un equipo o comité responsable de mantener y evolucionar el Sistema de Diseño.
   * Los nuevos componentes o patrones deben pasar por un proceso de revisión para asegurar su calidad y coherencia.
+
+### 2.1. Criterio de Decisión: ¿Cuándo Invertir en un Sistema de Diseño?
+
+```
+¿Cuántas aplicaciones/productos tienes?
+├─ 1 aplicación → No justifica Sistema de Diseño
+│  └─ Usar biblioteca de componentes estándar (ej. Material UI, Ant Design)
+├─ 2 aplicaciones → ¿Comparten componentes visuales?
+│  ├─ SÍ → Considerar biblioteca compartida simple
+│  └─ NO → Mantener separadas
+└─ ≥3 aplicaciones → ✅ Invertir en Sistema de Diseño
+   └─ ¿Equipos distribuidos?
+      ├─ SÍ → Sistema de Diseño + Gobernanza formal
+      └─ NO → Sistema de Diseño ligero
+```
+
+**ROI Esperado:**
+
+* Reducción 30-50% en tiempo de desarrollo de UIs
+* Consistencia visual entre productos
+* Onboarding más rápido de nuevos diseñadores/desarrolladores
+* Reducción de deuda de diseño
+
+**Componentes Mínimos Viables:**
+
+* Biblioteca de componentes UI (código + documentación)
+* Tokens de diseño (colores, espaciado, tipografía)
+* Guías de uso y patrones básicos
 
 ## 3. Patrones de Interfaz para Aplicaciones Empresariales
 

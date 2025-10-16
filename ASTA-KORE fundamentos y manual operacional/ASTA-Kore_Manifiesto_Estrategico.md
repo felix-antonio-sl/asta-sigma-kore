@@ -85,13 +85,13 @@ La intersección de estos ejes y niveles crea las **seis celdas de la realidad o
   * Aquí reside el `Canvas de Entidad de Valor`, el mapa de una página que describe un servicio o producto. Es la celda del diseño y la clarificación, donde se modela un componente de valor antes de construirlo.
 
 * **Σ-O (Diseño Operacional):** *¿Cuáles son las reglas e interfaces de esta unidad?*
-  * Aquí residen los `Contratos Conversacionales` (ej. APIs) y las `Fichas de Control` (reglas de negocio). Es la celda que garantiza interacciones predecibles y componibles, permitiendo que el ecosistema de servicios funcione como una red confiable y no como un conjunto de silos frágiles.
+  * Aquí residen los `Contratos` (de Datos, API, Agente, Proceso) que definen acuerdos explícitos entre EVs. Es la celda que garantiza interacciones predecibles y componibles, permitiendo que el ecosistema de servicios funcione como una red confiable y no como un conjunto de silos frágiles.
 
 * **Δ-E (Flujo Estratégico):** *¿Cómo gobernamos el valor y la inversión?*
   * Aquí reside el `Ciclo de Valor y Capacidad (CVC)`, el ritual de gobernanza donde se toman decisiones de portafolio basadas en evidencia. Es la celda de la dirección y la asignación de recursos, asegurando que el dinero y el esfuerzo fluyan hacia donde generan más valor estratégico.
 
 * **Δ-T (Flujo Táctico):** *¿Cuál es nuestra hipótesis de valor para este ciclo?*
-  * Aquí residen los `OKRs Trimestrales` y el `Mapeo de Historias`. Es la celda de la planificación basada en hipótesis, donde el trabajo se enmarca como experimentos de valor, no como una simple lista de tareas.
+  * Aquí reside el `Mapeo de Historias`, visualización del backlog priorizado por los OKRs activos (que viven en la Caja 9 del `Canvas de EV`). Es la celda de la planificación basada en hipótesis, donde el trabajo se enmarca como experimentos de valor, no como una simple lista de tareas.
 
 * **Δ-O (Flujo Operacional):** *¿Cómo ejecutamos el trabajo y capturamos el aprendizaje?*
   * Aquí residen el `Tablero de Flujo` y la `Bitácora de Decisiones (ADRs)`. Es la celda de la ejecución disciplinada y la memoria organizacional, donde se optimiza la entrega y se asegura que el conocimiento adquirido no se pierda.
@@ -124,7 +124,7 @@ En este marco, no gestionamos "proyectos"; gestionamos el ciclo de vida y la evo
   * El corazón del modelo. Cada equipo de una Entidad de Valor **diseña su anatomía** (usando el `Canvas de EV`), **planifica su evolución** a través de OKRs trimestrales y un backlog priorizado, y **rinde cuentas** en un ritual de gobernanza llamado `Ciclo de Valor y Capacidad (CVC)`. En el CVC, se presentan resultados basados en evidencia y la gobernanza toma decisiones explícitas de inversión (Continuar, Pivotar, Expandir o Cerrar).
 
 * **El Ciclo de Entrega (Ejecución Operacional):**
-  * Los ritmos de alta frecuencia donde el trabajo se ejecuta. Se **refinan las interfaces** a través de `Contratos Conversacionales`, se **gestiona el flujo** de entrega con sistemas como Xanpan (limitando el trabajo en progreso para maximizar la velocidad) y se **captura el aprendizaje** a través de `Bitácoras de Decisión (ADRs)`.
+  * Los ritmos de alta frecuencia donde el trabajo se ejecuta. Se **refinan las interfaces** a través de `Contratos` (negociados entre equipos), se **gestiona el flujo** de entrega con el `Tablero de Flujo` (limitando el trabajo en progreso para maximizar la velocidad) y se **captura el aprendizaje** a través de `Bitácoras de Decisión (ADRs)` que pueden contener Contratos cuando definen interfaces.
 
 Estos ciclos crean un sistema de bucles de retroalimentación (feedback loops) que conectan la estrategia con la operación, permitiendo que la organización aprenda y se adapte de forma continua y coherente.
 

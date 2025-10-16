@@ -134,10 +134,10 @@ ID: `EV-XXX` | Versión: `1.0` | Equipo Dueño: `<Nombre del Equipo>` | Fecha: `
 
 ### Parte 2: El Contexto Operacional
 
-| 7. Dependencias y Riesgos | 8. Gobernanza y Cumplimiento | 9. Métricas de Éxito |
+| 7. Dependencias y Riesgos | 8. Gobernanza y Cumplimiento | 9. Métricas de Éxito y OKRs Activos |
 | :--- | :--- | :--- |
 | ¿El éxito DEPENDE de alguien más? | ¿Cuáles son las REGLAS DEL JUEGO? | ¿Cómo sabremos que estamos GANANDO? |
-| • Dependencias Internas: (Otras EVs de las que dependemos)<br>• Dependencias Externas: (Proveedores, otros servicios)<br>• Riesgos de Dependencia: (Principal riesgo si una dependencia falla) | • Nodo Federado de Gobernanza (NFG): (¿Quién toma las decisiones de inversión?)<br>• Dueño de Producto/Servicio: (Persona con autoridad final)<br>• Anclaje Regulatorio (Overlays): (Leyes y normativas clave) | • Resultados Clave (KRs): (2-3 métricas de *outcome*)<br>• Objetivos de Nivel de Servicio (SLOs): (2-3 compromisos de fiabilidad)<br>• Métricas de Experiencia (UX): (CSAT, Tasa de Éxito de Tarea) |
+| • Dependencias Internas: (Otras EVs de las que dependemos)<br>• Dependencias Externas: (Proveedores, otros servicios)<br>• Riesgos de Dependencia: (Principal riesgo si una dependencia falla) | • Nodo de Gobernanza (NG): (¿Quién toma las decisiones de inversión?)<br>• Dueño de Producto/Servicio: (Persona con autoridad final)<br>• Restricciones Normativas: (Leyes y decretos clave que restringen el diseño) | **OKRs Activos (Trimestre Actual):**<br>• Objetivo: (Qué queremos lograr este trimestre)<br>• KR1: (Métrica de outcome, línea base → objetivo)<br>• KR2: (Métrica de outcome, línea base → objetivo)<br><br>**SLOs (Compromisos de Fiabilidad):**<br>• Disponibilidad: (ej. 99.9%)<br>• Latencia p95: (ej. <200ms)<br><br>**Histórico de OKRs:**<br>• Q[X-1]: [Objetivo anterior con resultados alcanzados] |
 ```
 
 ### Guía A.2.2: Mapeo de Historias (Story Mapping) (Δ-T)
@@ -158,6 +158,54 @@ Estructura del Mapa en una Pizarra:
     * Una vez que el mapa esté completo, use un marcador para trazar líneas horizontales que definan las Rebanadas de Entrega.
     * Rebanada 1 (Esqueleto Andante / MVP): Es la línea más alta. Contiene el conjunto mínimo de historias de cada actividad para que un usuario pueda completar el viaje de punta a punta.
     * Rebanada 2, 3, ...: Son los siguientes incrementos de valor.
+
+### Plantilla A.2.3: Mapa de Stakeholders (Σ-T)
+
+Instrucciones: Este artefacto se construye al inicio del Protocolo "Adopción Federada" (Sección 4.5 de Protocolos). El objetivo es mapear el ecosistema político y cultural antes de ejecutar un cambio organizacional. Use esta plantilla en un taller de 1-2 horas con el equipo de cambio para identificar actores clave y diseñar estrategias diferenciadas por segmento.
+
+```markdown
+# Mapa de Stakeholders: [Nombre del Cambio]
+
+Fecha: YYYY-MM-DD
+Equipo de Cambio: [Nombres]
+EV Afectada: [Nombre de la EV]
+
+## Cuadrante 1: Campeones (Alto Poder, Alto Interés)
+
+*Estos son tus aliados críticos. Tienen poder para habilitar el cambio y están motivados para que suceda.*
+
+| Nombre | Rol | Por qué es Campeón | Estrategia de Involucramiento |
+|:---|:---|:---|:---|
+| [Nombre] | [Cargo] | [Motivación: ej. "El cambio resuelve su problema X"] | Co-diseño en Canvas de EV, líder de Ola 1 |
+| [Ejemplo: María López] | [Jefa DIPIR] | [Frustrada con proceso manual de IPR] | Involucrar en formulación de OKRs, usuario piloto |
+
+## Cuadrante 2: Guardianes (Alto Poder, Bajo Interés)
+
+*Tienen poder para bloquear pero no están motivados. Requieren gestión política cuidadosa.*
+
+| Nombre | Rol | Riesgo de Bloqueo | Estrategia de Mitigación |
+|:---|:---|:---|:---|
+| [Nombre] | [Cargo] | [Objeción probable: ej. "Teme perder control"] | Mostrar cómo resuelve su problema X, negociar contrato explícito |
+| [Ejemplo: Juan Pérez] | [Jefe DAF] | [Preocupado por cambio en proceso de rendiciones] | Demostrar reducción de observaciones CGR, darle veto sobre diseño del módulo financiero |
+
+## Cuadrante 3: Adoptantes Tempranos (Bajo Poder, Alto Interés)
+
+*Están motivados pero no tienen poder formal. Son tus evangelistas internos.*
+
+| Nombre | Rol | Por qué Adoptará Temprano | Rol en Piloto |
+|:---|:---|:---|:---|
+| [Nombre] | [Cargo] | [Motivación: ej. "Técnicamente curioso"] | Usuario beta, testimonial en video, embajador en su división |
+| [Ejemplo: Ana Torres] | [Analista DIPIR] | [Frustrada con Excel, quiere aprender nuevas herramientas] | Usuario beta Ola 1, capturar testimonio para CVC |
+
+## Cuadrante 4: Observadores (Bajo Poder, Bajo Interés)
+
+*La mayoría silenciosa. No forzar adopción, usar transparencia pasiva.*
+
+| Segmento | Tamaño Estimado | Estrategia |
+|:---|:---|:---|
+| [Descripción del segmento] | [N personas] | [Estrategia: ej. "Comunicación pasiva, transparencia en dashboard"] |
+| [Ejemplo: Funcionarios de divisiones no afectadas directamente] | [~50 personas] | Newsletter trimestral con resultados del CVC, acceso al Observatorio de Adopción |
+```
 
 ## A.3. Plantillas de Nivel Operacional (Σ-O / Δ-O)
 
@@ -233,11 +281,23 @@ Ejemplo: "Decidimos adoptar la opción 3: integraremos un servicio de identidad 
 *   Introduce una nueva dependencia crítica en el proveedor de identidad.
 *   Requiere una migración coordinada de todos los servicios existentes.
 *   Aumenta la complejidad inicial del flujo de autenticación.
+
+---
+
+## Artefactos Relacionados
+
+*Opcional: Si esta decisión resulta en la creación de un Contrato (API, Datos, Agente, Proceso), referenciarlo aquí.*
+
+**Contratos Generados:**
+*   `contracts/api-identidad-v1.yml` - Contrato de API del servicio de identidad federada
+
+**Otros ADRs Relacionados:**
+*   ADR-012 - Decisión de deprecar autenticación local (reemplazado por este ADR)
 ```
 
-## A.4. Checklists de Contratos Conversacionales
+## A.4. Checklists de Contratos
 
-Instrucciones: Estas no son plantillas de documentos a rellenar, sino agendas para una conversación estratégica. Utilice el checklist correspondiente para guiar una reunión entre las partes involucradas. El objetivo es alcanzar un entendimiento mutuo y un acuerdo explícito.
+Instrucciones: Estas no son plantillas de documentos a rellenar, sino agendas para una conversación estratégica. Utilice el checklist correspondiente para guiar una reunión entre las partes involucradas. El objetivo es alcanzar un entendimiento mutuo y un acuerdo explícito que se formaliza como artefacto versionado (YAML/JSON).
 
 ### Checklist A.4.1: Contrato de Datos (Σ-O)
 

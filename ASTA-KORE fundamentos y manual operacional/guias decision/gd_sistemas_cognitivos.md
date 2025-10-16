@@ -1,8 +1,9 @@
 # Guía de Decisión: Diseño de Sistemas Cognitivos (IA)
 
-ID: `GD-IA-001`
-Versión: 1.0
-Propósito: Ayudar a los equipos a tomar decisiones estratégicas sobre el diseño, la gobernanza y el rol de los Sistemas Cognitivos (agentes, copilotos) como `Entidades de Valor (EV)`.
+**ID:** GD-IA-001  
+**Versión:** 1.0  
+**Dominio:** Σ-T (Diseño Táctico)  
+**Propósito:** Tomar decisiones estratégicas sobre el diseño, la gobernanza y el rol de los Sistemas Cognitivos (agentes, copilotos) como Entidades de Valor.
 
 ---
 

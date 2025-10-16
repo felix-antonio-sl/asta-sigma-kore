@@ -1,97 +1,168 @@
-# Guía Técnica: Ingeniería de Sistemas Cognitivos (IA)
+# GT-IA-001: Ingeniería de Sistemas Cognitivos (IA)
 
-ID: `GT-IA-001`
-Versión: 1.0
-Dominio: Inteligencia Artificial, MLOps, LLMOps
+**ID:** GT-IA-001  
+**Versión:** 2.0  
+**Dominio:** Inteligencia Artificial, MLOps, LLMOps  
+**Protocolo:** 2.1 - Diseño de Arquitectura
 
-Propósito: Esta guía técnica establece los patrones, prácticas y tecnologías para el diseño, construcción y operación de Sistemas Cognitivos (agentes, copilotos, motores de inferencia) como `Entidades de Valor (EV)` responsables y gobernadas.
+## Invariante Central
 
-Audiencia: Arquitectos de IA, Ingenieros de ML/IA, Científicos de Datos.
+**El modelo no es el sistema. El valor reside en el sistema sociotécnico completo que rodea al modelo.**
 
-Relación con KORE:
+Los sistemas cognitivos son Entidades de Valor responsables y gobernadas.
 
-* Guía de Decisión Relacionada: `gd_sistemas_cognitivos.md`
-* Contrato Nexus Implementado: `Contrato de Agente`
+## Principios
 
----
+### Principio 1: El Modelo no es el Sistema
 
-## 1. Principios KORE para Sistemas Cognitivos
+**Regla:** El valor está en el sistema completo: datos, interfaces, contratos, guardrails.
 
-1. El Modelo no es el Sistema: El valor reside en el sistema sociotécnico completo que rodea al modelo (datos, interfaces, `Contratos`, `Guardrails`), no solo en la precisión del modelo.
-2. Contexto Específico: El rendimiento de un modelo de IA no es transferible. Cada aplicación debe ser validada para su caso de uso y contexto específico.
-3. Aumento, no Reemplazo: Priorizar el diseño de sistemas que aumenten la inteligencia humana. El patrón `Humano-en-el-Bucle (HITL)` es la norma para decisiones de alto impacto.
-4. Responsabilidad Distribuida: La responsabilidad por las acciones de un agente de IA se distribuye explícitamente entre roles definidos (Dueño de la Capacidad, Arquitecto de IA, Ingeniero de Prompts, etc.).
+**Criterio:** La precisión del modelo es solo una métrica entre muchas.
 
-## 2. Arquitectura de Referencia para Aplicaciones de LLM
+### Principio 2: Contexto Específico
 
-Esta arquitectura de 4 capas permite construir aplicaciones de IA de forma segura, escalable y agnóstica al proveedor del modelo.
+**Regla:** El rendimiento de un modelo no es transferible.
 
-* Capa 4: Aplicación y Experiencia de Usuario (UX): La interfaz final con el usuario (chatbot, copiloto en una app existente, buscador inteligente).
-* Capa 3: Servicios de Negocio e Integración: Expone la capacidad de IA como una API segura y gobernada, integrada con el sistema de identidad de la empresa (OIDC/SSO).
-* Capa 2: Gateway de IA (Consumo del Modelo): Fachada única que centraliza todas las llamadas a las APIs de LLMs. Proporciona abstracción del proveedor, gestión de credenciales, caché, control de tráfico y monitoreo de costos.
-* Capa 1: Orquestación de Lógica y Contexto: El "cerebro" de la aplicación. Coordina el flujo de trabajo, gestiona los prompts y la memoria de la conversación, y decide cuándo usar RAG o llamar a herramientas.
+**Criterio:** Cada aplicación debe validarse para su caso de uso y contexto específico.
 
-## 3. Patrones de Orquestación Cognitiva
+### Principio 3: Aumento, no Reemplazo
 
-* Generación Aumentada por Recuperación (RAG - Retrieval-Augmented Generation):
-  * Propósito: Permite a los LLMs responder preguntas basadas en un corpus de conocimiento privado y confiable.
-  * Flujo: `Ingesta y Curación` -> `Chunking Estructural` -> `Indexación Híbrida (Vectorial + Lexical)` -> `Recuperación y Re-ranking` -> `Construcción de Prompt con Contexto` -> `Generación con Citas`.
-  * Gobernanza: Regulado por el `Contrato de Conocimiento`. Ver `gt_gestion_conocimiento.md`.
+**Regla:** Priorizar sistemas que aumenten la inteligencia humana.
 
-* Llamado a Herramientas (Tool Calling / Function Calling):
-  * Propósito: Permite a un LLM interactuar con el mundo exterior invocando APIs de negocio (ej. consultar un stock, crear un ticket).
-  * Gobernanza: Cada herramienta expuesta al LLM debe tener un `Contrato de Servicio` claro y permisos de acceso restringidos.
+**Patrón:** Humano-en-el-Bucle (HITL) es la norma para decisiones de alto impacto.
 
-* Sistemas Multi-Agente:
-  * Propósito: Descomponer tareas complejas en roles especializados (ej. `Planificador-Ejecutor`, `Crítico-Refinador`).
-  * Patrones: `Router` (dirige la petición al agente correcto), `Supervisor-Worker`, `Debate`.
+### Principio 4: Responsabilidad Distribuida
 
-## 4. El `Contrato de Agente`
+**Regla:** La responsabilidad por acciones de un agente se distribuye explícitamente.
 
-Este `Contrato Nexus` define la "personalidad", las capacidades y los límites de un agente de IA.
+**Roles:** Dueño de Capacidad, Arquitecto de IA, Ingeniero de Prompts.
 
-Nota de Implementación Canónica: Para asistentes de IA conversacionales y declarativos, la implementación de este contrato se realiza utilizando el "Marco de Ingeniería de Asistentes de IA (MIA)". Este marco provee:
+## Arquitectura de Referencia (4 Capas)
 
-* `Agent Lifecycle Management (ALM)`: El proceso de ciclo de vida para el diseño, desarrollo y mantenimiento del agente.
-* `Agent Definition Protocol (ADP)`: El lenguaje YAML declarativo para escribir la instancia del `Contrato de Agente` como código fuente.
+### Capa 4: Aplicación y UX
 
-La implementación de referencia del MIA se encuentra en `implementaciones/marco_ingenieria_asistentes_ai_conversacionales_declarativos/`.
+**Propósito:** Interfaz final con el usuario.
 
-Estructura Mínima del Contrato:
+**Ejemplos:** Chatbot, copiloto, buscador inteligente.
 
-```yaml
-agent_id: "agente_revision_contratos"
-version: 1.0
-owner: "equipo-legal"
-autonomy_level: "PLAN_AND_EXECUTE" # Nivel de autonomía (RAG, ReAct, Plan & Execute)
-role: "COPRODUCIR" # Rol en el sistema de trabajo (Monitor, Coproduce, Execute)
-tools: # Herramientas que puede invocar
-  - "api:buscar_jurisprudencia"
-  - "api:validar_clausula_riesgo"
-rag_policy: # Cómo usa el conocimiento
-  retrieval_mode: "hybrid"
-  citation_policy: "required_exact"
-guardrails: # Barandas de seguridad
-  input_scans: ["pii_detection", "prompt_injection_filter"]
-  output_scans: ["toxicity_scan", "faithfulness_check"]
-  operational_limits:
-    max_iterations: 5
-    token_cost_limit_usd: 1.5
-quality_metrics: # SLOs del agente
-  faithfulness_score: ">= 0.9"
-  citation_exactness: ">= 0.95"
-hitl_checkpoints: # Cuándo escalar a un humano
-  - "confidence_score < 0.8"
-  - "riesgo_legal_detectado == 'alto'"
-```
+### Capa 3: Servicios de Negocio e Integración
 
-## 5. MLOps y LLMOps: El Ciclo de Vida Operacional
+**Propósito:** Exponer capacidad de IA como API segura y gobernada.
 
-* Gestión de Prompts: Tratar los prompts como código. Centralizarlos en un `Registro de Prompts` para versionarlos, probarlos (A/B testing) y actualizarlos sin redesplegar la aplicación.
-* Serving de Modelos:
-  * Runtimes Optimizados: Utilizar servidores de inferencia como vLLM, TGI o Triton para maximizar el rendimiento en GPUs (ej. con `continuous batching`).
-  * Endpoints OpenAI-Compatible: Exponer los modelos (tanto comerciales como open-source) a través de una API interna compatible con el estándar de OpenAI para facilitar la integración.
-* Evaluación y Monitoreo:
-  * Evaluación Offline: Usar `golden sets` (conjuntos de datos de prueba) para regresión y `LLM-as-a-judge` para evaluar la calidad de las respuestas en base a rúbricas.
-  * Monitoreo Online: Medir métricas de calidad (fidelidad, tasa de alucinación, toxicidad), rendimiento (latencia TTFT, tokens/seg), y costo (costo por tarea/conversación).
-* Seguridad (OWASP Top 10 para LLMs): Implementar defensas contra `inyección de prompts`, `fugas de datos` a través del contexto, y `envenenamiento de datos de entrenamiento`.
+**Integración:** Sistema de identidad corporativo (OIDC/SSO).
+
+### Capa 2: Gateway de IA
+
+**Propósito:** Fachada única para todas las llamadas a LLMs.
+
+**Funciones:**
+
+- Abstracción del proveedor
+- Gestión de credenciales
+- Caché
+- Control de tráfico
+- Monitoreo de costos
+
+### Capa 1: Orquestación de Lógica y Contexto
+
+**Propósito:** "Cerebro" de la aplicación.
+
+**Funciones:**
+
+- Coordinar flujo de trabajo
+- Gestionar prompts y memoria
+- Decidir cuándo usar RAG o llamar herramientas
+
+## Patrones de Orquestación Cognitiva
+
+### Patrón 1: RAG (Retrieval-Augmented Generation)
+
+**Propósito:** Permitir a LLMs responder basándose en corpus de conocimiento privado.
+
+**Flujo:**
+
+1. Ingesta y curación
+2. Chunking estructural
+3. Indexación (vectorial + lexical)
+4. Recuperación y re-ranking
+5. Construcción de prompt con contexto
+6. Generación con citas
+
+**Gobernanza:** Regulado por Contrato de Conocimiento.
+
+### Patrón 2: Tool Calling (Function Calling)
+
+**Propósito:** Permitir a LLM interactuar con el mundo exterior invocando APIs.
+
+**Gobernanza:** Cada herramienta debe tener Contrato de Servicio y permisos restringidos.
+
+### Patrón 3: Sistemas Multi-Agente
+
+**Propósito:** Descomponer tareas complejas en roles especializados.
+
+**Patrones:**
+
+- Router (dirige a agente correcto)
+- Supervisor-Worker
+- Debate (Crítico-Refinador)
+
+## Contrato de Agente
+
+**Definición:** Define personalidad, capacidades y límites de un agente de IA.
+
+**Secciones del Contrato:**
+
+- **Autonomy Level:** Nivel de autonomía (RAG, ReAct, Plan & Execute)
+- **Role:** Rol en sistema de trabajo (Monitor, Coproduce, Execute)
+- **Tools:** Herramientas que puede invocar
+- **RAG Policy:** Cómo usa el conocimiento
+- **Guardrails:** Barandas de seguridad (input/output scans, límites operacionales)
+- **Quality Metrics:** SLOs del agente
+- **HITL Checkpoints:** Cuándo escalar a humano
+
+**Referencia:** Ver plantillas en `/plantillas_contratos/agentes/`
+
+## MLOps y LLMOps: Ciclo de Vida Operacional
+
+### Gestión de Prompts
+
+**Patrón:** Tratar prompts como código.
+
+**Práctica:** Centralizar en Registro de Prompts para versionar, probar (A/B) y actualizar sin redesplegar.
+
+### Serving de Modelos
+
+**Principios:**
+
+- Runtimes optimizados para maximizar rendimiento
+- Endpoints con API estándar para facilitar integración
+- Abstracción del proveedor
+
+### Evaluación y Monitoreo
+
+**Evaluación Offline:**
+
+- Golden sets para regresión
+- LLM-as-a-judge para evaluar calidad
+
+**Monitoreo Online:**
+
+- Métricas de calidad (fidelidad, alucinación, toxicidad)
+- Métricas de rendimiento (latencia, tokens/seg)
+- Métricas de costo (costo por tarea/conversación)
+
+### Seguridad
+
+**Defensas contra:**
+
+- Inyección de prompts
+- Fugas de datos a través del contexto
+- Envenenamiento de datos de entrenamiento
+
+**Referencia:** Ver estándares de seguridad para LLMs.
+
+## Integración con ASTA-Kore
+
+**Contratos:** Todo agente debe tener un Contrato de Agente versionado.
+
+**Referencia:** Ver `gt_gestion_conocimiento.md` para gestión de corpus RAG.

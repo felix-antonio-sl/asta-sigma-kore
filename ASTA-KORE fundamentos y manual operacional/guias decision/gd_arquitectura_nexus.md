@@ -1,10 +1,9 @@
 # Guía de Decisión: Arquitectura de Entidades de Valor con la Plataforma Nexus
 
-ID: `GD-SIGMA-001`
-Versión: 2.0
-Propósito: Esta es la guía maestra que establece la Plataforma Nexus como la implementación canónica de KORE. Guía a los equipos en la adopción de sus principios y en la elección de patrones arquitectónicos para sus `Entidades de Valor`.
-
----
+**ID:** GD-SIGMA-001  
+**Versión:** 2.0  
+**Dominio:** Σ-T (Diseño Táctico)  
+**Propósito:** Establecer la Plataforma Nexus como la implementación canónica de KORE y guiar a los equipos en la adopción de sus principios y en la elección de patrones arquitectónicos para sus Entidades de Valor.
 
 ## Principio KORE: La Arquitectura como Consecuencia del Diseño
 

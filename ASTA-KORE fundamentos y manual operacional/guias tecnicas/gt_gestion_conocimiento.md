@@ -13,8 +13,6 @@ Relación con KORE:
 * Guías de Decisión Relacionadas: `gd_sistemas_cognitivos.md`
 * Contrato Nexus Implementado: `Contrato de Conocimiento`
 
----
-
 ## 1. El Ciclo de Conocimiento KORE
 
 La gestión del conocimiento en KORE no es un proceso pasivo de archivo, sino un ciclo activo integrado en los rituales del marco.

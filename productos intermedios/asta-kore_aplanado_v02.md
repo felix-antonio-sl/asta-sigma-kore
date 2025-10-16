@@ -1,4 +1,4 @@
-# Asta-kore
+# ASTA-KORE APLANADO v03
 
 ## Project Structure
 
@@ -7,30 +7,43 @@ ASTA-KORE fundamentos y manual operacional
 ├── guias decision
 │   ├── gd_arquitectura_nexus.md
 │   ├── gd_automatizacion_proceso.md
+│   ├── gd_cambio_organizacional.md
 │   ├── gd_datos.md
-│   ├── gd_experiencia_usuario.md
-│   ├── gd_know.md
+│   ├── gd_mvp.md
+│   ├── gd_portafolio.md
+│   ├── gd_priorizacion.md
 │   └── gd_sistemas_cognitivos.md
 ├── guias tecnicas
 │   ├── implementaciones
 │   │   ├── marco_curacion_gestion_conocimiento_consumible_ia
-│   │   │   ├── auditoria.md
 │   │   │   ├── guide_core_003_khm-master_sts.md
 │   │   │   ├── guide_core_005_sfd-master_sts.md
 │   │   │   ├── guide_core_006_sts-master_sts.md
-│   │   │   └── README.md
+│   │   │   ├── README.md
+│   │   │   └── ultima_milla.code-workspace
 │   │   └── marco_ingenieria_asistentes_ai_conversacionales_declarativos
-│   │       ├── auditoria.md
 │   │       ├── guide_core_002_alm-master_sts.md
 │   │       ├── guide_core_004_adp-master_sts.md
 │   │       └── README.md
 │   ├── gt_alm_001.md
+│   ├── gt_api.md
 │   ├── gt_arquitectura_nexus.md
 │   ├── gt_diseno_ux.md
+│   ├── gt_flujo_entrega.md
+│   ├── gt_fronteras_evs.md
 │   ├── gt_gestion_conocimiento.md
+│   ├── gt_historia_usuario.md
 │   ├── gt_ingenieria_datos.md
 │   ├── gt_ingenieria_ia.md
-│   └── gt_ingenieria_software.md
+│   ├── gt_ingenieria_software.md
+│   ├── gt_mapeo_historias.md
+│   ├── gt_metricas_flujo.md
+│   ├── gt_observacionalidad.md
+│   ├── gt_reporteria.md
+│   ├── gt_seguridad.md
+│   ├── gt_slo_sli.md
+│   ├── gt_testing.md
+│   └── gt_trazabilidad_automatizada.md
 ├── metodologia refactorizada
 │   ├── auditorias
 │   ├── adopcion.md
@@ -149,13 +162,13 @@ La intersección de estos ejes y niveles crea las **seis celdas de la realidad o
   * Aquí reside el `Canvas de Entidad de Valor`, el mapa de una página que describe un servicio o producto. Es la celda del diseño y la clarificación, donde se modela un componente de valor antes de construirlo.
 
 * **Σ-O (Diseño Operacional):** *¿Cuáles son las reglas e interfaces de esta unidad?*
-  * Aquí residen los `Contratos Conversacionales` (ej. APIs) y las `Fichas de Control` (reglas de negocio). Es la celda que garantiza interacciones predecibles y componibles, permitiendo que el ecosistema de servicios funcione como una red confiable y no como un conjunto de silos frágiles.
+  * Aquí residen los `Contratos` (de Datos, API, Agente, Proceso) que definen acuerdos explícitos entre EVs. Es la celda que garantiza interacciones predecibles y componibles, permitiendo que el ecosistema de servicios funcione como una red confiable y no como un conjunto de silos frágiles.
 
 * **Δ-E (Flujo Estratégico):** *¿Cómo gobernamos el valor y la inversión?*
   * Aquí reside el `Ciclo de Valor y Capacidad (CVC)`, el ritual de gobernanza donde se toman decisiones de portafolio basadas en evidencia. Es la celda de la dirección y la asignación de recursos, asegurando que el dinero y el esfuerzo fluyan hacia donde generan más valor estratégico.
 
 * **Δ-T (Flujo Táctico):** *¿Cuál es nuestra hipótesis de valor para este ciclo?*
-  * Aquí residen los `OKRs Trimestrales` y el `Mapeo de Historias`. Es la celda de la planificación basada en hipótesis, donde el trabajo se enmarca como experimentos de valor, no como una simple lista de tareas.
+  * Aquí reside el `Mapeo de Historias`, visualización del backlog priorizado por los OKRs activos (que viven en la Caja 9 del `Canvas de EV`). Es la celda de la planificación basada en hipótesis, donde el trabajo se enmarca como experimentos de valor, no como una simple lista de tareas.
 
 * **Δ-O (Flujo Operacional):** *¿Cómo ejecutamos el trabajo y capturamos el aprendizaje?*
   * Aquí residen el `Tablero de Flujo` y la `Bitácora de Decisiones (ADRs)`. Es la celda de la ejecución disciplinada y la memoria organizacional, donde se optimiza la entrega y se asegura que el conocimiento adquirido no se pierda.
@@ -188,7 +201,7 @@ En este marco, no gestionamos "proyectos"; gestionamos el ciclo de vida y la evo
   * El corazón del modelo. Cada equipo de una Entidad de Valor **diseña su anatomía** (usando el `Canvas de EV`), **planifica su evolución** a través de OKRs trimestrales y un backlog priorizado, y **rinde cuentas** en un ritual de gobernanza llamado `Ciclo de Valor y Capacidad (CVC)`. En el CVC, se presentan resultados basados en evidencia y la gobernanza toma decisiones explícitas de inversión (Continuar, Pivotar, Expandir o Cerrar).
 
 * **El Ciclo de Entrega (Ejecución Operacional):**
-  * Los ritmos de alta frecuencia donde el trabajo se ejecuta. Se **refinan las interfaces** a través de `Contratos Conversacionales`, se **gestiona el flujo** de entrega con sistemas como Xanpan (limitando el trabajo en progreso para maximizar la velocidad) y se **captura el aprendizaje** a través de `Bitácoras de Decisión (ADRs)`.
+  * Los ritmos de alta frecuencia donde el trabajo se ejecuta. Se **refinan las interfaces** a través de `Contratos` (negociados entre equipos), se **gestiona el flujo** de entrega con el `Tablero de Flujo` (limitando el trabajo en progreso para maximizar la velocidad) y se **captura el aprendizaje** a través de `Bitácoras de Decisión (ADRs)` que pueden contener Contratos cuando definen interfaces.
 
 Estos ciclos crean un sistema de bucles de retroalimentación (feedback loops) que conectan la estrategia con la operación, permitiendo que la organización aprenda y se adapte de forma continua y coherente.
 
@@ -277,9 +290,10 @@ En esencia, ΑΣ-K es una invitación a dejar de construir mapas del tesoro cada
 
 > Un marco parsimonioso para la acción coherente en organizaciones complejas.
 
-- **Qué es:** Arquitectura Socio‑Técnica Adaptativa. “Kore” alude al núcleo esencial: el mínimo de principios, artefactos y rituales que habilitan coherencia y aprendizaje continuo.
+- **Qué es:** Arquitectura Socio‑Técnica Adaptativa. "Kore" alude al núcleo esencial: el mínimo de principios, artefactos y rituales que habilitan coherencia y aprendizaje continuo.
 - **Para quién:** Líderes, arquitectos, equipos de producto/servicio (EVs) y gobernanza.
 - **Cómo se usa:** Como un sistema operativo organizacional: modelo mental compartido + protocolos + guías + plataforma (Nexus) + contratos.
+- **Parsimonia:** **18 elementos fundamentales** (6 conceptos + 8 artefactos + 4 protocolos) destilados para máxima coherencia y mínima carga cognitiva.
 
 ---
 
@@ -315,10 +329,28 @@ flowchart LR
 - **Protocolos (el sistema operativo):** [./metodologia refactorizada/protocolos.md](./metodologia refactorizada/protocolos.md)  
   - Calendario CVC 2025: [./metodologia refactorizada/calendario_cvc_2025.md](./metodologia refactorizada/calendario_cvc_2025.md)  
   - PEM (Meta‑protocolo de evolución): [./metodologia refactorizada/protocolo_evolucion.md](./metodologia refactorizada/protocolo_evolucion.md)
+  - **Protocolos de Transformación (Cap. 4):**
+    - 4.1. Génesis (creación desde cero)
+    - 4.2. Metamorfosis (modernización legacy)
+    - 4.3. Orquestación (coordinación de múltiples EVs)
+      - Variante A: Intra-organizacional (un Nodo de Gobernanza)
+      - Variante B: Inter-organizacional (ecosistema federado)
+    - 4.5. Adopción Federada (gestión del cambio organizacional)
 - **Auditorías del marco:** [./metodologia refactorizada/auditorias/](./metodologia refactorizada/auditorias/)  
   - Ejemplo: [Auditoría Q3 2025](./metodologia refactorizada/auditorias/auditoria_2025_q3.md)
-- **Guías de Decisión (estratégicas):** [./guias decision/](./guias decision/)  
-  - Ej.: [gd_arquitectura_nexus.md](./guias decision/gd_arquitectura_nexus.md), [gd_automatizacion_proceso.md](./guias decision/gd_automatizacion_proceso.md)
+- **Guías de Decisión (7 guías destiladas):** [./guias decision/](./guias decision/)  
+  - **Estratégico (Σ-E / Δ-E):**
+    - [gd_portafolio.md](./guias decision/gd_portafolio.md) - ¿Nueva EV o expandir existente?
+    - [gd_cambio_organizacional.md](./guias decision/gd_cambio_organizacional.md) - ¿Cuándo aplicar Protocolo Adopción Federada?
+  - **Táctico (Σ-T / Δ-T):**
+    - [gd_arquitectura_nexus.md](./guias decision/gd_arquitectura_nexus.md) - ¿Qué patrón arquitectónico usar?
+    - [gd_datos.md](./guias decision/gd_datos.md) - ¿Cómo diseñar Producto de Datos?
+    - [gd_sistemas_cognitivos.md](./guias decision/gd_sistemas_cognitivos.md) - ¿Cómo diseñar Sistema Cognitivo (IA)?
+    - [gd_mvp.md](./guias decision/gd_mvp.md) - ¿Qué incluir en Esqueleto Andante?
+    - [gd_priorizacion.md](./guias decision/gd_priorizacion.md) - ¿En qué capacidad invertir primero?
+  - **Operacional (Σ-O / Δ-O):**
+    - [gd_automatizacion_proceso.md](./guias decision/gd_automatizacion_proceso.md) - ¿API, RPA o BPA?
+  - 📋 [MIGRACION_GUIAS.md](./guias decision/MIGRACION_GUIAS.md) - Registro de guías eliminadas/destiladas
 - **Guías Técnicas (implementación):** [./guias tecnicas/](./guias tecnicas/)  
   - Ej.: [gt_arquitectura_nexus.md](./guias tecnicas/gt_arquitectura_nexus.md), [gt_ingenieria_software.md](./guias tecnicas/gt_ingenieria_software.md)
 - **Contratos (fuente única de verdad operable):** [./contratos/](./contratos/)  
@@ -329,6 +361,43 @@ flowchart LR
 
 ---
 
+## Núcleo Parsimonioso (18 elementos)
+
+### 6 Conceptos Fundamentales
+
+1. **Matriz de Coherencia (Σ/Δ × E/T/O):** Modelo mental de 6 celdas para observar diseño y operación
+2. **Entidad de Valor (EV):** Unidad sociotécnica con propósito, fronteras contractuales y métricas de desempeño
+3. **Contrato:** Acuerdo explícito versionado entre EVs (tipos: Datos, API, Agente, Proceso)
+4. **Nodo de Gobernanza (NG):** Responsable de decisiones estratégicas (federación opcional para ecosistemas complejos)
+5. **Ciclo de Retroalimentación:** Patrón universal (Medir→Identificar→Intervenir→Verificar) con instancias a múltiples escalas
+6. **Canvas de EV:** Mapa vivo de la anatomía de una EV (incluye OKRs activos en Caja 9)
+
+### 8 Artefactos Operacionales
+
+**Estratégico (Σ-E / Δ-E):**
+
+1. Mapa de Capacidades
+2. Informe de CVC
+
+**Táctico (Σ-T / Δ-T):**
+3. Canvas de EV (con OKRs activos)
+4. Mapeo de Historias
+5. Mapa de Stakeholders
+
+**Operacional (Σ-O / Δ-O):**
+6. Contrato (tipos: Datos, API, Agente, Proceso)
+7. ADR (referencia Contratos cuando define interfaces)
+8. Tablero de Flujo (con límites WIP)
+
+### 4 Protocolos de Transformación
+
+1. **Génesis:** Creación desde cero (MVT + Esqueleto Andante)
+2. **Metamorfosis:** Modernización legacy (Strangler Fig Pattern)
+3. **Orquestación:** Coordinación de múltiples EVs (variantes intra/inter-organizacional)
+4. **Adopción Federada:** Gestión del cambio organizacional (transparencia radical + olas de adopción)
+
+---
+
 ## Qué hacer según tu rol
 
 - **Líderes y Gobernanza**
@@ -336,12 +405,17 @@ flowchart LR
   - Usar el [Calendario CVC 2025](./metodologia refactorizada/calendario_cvc_2025.md) para planificar y exigir evidencia en las decisiones.
 
 - **Equipos de EV**
-  - Modelar su EV en el `Canvas` y formular OKRs trimestrales. Ver Cap. 2 de [Protocolos](./metodologia refactorizada/protocolos.md) y [Catálogo](./metodologia refactorizada/catalogo.md).
+  - Modelar su EV en el `Canvas` y formular 1–2 OKRs trimestrales. Ver Cap. 2 de [Protocolos](./metodologia refactorizada/protocolos.md) y [Catálogo](./metodologia refactorizada/catalogo.md).
   - Si tu flujo es automatizado, acompañarlo con [Contrato de Proceso](contratos/procesos/contrato_proceso.md) + [YAML](contratos/procesos/contrato_proceso.yml).
 
 - **Arquitectos/Ingeniería**
   - Decidir con Guías de Decisión (p.ej. [gd_arquitectura_nexus.md](./guias decision/gd_arquitectura_nexus.md)).
   - Implementar con Guías Técnicas (p.ej. [gt_ingenieria_software.md](./guias tecnicas/gt_ingenieria_software.md)).
+
+- **Líderes de Cambio Organizacional**
+  - Usar [Guía de Decisión: Gestión del Cambio](./guias decision/gd_cambio_organizacional.md) para determinar si aplicar el Protocolo "Adopción Federada".
+  - Construir el [Mapa de Stakeholders](./metodologia refactorizada/catalogo.md#plantilla-a23-mapa-de-stakeholders-σ-t) y diseñar Roadmap de Adopción por Olas.
+  - Gestionar mediante transparencia radical: Observatorio de Adopción + rituales "Show & Tell" en CVC.
 
 ---
 
@@ -374,16 +448,14 @@ flowchart LR
 
 ---
 
-## Glosario mínimo
+## Glosario Rápido
 
-- **EV (Entidad de Valor):** unidad sociotécnica con propósito, fronteras contractuales y métricas de desempeño.
-- **Contrato:** acuerdo explícito que rige una interacción (Datos, Proceso, Agente, Conocimiento).
-- **ADR:** bitácora de decisión arquitectónica concisa y versionada.
-- **Nexus:** arquitectura de referencia que materializa las “carreteras pavimentadas”.
-
----
-
-¿Sugerencias o mejoras al marco? Usa el [PEM](./metodologia refactorizada/protocolo_evolucion.md) y registra tu auditoría en `./metodologia refactorizada/auditorias/`.
+- **EV:** Entidad de Valor (átomo del valor organizacional)
+- **Contrato:** Acuerdo explícito versionado (YAML/JSON) que define interacciones
+- **ADR:** Bitácora de Decisión Arquitectónica (combate amnesia organizacional)
+- **CVC:** Ciclo de Valor y Capacidad (ritual trimestral de gobernanza basado en evidencia)
+- **NG:** Nodo de Gobernanza (toma decisiones de inversión)
+- **Nexus:** Plataforma de referencia ("carreteras pavimentadas" + guardrails)
 
 ```
 
@@ -392,11 +464,10 @@ flowchart LR
 ```markdown
 # Guía de Decisión: Arquitectura de Entidades de Valor con la Plataforma Nexus
 
-ID: `GD-SIGMA-001`
-Versión: 2.0
-Propósito: Esta es la guía maestra que establece la Plataforma Nexus como la implementación canónica de KORE. Guía a los equipos en la adopción de sus principios y en la elección de patrones arquitectónicos para sus `Entidades de Valor`.
-
----
+**ID:** GD-SIGMA-001  
+**Versión:** 2.0  
+**Dominio:** Σ-T (Diseño Táctico)  
+**Propósito:** Establecer la Plataforma Nexus como la implementación canónica de KORE y guiar a los equipos en la adopción de sus principios y en la elección de patrones arquitectónicos para sus Entidades de Valor.
 
 ## Principio KORE: La Arquitectura como Consecuencia del Diseño
 
@@ -437,8 +508,6 @@ ID: `GD-BPA-001`
 Versión: 1.0
 Propósito: Ayudar a los equipos a decidir la estrategia de automatización correcta para un proceso de negocio, en el contexto de una `Entidad de Valor (EV)`.
 
----
-
 ## Principio KORE: API-First, RPA como Deuda Técnica
 
 La interacción programática a través de un `Contrato de Servicio` (API) es siempre la opción preferida por su robustez y bajo acoplamiento. El uso de RPA para interactuar con la UI de otro sistema debe ser considerado una forma de deuda técnica: una solución táctica y temporal que debe ser explícitamente justificada y gestionada.
@@ -476,16 +545,64 @@ La decisión de implementar RPA DEBE ser documentada en una `Bitácora de Decisi
 
 ```
 
+### ASTA-KORE fundamentos y manual operacional/guias decision/gd_cambio_organizacional.md
+
+```markdown
+# Guía de Decisión: ¿Cuándo Aplicar el Protocolo "Adopción Federada"?
+
+**ID:** GD-CAMBIO-001  
+**Versión:** 1.0  
+**Dominio:** Δ-E (Flujo Estratégico)  
+**Propósito:** Decidir si un cambio organizacional requiere el protocolo formal "Adopción Federada" o puede gestionarse con rituales estándar de ASTA-Kore.
+
+## Pregunta Estratégica
+
+¿Este cambio requiere un protocolo formal de gestión de adopción, o puede ejecutarse mediante los rituales estándar de ASTA-Kore?
+
+## Árbol de Decisión
+
+### Pregunta 1: ¿El cambio afecta a múltiples equipos/divisiones?
+
+- **NO** → Gestión estándar vía `Canvas de EV` y `OKRs` del equipo. No requiere Protocolo "Adopción Federada".
+- **SÍ** → Continuar a Pregunta 2.
+
+### Pregunta 2: ¿Existen stakeholders con Alto Poder que podrían bloquear?
+
+- **NO** → Gestión estándar. Comunicar en `CVC` y escalar gradualmente.
+- **SÍ** → Continuar a Pregunta 3.
+
+### Pregunta 3: ¿El cambio implica deprecar un sistema/proceso existente?
+
+- **NO** → Considerar Protocolo "Adopción Federada" si hay resistencia cultural esperada.
+- **SÍ** → **APLICAR Protocolo "Adopción Federada"**. La deprecación de sistemas legacy siempre requiere gestión política explícita.
+
+## Señales de que NECESITAS el Protocolo
+
+✅ Múltiples divisiones con diferentes niveles de madurez digital.
+✅ Existe un "Guardián" (líder con poder) escéptico o resistente.
+✅ El cambio requiere que usuarios abandonen herramientas/procesos familiares.
+✅ Hay riesgo de sabotaje pasivo (ej. "adopción nominal" sin uso real).
+✅ El cambio tiene implicaciones políticas o de poder (ej. centralización de datos).
+
+## Señales de que NO lo necesitas
+
+❌ El cambio es interno a un solo equipo.
+❌ Todos los stakeholders clave son "Campeones" (Alto Poder, Alto Interés).
+❌ El cambio es aditivo (no depreca nada existente).
+❌ La organización tiene cultura de adopción ágil probada.
+
+**Protocolo Relacionado**:  `protocolos.md`
+```
+
 ### ASTA-KORE fundamentos y manual operacional/guias decision/gd_datos.md
 
 ```markdown
 # Guía de Decisión: Diseño de Productos de Datos
 
-ID: `GD-DATA-001`
-Versión: 1.0
-Propósito: Ayudar a los equipos a tomar decisiones estratégicas sobre el diseño, la gobernanza y la operación de Productos de Datos como `Entidades de Valor (EV)`.
-
----
+**ID:** GD-DATA-001  
+**Versión:** 1.0  
+**Dominio:** Σ-T (Diseño Táctico)  
+**Propósito:** Tomar decisiones estratégicas sobre el diseño, la gobernanza y la operación de Productos de Datos como Entidades de Valor.
 
 ## Principio KORE: El Dato como un Producto, no como un Subproducto
 
@@ -518,73 +635,385 @@ Para una inmersión profunda en la implementación de estos patrones, incluyendo
 
 ```
 
-### ASTA-KORE fundamentos y manual operacional/guias decision/gd_experiencia_usuario.md
+### ASTA-KORE fundamentos y manual operacional/guias decision/gd_mvp.md
 
 ```markdown
-# Guía de Decisión: Diseño de Experiencia de Usuario (UX)
+# Guía de Decisión: Definición del Esqueleto Andante (MVP)
 
-ID: `GD-UX-001`
-Versión: 1.0
-Propósito: Ayudar a los equipos a tomar decisiones estratégicas sobre el diseño de la experiencia de usuario (UX) para una `Entidad de Valor (EV)`.
+**ID:** GD-MVP-001  
+**Versión:** 2.0  
+**Dominio:** Δ-T (Flujo Táctico)  
+**Propósito:** Decidir qué capacidades incluir en el primer incremento de valor desplegable.
 
----
+## Pregunta Estratégica
 
-## Principio KORE: La Experiencia del Usuario es una Capacidad, no un Adorno
+**¿Cuál es el conjunto mínimo de capacidades que entrega valor de punta a punta?**
 
-Una `Entidad de Valor` no solo debe ser funcionalmente correcta, sino también usable, accesible y eficiente. La UX es una dimensión crítica de la calidad que debe ser considerada desde el inicio del diseño en el `Canvas de EV`, no como una ocurrencia tardía.
+## Definición: Esqueleto Andante
 
-## Protocolo de Decisión para el Diseño de UX
+**No es:** Un prototipo, mockup o demo.
 
-Durante el `Taller de Canvas de EV`, utilice las siguientes preguntas para guiar la conversación sobre la experiencia del usuario:
+**Es:** Un sistema funcional que:
 
-| Caja del Canvas | Pregunta Clave de UX a Responder |
-| :--- | :--- |
-| 2. Usuarios | ¿Quiénes son los consumidores de esta EV? ¿Cuál es su contexto, nivel de habilidad y necesidades de accesibilidad? |
-| 3. Flujo de Valor | ¿Cómo es el "viaje del usuario" al interactuar con esta EV? ¿Dónde podemos reducir la fricción? |
-| 5. Descubrimiento | ¿Cómo encontrarán los usuarios la funcionalidad que necesitan? ¿Es la navegación intuitiva? |
-| 8. Gobernanza | ¿Cómo proporcionamos ayuda contextual y manejamos los errores de forma clara? |
+1. ✅ Entrega valor real a usuarios reales
+2. ✅ Recorre el flujo completo (inicio → fin)
+3. ✅ Está desplegado en producción
+4. ✅ Es medible (genera datos de uso)
 
-## Heurísticas de Decisión de Diseño
+**Metáfora:** Un esqueleto humano. No tiene músculos ni piel, pero puede sostenerse y moverse.
 
-Las decisiones de diseño deben estar alineadas con los principios de la UX moderna. Utilice esta guía para orientar sus decisiones y consulte la guía técnica para patrones de implementación.
+## Árbol de Decisión
 
-| Si su objetivo es... | Considere el principio/patrón... | Porque... | Guía Técnica de Referencia |
-| :--- | :--- | :--- | :--- |
-| Simplificar interfaces complejas y reducir la carga cognitiva. | Divulgación Progresiva y Minimalismo. | Muestra solo lo necesario, revelando la complejidad solo cuando se solicita. | `gt_diseno_ux.md` |
-| Aumentar la eficiencia de los usuarios expertos. | Atajos de Teclado y Paletas de Comandos. | Permite a los usuarios avanzados operar la interfaz sin depender del ratón, acelerando tareas repetitivas. | `gt_diseno_ux.md` |
-| Garantizar la coherencia a través de múltiples aplicaciones. | Adoptar un Sistema de Diseño (Design System). | Proporciona un repositorio central de componentes y patrones reutilizables, acelerando el desarrollo. | `gt_diseno_ux.md` |
-| Hacer la aplicación accesible para todos los usuarios. | Diseño Inclusivo (WCAG) por defecto. | La accesibilidad no es una opción, es un requisito que beneficia a todos los usuarios. | `gt_diseno_ux.md` |
-| Integrar IA para mejorar la experiencia. | Copilotos y Asistentes de IA. | Aumenta la inteligencia del usuario, automatiza tareas y proporciona ayuda contextual en lenguaje natural. | `gt_diseno_ux.md`, `gt_ingenieria_ia.md` |
+### Pregunta 1: ¿Esta capacidad es parte del flujo crítico de valor?
 
-Para una inmersión profunda en la implementación de estos patrones, incluyendo la gestión de un Sistema de Diseño, patrones de interfaz para aplicaciones empresariales y la integración de IA en la UX, consulte la `gt_diseno_ux.md`.
+**Verificación:** ¿Sin esta capacidad, el usuario NO puede completar su objetivo principal?
+
+- **SÍ** → **INCLUIR en Esqueleto Andante**. Continuar a Pregunta 2.
+- **NO** → **EXCLUIR**. Es optimización o feature secundaria.
+
+### Pregunta 2: ¿Es la versión más simple que funciona?
+
+**Verificación:** ¿Puedo simplificar esta capacidad y aún así entregar valor?
+
+- **SÍ** → **SIMPLIFICAR**. Implementar versión mínima.
+- **NO** → **INCLUIR** tal como está.
+
+### Pregunta 3: ¿Puedo medirla en producción?
+
+**Verificación:** ¿Puedo capturar métricas de uso real (no simulado)?
+
+- **SÍ** → **INCLUIR**. Es parte del Esqueleto Andante.
+- **NO** → **EXCLUIR**. No es desplegable.
+
+## Criterios de Calidad del Esqueleto Andante
+
+### Checklist
+
+- **Valor:**
+  - [ ] Resuelve el problema principal del usuario
+  - [ ] Usuarios reales pueden usarlo (no solo el equipo)
+  - [ ] Genera valor medible (transacciones, conversiones)
+
+- **Completitud:**
+  - [ ] Recorre el flujo de punta a punta
+  - [ ] No tiene "pantallas de construcción" o TODOs
+  - [ ] Cumple la DoD (desplegado en producción)
+
+- **Simplicidad:**
+  - [ ] Cada capacidad es la versión más simple que funciona
+  - [ ] No tiene features "por si acaso"
+  - [ ] Puede implementarse en 4-8 semanas
+
+- **Medibilidad:**
+  - [ ] Instrumentado con métricas básicas
+  - [ ] Logs estructurados implementados
+  - [ ] Dashboard de uso configurado
+
+## Integración con ASTA-Kore
+
+| Artefacto | Acción |
+|:---|:---|
+| **Mapeo de Historias** | Primera fila horizontal = Esqueleto Andante |
+| **OKRs** | El Esqueleto debe contribuir a un KR activo |
+| **Tablero de Flujo** | Historias del Esqueleto tienen máxima prioridad |
+| **DoD** | El Esqueleto debe cumplir DoD (desplegado) |
+| **CVC** | Demo del Esqueleto en primer CVC |
+
+**Referencia Detallada:** Ver `protocolos.md` §2.2 (Mapeo de Historias) para técnicas y patrones completos.
+
+## Anti-Patrones
+
+| Anti-Patrón | Síntoma | Solución |
+|:---|:---|:---|
+| **MVP Inflado** | Esqueleto con 50 features | Aplicar técnica de slicing radical |
+| **Prototipo Eterno** | "Esqueleto" que nunca se despliega | Forzar despliegue en semana 4 |
+| **Perfeccionismo** | Pulir UI antes de validar flujo | Funcionalidad primero, estética después |
+| **Sin Métricas** | No se mide uso real | Instrumentar antes de desplegar |
 
 ```
 
-### ASTA-KORE fundamentos y manual operacional/guias decision/gd_know.md
+### ASTA-KORE fundamentos y manual operacional/guias decision/gd_portafolio.md
 
 ```markdown
-# Guía de Decisión: Gestión del Conocimiento
+# Guía de Decisión: Gestión de Portafolio de EVs
 
-ID: `GD-KNOW-001`
-Versión: 1.0
-Propósito: Ayudar a los equipos y a la organización a tomar decisiones sobre cómo capturar, sintetizar y aplicar el conocimiento para mejorar la entrega de valor.
+**ID:** GD-PORTFOLIO-001  
+**Versión:** 2.0  
+**Dominio:** Σ-E (Diseño Estratégico)  
+**Propósito:** Decidir si crear una nueva Entidad de Valor o expandir una existente.
 
----
+## Pregunta Estratégica
 
-## Principio KORE: El Conocimiento es una Capacidad Activa, no un Archivo Pasivo
+**¿Crear una nueva EV o expandir una existente?**
 
-La Gestión del Conocimiento (KM) no es un fin en sí mismo, sino una capacidad habilitadora que reduce la incertidumbre y acelera los ciclos de aprendizaje. En KORE, el conocimiento se gestiona a través de los rituales y artefactos del marco.
+## Árbol de Decisión
 
-## Protocolo de Decisión para la Gestión del Conocimiento
+### Pregunta 1: ¿El problema tiene un propósito de valor claramente diferenciado?
 
-| Si su objetivo es... | Considere el protocolo/patrón... | Porque... | Guía Técnica de Referencia |
-| :--- | :--- | :--- | :--- |
-| Capturar el "porqué" de una decisión técnica importante. | Documentar la decisión en una `Bitácora de Decisión (ADR)`. | Combate la "amnesia organizacional" y crea un activo de conocimiento explícito y reutilizable. | `gt_ingenieria_software.md` |
-| Sintetizar el conocimiento de un dominio en una forma accionable. | Crear o actualizar una Guía Técnica (GT). | Consolida el "cómo" en una fuente única de verdad, separándolo del "porqué" estratégico. | `gt_arquitectura_nexus.md` |
-| Habilitar a un Sistema de IA para que responda preguntas sobre conocimiento interno de forma confiable. | Implementar un Pipeline de Curación para RAG. | Transforma documentos no estructurados en una base de conocimiento que la IA puede usar para dar respuestas citables y verificables. | `gt_gestion_conocimiento.md` |
-| Gobernar el uso del conocimiento por parte de la IA. | Implementar un `Contrato de Conocimiento`. | Define las reglas de autoridad, vigencia y citación para una colección de conocimiento, garantizando su uso responsable. | `gt_gestion_conocimiento.md` |
+**Verificación:** ¿Puedo formular un Objective (OKR) que NO se solape con los de EVs existentes?
 
-Para una inmersión profunda en la implementación de un sistema de gestión del conocimiento, y especialmente en el pipeline técnico para la curación de contenido para RAG, consulte la `gt_gestion_conocimiento.md`.
+- **NO** → **EXPANDIR EV EXISTENTE**. Añadir capacidad al Canvas de la EV más cercana.
+- **SÍ** → Continuar a Pregunta 2.
+
+### Pregunta 2: ¿Requiere un equipo dedicado (≥3 personas) de forma sostenida?
+
+**Verificación:** ¿El trabajo justifica un equipo full-time por ≥6 meses?
+
+- **NO** → **EXPANDIR EV EXISTENTE**. Gestionar como feature dentro de una EV.
+- **SÍ** → Continuar a Pregunta 3.
+
+### Pregunta 3: ¿Tiene contratos de interfaz claramente separables?
+
+**Verificación:** ¿Puedo definir Contratos (Datos, API, Agente, Proceso) que NO requieren acoplamiento fuerte con otras EVs?
+
+- **NO** → **EXPANDIR EV EXISTENTE**. El acoplamiento fuerte indica que es parte de la misma EV.
+- **SÍ** → **CREAR NUEVA EV**.
+
+## Matriz de Decisión
+
+| Criterio | Expandir EV | Nueva EV |
+|:---|:---:|:---:|
+| **Propósito diferenciado** | ❌ | ✅ |
+| **Equipo dedicado ≥6 meses** | ❌ | ✅ |
+| **Contratos separables** | ❌ | ✅ |
+| **Métricas de valor propias** | ❌ | ✅ |
+
+**Regla:** Si cumple 3-4 criterios → Nueva EV. Si cumple 0-2 → Expandir existente.
+
+## Señales de que NECESITAS Nueva EV
+
+✅ **Propósito único:** "Sistema de Postulaciones" vs. "Portal Ciudadano" (propósitos distintos)  
+✅ **Equipo sostenido:** Requiere 5 personas por 2 años  
+✅ **Contratos claros:** Expone API REST, consume datos de Registro Civil  
+✅ **Métricas propias:** NPS de postulantes, tasa de conversión  
+✅ **Ciclo de vida independiente:** Puede desplegarse sin afectar otras EVs  
+
+## Señales de que DEBES Expandir EV Existente
+
+❌ **Propósito solapado:** "Mejorar UX del portal" (es parte del Portal Ciudadano)  
+❌ **Trabajo temporal:** 2 personas por 3 meses  
+❌ **Acoplamiento fuerte:** Requiere modificar código de otra EV  
+❌ **Sin métricas propias:** Contribuye a métricas de otra EV  
+❌ **Dependencia de despliegue:** No puede desplegarse independientemente  
+
+## Checklist de Creación de Nueva EV
+
+**Fase 1: Validación**
+
+- [ ] Propósito de valor formulado (Objective claro)
+- [ ] Equipo identificado (≥3 personas, ≥6 meses)
+- [ ] Contratos de interfaz diseñados
+- [ ] Métricas de valor definidas (KRs)
+- [ ] Sponsor ejecutivo asignado
+
+**Fase 2: Diseño**
+
+- [ ] Canvas de EV completado
+- [ ] OKRs trimestrales definidos (Caja 9 del Canvas)
+- [ ] Story Map inicial creado
+- [ ] Contratos formalizados (YAML)
+- [ ] ADR-001 (decisión de crear la EV) documentado
+
+**Fase 3: Génesis**
+
+- [ ] Repositorio creado
+- [ ] Pipeline CI/CD configurado
+- [ ] Tablero de Flujo inicializado
+- [ ] Esqueleto Andante desplegado
+- [ ] Primera retrospectiva ejecutada
+
+## Integración con ASTA-Kore
+
+| Artefacto | Acción |
+|:---|:---|
+| **Canvas de EV** | Crear nuevo Canvas para la EV |
+| **Portafolio (Σ-E)** | Registrar nueva EV en inventario organizacional |
+| **Contratos** | Formalizar interfaces con otras EVs |
+| **CVC** | Presentar nueva EV en próximo CVC |
+| **ADR** | Documentar decisión de crear la EV |
+
+**Referencia Detallada:** Ver `protocolos.md` §4.1 (Protocolo Génesis) para patrones de evolución completos.
+
+## Anti-Patrones
+
+| Anti-Patrón | Síntoma | Solución |
+|:---|:---|:---|
+| **EV Prematura** | Crear EV para feature de 2 meses | Esperar a que emerja necesidad sostenida |
+| **EV Zombie** | EV sin equipo ni actividad | Cerrar formalmente (Protocolo Sunset) |
+| **EV Acoplada** | EVs que no pueden desplegarse independientemente | Refactorizar contratos o fusionar EVs |
+| **EV Sin Propósito** | No tiene OKRs claros | Reformular propósito o cerrar |
+
+```
+
+### ASTA-KORE fundamentos y manual operacional/guias decision/gd_priorizacion.md
+
+```markdown
+# Guía de Decisión: Priorización de Inversión en Capacidades
+
+**ID:** GD-CAPACITY-001  
+**Versión:** 3.0  
+**Dominio:** Δ-T (Flujo Táctico)  
+**Propósito:** Decidir en qué capacidad invertir primero cuando los recursos son limitados.
+
+## Principio Invariante: OKR-First
+
+**Regla Fundamental:** Solo se prioriza trabajo que contribuye a un Resultado Clave (KR) activo del trimestre.
+
+**Fundamento:** El backlog se subordina a los OKRs. Primero se define el resultado (KR), luego se crea el trabajo. Esto garantiza que cada esfuerzo esté anclado en la estrategia y sea medible.
+
+**Excepción:** Trabajo sin KR asociado va al **"Objetivo Cero"** (deuda técnica, exploración, mejora de herramientas) con 20% de capacidad reservada obligatoriamente.
+
+## Pregunta Estratégica
+
+**¿En qué capacidad invertir primero cuando los recursos son limitados?**
+
+## Árbol de Decisión
+
+### Pregunta 0: ¿Esta capacidad contribuye a un KR activo del trimestre?
+
+**Verificación:** ¿Puedo identificar el KR específico (ej. "KR-2025-Q1-02: Reducir tiempo de postulación de 15 a 5 minutos") al que contribuye?
+
+- **SÍ** → **CONTINUAR** a Pregunta 1. Es trabajo priorizable.
+- **NO** → **EVALUAR OBJETIVO CERO**:
+  - ¿Es deuda técnica crítica, exploración o mejora de herramientas?
+    - **SÍ** → Asignar al 20% de capacidad reservada para Objetivo Cero.
+    - **NO** → **RECHAZAR**. No priorizar hasta que se formule un KR que lo justifique.
+
+### Pregunta 1: ¿La capacidad desbloquea valor inmediato medible en el KR?
+
+**Verificación:** ¿Puedo medir impacto en el KR asociado en <4 semanas?
+
+- **SÍ** → **PRIORIDAD ALTA**. Continuar a Pregunta 2.
+- **NO** → **PRIORIDAD MEDIA/BAJA**. Evaluar si es habilitadora.
+
+### Pregunta 2: ¿Es un cuello de botella crítico en el flujo de valor?
+
+**Verificación:** ¿Múltiples historias están bloqueadas esperando esta capacidad?
+
+- **SÍ** → **PRIORIDAD MÁXIMA**. Ejecutar inmediatamente.
+- **NO** → **PRIORIDAD ALTA**. Continuar a Pregunta 3.
+
+### Pregunta 3: ¿El costo de NO tenerla crece exponencialmente?
+
+**Verificación:** ¿Cada semana de retraso aumenta significativamente el costo/riesgo?
+
+- **SÍ** → **PRIORIDAD MÁXIMA**. Ejecutar inmediatamente.
+- **NO** → **PRIORIDAD ALTA**. Priorizar por ROI.
+
+## Matriz de Priorización: Valor vs. Esfuerzo
+
+```plain
+         │                       │
+  Alto   │   ┌──────────┐    │   ┌──────────┐
+  Valor  │   │  HACER   │    │   │PLANIFICAR│
+         │   │    YA    │    │   │  (Q+1)   │
+         │   └──────────┘    │   └──────────┘
+ ─────────┼───────────────────────┼───────────────────────
+  Bajo   │   ┌──────────┐    │   ┌──────────┐
+         │   │  HACER   │    │   │    NO    │
+         │   │ (Quick  │    │   │  HACER   │
+         │   │  Wins)  │    │   │         │
+         │   └──────────┘    │   └──────────┘
+         └───────────────────────┴───────────────────────
+           Bajo Esfuerzo          Alto Esfuerzo
+```
+
+**Fórmula de Priorización (OKR-First):**
+
+```
+Score = (Impacto_en_KR × Urgencia) / Esfuerzo
+```
+
+**Donde:**
+
+- **Impacto_en_KR** (1-10): Δ esperado en el Resultado Clave asociado
+  - 10 = Mueve el KR >50% hacia el objetivo
+  - 7-9 = Mueve el KR 25-50%
+  - 4-6 = Mueve el KR 10-25%
+  - 1-3 = Mueve el KR <10%
+  - 0 = No contribuye a ningún KR activo → **Rechazar o asignar a Objetivo Cero**
+
+- **Urgencia** (1-3): Costo de retraso
+  - 3 = Cada semana de retraso aumenta costo/riesgo significativamente
+  - 2 = Costo de retraso moderado
+  - 1 = Puede esperar sin penalización
+
+- **Esfuerzo** (1-20): Semanas estimadas de implementación
+
+**Ejemplo:**
+
+- Capacidad A: Impacto_en_KR=8, Urgencia=3, Esfuerzo=2 → Score = (8×3)/2 = **12**
+- Capacidad B: Impacto_en_KR=5, Urgencia=2, Esfuerzo=8 → Score = (5×2)/8 = **1.25**
+- **Decisión:** Priorizar Capacidad A
+
+## Tipos de Capacidades
+
+### 1. Capacidades de Valor Directo
+
+**Definición:** Entregan valor inmediato a usuarios finales y mueven un KR activo.  
+**Criterio:** Impacto medible en KR del trimestre (Impacto_en_KR ≥ 4).  
+**Requisito:** Debe estar explícitamente vinculada a un KR en el Mapeo de Historias.
+
+### 2. Capacidades Habilitadoras
+
+**Definición:** Desbloquean múltiples capacidades de valor.  
+**Criterio:** Número de capacidades de valor que desbloquea.  
+**Regla:** Implementar solo cuando ≥3 capacidades de valor las requieren.
+
+### 3. Capacidades de Deuda Técnica (Objetivo Cero)
+
+**Definición:** Reducen fricción operacional o riesgo técnico sin contribuir directamente a un KR del trimestre.  
+**Criterio:** Costo de NO hacerlo (bugs, lentitud, riesgo, sostenibilidad del equipo).  
+**Regla Obligatoria:** Reservar 20% de capacidad para Objetivo Cero.
+
+**Ejemplos válidos de Objetivo Cero:**
+
+- Pago de deuda técnica crítica (refactorización, actualización de dependencias)
+- Mejora de herramientas del equipo (automatización de tests, optimización de pipeline)
+- Exploración de nuevas tecnologías (spikes, prototipos de aprendizaje)
+- Formación y capacitación del equipo
+
+**Regla:** Trabajo de Objetivo Cero NO compite con trabajo de KRs. Tiene presupuesto separado.
+
+## Patrones de Priorización
+
+### Patrón 1: Esqueleto Andante Primero
+
+**Principio:** Implementar el flujo de valor de punta a punta antes de optimizar.  
+**Regla:** No optimizar antes de validar que el flujo básico funciona.
+
+### Patrón 2: Desbloquear Cuellos de Botella
+
+**Principio:** Atacar primero lo que bloquea a más personas.  
+**Regla:** Si ≥3 historias están bloqueadas por la misma dependencia, esa dependencia es prioridad máxima.
+
+### Patrón 3: Reducir Variabilidad
+
+**Principio:** Priorizar capacidades que estabilizan el sistema.  
+**Regla:** Si >30% de capacidad se gasta en bugs/incidentes, priorizar calidad sobre features.
+
+## Integración con ASTA-Kore
+
+| Artefacto | Acción |
+|:---|:---|
+| **OKRs (Caja 9 Canvas EV)** | Cada capacidad de valor directo DEBE estar vinculada a un KR específico |
+| **Mapeo de Historias** | Historias se agrupan por KR y se ordenan por Score de priorización |
+| **Tablero de Flujo** | Columna "Opciones" muestra KR asociado a cada historia |
+| **CVC** | Progreso de KRs se reporta mostrando qué capacidades contribuyeron |
+| **Objetivo Cero** | 20% de capacidad visible en Tablero como trabajo sin KR |
+
+**Referencia Detallada:** Ver `protocolos.md` §2.2 (Mapeo de Historias) para matriz Valor/Esfuerzo completa.
+
+## Anti-Patrones
+
+| Anti-Patrón | Síntoma | Solución |
+|:---|:---|:---|
+| **Gold Plating** | Optimizar antes de validar | Esqueleto Andante primero |
+| **HIPPO** | Priorizar por opinión del jefe sin ancla en KRs | Priorizar por Impacto_en_KR medible |
+| **Trabajo Huérfano** | Historias sin KR asociado en el backlog | Rechazar o mover a Objetivo Cero |
+| **Deuda Infinita** | 0% de capacidad para deuda técnica | Reservar 20% obligatorio (Objetivo Cero) |
+| **Parálisis de Análisis** | Semanas decidiendo prioridades | Timebox: 1 hora de priorización/semana |
+| **KR Inflado** | Vincular todo trabajo a KRs forzadamente | Usar Objetivo Cero para trabajo legítimo sin KR |
 
 ```
 
@@ -593,9 +1022,10 @@ Para una inmersión profunda en la implementación de un sistema de gestión del
 ```markdown
 # Guía de Decisión: Diseño de Sistemas Cognitivos (IA)
 
-ID: `GD-IA-001`
-Versión: 1.0
-Propósito: Ayudar a los equipos a tomar decisiones estratégicas sobre el diseño, la gobernanza y el rol de los Sistemas Cognitivos (agentes, copilotos) como `Entidades de Valor (EV)`.
+**ID:** GD-IA-001  
+**Versión:** 1.0  
+**Dominio:** Σ-T (Diseño Táctico)  
+**Propósito:** Tomar decisiones estratégicas sobre el diseño, la gobernanza y el rol de los Sistemas Cognitivos (agentes, copilotos) como Entidades de Valor.
 
 ---
 
@@ -653,8 +1083,7 @@ Se establece una separación clara entre el marco (la definición de KORE) y la 
 
 La estructura raíz de referencia es la siguiente:
 
-```
-
+```plain
 /<org-repo>/
 ├─ _framework_asta-kore/      # Submódulo Git apuntando al repo del marco (solo lectura)
 ├─ entidades_de_valor/        # Contiene todas las Entidades de Valor (EVs)
@@ -662,15 +1091,13 @@ La estructura raíz de referencia es la siguiente:
 ├─ paquetes/                  # Librerías y componentes compartidos
 ├─ ops/                       # Operaciones a nivel de repositorio (pipelines, policies)
 └─ proyectos_espejo/          # Charters de proyectos sin código propio (solo gestión)
-
 ```
 
 ### 2.2. Estructura de una Entidad de Valor (EV)
 
 Cada EV, sea una aplicación, un proceso o un agente, sigue una estructura interna predecible:
 
-```
-
+```plain
 /entidades_de_valor/
 └─ ev-<nombre-ev>/
    ├─ contratos/             # Instancias VIVAS de los contratos (ej. contrato_proceso.yml)
@@ -680,7 +1107,6 @@ Cada EV, sea una aplicación, un proceso o un agente, sigue una estructura inter
    ├─ ops/                   # Pipelines y configuración de CI/CD específicos de la EV
    ├─ src/                   # Código fuente
    └─ tests/                 # Pruebas automatizadas
-
 ```
 
 ### 2.3. Convención para Agentes de IA
@@ -695,6 +1121,161 @@ Los Agentes de IA son EVs de primera clase. Para distinguirlos y facilitar la au
 1. Framework como Dependencia: El código de la organización NUNCA debe modificar el contenido de `/_framework_asta-kore/`. Las actualizaciones se gestionan a través de `git submodule update`.
 2. Contratos Vivos: Los contratos en `entidades_de_valor//contratos/` son artefactos operables. Los pipelines de CI/CD DEBEN validarlos contra los esquemas definidos en el marco.
 3. Visibilidad del Valor (CVC): Cada EV debe producir un informe CVC trimestral en su directorio `docs/cvc/`, vinculando evidencia de OKRs, demos y métricas de salud.
+
+```
+
+### ASTA-KORE fundamentos y manual operacional/guias tecnicas/gt_api.md
+
+```markdown
+# GT-API-DESIGN-001: Diseño de APIs para Contratos de Servicio
+
+**ID:** GT-API-DESIGN-001  
+**Versión:** 2.0  
+**Dominio:** Σ-T (Diseño Táctico)  
+**Protocolo:** 2.1 - Diseño de Arquitectura
+
+## Invariante Central
+
+**Una API es un contrato de comportamiento, no una exposición directa de la base de datos.**
+
+Su propósito es expresar capacidades de negocio, no estructuras técnicas.
+
+## Principios de Diseño
+
+### Principio 1: Orientación a Casos de Uso
+
+**Regla:** Diseñar endpoints para lo que el cliente necesita hacer, no para las tablas de la BD.
+
+**Ejemplo:**
+
+```plain
+❌ Orientado a BD:
+GET /tablas/postulaciones
+GET /tablas/ciudadanos
+
+✅ Orientado a Casos de Uso:
+GET /postulaciones/{id}/resumen-completo
+  (incluye ciudadano + documentos en una llamada)
+```
+
+### Principio 2: Estabilidad del Contrato
+
+**Regla:** Los cambios en la implementación interna NO deben romper el contrato.
+
+**Ejemplo:**
+
+```plain
+Versión 1 (BD relacional):
+GET /postulaciones/{id} → SELECT * FROM postulaciones
+
+Versión 2 (migración a NoSQL):
+GET /postulaciones/{id} → db.postulaciones.findOne()
+
+El contrato NO cambia
+```
+
+### Principio 3: Versionado Explícito
+
+**Regla:** Cambios incompatibles requieren nueva versión. Mantener versiones anteriores hasta que todos los clientes migren.
+
+**Patrón:**
+
+```plain
+v1: /v1/postulaciones/{id}
+v2: /v2/postulaciones/{id}
+
+Deprecación: v1 se mantiene 6 meses después de lanzar v2
+```
+
+## Criterios de Decisión: REST vs. GraphQL vs. gRPC
+
+### REST (Recomendado para APIs públicas)
+
+**Cuándo usar:**
+
+- ✅ APIs públicas o inter-organizacionales
+- ✅ Clientes diversos (web, móvil, terceros)
+- ✅ Cacheo importante
+
+**Ventajas:** Estándar, simple, cacheable  
+**Desventajas:** Over-fetching, múltiples requests
+
+### GraphQL (Para clientes con necesidades variables)
+
+**Cuándo usar:**
+
+- ✅ Clientes necesitan datos muy específicos
+- ✅ Evitar over-fetching/under-fetching
+- ✅ Frontend y backend en mismo equipo
+
+**Ventajas:** Flexible, eficiente  
+**Desventajas:** Complejidad, difícil de cachear
+
+### gRPC (Para comunicación interna de alta performance)
+
+**Cuándo usar:**
+
+- ✅ Comunicación entre microservicios internos
+- ✅ Baja latencia crítica
+- ✅ Tipado fuerte requerido
+
+**Ventajas:** Rápido, tipado, streaming  
+**Desventajas:** No browser-friendly, menos estándar
+
+## Patrones de Versionado
+
+### Estrategia: URL Versioning
+
+**Patrón:**
+
+```plain
+/v1/postulaciones/{id}
+/v2/postulaciones/{id}
+```
+
+**Ventajas:**
+
+- ✅ Simple de implementar
+- ✅ Fácil de cachear
+- ✅ Claro para clientes
+
+### Ciclo de Vida de Versiones
+
+**Regla:** Mantener versión anterior 6 meses después de lanzar nueva versión.
+
+**Ejemplo:**
+
+```yaml
+v1:
+  lanzamiento: 2024-01-01
+  deprecacion: 2025-01-01 (anuncio)
+  sunset: 2025-07-01 (apagado)
+  
+v2:
+  lanzamiento: 2025-01-01
+  cambios_incompatibles:
+    - Campo "estado" ahora es enum (antes string)
+```
+
+## Anti-Patrones
+
+| Anti-Patrón | Síntoma | Solución |
+|:---|:---|:---|
+| **Chatty API** | 10 llamadas para 1 pantalla | Endpoints agregados |
+| **CRUD Ingenuo** | API = espejo de BD | Diseñar por casos de uso |
+| **Breaking Changes** | Cambios sin versionar | Versionado explícito |
+| **Sin Paginación** | Retorna 10,000 items | Paginación obligatoria |
+
+## Integración con ASTA-Kore
+
+**Contrato de API:** Toda API debe tener un `contrato_api.yml` que defina:
+
+- Endpoints y métodos
+- Estructura de request/response
+- SLOs (latencia, disponibilidad)
+- Versionado y deprecación
+
+**Referencia:** Ver plantillas de contratos en `/plantillas_contratos/apis/`
 
 ```
 
@@ -715,8 +1296,6 @@ Relación con KORE:
 
 * Guía de Decisión Relacionada: `gd_arquitectura_nexus.md`
 * Artefactos KORE Gobernados: `Canvas de EV`, `Mapa de Capacidades`, `Contratos Conversacionales`, `ADRs`.
-
----
 
 ## 1. Principios de la Plataforma Nexus
 
@@ -787,10 +1366,7 @@ Audiencia: Diseñadores de UX/UI, Dueños de Producto, Desarrolladores Frontend.
 
 Relación con KORE:
 
-* Guía de Decisión Relacionada: `gd_experiencia_usuario.md`
 * Artefactos KORE Informados: `Canvas de EV` (Cajas 2, 3, 9), `Mapeo de Historias`.
-
----
 
 ## 1. Principios de Diseño UX para Entidades de Valor KORE
 
@@ -833,6 +1409,34 @@ Un Sistema de Diseño es la fuente única de verdad para la UX/UI. Es un product
   * Debe existir un equipo o comité responsable de mantener y evolucionar el Sistema de Diseño.
   * Los nuevos componentes o patrones deben pasar por un proceso de revisión para asegurar su calidad y coherencia.
 
+### 2.1. Criterio de Decisión: ¿Cuándo Invertir en un Sistema de Diseño?
+
+```
+¿Cuántas aplicaciones/productos tienes?
+├─ 1 aplicación → No justifica Sistema de Diseño
+│  └─ Usar biblioteca de componentes estándar (ej. Material UI, Ant Design)
+├─ 2 aplicaciones → ¿Comparten componentes visuales?
+│  ├─ SÍ → Considerar biblioteca compartida simple
+│  └─ NO → Mantener separadas
+└─ ≥3 aplicaciones → ✅ Invertir en Sistema de Diseño
+   └─ ¿Equipos distribuidos?
+      ├─ SÍ → Sistema de Diseño + Gobernanza formal
+      └─ NO → Sistema de Diseño ligero
+```
+
+**ROI Esperado:**
+
+* Reducción 30-50% en tiempo de desarrollo de UIs
+* Consistencia visual entre productos
+* Onboarding más rápido de nuevos diseñadores/desarrolladores
+* Reducción de deuda de diseño
+
+**Componentes Mínimos Viables:**
+
+* Biblioteca de componentes UI (código + documentación)
+* Tokens de diseño (colores, espaciado, tipografía)
+* Guías de uso y patrones básicos
+
 ## 3. Patrones de Interfaz para Aplicaciones Empresariales
 
 * Navegación:
@@ -853,6 +1457,278 @@ Un Sistema de Diseño es la fuente única de verdad para la UX/UI. Es un product
 
 ```
 
+### ASTA-KORE fundamentos y manual operacional/guias tecnicas/gt_flujo_entrega.md
+
+```markdown
+# GT-CI-CD-001: Pipelines de Integración y Despliegue Continuo
+
+**ID:** GT-CI-CD-001  
+**Versión:** 2.0  
+**Dominio:** Δ-O (Flujo Operacional)  
+**Protocolo:** 3.2 - Gestión del Flujo de Entrega
+
+## Invariante Central
+
+**El pipeline es la única forma de desplegar a producción. No hay excepciones.**
+
+Su propósito es automatizar la verificación de calidad y reducir el tiempo entre commit y producción.
+
+## Fundamentos: Métricas DORA
+
+### Métricas Primitivas de Flujo de Entrega
+
+| Métrica | Definición | Objetivo |
+|---------|------------|----------|
+| **Deployment Frequency** | Deploys a producción por día | >1 deploy/día |
+| **Lead Time for Changes** | Tiempo desde commit hasta producción | <1 hora |
+| **Change Failure Rate** | % de deploys que requieren rollback | <5% |
+| **Time to Restore** | Tiempo para recuperarse de falla | <1 hora |
+
+**Fuente:** DORA Metrics (DevOps Research and Assessment)
+
+### Criterio de Decisión para Stages del Pipeline
+
+**Para cualquier stage del pipeline:**
+
+```plain
+¿Reduce Change Failure Rate O reduce Lead Time?
+├─ SÍ  → Mantener/Optimizar
+└─ NO  → Eliminar
+```
+
+**Ejemplos:**
+
+- Stage de security scan que detecta vulnerabilidades → Mantener (reduce CFR)
+- Stage de lint que falla en <30s → Mantener (bajo impacto en LT, alto en CFR)
+- Stage de documentación que nadie lee → Eliminar (no impacta métricas)
+- Stage de tests E2E que toma 2 horas → Optimizar o mover a post-deploy
+
+## Principios
+
+### Principio 1: Trunk-Based Development
+
+**Regla:** Todos comitean a `main`. Branches de feature viven <2 días.
+
+**Ventaja:** Reduce conflictos de merge, acelera feedback.
+
+### Principio 2: Pipeline as Code
+
+**Regla:** El pipeline está versionado en el repo, no en la UI de CI.
+
+**Ventaja:** Cambios al pipeline se revisan como código.
+
+### Principio 3: Fail Fast
+
+**Regla:** Tests rápidos primero, lentos después.
+
+**Orden recomendado:**
+
+1. Lint (30s)
+2. Unit tests (2 min)
+3. Integration tests (5 min)
+4. E2E tests (10 min)
+5. Deploy to staging
+6. Smoke tests (2 min)
+7. Deploy to production
+
+**Ventaja:** Feedback en <3 min para 90% de errores.
+
+## Estrategias de Despliegue
+
+### Estrategia 1: Rolling Update (Por Defecto)
+
+**Proceso:**
+
+1. Crear nuevos pods con versión nueva
+2. Esperar que estén healthy
+3. Terminar pods con versión vieja
+4. Repetir hasta completar
+
+**Ventaja:** Sin downtime  
+**Desventaja:** Versión vieja y nueva coexisten temporalmente
+
+### Estrategia 2: Blue-Green
+
+**Proceso:**
+
+1. Desplegar versión nueva (green) en paralelo a vieja (blue)
+2. Ejecutar smoke tests en green
+3. Cambiar tráfico de blue a green
+4. Mantener blue por 1 hora para rollback rápido
+
+**Ventaja:** Rollback instantáneo  
+**Desventaja:** Requiere 2× recursos temporalmente
+
+### Estrategia 3: Canary
+
+**Proceso:**
+
+1. Desplegar nueva versión a 5% de tráfico
+2. Monitorear métricas por 30 min
+3. Si OK, aumentar a 25%
+4. Si OK, aumentar a 50%
+5. Si OK, aumentar a 100%
+
+**Ventaja:** Riesgo minimizado  
+**Desventaja:** Despliegue más lento
+
+## Feature Flags
+
+### Propósito
+
+**Problema:** Código nuevo en producción pero feature no lista para usuarios.
+
+**Solución:** Feature flag para activar/desactivar sin redesplegar.
+
+### Tipos de Flags
+
+| Tipo | Propósito | Duración |
+|------|-----------|----------|
+| **Release Flag** | Activar feature nueva gradualmente | Temporal (eliminar después de rollout) |
+| **Ops Flag** | Circuit breaker para dependencias | Permanente |
+| **Experiment Flag** | A/B testing | Temporal (hasta tener datos) |
+
+**Regla:** Eliminar flags de release después de 2 semanas en 100%.
+
+## Rollback
+
+### Rollback Automático
+
+**Trigger:** Métricas de salud degradadas.
+
+**Criterio:** Si error rate >5% durante 5 minutos → rollback automático
+
+### Rollback Manual
+
+**Tiempo de Rollback:** <5 minutos (objetivo)
+
+## Ambientes
+
+### Topología Mínima
+
+| Ambiente | Propósito | Datos | Despliegue |
+|----------|-----------|-------|------------|
+| **Desarrollo** | Desarrollo local | Datos sintéticos | Manual |
+| **Staging** | Pre-producción | Copia anonimizada de producción | Automático (cada commit a main) |
+| **Producción** | Usuarios reales | Datos reales | Automático (después de smoke tests) |
+
+### Paridad de Ambientes
+
+**Regla:** Staging debe ser idéntico a producción.
+
+**Diferencias permitidas:**
+
+- Escala (staging: 2 pods, prod: 10 pods)
+- Datos (staging: anonimizados, prod: reales)
+
+**Diferencias prohibidas:**
+
+- Versión de runtime
+- Configuración de servicios
+- Topología de red
+
+## Integración con ASTA-Kore
+
+**Referencia:** Ver `protocolos.md` §3.2 para proceso completo de gestión del flujo de entrega.
+
+**Métricas DORA → CVC:** Las métricas DORA se reportan trimestralmente en el CVC como evidencia de salud operacional.
+
+```
+
+### ASTA-KORE fundamentos y manual operacional/guias tecnicas/gt_fronteras_evs.md
+
+```markdown
+# GT-BOUNDARIES-001: Trazado de Fronteras entre EVs
+
+**ID:** GT-BOUNDARIES-001  
+**Versión:** 2.0  
+**Dominio:** Σ-T (Diseño Táctico)  
+**Protocolo:** 2.1 - Diseño de Arquitectura
+
+## Invariante Central
+
+**Las fronteras entre EVs son contratos explícitos, no líneas en un diagrama.**
+
+Una frontera bien trazada maximiza autonomía interna y minimiza acoplamiento externo.
+
+## Principios de Trazado
+
+### Principio 1: Cohesión de Propósito
+
+**Regla:** Todo lo que sirve al mismo propósito de valor debe estar dentro de la misma frontera.
+
+**Verificación:** ¿Estos componentes comparten el mismo Objective (OKR)?
+
+### Principio 2: Autonomía de Despliegue
+
+
+**Regla:** Una EV debe poder desplegarse sin requerir despliegue coordinado de otras EVs.
+
+**Verificación:** ¿Puedo hacer un release sin esperar a otra EV?
+
+### Principio 3: Minimizar Dependencias de Datos
+
+**Regla:** Cada EV es dueña de sus propios datos. Otras EVs acceden vía contrato, no vía BD compartida.
+
+**Verificación:** ¿Esta EV puede funcionar si la BD de otra EV no está disponible?
+
+## Patrones de Trazado
+
+### Patrón 1: Por Capacidad de Negocio
+
+**Criterio:** Agrupar por lo que hace el sistema, no por cómo lo hace.
+
+**Regla:** Si dos capacidades tienen verbos diferentes (postular vs. evaluar), probablemente son EVs distintas.
+
+### Patrón 2: Por Ciclo de Vida
+
+**Criterio:** Agrupar por frecuencia de cambio similar.
+
+**Regla:** No mezclar componentes estables con componentes volátiles en la misma EV.
+
+### Patrón 3: Por Equipo
+
+**Criterio:** Una EV = Un equipo (3-9 personas).
+
+**Regla:** Si dos equipos necesitan coordinarse constantemente para desplegar, las fronteras están mal trazadas.
+
+## Técnica: Context Mapping (DDD)
+
+### Bounded Context
+
+**Definición:** Frontera lingüística donde un término tiene un significado específico.
+
+**Señal de frontera:** El mismo término significa cosas distintas en diferentes contextos.
+
+### Relaciones entre Contexts
+
+| Relación | Definición | Ejemplo |
+|:---|:---|:---|
+| **Customer-Supplier** | EV-A consume servicios de EV-B | Evaluación consume API de Postulaciones |
+| **Conformist** | EV-A adopta modelo de EV-B sin negociar | Portal consume API de Registro Civil (externa) |
+| **Anticorruption Layer** | EV-A traduce modelo de EV-B a su propio modelo | Postulaciones traduce datos de Registro Civil |
+| **Shared Kernel** | EV-A y EV-B comparten código común | Librería de validación de RUT |
+
+## Anti-Patrones
+
+| Anti-Patrón | Síntoma | Solución |
+|:---|:---|:---|
+| **BD Compartida** | Múltiples EVs escriben en misma tabla | Separar BDs, comunicar vía API |
+| **Distributed Monolith** | Microservicios que deben desplegarse juntos | Fusionar en monolito o rediseñar fronteras |
+| **Chatty APIs** | 50 llamadas para renderizar una pantalla | Diseñar APIs orientadas a casos de uso |
+| **God Service** | EV que todos necesitan para todo | Descomponer en EVs más pequeñas |
+
+## Integración con ASTA-Kore
+
+**Contratos de Frontera:** Toda frontera entre EVs debe tener un contrato explícito:
+
+- Contrato de Servicio (API)
+- Contrato de Datos (Eventos)
+
+**Referencia:** Ver plantillas de contratos en `/plantillas_contratos/`
+
+```
+
 ### ASTA-KORE fundamentos y manual operacional/guias tecnicas/gt_gestion_conocimiento.md
 
 ```markdown
@@ -870,8 +1746,6 @@ Relación con KORE:
 
 * Guías de Decisión Relacionadas: `gd_sistemas_cognitivos.md`
 * Contrato Nexus Implementado: `Contrato de Conocimiento`
-
----
 
 ## 1. El Ciclo de Conocimiento KORE
 
@@ -938,471 +1812,1761 @@ serving_policy:
 
 ## 4. Roles y Responsabilidades en el Ciclo de Conocimiento
 
-- Dueño del Conocimiento (Knowledge Owner): Experto de dominio responsable de la validez y vigencia del contenido en su área (ej. el experto en normativa fiscal es dueño de la colección de conocimiento fiscal).
-- Curador de Contenido (Content Curator): Responsable de ejecutar el pipeline de ingesta, enriquecimiento y asegurar la calidad de los metadatos.
-- Ingeniero de Conocimiento (Knowledge Engineer): Diseña y mantiene el pipeline técnico de RAG, optimiza los modelos de embedding y las estrategias de búsqueda.
+* Dueño del Conocimiento (Knowledge Owner): Experto de dominio responsable de la validez y vigencia del contenido en su área (ej. el experto en normativa fiscal es dueño de la colección de conocimiento fiscal).
+* Curador de Contenido (Content Curator): Responsable de ejecutar el pipeline de ingesta, enriquecimiento y asegurar la calidad de los metadatos.
+* Ingeniero de Conocimiento (Knowledge Engineer): Diseña y mantiene el pipeline técnico de RAG, optimiza los modelos de embedding y las estrategias de búsqueda.
+
+```
+
+### ASTA-KORE fundamentos y manual operacional/guias tecnicas/gt_historia_usuario.md
+
+```markdown
+# GT-USER-STORIES-001: Técnicas de Historias de Usuario
+
+**ID:** GT-USER-STORIES-001  
+**Versión:** 2.0  
+**Dominio:** Δ-T (Flujo Táctico)  
+**Protocolo:** 2.2 - Mapeo de Historias
+
+## Invariante Central
+
+**Una historia de usuario es una promesa de conversación, no una especificación completa.**
+
+Su propósito es **anclar el diálogo** sobre valor, no documentar exhaustivamente el trabajo.
+
+**Referencia:** Ver `protocolos.md` §2.2.2 para formato canónico y criterios INVEST.
+
+## Técnicas de Slicing (Rebanado)
+
+### Problema: Historia Demasiado Grande
+
+**Señal:** Estimación >5 días o múltiples criterios de aceptación no relacionados.
+
+**Solución:** Aplicar patrones de slicing.
+
+### Patrón 1: Slicing por Flujo de Trabajo
+
+**Historia original:**
+
+```plain
+Como usuario, quiero gestionar mis proyectos, para organizarlos
+```
+
+**Rebanadas:**
+
+```plain
+H1: Como usuario, quiero crear un proyecto
+H2: Como usuario, quiero editar un proyecto
+H3: Como usuario, quiero eliminar un proyecto
+H4: Como usuario, quiero archivar un proyecto
+```
+
+### Patrón 2: Slicing por Regla de Negocio
+
+**Historia original:**
+
+```plain
+Como sistema, quiero validar postulaciones
+```
+
+**Rebanadas:**
+
+```plain
+H1: Validar que el RUT es válido
+H2: Validar que el postulante es mayor de edad
+H3: Validar que no tiene postulaciones duplicadas
+H4: Validar que adjuntó documentos obligatorios
+```
+
+### Patrón 3: Slicing por Variación de Datos
+
+**Historia original:**
+
+```plain
+Como usuario, quiero buscar proyectos
+```
+
+**Rebanadas:**
+
+```plain
+H1: Buscar por nombre exacto
+H2: Buscar por nombre parcial (contiene)
+H3: Buscar por múltiples campos
+H4: Buscar con filtros combinados (AND/OR)
+```
+
+### Patrón 4: Slicing por Camino Feliz vs. Excepciones
+
+**Historia original:**
+
+```plain
+Como usuario, quiero subir un archivo
+```
+
+**Rebanadas:**
+
+```plain
+H1: Subir archivo válido (PDF <5MB) → Camino feliz
+H2: Mostrar error si archivo >5MB → Excepción
+H3: Mostrar error si formato no es PDF → Excepción
+H4: Permitir reemplazar archivo → Variación
+```
+
+**Regla:** Implementar primero el camino feliz. Las excepciones son historias separadas.
+
+## Criterios de Aceptación: Formato DADO-CUANDO-ENTONCES
+
+### Estructura
+
+```yaml
+criterios:
+  - condición: [estado inicial]
+    acción: [lo que hace el usuario]
+    resultado: [estado final verificable]
+```
+
+### Ejemplo
+
+```plain
+Criterios de Aceptación:
+- [ ] DADO que soy un usuario autenticado
+      CUANDO hago clic en "Crear Proyecto"
+      ENTONCES veo un formulario con campos: nombre, descripción, fecha inicio
+      
+- [ ] DADO que completé el formulario
+      CUANDO hago clic en "Guardar"
+      ENTONCES el proyecto aparece en mi lista
+      Y recibo una notificación de confirmación
+```
+
+**Formato:** DADO-CUANDO-ENTONCES (Given-When-Then) de BDD.
+
+## Integración con ASTA-Kore
+
+| Artefacto | Integración |
+|:---|:---|
+| **Story Mapping** | Las historias provienen de rebanar el Story Map |
+| **Tablero de Flujo** | Las historias entran a "Opciones" cuando cumplen Definition of Ready |
+| **OKRs** | Cada historia tiene tag de OKR y contribuye a un KR |
+| **Contratos** | Los criterios de aceptación definen el contrato de comportamiento |
 
 ```
 
 ### ASTA-KORE fundamentos y manual operacional/guias tecnicas/gt_ingenieria_datos.md
 
 ```markdown
-# Guía Técnica: Ingeniería de Datos Orientada a Productos
+# GT-DATA-001: Ingeniería de Datos Orientada a Productos
 
-ID: `GT-DATA-001`
-Versión: 1.0
-Dominio: Ingeniería de Datos, Arquitectura de Datos
+**ID:** GT-DATA-001  
+**Versión:** 2.0  
+**Dominio:** Ingeniería de Datos, Arquitectura de Datos  
+**Protocolo:** 2.1 - Diseño de Arquitectura
 
-Propósito: Esta guía técnica establece los patrones, prácticas y tecnologías para diseñar, construir y operar Productos de Datos como `Entidades de Valor (EV)` confiables, gobernadas y de autoservicio.
+## Invariante Central
 
-Audiencia: Arquitectos de Datos, Ingenieros de Datos, Data Product Owners.
+**Cada conjunto de datos expuesto es un producto con dueño, ciclo de vida, contrato explícito y SLOs.**
 
-Relación con KORE:
+Los datos no son un subproducto de las aplicaciones, son activos de primera clase.
 
-* Guía de Decisión Relacionada: `gd_datos.md`
-* Contrato Nexus Implementado: `Contrato de Datos`
+## Principios
 
----
+### Principio 1: Dato como Producto (Data as a Product)
 
-## 1. Principios de la Ingeniería de Datos KORE
+**Regla:** Cada conjunto de datos tiene:
 
-1. Dato como Producto (Data as a Product): Cada conjunto de datos expuesto es un producto. Tiene un dueño, un ciclo de vida, un `Contrato de Datos` explícito y `SLOs` de calidad y disponibilidad.
-2. Gobernanza Federada y Automatizada: La gobernanza no es un cuello de botella central. Se implementa a través de `policy-as-code` (ej. OPA/Rego) y se aplica automáticamente en los pipelines.
-3. Semántica Primero: Antes de mover datos, se define su significado. El `Glosario de Negocio` y los modelos conceptuales son artefactos de primera clase.
-4. Observabilidad de Datos: Los pipelines y productos de datos deben ser instrumentados para medir las dimensiones de calidad (frescura, completitud, validez) y rendimiento.
+- Dueño responsable
+- Contrato de Datos explícito
+- SLOs de calidad y disponibilidad
+- Ciclo de vida gestionado
 
-## 2. Arquitectura de Referencia: Lakehouse Orientado a Zonas
+### Principio 2: Gobernanza Federada y Automatizada
 
-Esta arquitectura equilibra la flexibilidad de un Data Lake con el rendimiento y la gobernanza de un Data Warehouse.
+**Regla:** La gobernanza no es un cuello de botella central.
 
-* Zona Bronce (Crudo):
-  * Propósito: Ingesta de datos en su formato original, inmutable.
-  * Tecnología: Almacenamiento de objetos (S3, ADLS) con formatos eficientes (Parquet, Avro).
-  * Patrón de Ingesta: CDC (Debezium), Outbox Pattern para eventos, APIs, Batch.
+**Patrón:** Policy-as-Code aplicada automáticamente en pipelines.
 
-* Zona Plata (Limpio y Conforme):
-  * Propósito: Limpieza, desduplicación, conformación de datos y aplicación de reglas de calidad. Los datos se modelan y se les asignan identificadores únicos.
-  * Tecnología: Motores de procesamiento distribuido (Spark, dbt) sobre formatos de tabla transaccionales (Delta Lake, Iceberg, Hudi).
+### Principio 3: Semántica Primero
 
-* Zona Oro (Agregado y Expuesto):
-  * Propósito: Creación de los `Productos de Datos` finales, agregados y optimizados para el consumo. Son las vistas de negocio.
-  * Tecnología: Vistas materializadas, modelos dimensionales (Star Schema), APIs de datos (GraphQL/REST).
+**Regla:** Antes de mover datos, definir su significado.
 
-## 3. El `Contrato de Datos`
+**Artefactos:** Glosario de Negocio y modelos conceptuales son de primera clase.
 
-Este `Contrato Nexus` es el pilar de la gobernanza de datos. Es un archivo YAML versionado en Git que define las expectativas entre el productor y el consumidor de un `Producto de Datos`.
+### Principio 4: Observabilidad de Datos
 
-Estructura Mínima del Contrato:
+**Regla:** Los pipelines y productos de datos deben ser instrumentados.
 
-```yaml
-product: facturacion_clientes
-version: 1.0.0
-owner: "equipo-finanzas"
-interfaces: # Cómo se consume
-  - type: sql
-    uri: "warehouse.gold.facturacion_clientes"
-  - type: api
-    uri: "/v1/facturacion"
-semantics: # Qué significa
-  glossary_refs: ["Factura", "Cliente"]
-  business_rules:
-    - name: factura_valida
-      rule: "estado IN ('EMITIDA', 'PAGADA', 'ANULADA')"
-schema: # Cuál es la estructura
-  primary_key: [id_factura]
-  fields:
-    - {name: id_factura, type: string, required: true}
-    - {name: monto_total, type: decimal(18,2), required: true}
-quality: # Cuán confiable es
-  checks:
-    - {name: pk_unica, rule: "unique(id_factura)"}
-    - {name: monto_positivo, rule: "monto_total >= 0"}
-slo: # Compromisos medibles
-  freshness_p95_minutes: 60
-  availability_pct: 99.9
-security: # Quién puede acceder
-  classification: "Confidencial"
-  access_roles: ["analista_finanzas"]
-lineage: # De dónde viene
-  sources: ["kafka.topic.billing.events", "db.legacy.customers"]
-changes: # Cómo evoluciona
-  policy: semver
-  deprecation_window_days: 90
-```
+**Dimensiones:** Frescura, completitud, validez, rendimiento.
 
-## 4. Protocolo de Calidad de Datos (Data Quality)
+## Arquitectura de Referencia: Lakehouse por Zonas
 
-La calidad de los datos se gestiona como un sistema, no como una tarea manual.
+### Zona Bronce (Crudo)
 
-- Dimensiones de Calidad: Medir sistemáticamente exactitud, completitud, validez, unicidad, consistencia y frescura.
-- Pipeline de DQ:
-    1. Preventivo: Validar datos en el punto de entrada (APIs, UIs) usando el `Contrato de Datos`.
-    2. Detectivo: Ejecutar tests de calidad como parte del pipeline de transformación (ej. Great Expectations, dbt tests) entre las zonas Bronce, Plata y Oro.
-    3. Correctivo: Poner en cuarentena los registros que fallan las validaciones para su análisis, en lugar de detener todo el pipeline.
+**Propósito:** Ingesta de datos en formato original, inmutable.
 
-## 5. Observabilidad y SRE de Datos
+**Características:**
 
-Tratar los `Productos de Datos` como servicios con `SLOs` y `Error Budgets`.
+- Almacenamiento de objetos
+- Formatos eficientes (columnar)
+- Patrones: CDC, Outbox Pattern, APIs, Batch
 
-- SLIs (Indicadores de Nivel de Servicio):
-  - Frescura (p95): ¿Cuán actualizados están los datos?
-  - Latencia de Pipeline (p95): ¿Cuánto tarda el pipeline E2E en ejecutarse?
-  - Tasa de Fallos de Calidad: % de registros que violan las reglas de calidad.
-  - Disponibilidad de la Interfaz: % de tiempo que la API o la tabla está accesible.
-- Linaje Activo: Utilizar herramientas como OpenLineage para capturar automáticamente el linaje de datos a nivel de columna. El linaje no es un diagrama estático, es metadata viva.
+### Zona Plata (Limpio y Conforme)
 
-## 6. Seguridad y Privacidad
+**Propósito:** Limpieza, desduplicación, conformación y aplicación de reglas de calidad.
 
-La seguridad de los datos es por diseño, no por accidente.
+**Características:**
 
-- Clasificación de Datos: Etiquetar cada `Producto de Datos` con un nivel de sensibilidad (ej. Público, Interno, Confidencial, Restringido).
-- Control de Acceso Basado en Atributos (ABAC): Usar políticas (`Policy-as-Code` con OPA/Rego) que definen el acceso basado en el rol del usuario, la clasificación del dato y el contexto de la petición.
-- Privacidad por Diseño: Aplicar técnicas de minimización, anonimización y pseudoanonimización según la clasificación del dato. Implementar políticas de retención y expurgo automáticas.
+- Datos modelados
+- Identificadores únicos asignados
+- Formatos de tabla transaccionales
+
+### Zona Oro (Agregado y Expuesto)
+
+**Propósito:** Productos de Datos finales, agregados y optimizados para consumo.
+
+**Características:**
+
+- Vistas de negocio
+- Modelos dimensionales
+- APIs de datos
+
+## Contrato de Datos
+
+**Definición:** Archivo versionado que define expectativas entre productor y consumidor de un Producto de Datos.
+
+**Secciones del Contrato:**
+
+- **Interfaces:** Cómo se consume (SQL, API)
+- **Semántica:** Qué significa (glosario, reglas de negocio)
+- **Schema:** Estructura (campos, tipos, PK)
+- **Calidad:** Checks de validación
+- **SLO:** Compromisos medibles (frescura, disponibilidad)
+- **Seguridad:** Clasificación, roles de acceso
+- **Linaje:** De dónde viene
+- **Cambios:** Política de versionado
+
+**Referencia:** Ver plantillas en `/plantillas_contratos/datos/`
+
+## Protocolo de Calidad de Datos
+
+### Estrategia de 3 Capas
+
+**1. Preventivo:** Validar en punto de entrada (APIs, UIs)
+
+**2. Detectivo:** Tests de calidad en pipeline de transformación
+
+**3. Correctivo:** Cuarentena de registros fallidos (no detener pipeline)
+
+### Dimensiones de Calidad
+
+- Exactitud
+- Completitud
+- Validez
+- Unicidad
+- Consistencia
+- Frescura
+
+## Observabilidad y SRE de Datos
+
+**Principio:** Tratar Productos de Datos como servicios con SLOs y Error Budgets.
+
+**SLIs Típicos:**
+
+- Frescura (p95): ¿Cuán actualizados están los datos?
+- Latencia de Pipeline (p95): ¿Cuánto tarda el pipeline E2E?
+- Tasa de Fallos de Calidad: % de registros que violan reglas
+- Disponibilidad de Interfaz: % de tiempo accesible
+
+**Linaje Activo:** Capturar automáticamente linaje de datos a nivel de columna como metadata viva.
+
+## Seguridad y Privacidad
+
+### Clasificación de Datos
+
+**Niveles:** Público, Interno, Confidencial, Restringido
+
+**Regla:** Etiquetar cada Producto de Datos con nivel de sensibilidad.
+
+### Control de Acceso
+
+**Patrón:** ABAC (Attribute-Based Access Control)
+
+**Criterios:** Rol del usuario, clasificación del dato, contexto de petición
+
+### Privacidad por Diseño
+
+**Técnicas:**
+
+- Minimización de datos
+- Anonimización
+- Pseudoanonimización
+- Políticas de retención y expurgo automáticas
+
+## Integración con ASTA-Kore
+
+**Contratos:** Todo Producto de Datos debe tener un Contrato de Datos versionado.
+
+**Referencia:** Ver `gt_observabilidad.md` para instrumentación de pipelines.
 
 ```
 
 ### ASTA-KORE fundamentos y manual operacional/guias tecnicas/gt_ingenieria_ia.md
 
 ```markdown
-# Guía Técnica: Ingeniería de Sistemas Cognitivos (IA)
+# GT-IA-001: Ingeniería de Sistemas Cognitivos (IA)
 
-ID: `GT-IA-001`
-Versión: 1.0
-Dominio: Inteligencia Artificial, MLOps, LLMOps
+**ID:** GT-IA-001  
+**Versión:** 2.0  
+**Dominio:** Inteligencia Artificial, MLOps, LLMOps  
+**Protocolo:** 2.1 - Diseño de Arquitectura
 
-Propósito: Esta guía técnica establece los patrones, prácticas y tecnologías para el diseño, construcción y operación de Sistemas Cognitivos (agentes, copilotos, motores de inferencia) como `Entidades de Valor (EV)` responsables y gobernadas.
+## Invariante Central
 
-Audiencia: Arquitectos de IA, Ingenieros de ML/IA, Científicos de Datos.
+**El modelo no es el sistema. El valor reside en el sistema sociotécnico completo que rodea al modelo.**
 
-Relación con KORE:
+Los sistemas cognitivos son Entidades de Valor responsables y gobernadas.
 
-* Guía de Decisión Relacionada: `gd_sistemas_cognitivos.md`
-* Contrato Nexus Implementado: `Contrato de Agente`
+## Principios
 
----
+### Principio 1: El Modelo no es el Sistema
 
-## 1. Principios KORE para Sistemas Cognitivos
+**Regla:** El valor está en el sistema completo: datos, interfaces, contratos, guardrails.
 
-1. El Modelo no es el Sistema: El valor reside en el sistema sociotécnico completo que rodea al modelo (datos, interfaces, `Contratos`, `Guardrails`), no solo en la precisión del modelo.
-2. Contexto Específico: El rendimiento de un modelo de IA no es transferible. Cada aplicación debe ser validada para su caso de uso y contexto específico.
-3. Aumento, no Reemplazo: Priorizar el diseño de sistemas que aumenten la inteligencia humana. El patrón `Humano-en-el-Bucle (HITL)` es la norma para decisiones de alto impacto.
-4. Responsabilidad Distribuida: La responsabilidad por las acciones de un agente de IA se distribuye explícitamente entre roles definidos (Dueño de la Capacidad, Arquitecto de IA, Ingeniero de Prompts, etc.).
+**Criterio:** La precisión del modelo es solo una métrica entre muchas.
 
-## 2. Arquitectura de Referencia para Aplicaciones de LLM
+### Principio 2: Contexto Específico
 
-Esta arquitectura de 4 capas permite construir aplicaciones de IA de forma segura, escalable y agnóstica al proveedor del modelo.
+**Regla:** El rendimiento de un modelo no es transferible.
 
-* Capa 4: Aplicación y Experiencia de Usuario (UX): La interfaz final con el usuario (chatbot, copiloto en una app existente, buscador inteligente).
-* Capa 3: Servicios de Negocio e Integración: Expone la capacidad de IA como una API segura y gobernada, integrada con el sistema de identidad de la empresa (OIDC/SSO).
-* Capa 2: Gateway de IA (Consumo del Modelo): Fachada única que centraliza todas las llamadas a las APIs de LLMs. Proporciona abstracción del proveedor, gestión de credenciales, caché, control de tráfico y monitoreo de costos.
-* Capa 1: Orquestación de Lógica y Contexto: El "cerebro" de la aplicación. Coordina el flujo de trabajo, gestiona los prompts y la memoria de la conversación, y decide cuándo usar RAG o llamar a herramientas.
+**Criterio:** Cada aplicación debe validarse para su caso de uso y contexto específico.
 
-## 3. Patrones de Orquestación Cognitiva
+### Principio 3: Aumento, no Reemplazo
 
-* Generación Aumentada por Recuperación (RAG - Retrieval-Augmented Generation):
-  * Propósito: Permite a los LLMs responder preguntas basadas en un corpus de conocimiento privado y confiable.
-  * Flujo: `Ingesta y Curación` -> `Chunking Estructural` -> `Indexación Híbrida (Vectorial + Lexical)` -> `Recuperación y Re-ranking` -> `Construcción de Prompt con Contexto` -> `Generación con Citas`.
-  * Gobernanza: Regulado por el `Contrato de Conocimiento`. Ver `gt_gestion_conocimiento.md`.
+**Regla:** Priorizar sistemas que aumenten la inteligencia humana.
 
-* Llamado a Herramientas (Tool Calling / Function Calling):
-  * Propósito: Permite a un LLM interactuar con el mundo exterior invocando APIs de negocio (ej. consultar un stock, crear un ticket).
-  * Gobernanza: Cada herramienta expuesta al LLM debe tener un `Contrato de Servicio` claro y permisos de acceso restringidos.
+**Patrón:** Humano-en-el-Bucle (HITL) es la norma para decisiones de alto impacto.
 
-* Sistemas Multi-Agente:
-  * Propósito: Descomponer tareas complejas en roles especializados (ej. `Planificador-Ejecutor`, `Crítico-Refinador`).
-  * Patrones: `Router` (dirige la petición al agente correcto), `Supervisor-Worker`, `Debate`.
+### Principio 4: Responsabilidad Distribuida
 
-## 4. El `Contrato de Agente`
+**Regla:** La responsabilidad por acciones de un agente se distribuye explícitamente.
 
-Este `Contrato Nexus` define la "personalidad", las capacidades y los límites de un agente de IA.
+**Roles:** Dueño de Capacidad, Arquitecto de IA, Ingeniero de Prompts.
 
-Nota de Implementación Canónica: Para asistentes de IA conversacionales y declarativos, la implementación de este contrato se realiza utilizando el "Marco de Ingeniería de Asistentes de IA (MIA)". Este marco provee:
+## Arquitectura de Referencia (4 Capas)
 
-* `Agent Lifecycle Management (ALM)`: El proceso de ciclo de vida para el diseño, desarrollo y mantenimiento del agente.
-* `Agent Definition Protocol (ADP)`: El lenguaje YAML declarativo para escribir la instancia del `Contrato de Agente` como código fuente.
+### Capa 4: Aplicación y UX
 
-La implementación de referencia del MIA se encuentra en `implementaciones/marco_ingenieria_asistentes_ai_conversacionales_declarativos/`.
+**Propósito:** Interfaz final con el usuario.
 
-Estructura Mínima del Contrato:
+**Ejemplos:** Chatbot, copiloto, buscador inteligente.
 
-```yaml
-agent_id: "agente_revision_contratos"
-version: 1.0
-owner: "equipo-legal"
-autonomy_level: "PLAN_AND_EXECUTE" # Nivel de autonomía (RAG, ReAct, Plan & Execute)
-role: "COPRODUCIR" # Rol en el sistema de trabajo (Monitor, Coproduce, Execute)
-tools: # Herramientas que puede invocar
-  - "api:buscar_jurisprudencia"
-  - "api:validar_clausula_riesgo"
-rag_policy: # Cómo usa el conocimiento
-  retrieval_mode: "hybrid"
-  citation_policy: "required_exact"
-guardrails: # Barandas de seguridad
-  input_scans: ["pii_detection", "prompt_injection_filter"]
-  output_scans: ["toxicity_scan", "faithfulness_check"]
-  operational_limits:
-    max_iterations: 5
-    token_cost_limit_usd: 1.5
-quality_metrics: # SLOs del agente
-  faithfulness_score: ">= 0.9"
-  citation_exactness: ">= 0.95"
-hitl_checkpoints: # Cuándo escalar a un humano
-  - "confidence_score < 0.8"
-  - "riesgo_legal_detectado == 'alto'"
-```
+### Capa 3: Servicios de Negocio e Integración
 
-## 5. MLOps y LLMOps: El Ciclo de Vida Operacional
+**Propósito:** Exponer capacidad de IA como API segura y gobernada.
 
-- Gestión de Prompts: Tratar los prompts como código. Centralizarlos en un `Registro de Prompts` para versionarlos, probarlos (A/B testing) y actualizarlos sin redesplegar la aplicación.
-- Serving de Modelos:
-  - Runtimes Optimizados: Utilizar servidores de inferencia como vLLM, TGI o Triton para maximizar el rendimiento en GPUs (ej. con `continuous batching`).
-  - Endpoints OpenAI-Compatible: Exponer los modelos (tanto comerciales como open-source) a través de una API interna compatible con el estándar de OpenAI para facilitar la integración.
-- Evaluación y Monitoreo:
-  - Evaluación Offline: Usar `golden sets` (conjuntos de datos de prueba) para regresión y `LLM-as-a-judge` para evaluar la calidad de las respuestas en base a rúbricas.
-  - Monitoreo Online: Medir métricas de calidad (fidelidad, tasa de alucinación, toxicidad), rendimiento (latencia TTFT, tokens/seg), y costo (costo por tarea/conversación).
-- Seguridad (OWASP Top 10 para LLMs): Implementar defensas contra `inyección de prompts`, `fugas de datos` a través del contexto, y `envenenamiento de datos de entrenamiento`.
+**Integración:** Sistema de identidad corporativo (OIDC/SSO).
+
+### Capa 2: Gateway de IA
+
+**Propósito:** Fachada única para todas las llamadas a LLMs.
+
+**Funciones:**
+
+- Abstracción del proveedor
+- Gestión de credenciales
+- Caché
+- Control de tráfico
+- Monitoreo de costos
+
+### Capa 1: Orquestación de Lógica y Contexto
+
+**Propósito:** "Cerebro" de la aplicación.
+
+**Funciones:**
+
+- Coordinar flujo de trabajo
+- Gestionar prompts y memoria
+- Decidir cuándo usar RAG o llamar herramientas
+
+## Patrones de Orquestación Cognitiva
+
+### Patrón 1: RAG (Retrieval-Augmented Generation)
+
+**Propósito:** Permitir a LLMs responder basándose en corpus de conocimiento privado.
+
+**Flujo:**
+
+1. Ingesta y curación
+2. Chunking estructural
+3. Indexación (vectorial + lexical)
+4. Recuperación y re-ranking
+5. Construcción de prompt con contexto
+6. Generación con citas
+
+**Gobernanza:** Regulado por Contrato de Conocimiento.
+
+### Patrón 2: Tool Calling (Function Calling)
+
+**Propósito:** Permitir a LLM interactuar con el mundo exterior invocando APIs.
+
+**Gobernanza:** Cada herramienta debe tener Contrato de Servicio y permisos restringidos.
+
+### Patrón 3: Sistemas Multi-Agente
+
+**Propósito:** Descomponer tareas complejas en roles especializados.
+
+**Patrones:**
+
+- Router (dirige a agente correcto)
+- Supervisor-Worker
+- Debate (Crítico-Refinador)
+
+## Contrato de Agente
+
+**Definición:** Define personalidad, capacidades y límites de un agente de IA.
+
+**Secciones del Contrato:**
+
+- **Autonomy Level:** Nivel de autonomía (RAG, ReAct, Plan & Execute)
+- **Role:** Rol en sistema de trabajo (Monitor, Coproduce, Execute)
+- **Tools:** Herramientas que puede invocar
+- **RAG Policy:** Cómo usa el conocimiento
+- **Guardrails:** Barandas de seguridad (input/output scans, límites operacionales)
+- **Quality Metrics:** SLOs del agente
+- **HITL Checkpoints:** Cuándo escalar a humano
+
+**Referencia:** Ver plantillas en `/plantillas_contratos/agentes/`
+
+## MLOps y LLMOps: Ciclo de Vida Operacional
+
+### Gestión de Prompts
+
+**Patrón:** Tratar prompts como código.
+
+**Práctica:** Centralizar en Registro de Prompts para versionar, probar (A/B) y actualizar sin redesplegar.
+
+### Serving de Modelos
+
+**Principios:**
+
+- Runtimes optimizados para maximizar rendimiento
+- Endpoints con API estándar para facilitar integración
+- Abstracción del proveedor
+
+### Evaluación y Monitoreo
+
+**Evaluación Offline:**
+
+- Golden sets para regresión
+- LLM-as-a-judge para evaluar calidad
+
+**Monitoreo Online:**
+
+- Métricas de calidad (fidelidad, alucinación, toxicidad)
+- Métricas de rendimiento (latencia, tokens/seg)
+- Métricas de costo (costo por tarea/conversación)
+
+### Seguridad
+
+**Defensas contra:**
+
+- Inyección de prompts
+- Fugas de datos a través del contexto
+- Envenenamiento de datos de entrenamiento
+
+**Referencia:** Ver estándares de seguridad para LLMs.
+
+## Integración con ASTA-Kore
+
+**Contratos:** Todo agente debe tener un Contrato de Agente versionado.
+
+**Referencia:** Ver `gt_gestion_conocimiento.md` para gestión de corpus RAG.
 
 ```
 
 ### ASTA-KORE fundamentos y manual operacional/guias tecnicas/gt_ingenieria_software.md
 
 ```markdown
-# Guía Técnica: Ingeniería de Aplicaciones y Procesos
+# GT-SOFT-001: Ingeniería de Aplicaciones y Procesos
 
-ID: `GT-SOFT-001`
-Versión: 1.0
-Dominio: Ingeniería de Software y Automatización de Procesos
+**ID:** GT-SOFT-001  
+**Versión:** 2.0  
+**Dominio:** Ingeniería de Software y Automatización de Procesos  
+**Protocolo:** 2.1 - Diseño de Arquitectura
 
-Propósito: Esta guía técnica establece los patrones, prácticas y tecnologías para el diseño, construcción y operación de `Entidades de Valor` de tipo Aplicación de Negocio y Proceso Automatizado.
+## Invariante Central
 
-Audiencia: Arquitectos de Soluciones, Ingenieros de Software, Ingenieros de Automatización.
+**La elección del patrón arquitectónico debe ser una decisión deliberada, registrada en un ADR.**
 
-Relación con KORE:
+Cada patrón tiene trade-offs. No hay soluciones universales.
 
-* Guías de Decisión Relacionadas: `gd_arquitectura_nexus.md`, `gd_automatizacion_proceso.md`
-* Contrato Nexus Implementado: `Contrato de Proceso` — [Especificación](../contratos/procesos/contrato_proceso.md) · [Plantilla](../contratos/procesos/contrato_proceso.yml)
+## Patrones Arquitectónicos
 
----
+| Patrón | Ideal Para | Ventajas | Trade-offs |
+|:---|:---|:---|:---|
+| **Monolito Modular** | MVPs, equipos pequeños | Simplicidad de desarrollo y despliegue | Acoplamiento tecnológico, escalabilidad monolítica |
+| **Microservicios** | Sistemas complejos, equipos grandes | Autonomía de equipos, despliegues independientes | Complejidad operacional, consistencia eventual |
+| **Arquitectura Orientada a Eventos (EDA)** | Procesos asíncronos, alta desacoplación | Desacoplamiento máximo, escalabilidad | Complejidad en depuración de flujos |
+| **Serverless (FaaS)** | Cargas intermitentes, basadas en eventos | Coste cero en reposo, escalado automático | Cold starts, vendor lock-in |
 
-## 1. Patrones Arquitectónicos
+**Principio Rector:** Comience con Monolito Modular bien estructurado. Extraiga Microservicios solo cuando el dolor del acoplamiento supere la complejidad de la distribución.
 
-La elección del patrón arquitectónico debe ser una decisión deliberada, registrada en un `ADR`, y alineada con los límites de la `Entidad de Valor` definidos en su `Canvas de EV`.
+## Protocolo de Ciclo de Vida de Desarrollo (SDLC)
 
-| Patrón | Ideal Para | Ventajas Clave | Consideraciones Técnicas (Trade-offs) |
-| :--- | :--- | :--- | :--- |
-| Monolito Modular | MVPs, equipos pequeños, dominios de negocio acotados. | Simplicidad de desarrollo y despliegue inicial. | Acoplamiento tecnológico, escalabilidad monolítica. |
-| Microservicios | Sistemas complejos, equipos grandes, necesidad de escalabilidad granular. | Autonomía de equipos, despliegues independientes, resiliencia. | Complejidad operacional, consistencia eventual (Sagas), latencia de red. |
-| Arquitectura Orientada a Eventos (EDA) | Procesos asíncronos, alta desacoplación, sistemas reactivos. | Desacoplamiento máximo, escalabilidad, resiliencia a picos. | Complejidad en la depuración de flujos, requiere un broker robusto. |
-| Serverless (FaaS) | Cargas de trabajo intermitentes, tareas basadas en eventos. | Coste cero en reposo, escalado automático gestionado. | Cold starts, vendor lock-in, limitaciones de ejecución. |
+### 1. Diseño y Arquitectura
 
-Principio Rector: Comience con un Monolito Modular bien estructurado. Extraiga Microservicios solo cuando el dolor del acoplamiento supere la complejidad de la distribución.
+**Artefactos:**
 
-## 2. Protocolo de Ciclo de Vida de Desarrollo (SDLC)
+- Diagramas C4 (Contexto, Contenedores, Componentes)
+- ADRs para decisiones arquitectónicas significativas
+- SLOs cuantitativos (disponibilidad, latencia, error)
 
-Este protocolo asegura la calidad, seguridad y velocidad en la entrega de software.
+### 2. Desarrollo e Integración Continua (CI)
 
-1. Diseño y Arquitectura:
-    * `Diagramas C4`: Modelar la arquitectura en niveles de abstracción (Contexto, Contenedores, Componentes).
-    * `ADRs`: Documentar cada decisión arquitectónica significativa.
-    * `SLOs` Cuantitativos: Definir objetivos de disponibilidad, latencia y error antes de escribir código.
+**Pipeline de CI (en cada commit):**
 
-2. Desarrollo e Integración Continua (CI):
-    * Pipeline de CI: En cada `commit`, automatizar builds, tests (unitarios, integración) y análisis estático (`SAST`).
-    * Análisis de Dependencias (`SCA`): Escanear continuamente las librerías de terceros en busca de vulnerabilidades (ej. Snyk, Dependabot).
+- Builds automatizados
+- Tests (unitarios, integración)
+- Análisis estático de seguridad (SAST)
+- Análisis de dependencias (SCA)
 
-3. Despliegue y Operación (CD/DevOps):
-    * Infraestructura como Código (IaC): Usar Terraform o Pulumi para gestionar la infraestructura de forma declarativa y versionada.
-    * Contenerización: Usar Docker y Kubernetes como estándar para empaquetar y orquestar.
-    * Despliegue Automatizado: Utilizar estrategias seguras (Canary, Blue-Green) controladas por `Feature Flags`.
+### 3. Despliegue y Operación (CD/DevOps)
 
-4. Observabilidad:
-    * Logs Estructurados (JSON): Para un análisis y búsqueda eficientes (ELK, Loki).
-    * Métricas: Series temporales para dashboards y alertas (Prometheus, Grafana).
-    * Trazas Distribuidas: Para depurar cuellos de botella en sistemas de microservicios (Jaeger, OpenTelemetry).
+**Prácticas:**
 
-## 3. Automatización de Procesos de Negocio (BPA)
+- Infraestructura como Código (IaC) declarativa y versionada
+- Contenerización estándar
+- Despliegue automatizado con estrategias seguras (Canary, Blue-Green)
+- Feature Flags para control de releases
 
-La automatización de procesos es una capacidad de ingeniería de software, no una disciplina separada. Se rige por los mismos principios de calidad y seguridad.
+### 4. Observabilidad
 
-### 3.1. Arquitectura de Referencia para BPA
+**Tres Pilares:**
 
-Una solución de BPA es un sistema compuesto que orquesta diferentes tipos de `Entidades de Valor`.
+- Logs estructurados (para análisis eficiente)
+- Métricas (series temporales para dashboards y alertas)
+- Trazas distribuidas (para depurar cuellos de botella)
 
-* Capa de Orquestación: Un motor de workflow (ej. Camunda) que ejecuta modelos de proceso (`BPMN`) y gestiona el estado de los flujos de larga duración.
-* Capa de Ejecución de Tareas:
-  * API-based (Preferido): Microservicios y conectores que ejecutan lógica de negocio a través de APIs.
-  * UI-based (Último Recurso): Flota de bots `RPA` para interactuar con sistemas legacy sin API.
-  * Human-in-the-Loop (HITL): Cola de tareas para que los humanos manejen excepciones y decisiones de alto juicio.
-* Capa de Inteligencia: Servicios de IA para tareas cognitivas (ej. `IDP` para leer documentos, `NLP` para entender texto). Ver `gt_ingenieria_ia.md`.
+**Referencia:** Ver `gt_observabilidad.md` para detalles.
 
-### 3.2. Patrones de Flujo de Proceso
+## Automatización de Procesos de Negocio (BPA)
 
-* Orquestación (Patrón Saga): Un orquestador central dirige el flujo y es responsable de ejecutar las acciones de compensación en caso de error. Proporciona alta visibilidad del estado del proceso.
-* Coreografía (Orientado a Eventos): Los servicios reaccionan a eventos en un bus de mensajes de forma autónoma. Promueve el desacoplamiento, pero la visibilidad del flujo de punta a punta es más compleja.
+### Arquitectura de Referencia
 
-### 3.3. El `Contrato de Proceso`
+**Capa de Orquestación:**
 
-Este `Contrato Nexus` formaliza los compromisos de un proceso automatizado. Debe ser un artefacto versionado que acompaña al modelo BPMN.
+- Motor de workflow que ejecuta modelos de proceso
+- Gestiona estado de flujos de larga duración
 
-Referencia: [Especificación](../plantillas_contratos/procesos/contrato_proceso.md) · [Plantilla YAML](../plantillas_contratos/procesos/contrato_proceso.yml)
+**Capa de Ejecución de Tareas:**
 
-Atributos Clave:
+- **API-based (Preferido):** Microservicios y conectores vía APIs
+- **UI-based (Último Recurso):** Bots RPA para sistemas legacy sin API
+- **Human-in-the-Loop (HITL):** Cola de tareas para excepciones
 
-* `sla`: Objetivos de Nivel de Servicio (ej. `cycle_time_p95_minutes: 180`).
-* `stp_target_pct`: Porcentaje objetivo de casos procesados sin intervención humana (Straight-Through Processing).
-* `hitl`: Definición de las colas de excepciones y reglas de escalamiento.
-* `saga`: Mapeo de acciones de compensación para tareas críticas.
-* `events`: Lista de eventos de negocio canónicos que el proceso emite o consume.
-* `idempotency`: Claves de negocio que aseguran que la re-ejecución del proceso no duplique transacciones.
+**Capa de Inteligencia:**
 
-## 4. Seguridad Embebida (Shift-Left)
+- Servicios de IA para tareas cognitivas (IDP, NLP)
 
-La seguridad es una responsabilidad del equipo de desarrollo, integrada en el SDLC.
+**Referencia:** Ver `gt_ingenieria_ia.md` para sistemas cognitivos.
 
-* Autenticación y Autorización: Usar estándares como OAuth 2.1 / OIDC. Implementar JWT para APIs stateless y RBAC/ABAC para control de acceso granular.
-* Gestión de Secretos: Utilizar un vault centralizado (ej. HashiCorp Vault). Nunca almacenar secretos en el código fuente o repositorios Git.
-* Análisis de Seguridad Automatizado: Integrar `SAST`, `DAST` y `SCA` en los pipelines de CI/CD para detectar vulnerabilidades de forma temprana.
+### Patrones de Flujo de Proceso
 
+**Orquestación (Patrón Saga):**
+
+- Orquestador central dirige el flujo
+- Responsable de acciones de compensación en caso de error
+- Alta visibilidad del estado del proceso
+
+**Coreografía (Orientado a Eventos):**
+
+- Servicios reaccionan a eventos de forma autónoma
+- Promueve desacoplamiento
+- Visibilidad E2E más compleja
+
+## Contrato de Proceso
+
+**Definición:** Formaliza compromisos de un proceso automatizado.
+
+**Atributos Clave:**
+
+- **SLA:** Objetivos de nivel de servicio (cycle time)
+- **STP Target:** % de casos sin intervención humana
+- **HITL:** Definición de colas de excepciones
+- **Saga:** Mapeo de acciones de compensación
+- **Events:** Eventos de negocio canónicos
+- **Idempotency:** Claves para evitar duplicación
+
+**Referencia:** Ver plantillas en `/plantillas_contratos/procesos/`
+
+## Seguridad Embebida (Shift-Left)
+
+**Principio:** Seguridad es responsabilidad del equipo de desarrollo, integrada en SDLC.
+
+### Autenticación y Autorización
+
+**Estándares:** OAuth 2.1 / OIDC
+
+**Patrones:**
+
+- JWT para APIs stateless
+- RBAC/ABAC para control de acceso granular
+
+### Gestión de Secretos
+
+**Regla:** Usar vault centralizado. Nunca almacenar secretos en código fuente o repositorios.
+
+### Análisis de Seguridad Automatizado
+
+**Integración en CI/CD:**
+
+- SAST (Static Application Security Testing)
+- DAST (Dynamic Application Security Testing)
+- SCA (Software Composition Analysis)
+
+## Integración con ASTA-Kore
+
+**ADRs:** Documentar decisiones arquitectónicas significativas.
+
+**Contratos:** Todo proceso automatizado debe tener un Contrato de Proceso versionado.
+
+**Referencia:** Ver `gt_flujo_entrega.md` para pipelines CI/CD.
+
+```
+
+### ASTA-KORE fundamentos y manual operacional/guias tecnicas/gt_mapeo_historias.md
+
+```markdown
+# GT-STORY-MAP-001: Técnicas de Mapeo de Historias
+
+**ID:** GT-STORY-MAP-001 | **Versión:** 1.0 | **Dominio:** Δ-T  
+
+## Invariantes Fundamentales
+
+**I-1. Story as Placeholder:** Historias NO son especificaciones, son placeholders para conversación  
+**I-2. Conversation > Documentation:** Conversación en vivo es más barata y efectiva que documentos escritos  
+**I-3. Business Benefit Required:** TODA historia DEBE tener valor de negocio explícito. Sin valor = no construir  
+**I-4. Transitory Nature:** Historias son tokens transitorios de corta vida. Prohibido perfeccionarlas  
+**I-5. Vertical Slicing:** Rebanadas entregan valor end-to-end, nunca por capas técnicas horizontales  
+**I-6. OKRs-First:** Preguntar "¿Cómo avanzamos OKRs?" no "¿Qué quemamos del backlog?"  
+
+## Anatomía del Story Map
+
+```plain
+ESPINA: [Descubrir] → [Postular] → [Evaluar] → [Notificar]
+            ↓             ↓            ↓            ↓
+R1:     [Buscar]     [Form básico] [Validar]   [Email]
+R2:     [Filtros]    [Autofill]    [IA Score]  [SMS+Portal]
+R3:     [Recom.]     [Anexos]      [Panel]     [Analytics]
+```
+
+**Elementos:**  
+
+1. **Espina Dorsal:** Actividades principales del usuario (horizontal). Verbos de acción, NO etapas técnicas  
+2. **Historias:** Tareas específicas bajo cada actividad (vertical). Placeholders para conversaciones  
+3. **Rebanadas:** Agrupaciones horizontales que entregan valor completo de punta a punta  
+4. **Rebanada 1 = Esqueleto Andante:** Mínimo para completar el viaje del usuario con valor real  
+
+## Patrones de Slicing
+
+| Patrón | Cuándo Aplicar | Ejemplo |
+|:---|:---|:---|
+| **Persona** | Múltiples tipos de usuarios | R1: Individual / R2: Apoderado / R3: Org |
+| **Regla** | Variantes por condición | R1: Happy path / R2: Validaciones / R3: Excepciones |
+| **Dato** | Complejidad de campos | R1: Texto / R2: Validación API / R3: Archivos |
+| **Plataforma** | Multicanal | R1: Web / R2: Mobile / R3: API |
+| **Escala** | Performance creciente | R1: 100/día / R2: 10K/día / R3: 100K/día |
+
+**Técnica SPIDR:** Spike, Path, Interface, Data, Rule (aplicar cuando historia >5 días)
+
+## Esqueleto Andante: 5 Criterios
+
+**Restricción:** Rebanada 1 DEBE cumplir los 5 criterios antes de iniciar Rebanada 2.
+
+- [ ] **Flujo completo:** Recorre inicio→fin sin gaps. Usuario completa su objetivo
+- [ ] **Valor medible:** Existe métrica observable de éxito (tiempo, conversión, satisfacción)
+- [ ] **Desplegable:** Sistema real en producción con datos reales, NO prototipo
+- [ ] **Genera datos:** Métricas/logs implementados desde día 1 para medir outcomes
+- [ ] **Versión simple:** Camino feliz sin excepciones ni optimizaciones prematuras
+
+**Regla de capacidad:** Si Esqueleto estimado >8 semanas → aplicar slicing adicional hasta cumplir restricción.
+
+## Facilitación del Taller (2-3h)
+
+**Participantes:** PO (lidera), Equipo completo, Usuario/stakeholder (ideal)
+
+### Fase 1: Narrar Viaje (30m)
+
+- PO cuenta historia del usuario inicio→fin
+- Equipo identifica actividades principales (verbo + sustantivo)
+- Ordenar horizontalmente = Espina Dorsal
+
+### Fase 2: Desglosar Historias (45m)
+
+- Por actividad, proponer historias específicas
+- Formato: "Como [rol], quiero [acción], para [beneficio]"
+- Pegar verticalmente bajo cada actividad
+- NO estimar aún
+
+### Fase 3: Identificar Esqueleto (30m)
+
+- Marcar historias de Rebanada 1
+- Aplicar 5 criterios rigurosamente
+- Eliminar "por si acaso"
+- Validar: ¿Entrega valor punta a punta?
+
+### Fase 4: Priorizar Rebanadas (30m)
+
+- Agrupar historias restantes en R2, R3, N
+- Anclar cada rebanada en OKR activo
+- Ordenar por impacto en KR
+
+### Fase 5: Estimar y Validar (30m)
+
+- Planning Poker solo R1
+- Validar cabe en 4-8 semanas
+- Si no: Volver a Fase 3 con slicing adicional
+
+## Vinculación a OKRs
+
+**Formato estándar:**
+
+```markdown
+## Rebanada 1: Esqueleto Andante
+**KR:** KR-Q1-02: Reducir tiempo de postulación 15→5 min
+**Impacto:** Baseline ~10 min (primera versión digital)
+**Estimación:** 6 semanas
+
+## Rebanada 2: Optimización UX
+**KR:** Mismo KR-Q1-02
+**Impacto:** Meta <5 min (con autofill + validaciones)
+**Estimación:** 4 semanas
+```
+
+**Regla:** Si rebanada NO contribuye a OKR activo → Rechazar o mover a Objetivo Cero (20% capacidad).
+
+## Anti-Patrones
+
+| Anti-Patrón | Síntoma | Corrección |
+|:---|:---|:---|
+| **WBS técnico** | Historias son tareas técnicas ("Crear tabla") | Re-enmarcar en valor usuario. Aplicar I-3 |
+| **Esqueleto inflado** | R1 con 50 historias, 6+ meses | Slicing radical. Solo 20% del total debe ir a R1 |
+| **Sin OKR** | Rebanadas sin vinculación estratégica | Aplicar I-6: OKRs-First. Rechazar o Objetivo Cero |
+| **Slicing horizontal** | Rebanadas por capas (backend/frontend) | Slicing vertical obligatorio (I-5) |
+| **Mapa estático** | Nunca actualizado post-taller | Revisar en retrospectivas. "¿Reflejó realidad?" |
+| **Estimación prematura** | Estimar todo antes de Esqueleto | Solo estimar R1 inicialmente |
+
+## Checklist de Calidad
+
+**Estructura:**
+
+- [ ] Espina cubre flujo usuario completo
+- [ ] Actividades = verbos de acción usuario
+- [ ] Historias agrupadas bajo actividad correcta
+
+**Esqueleto Andante:**
+
+- [ ] Cumple 5 criterios (restricción de pull)
+- [ ] Estimado 4-8 semanas (restricción de capacidad)
+- [ ] Vinculado a KR activo
+- [ ] Formato "Como [rol], quiero..."
+
+**Rebanadas Adicionales:**
+
+- [ ] Priorizadas por impacto en KR
+- [ ] Patrón de slicing aplicado coherentemente
+- [ ] Cada una entrega valor incremental observable
+
+**Facilitación:**
+
+- [ ] Participaron PO + Equipo + Usuario
+- [ ] Duración 2-3h
+- [ ] Resultado documentado
+
+```
+
+### ASTA-KORE fundamentos y manual operacional/guias tecnicas/gt_metricas_flujo.md
+
+```markdown
+# GT-FLOW-001: Técnicas Avanzadas de Métricas de Flujo
+
+**ID:** GT-FLOW-001  
+**Versión:** 2.0  
+**Dominio:** Δ-O (Flujo Operacional)  
+**Protocolo:** 3.2 - Gestión del Flujo de Entrega
+
+## Invariante Central
+
+**Las métricas de flujo miden la eficiencia del sistema de trabajo del equipo, no del sistema técnico.**
+
+Su propósito es implementar los invariantes de LEAN² (Flujo, Visibilidad, Adaptación) mediante instrumentación práctica.
+
+**Referencia:** Ver `protocolos.md` §3.2.2 para definiciones de métricas primitivas (Lead Time, Cycle Time, Throughput, WIP, Flow Efficiency).
+
+## Casos Edge: Manejo de Situaciones Especiales
+
+### Caso 1: Trabajo Bloqueado
+
+**Problema:** Item pasa días en estado "Blocked" sin progreso.
+
+**Estrategias de Manejo:**
+
+| Estrategia | Descripción | Cuándo Usar |
+|------------|-------------|-------------|
+| **Excluir del Cycle Time** | Restar tiempo bloqueado del cálculo | Bloqueos externos (dependencias de otros equipos) |
+| **Incluir en Cycle Time** | Contar tiempo bloqueado como parte del trabajo | Bloqueos internos (parte del proceso del equipo) |
+| **Métrica Separada** | Reportar "Tiempo Bloqueado" como métrica independiente | Siempre (para visibilidad) |
+
+**Fórmula ajustada:**
+
+```plain
+Cycle Time Ajustado = (T_done - T_doing) - Σ(tiempo_bloqueado)
+```
+
+**Decisión:** Si >20% del tiempo es bloqueado, es señal de desperdicio sistémico (tipo: Espera).
+
+### Caso 2: Items Reabiertos
+
+**Problema:** Item se marca Done, luego se reabre por bug o cambio de requisitos.
+
+**Estrategias de Manejo:**
+
+| Estrategia | Descripción | Cuándo Usar |
+|------------|-------------|-------------|
+| **Última Completitud** | Usar la fecha de la última vez que se marcó Done | Recomendado (refleja realidad) |
+| **Primera Completitud** | Usar la fecha de la primera vez que se marcó Done | Si quieres medir "tiempo hasta primer intento" |
+| **Contar como Nuevo Item** | Tratar reapertura como trabajo nuevo | Si reapertura es sustancialmente diferente |
+
+**Fórmula recomendada:**
+
+```plain
+Lead Time = max(T_done_1, T_done_2, ..., T_done_n) - T_created
+```
+
+**Métrica adicional:** "Tasa de Reapertura" = (Items reabiertos / Items completados) × 100%
+
+### Caso 3: Percentiles vs. Promedios
+
+**Problema:** Promedios ocultan outliers y no representan la experiencia típica.
+
+**Solución:** Usar percentiles para reportar distribución.
+
+**Percentiles Recomendados:**
+
+| Percentil | Significado | Cuándo Usar |
+|-----------|-------------|-------------|
+| **p50 (Mediana)** | Experiencia típica | Baseline, comparaciones |
+| **p85** | Peor caso razonable | Objetivos de SLO |
+| **p95** | Casos extremos | Identificar outliers |
+| **p99** | Peor caso absoluto | Análisis de patología |
+
+**Ejemplo de Reporte:**
+
+```plain
+Lead Time (últimos 90 días):
+- p50: 5.2 días (típico)
+- p85: 9.8 días (peor caso razonable)
+- p95: 15.3 días (outliers)
+- Promedio: 7.1 días (no usar para objetivos)
+```
+
+**Regla:** Nunca uses promedio para objetivos. Usa p50 o p85.
+
+## Identificación de Restricciones
+
+### Análisis de Acumulación
+
+**Pregunta:** ¿Dónde se acumula el trabajo?
+
+**Patrón de Análisis:**
+
+1. Calcular tiempo promedio por estado
+2. Identificar el estado con mayor acumulación
+3. Ese es tu cuello de botella (restricción)
+
+**Ejemplo de Resultado:**
+
+```plain
+Backlog: 2.3 días
+Ready: 0.5 días
+Doing: 3.1 días
+Review: 4.8 días  ← RESTRICCIÓN (mayor acumulación)
+Done: 0 días
+```
+
+**Acción:** Intervenir en Review (agregar revisores, automatizar checks).
+
+### Patrones de Anti-Patrones
+
+| Patrón Observado | Diagnóstico | Intervención |
+|------------------|-------------|---------------|
+| **WIP creciente, Throughput decreciente** | Sobrecarga del equipo | Reducir WIP, rechazar trabajo nuevo |
+| **Lead Time creciente, Cycle Time estable** | Acumulación en Backlog | Mejorar priorización, reducir demanda |
+| **Flow Efficiency <20%** | Mucho tiempo de espera | Identificar y eliminar handoffs |
+| **Throughput errático** | Tamaño de historias variable | Partir historias más pequeñas |
+| **Cycle Time >2× Lead Time** | Retrabajo o bloqueos | Mejorar Definition of Ready |
+
+## Comparación Interna (No Externa)
+
+**Mejor práctica:** Comparar contra tu propio baseline, no contra benchmarks externos.
+
+**Patrón de Comparación:**
+
+```yaml
+baseline:
+  periodo: "Últimos 90 días"
+  metrica: "Lead Time p85"
+  valor: "12.5 días"
+
+periodo_actual:
+  periodo: "Últimos 30 días"
+  metrica: "Lead Time p85"
+  valor: "9.8 días"
+
+analisis:
+  tendencia: "Mejorando"
+  delta: "-2.7 días (-21.6%)"
+  accion: "Mantener intervenciones actuales"
+```
+
+**Criterios de Evaluación:**
+
+| Cambio vs. Baseline | Interpretación | Acción |
+|---------------------|----------------|--------|
+| **Mejora >20%** | Intervención exitosa | Amplificar, documentar en ADR |
+| **Mejora 5-20%** | Progreso incremental | Mantener, seguir monitoreando |
+| **Cambio <5%** | Estable | Buscar nueva restricción |
+| **Degradación 5-20%** | Alerta temprana | Investigar causa |
+| **Degradación >20%** | Crisis | Intervención inmediata |
+
+## Integración con CVC (Δ-E)
+
+### Template de Reporte
+
+```markdown
+## Salud del Flujo (Δ-O)
+
+### Métricas del Trimestre Q1 2025
+
+| Métrica | Actual | Objetivo | vs. Q4 2024 | Estado |
+|---------|--------|----------|-------------|--------|
+| Lead Time (p85) | 8.5d | <10d | ▼ -2.3d | 🟢 |
+| Cycle Time (p50) | 3.2d | <5d | ▼ -0.8d | 🟢 |
+| Throughput | 12 items/sem | >8 items/sem | ▲ +3 | 🟢 |
+| Flow Efficiency | 38% | >40% | → 0% | 🟡 |
+| WIP Promedio | 10 | ≤12 | ▼ -2 | 🟢 |
+
+### Restricción Dominante Identificada
+
+**Estado:** Review (45% del Lead Time total)
+
+**Tipo de desperdicio:** Espera (aprobaciones manuales)
+
+**Hipótesis de mejora:** Automatizar 80% de code reviews con linters + tests obligatorios
+
+**Experimento:** Implementar pre-commit hooks + CI checks
+
+**KR asociado:** "Reducir tiempo en Review de 2.1d a <0.5d hacia fin de Q1"
+
+**Responsable:** Tech Lead
+
+**Verificación:** Próximo CVC (Q2)
+```
+
+## Integración con ASTA-Kore
+
+| Artefacto | Cómo se Conecta |
+|-----------|------------------|
+| **Tablero de Flujo** (Δ-O) | Fuente de datos para métricas |
+| **Retrospectiva del Flujo** (Δ-O) | Consume métricas para identificar restricciones |
+| **OKRs Trimestrales** (Δ-T) | KRs pueden ser métricas de flujo |
+| **CVC** (Δ-E) | Reporta métricas como evidencia de salud |
+| **ADRs** (Δ-O) | Documenta experimentos de mejora |
+
+**Referencia completa:** Ver `protocolos.md` §3.2 para proceso completo de gestión del flujo.
+
+```
+
+### ASTA-KORE fundamentos y manual operacional/guias tecnicas/gt_observacionalidad.md
+
+```markdown
+# GT-OBSERVABILITY-001: Stack de Observabilidad
+
+**ID:** GT-OBSERVABILITY-001  
+**Versión:** 2.0  
+**Dominio:** Δ-O (Flujo Operacional)  
+**Protocolo:** 3.3 - Transparencia Radical
+
+## Invariante Central
+
+**La observabilidad no es monitoreo. Es la capacidad de entender el estado interno del sistema desde sus salidas externas.**
+
+Su propósito es responder "¿Por qué?" sin necesidad de desplegar código nuevo.
+
+## Los Tres Pilares
+
+### Pilar 1: Logs (Qué pasó)
+
+**Definición:** Registro inmutable de eventos discretos.
+
+**Reglas:**
+
+- ✅ Formato estructurado (no texto plano)
+- ✅ Timestamp en UTC con precisión
+- ✅ Trace ID para correlación
+- ✅ Contexto relevante (IDs, duraciones)
+
+### Pilar 2: Métricas (Cuánto/Cuándo)
+
+**Definición:** Valores numéricos agregados en el tiempo.
+
+**Tipos:**
+
+| Tipo | Descripción | Ejemplo |
+|------|-------------|---------|
+| **Counter** | Contador monotónico (solo sube) | `postulaciones_creadas_total` |
+| **Gauge** | Valor instantáneo (sube/baja) | `postulaciones_en_revision_actual` |
+| **Histogram** | Distribución de valores | `http_request_duration_seconds` |
+| **Summary** | Percentiles precalculados | `api_latency_p95` |
+
+**Convención de Nombres:**
+
+```plain
+{namespace}_{subsystem}_{name}_{unit}
+
+Ejemplos:
+- postulaciones_api_requests_total
+- postulaciones_db_query_duration_seconds
+```
+
+### Pilar 3: Traces (Cómo fluye)
+
+**Definición:** Representación del recorrido de una request a través del sistema.
+
+**Estructura conceptual:**
+
+```plain
+Trace: abc-123
+├─ Span: API Gateway (10ms)
+├─ Span: Postulaciones Service (45ms)
+│  ├─ Span: Validar RUT (5ms)
+│  ├─ Span: Query BD (30ms)
+│  └─ Span: Publicar Evento (10ms)
+└─ Span: Notificaciones Service (20ms)
+```
+
+**Información por Span:**
+
+- Trace ID (correlación)
+- Span ID (identificación)
+- Parent Span ID (jerarquía)
+- Duración
+- Atributos de contexto
+
+## Principios de Instrumentación
+
+### Principio 1: Instrumentar desde el Diseño
+
+**Regla:** La observabilidad no se añade al final, se diseña desde el inicio.
+
+**Criterio:** Toda EV debe emitir los tres pilares desde su primer despliegue.
+
+### Principio 2: Correlación entre Pilares
+
+**Regla:** Logs, métricas y traces deben correlacionarse vía Trace ID.
+
+**Beneficio:** Poder navegar de un dashboard (métrica) → log específico → trace completo.
+
+### Principio 3: Cardinalidad Controlada
+
+**Regla:** Evitar etiquetas con alta cardinalidad en métricas.
+
+**Ejemplo:**
+
+- ❌ `user_id` como etiqueta (millones de valores)
+- ✅ `user_type` como etiqueta (pocos valores: ciudadano, evaluador, admin)
+
+## Criterios de Decisión: ¿Qué Instrumentar?
+
+### Regla de Oro
+
+**Instrumentar:**
+
+- ✅ Puntos de entrada (APIs, eventos)
+- ✅ Puntos de salida (llamadas a BDs, APIs externas)
+- ✅ Decisiones de negocio (validaciones, aprobaciones)
+- ✅ Errores y excepciones
+
+**No instrumentar:**
+
+- ❌ Loops internos de procesamiento
+- ❌ Funciones auxiliares triviales
+
+## Integración con ASTA-Kore
+
+**SLOs:** Las métricas de observabilidad alimentan los SLOs definidos en los Contratos.
+
+**CVC:** Los dashboards de observabilidad son evidencia de salud operacional en el CVC.
+
+**Referencia:** Ver `gt_slo_sli.md` para definición de SLOs basados en métricas de observabilidad.
+
+```
+
+### ASTA-KORE fundamentos y manual operacional/guias tecnicas/gt_reporteria.md
+
+```markdown
+# GT-REPORTERIA-001: Vistas Materializadas para Stakeholders Externos
+
+**ID:** GT-REPORTERIA-001  
+**Versión:** 2.0  
+**Dominio:** Σ-O (Diseño Operacional) + Δ-O (Flujo Operacional)  
+**Protocolo:** 3.3 - Transparencia Radical
+
+## Invariante Central
+
+**La reportería tradicional es una vista materializada de artefactos vivos, no una fuente de verdad paralela.**
+
+Su propósito es **traducir** la realidad operacional a formatos consumibles por stakeholders externos, sin crear duplicación ni fricción.
+
+## Problema: Doble Contabilidad
+
+### Anti-Patrón Tradicional
+
+```plain
+Sistema Real (Jira, GitHub) ≠≠≠ Reportería (Excel, PPT)
+        ↓                              ↓
+   Fuente de Verdad #1         Fuente de Verdad #2
+        ↓                              ↓
+   Divergencia                     Fricción
+```
+
+**Consecuencias:**
+
+- ❌ Datos desactualizados en reportes
+- ❌ Tiempo perdido en "preparar reportes"
+- ❌ Decisiones basadas en información incorrecta
+
+### Patrón ASTA-Kore: Vista Materializada
+
+```plain
+Fuente de Verdad Única (Artefactos KORE)
+• Canvas de EV
+• OKRs en CVC
+• Tablero de Flujo
+• ADRs
+        ↓
+(Transformación automatizada)
+        ↓
+Vista Ejecutiva (PPT, PDF) | Vista Técnica (Dashboard)
+```
+
+**Principios:**
+
+1. ✅ **Una sola fuente de verdad:** Los artefactos KORE
+2. ✅ **Generación automatizada:** Scripts, no trabajo manual
+3. ✅ **Solo lectura:** Las vistas no se editan, se regeneran
+4. ✅ **Frecuencia definida:** Semanal, mensual, trimestral
+
+## Tipos de Vistas Materializadas
+
+### Vista 1: Reporte Ejecutivo Mensual
+
+**Audiencia:** Directores, Autoridades  
+**Frecuencia:** Mensual (post-CVC)  
+**Formato:** Documento de 2-3 páginas
+
+**Contenido Mínimo:**
+
+- Estado de OKRs (gráfico de progreso)
+- Hitos logrados este mes
+- Bloqueos críticos (si existen)
+- Métricas de flujo (Cycle Time, Throughput)
+- Disponibilidad del sistema (uptime %)
+- Hitos planificados próximo mes
+- Riesgos identificados
+
+**Fuente de Datos:**
+
+- Canvas de EV → OKRs
+- Tablero de Flujo → Métricas
+- CVC → Hitos y bloqueos
+
+### Vista 2: Dashboard Operacional (Tiempo Real)
+
+**Audiencia:** Equipo técnico, Product Owners  
+**Frecuencia:** Tiempo real  
+**Formato:** Dashboard web
+
+**Contenido Mínimo:**
+
+- Métricas DORA (Deployment Frequency, Lead Time, CFR, MTTR)
+- SLOs actuales vs. objetivo
+- WIP actual vs. límite
+- Throughput semanal
+- Restricciones identificadas
+
+**Fuente de Datos:**
+
+- Pipeline CI/CD → Métricas DORA
+- Sistema de observabilidad → SLOs
+- Tablero de Flujo → WIP, Throughput
+
+### Vista 3: Informe Trimestral (CVC)
+
+**Audiencia:** Nodo de Gobernanza, Stakeholders  
+**Frecuencia:** Trimestral  
+**Formato:** Documento estructurado
+
+**Contenido Mínimo:**
+
+- Progreso de OKRs (evidencia)
+- Demos realizadas
+- Métricas de salud (flujo, técnicas)
+- Restricciones dominantes identificadas
+- Experimentos de mejora ejecutados
+- Plan para próximo trimestre
+
+**Fuente de Datos:**
+
+- Canvas de EV → OKRs
+- CVC → Evidencia, demos
+- Retrospectivas → Restricciones, experimentos
+
+## Principio de Automatización
+
+**Regla:** La generación de reportes debe ser automatizable.
+
+**Patrón:**
+
+```plain
+Artefactos KORE (YAML, Markdown)
+        ↓
+Script de transformación
+        ↓
+Vista materializada (PDF, HTML, Dashboard)
+```
+
+**Criterio de éxito:** Un stakeholder puede regenerar el reporte en <5 minutos sin intervención manual.
+
+## Integración con ASTA-Kore
+
+**CVC → Reportes:** El informe trimestral del CVC es la fuente para reportes ejecutivos.
+
+**Transparencia Radical:** Todos los reportes deben ser accesibles a todos los stakeholders (sin información sensible).
+
+**Referencia:** Ver `protocolos.md` §2.3 para proceso completo del CVC.
+
+```
+
+### ASTA-KORE fundamentos y manual operacional/guias tecnicas/gt_seguridad.md
+
+```markdown
+# GT-SECURITY-001: Modelo de Seguridad
+
+**ID:** GT-SECURITY-001  
+**Versión:** 2.0  
+**Dominio:** Σ-O (Diseño Operacional)  
+**Protocolo:** 3.1 - Gestión de la Confiabilidad
+
+## Invariante Central
+
+**La seguridad es una propiedad del sistema, no un componente añadido al final.**
+
+Su propósito es proteger datos y operaciones sin impedir el flujo de valor.
+
+## Principios
+
+### Principio 1: Zero Trust
+
+**Regla:** Nunca confiar, siempre verificar.
+
+**Criterio:** Toda request debe autenticarse y autorizarse, incluso dentro de la red interna.
+
+### Principio 2: Defense in Depth
+
+**Regla:** Múltiples capas de seguridad.
+
+**Capas:**
+
+1. Red (firewall, WAF)
+2. Aplicación (autenticación, autorización)
+3. Datos (encriptación, enmascaramiento)
+4. Auditoría (logs, alertas)
+
+### Principio 3: Least Privilege
+
+**Regla:** Mínimos permisos necesarios.
+
+**Criterio:** Cada usuario/servicio solo tiene acceso a lo estrictamente necesario para su función.
+
+## Patrones de Autenticación
+
+### Patrón: Token Stateless
+
+**Criterio de decisión:**
+
+- ✅ Usar tokens stateless (JWT) si: APIs distribuidas, múltiples servicios
+- ❌ No usar si: Necesitas revocación inmediata de sesiones
+
+### Patrón: OAuth 2.0 / OIDC
+
+**Criterio de decisión:**
+
+- ✅ Usar OAuth si: Delegación de autorización a terceros
+- ✅ Usar OIDC si: Necesitas información de identidad del usuario
+
+## Integración con ASTA-Kore
+
+**Contratos de Seguridad:** Toda EV debe declarar en su contrato:
+
+- Modelo de autenticación
+- Modelo de autorización (RBAC/ABAC)
+- Datos sensibles manejados
+- Políticas de encriptación
+
+**Referencia:** Ver plantillas de contratos en `/plantillas_contratos/`
+
+```
+
+### ASTA-KORE fundamentos y manual operacional/guias tecnicas/gt_slo_sli.md
+
+```markdown
+# GT-SLO-SLI-001: Definición de SLOs y SLIs
+
+**ID:** GT-SLO-SLI-001  
+**Versión:** 2.0  
+**Dominio:** Σ-O (Diseño Operacional)  
+**Protocolo:** 3.1 - Gestión de la Confiabilidad
+
+## Invariante Central
+
+**Un SLO es un contrato de confiabilidad con los usuarios, no una aspiración técnica.**
+
+Su propósito es definir cuánta indisponibilidad es aceptable, no aspirar a 100% de uptime.
+
+## Definiciones
+
+### SLI (Service Level Indicator)
+
+**Definición:** Métrica cuantitativa de un aspecto del nivel de servicio.
+
+**Ejemplos:**
+
+- Disponibilidad: % de requests exitosas
+- Latencia: % de requests respondidas en <Xms
+- Correctitud: % de transacciones sin errores
+- Frescura: % de datos con antigüedad <X minutos
+
+### SLO (Service Level Objective)
+
+**Definición:** Objetivo de confiabilidad expresado como un rango de valores aceptables para un SLI.
+
+**Ejemplos:**
+
+- "99.5% de disponibilidad en ventana de 30 días"
+- "95% de requests <500ms en ventana de 7 días"
+
+### SLA (Service Level Agreement)
+
+**Definición:** Contrato legal con consecuencias si no se cumple el SLO.
+
+**Regla:** SLA ≤ SLO. Ejemplo: Si SLO es 99.5%, SLA puede ser 99.0%.
+
+## Criterios de Selección de SLIs
+
+### Pregunta: ¿Qué le importa al usuario?
+
+**Categorías:**
+
+| Aspecto | Pregunta | SLI Típico |
+|---------|----------|------------|
+| **Disponibilidad** | ¿El servicio responde? | % de requests exitosas |
+| **Latencia** | ¿Qué tan rápido responde? | % de requests <Xms |
+| **Correctitud** | ¿La respuesta es correcta? | % de transacciones sin errores |
+| **Frescura** | ¿Los datos están actualizados? | % de datos con antigüedad <X min |
+
+## Patrón de Definición
+
+### Paso 1: Identificar SLI
+
+**Pregunta:** ¿Qué métrica refleja la experiencia del usuario?
+
+**Ejemplo:** Para una API de consulta de postulaciones → Latencia p95
+
+### Paso 2: Definir SLO
+
+**Pregunta:** ¿Qué nivel de servicio es aceptable?
+
+**Ejemplo:** "95% de requests deben responder en <500ms en ventana de 7 días"
+
+### Paso 3: Instrumentar
+
+**Pregunta:** ¿Cómo mido este SLI?
+
+**Ejemplo:** Instrumentar API con métricas de duración de requests
+
+### Paso 4: Alertar
+
+**Pregunta:** ¿Cuándo debo intervenir?
+
+**Ejemplo:** Alerta si SLO cae por debajo del 95% durante 1 hora
+
+## Integración con ASTA-Kore
+
+**Contratos:** Todo contrato de EV debe declarar sus SLOs.
+
+**Observabilidad:** Los SLIs se miden con el stack de observabilidad (métricas).
+
+**CVC:** Los SLOs se reportan trimestralmente como evidencia de confiabilidad.
+
+**Referencia:** Ver `gt_observabilidad.md` para instrumentación de SLIs.
+
+```
+
+### ASTA-KORE fundamentos y manual operacional/guias tecnicas/gt_testing.md
+
+```markdown
+# GT-TESTING-001: Estrategia de Testing
+
+**ID:** GT-TESTING-001  
+**Versión:** 2.0  
+**Dominio:** Δ-O (Flujo Operacional)  
+**Protocolo:** 3.2 - Gestión del Flujo de Entrega
+
+## Invariante Central
+
+**Los tests son especificaciones ejecutables, no documentación opcional.**
+
+Su propósito es permitir cambios con confianza, no alcanzar 100% de cobertura.
+
+## Pirámide de Testing
+
+```plain
+
+        ┌─────────┐
+       ╱  E2E (5%) ╲      Lentos, frágiles, costosos
+      ╱─────────────╲
+     ╱ Integration   ╲    Moderados
+    ╱    (15%)       ╲
+   ╱─────────────────╲
+  ╱   Unit (80%)      ╲   Rápidos, estables, baratos
+ ╱─────────────────────╲
+
+```
+
+**Regla:** Mayoría de tests deben ser unitarios.
+
+## Tests Unitarios
+
+### Definición
+
+**Qué:** Verifican una unidad de código aislada (función, clase).
+
+**Características:**
+
+- ✅ Rápidos (<10ms por test)
+- ✅ Aislados (sin BD, sin red, sin filesystem)
+- ✅ Determinísticos (mismo input → mismo output)
+
+### Estructura: AAA (Arrange-Act-Assert)
+
+**Patrón:**
+
+1. **Arrange:** Preparar datos de entrada
+2. **Act:** Ejecutar la función bajo test
+3. **Assert:** Verificar el resultado
+
+### Cobertura
+
+**Objetivo:** ≥80% de cobertura de líneas.
+
+**Regla:** Código crítico (validaciones, lógica de negocio) debe tener 100% de cobertura.
+
+## Tests de Integración
+
+### Definición
+
+**Qué:** Verifican interacción entre componentes (código + BD, código + API externa).
+
+**Características:**
+
+- ⏱️ Moderadamente lentos (segundos)
+- 🔗 Requieren dependencias reales o simuladas
+- 🎯 Verifican contratos entre componentes
+
+## Tests E2E (End-to-End)
+
+### Definición
+
+**Qué:** Verifican flujos completos desde la perspectiva del usuario.
+
+**Características:**
+
+- 🐌 Lentos (minutos)
+- 💔 Frágiles (muchas dependencias)
+- 💰 Costosos de mantener
+
+**Regla:** Solo para flujos críticos de negocio (camino feliz).
+
+## Criterios de Decisión: ¿Qué Tipo de Test?
+
+| Escenario | Tipo de Test | Justificación |
+|-----------|--------------|---------------|
+| Validación de RUT | Unitario | Lógica pura, sin dependencias |
+| Guardar en BD | Integración | Interacción con BD |
+| Flujo completo de postulación | E2E | Flujo crítico de negocio |
+
+## Integración con ASTA-Kore
+
+**Pipeline CI/CD:** Los tests se ejecutan automáticamente en cada commit.
+
+**Definition of Done:** Una historia no está "Done" hasta que tiene tests automatizados.
+
+**Referencia:** Ver `gt_flujo_entrega.md` para integración de tests en el pipeline.
+
+```
+
+### ASTA-KORE fundamentos y manual operacional/guias tecnicas/gt_trazabilidad_automatizada.md
+
+```markdown
+# GT-TRACE-001: Patrones de Trazabilidad Estrategia-Ejecución
+
+**ID:** GT-TRACE-001 | **Versión:** 1.0 | **Dominio:** Δ-O | **Estado:** ROADMAP
+
+## Invariante Central
+
+**La trazabilidad entre estrategia (OKRs) y ejecución debe ser verificable mediante convenciones explícitas y automatización progresiva.**
+
+**Objetivo:** Responder en <30 segundos: "¿Qué KR motivó este cambio?" y "¿Qué trabajo contribuyó a este KR?"
+
+## Propósito: Alineación Lateral, No Control
+
+### I-1. Bottom-up Alignment
+Trazabilidad para **coordinación horizontal** entre equipos, NO control top-down ni micro-gestión de performance individual.
+
+### I-2. Outcome-Oriented
+Trackear **OUTCOMES** (cambios medibles en negocio), NO outputs (features entregadas) ni progress (% de tareas completadas).
+
+**Ejemplo correcto:** "Commits vinculados a KR-Q1-02: Reducir tiempo de 15→5 min" → Medir impacto en tiempo real  
+**Ejemplo incorrecto:** "85% de features del backlog completadas" → Output sin outcome
+
+### I-3. Measure What Matters
+Solo implementar trazabilidad que **informa decisiones reales**. Prohibido: vanity metrics sin acción (ej: "commits por desarrollador").
+
+### I-4. Track Distractions
+Crear feedback loop de trabajo **NO vinculado a OKRs** para identificar distracciones sistemáticas y decidir: tolerar, eliminar, o convertir en Objetivo Cero (20% capacidad).
+
+## Modelo de Trazabilidad
+
+### Cadena de Conexiones
+
+```
+OKR (KR-2025-Q1-02: Reducir tiempo 15→5 min)
+  ├── Rebanada Story Map (R2: Optimización UX)
+  │   ├── Historia (US-101: Autofill datos)
+  │   │   ├── Commit abc123
+  │   │   └── Release v1.2.0
+  │   └── Historia (US-102: Validación inteligente)
+  ├── ADR-015 (Integrar API Registro Civil)
+  │   └── Commits (ghi789, jkl012)
+  └── Evidencia de Impacto
+      └── Métrica: 9 min (-33% vs baseline)
+```
+
+**Principios:**
+1. **Declarativo:** Metadatos explícitos en origen, no inferidos post-facto
+2. **Bidireccional:** Navegable OKR→Código y Código→OKR
+3. **Verificable:** Automatizable sin interpretación humana
+4. **Incremental:** Comienza manual, automatiza progresivamente
+
+## Convenciones de Metadatos
+
+### Formato de Commits
+
+```
+[KR-ID] [US-ID] tipo: descripción
+
+Refs: IDs relacionados
+```
+
+**Ejemplo:**
+```
+[KR-2025-Q1-02] [US-101] feat: agregar autofill de RUT
+
+Integración con API Registro Civil para pre-llenar datos,
+reduciendo tiempo de llenado de formulario en ~3 minutos.
+
+Refs: KR-2025-Q1-02, US-101, ADR-015
+```
+
+**Tipos:** feat, fix, refactor, docs, test, chore
+
+### Campo en ADRs
+
+**Obligatorio:**
+```markdown
+**KR Motivador:** [KR-ID]: [Descripción del KR]
+```
+
+**Ejemplo:**
+```markdown
+# ADR-015: Integración API Registro Civil
+
+**KR Motivador:** KR-2025-Q1-02: Reducir tiempo 15→5 min
+
+## Contexto
+74% rechazos por RUTs inválidos. Validación manual genera fricción.
+
+## Decisión
+Integrar API Registro Civil para validación automática en tiempo real.
+
+## Consecuencias
++ Reduce errores de captura en 90%
++ Disminuye tiempo de postulación en ~3 min (contribuye directamente a KR)
+- Introduce dependencia externa (SLA 99.5% del Registro Civil)
+
+## Medición de Impacto en KR
+Baseline: 12 min promedio → Target: 9 min promedio (-25%)
+Dashboard: [link a métricas en tiempo real]
+```
+
+## Agregación por Release
+
+**Release Notes Automatizadas:**
+
+```markdown
+# Release v1.2.0 (2025-01-20)
+
+## KRs Impactados
+- **KR-2025-Q1-02:** Reducir tiempo postulación (18 commits)
+  - Impacto medido: -33% (de 12 min → 9 min)
+- **KR-2025-Q1-03:** Aumentar completitud (5 commits)
+  - Impacto esperado: +10% (baseline 60% → target 70%)
+
+## Cambios Funcionales
+- Validación automática RUT (US-101)
+- Autofill datos desde Registro Civil (US-102)
+- Notificaciones SMS (US-105)
+
+## Decisiones Arquitectónicas
+- ADR-015: Integración API Registro Civil
+- ADR-016: Circuit Breaker para APIs externas
+
+## Trabajo Sin KR (Distracciones)
+- 3 commits de bugs críticos en producción (no planificados)
+- 2 commits de deuda técnica urgente
+- **Análisis:** 22% del trabajo fue no planificado → Considerar Objetivo Cero
+```
+
+## Validación Automatizada
+
+### Nivel 1: Git Hooks (Pre-commit)
+- Validar formato de commit antes de aceptar
+- Verificar que KR-ID existe en OKRs activos del trimestre
+- Verificar que US-ID corresponde a Story Map actual
+- **Beneficio:** Garantiza adherencia desde el origen
+
+### Nivel 2: CI/CD Pipeline
+- Extraer metadatos de commits automáticamente
+- Validar consistencia KR↔US↔ADR
+- Generar release notes automáticas con KRs impactados
+- Bloquear merge si violaciones críticas detectadas
+- **Beneficio:** Visibilidad continua + release notes sin esfuerzo manual
+
+## Dashboard de Trazabilidad
+
+**Vistas Esenciales (6 paneles accionables):**
+
+| Vista | Pregunta que Responde | Acción que Informa |
+|:---|:---|:---|
+| **Progreso de KR** | ¿Cuánto trabajo se completó por KR? | Decidir acelerar/pausar iniciativa |
+| **Velocity por KR** | ¿A qué ritmo avanzamos? | Detectar desaceleración temprana |
+| **Impacto de Release** | ¿Qué KRs se desplegaron esta semana? | Comunicar valor a stakeholders |
+| **Red de ADRs** | ¿Qué decisiones arquitectónicas soportan este KR? | Trazabilidad de decisiones técnicas |
+| **Alertas** | ¿Qué KRs no tienen actividad hace >2 semanas? | Intervenir proactivamente en estancamientos |
+| **Distracciones** | ¿Qué % de trabajo NO tiene KR-ID? | Decidir sobre Objetivo Cero (20% capacidad) |
+
+**Principio:** Tecnología-agnóstico. Funciona con cualquier sistema que pueda extraer metadatos estructurados y agregarlos.
+
+## Niveles de Madurez (Implementación Incremental)
+
+### Nivel 1: Manual (Baseline)
+**Artefactos:** Convenciones documentadas (formato commit, ADR con KR)  
+**Esfuerzo:** 1 semana (documentación + capacitación)  
+**Beneficio:** Trazabilidad consultable manualmente
+
+### Nivel 2: Validación Automatizada
+**Artefactos:** Git hooks + Pipeline que extrae KR-IDs + Release notes auto  
+**Esfuerzo:** 2-4 semanas (1 desarrollador)  
+**Beneficio:** Adherencia garantizada + visibilidad en releases
+
+### Nivel 3: Dashboard en Tiempo Real
+**Artefactos:** ETL que agrega metadatos + Dashboard con 6 vistas + API de consulta  
+**Esfuerzo:** 6-10 semanas (2 desarrolladores)  
+**Beneficio:** Visibilidad continua + detección proactiva de estancamientos
+
+### Nivel 4: Análisis Predictivo
+**Artefactos:** Modelos que predicen cumplimiento de KR + Alertas de riesgo + Recomendaciones  
+**Esfuerzo:** 12+ semanas (equipo de datos)  
+**Beneficio:** Gestión anticipatoria de portafolio
+
+**Regla:** NO saltar niveles. Validar valor en Nivel N antes de invertir en Nivel N+1.
+
+## Alternativas de Implementación
+
+### Opción A: Herramientas Comerciales
+**Ventajas:** Funcionalidad inmediata, soporte vendor  
+**Desventajas:** Costo, vendor lock-in, adaptación al modelo ASTA-Kore  
+**Ejemplos:** Jira, Azure DevOps, Linear, Shortcut
+
+### Opción B: Solución Custom
+**Ventajas:** Control total, adaptable al modelo exacto, sin lock-in  
+**Desventajas:** Esfuerzo de desarrollo inicial, mantenimiento  
+**Componentes genéricos:** Parser de commits, base de datos de metadatos, API de consulta, dashboards
+
+### Opción C: Híbrida (Recomendada)
+**Enfoque:** Usar herramienta comercial para gestión de US, scripts custom para trazabilidad específica ASTA-Kore  
+**Ejemplo:** Jira para historias + scripts Python que extraen KR-IDs y generan dashboards custom
+
+## Anti-Patrones
+
+| Anti-Patrón | Síntoma | Consecuencia | Corrección |
+|:---|:---|:---|:---|
+| **Trazabilidad retrospectiva** | Documentar vínculos después del hecho | Metadatos inexactos, esfuerzo desperdiciado | Convenciones desde commit 1 |
+| **Granularidad excesiva** | Trackear cada línea de código | Sobrecarga sin valor | Focus en unidades de valor (US, ADR) |
+| **Dashboard vanity** | Métricas que no informan decisiones | Esfuerzo desperdiciado | Solo trackear lo accionable (I-3) |
+| **Infraestructura prematura** | Construir Nivel 4 sin validar Nivel 1 | Alto riesgo de abandono | Implementación incremental obligatoria |
+| **Control jerárquico** | Usar como herramienta de micro-gestión | Destruye autonomía de equipos | Énfasis en alineación lateral (I-1) |
+| **Ignorar distracciones** | No trackear trabajo sin KR-ID | Pérdida de visibilidad sistémica | Vista "Distracciones" obligatoria (I-4) |
+
+## Integración con ASTA-Kore
+
+| Artefacto | Rol en Trazabilidad | Visibilidad Generada |
+|:---|:---|:---|
+| **Canvas EV (Caja 9)** | Fuente de verdad de OKRs activos del trimestre | Qué KRs están "en juego" |
+| **Story Map** | Vincula KRs → Rebanadas → Historias | Qué historias contribuyen a qué KR |
+| **ADR** | Vincula decisiones arquitectónicas → KRs motivadores | Por qué tomamos decisión X para KR Y |
+| **CVC** | Presenta evidencia de progreso por KR con métricas reales | Progreso medido, no estimado |
+| **Tablero de Flujo** | Visibilidad diaria de trabajo activo con tags de KR | Qué se está trabajando ahora mismo |
+| **Retrospectiva** | Analiza % de trabajo con vs sin KR-ID | Aprender sobre distracciones sistemáticas |
+
+## Criterios de Éxito
+
+**Pregunta de Validación (responder en <30 segundos):**
+
+- [ ] ¿Qué commits/releases contribuyeron a KR-X?
+- [ ] ¿Qué KR motivó el cambio Y?
+- [ ] ¿Qué KRs están sin actividad hace >2 semanas?
+- [ ] ¿Qué ADRs soportan la decisión para KR-Z?
+- [ ] ¿Qué % del trabajo del trimestre NO tiene KR-ID (distracciones)?
+
+**Si respuesta = "Necesito 30 minutos de búsqueda manual"** → Incrementar nivel de madurez.
+
+**Si respuesta = "No tenemos esos datos"** → Estamos en Nivel 0. Comenzar con Nivel 1 (convenciones manuales).
 ```
 
 ### ASTA-KORE fundamentos y manual operacional/guias tecnicas/implementaciones/marco_curacion_gestion_conocimiento_consumible_ia/README.md
 
 ```markdown
-
-```
-
-### ASTA-KORE fundamentos y manual operacional/guias tecnicas/implementaciones/marco_curacion_gestion_conocimiento_consumible_ia/auditoria.md
-
-```markdown
-# Recomendaciones
-
-## Resumen (en una línea)
-
-Las tres guías están muy bien alineadas con STS, pero hay 3 puntos críticos a corregir: (1) uso de `Ref:` hacia un documento externo en KHM, (2) el modelo de nombres permite artefactos SFD “standalone” (contradice SFD-embedded-only), y (3) una leve tensión normativa entre la prohibición STS de “mezclar sintaxis STS en bloques embebidos” y el uso de `###/####` dentro de SFD.
-
----
-
-## Cómo evalué (muy breve)
-
-* Revisé metadatos, bloque de **LLM Parsing Instructions**, IDs, política de `Ref:` y vocabulario abreviado.
-* Contrasté secciones que se referencian implícita o explícitamente entre guías (STS ⟷ SFD ⟷ KHM).
-* Aterricé hallazgos en **errores**, **riesgos/ambigüedades**, y **mejoras** concretas.
-
----
-
-## Hallazgos por documento
-
-### 1) KHM – Master Guide: Knowledge Hub Management (interna)
-
-**Fortalezas**
-
-* Metadatos completos y bloque de parsing con lexicón abreviado declarado; política de `Ref:` como interno-solo coherente con STS.
-* Arquitectura de directorios, ciclo de vida y composición declarativa por `agent.yaml` bien definidos.
-
-**Problemas/alertas**
-
-1. **Uso indebido de `Ref:` a documento externo**: en la convención de commits se usa `Ref:` para apuntar a `guide_core_002_alm-master_sts.md` (ID `GUIDE-ALM-GIT-COMMITS-01`). Según STS, `Ref:` **solo** puede apuntar a un `ID:` dentro del **mismo** documento (externos van en `Ctx:` o `Src:`). **Corregir a `Ctx:` o `Src:`**.  
-2. **Modelo de nombre permite SFD “standalone”**: el ejemplo `sfd_gn_005_formulario-postulacion_sfd.md` sugiere un archivo cuyo **formato** es `sfd`. Pero SFD establece **modelo embebido-solo**: SFD debe vivir **dentro de** un documento host STS, no como archivo SFD independiente.  
-
-**Mejoras menores**
-
-* Coherencia ejemplar entre IDs `GUIDE-KHM-*` y referencias internas. Mantener.
-
----
-
-### 2) SFD – Master Guide (interna)
-
-**Fortalezas**
-
-* Declara explícitamente el **modelo embebido-solo** para SFD y la jerarquía `Form-Section`/`Form-Field` con léxico controlado; excelente para RAG y validaciones.
-* Política de `Ref:` **intrablock** (dentro del mismo bloque SFD) y herencia de instrucciones STS desde el host.
-
-**Riesgo/ambigüedad**
-
-* Usa `###/####` **dentro** del bloque SFD para estructurar secciones/campos. STS dice que el contenido del bloque es “opaco” para STS y **prohíbe mezclar sintaxis STS** dentro del bloque. Aunque en la práctica el parser STS ignora el contenido, conviene **aclarar** la excepción en STS o en SFD (ver “Acciones”).  
-
----
-
-### 3) STS – Master Guide (interna)
-
-**Fortalezas**
-
-* Regla de oro de `Ref:` interno-solo, **language invariance**, y checklist de auditoría muy claros; KHM y SFD los aplican casi íntegramente.
-* Definición formal de **Embedded Blocks** (BEGIN/END) y del estándar de IDs.
-
-**Riesgo/ambigüedad**
-
-* En **Embedded Blocks** se declara `Prohib: Mixing STS syntax within an embedded block`. SFD prescribe encabezados Markdown dentro del bloque. Requiere **nota aclaratoria** para evitar interpretaciones rígidas por parsers.
-
----
-
-## Coherencia cruzada (lo clave)
-
-1. **SFD embebido vs. KHM naming**
-
-   * SFD: “**embedded-only**” (siempre dentro de un host STS).
-   * KHM: permite `..._sfd.md` y además usa `tipo=sfd` + `formato=sfd` (doble SFD). **Conflicto**. Propuesta abajo.
-
-2. **Política de `Ref:` (interna-solo) aplicada globalmente**
-
-   * STS lo exige; SFD lo refuerza (intrablock). KHM lo cumple casi siempre, salvo el punto de commits (cambiar a `Ctx:`/`Src:`).
-
-3. **Sintaxis dentro de bloques embebidos**
-
-   * STS prohíbe “mezcla de sintaxis STS”. SFD requiere `###/####` internamente. Recomiendo **alineación normativa** (ver acción #3).  
-
----
-
-## Acciones recomendadas (ediciones concretas)
-
-**1) KHM – Cambiar `Ref:` externo por `Ctx:`/`Src:` (obligatorio)**
-
-* En “Commit Message Convention”, sustituir la línea:
-
-  * **De**: `Ref: The full specification is detailed in guide_core_002_alm-master_sts.md, ID GUIDE-ALM-GIT-COMMITS-01.`
-  * **A**: `Ctx: guide_core_002_alm-master_sts.md (ID: GUIDE-ALM-GIT-COMMITS-01).` **o**, si se cita como origen normativo, `Src: GUIDE-ALM-GIT-COMMITS-01.`
-    Motivo: cumple la política `Ref:` interno-solo de STS.  
-
-**2) KHM – Ajustar el **Naming** para SFD (obligatorio)**
-
-* **Opción A (recomendada)**: eliminar `sfd` como valor válido de `formato` en el nombre de archivo y **mantener todo archivo final como `_sts.md`**. Los contenidos SFD irán **siempre embebidos** (BEGIN/END) dentro del host STS.
-
-  * Actualiza el ejemplo **incorrecto** `sfd_gn_005_formulario-postulacion_sfd.md` por, p.ej.:
-
-    * `kb_gn_005_formulario-postulacion_sts.md` (host STS) **con** `BEGIN_EMBEDDED_BLOCK:: SFD FORM-POST-01` adentro.
-* **Opción B**: si se desea conservar `tipo=sfd`, **mantener `formato=sts`**: `sfd_gn_005_formulario-postulacion_sts.md`.
-  Motivo: alinear con “embedded-only” de SFD.  
-
-**3) STS – Aclaración en Embedded Blocks (recomendado, normativa)**
-
-* En `GUIDE-STS-COMPONENTS-EMBEDDED-BLOCK-01`, reemplazar **Prohibición** por una redacción que **permita** que el contenido embebido use **su propia** gramática (p.ej., encabezados Markdown como parte del estándar SFD), dejando claro que:
-
-  * “El bloque es **opaco** para STS; los encabezados y claves dentro del bloque **no** deben interpretarse como STS.”
-  * “La prohibición aplica a **palabras clave STS** (p.ej., `Purp:`/`Req:`) dentro del bloque, no a la sintaxis Markdown que use el estándar embebido.”
-    Motivo: eliminar la ambigüedad con SFD.  
-
-**4) (Opcional) Estandarizar el formato del bloque `BEGIN_LLM_INSTRUCTIONS`**
-
-* Usar el mismo patrón de cercado en las tres guías (con o sin negritas) para uniformidad.
-
----
-
-## Checklist de conformidad post-cambios
-
-* [ ] KHM: `Ref:` solo a IDs internos; externos movidos a `Ctx:`/`Src:`.  
-* [ ] KHM: `formato` final de archivos **solo `_sts.md`**; SFD **siempre** embebido. Ejemplos corregidos.  
-* [ ] STS: aclaración sobre sintaxis dentro de embedded blocks aprobada.
-* [ ] SFD: se mantiene sin cambios funcionales; queda explícitamente compatible con la aclaración STS.
-
----
-
-Si quieres, puedo devolverte **patches de texto** listos para pegar en cada archivo con estas correcciones ya redactadas.
-
-Medical References:
-
-1. None — DOI: file-3HEmP4MXpqAR1YxwVt4szv
-2. None — DOI: file-Ljrg3SVubzka8vHvs5wiXx
-3. None — DOI: file-3NuMv9Lsh93GHyLg8LK3Qm
 
 ```
 
@@ -2332,142 +4496,21 @@ ID: GUIDE-STS-EXAMPLE-TABLE-01
 
 ```
 
+### ASTA-KORE fundamentos y manual operacional/guias tecnicas/implementaciones/marco_curacion_gestion_conocimiento_consumible_ia/ultima_milla.code-workspace
+
+```code-workspace
+{
+    "folders": [
+        {
+            "path": "../../../../../../plan-td-gore-nuble/asistentes_ai/milla"
+        }
+    ]
+}
+```
+
 ### ASTA-KORE fundamentos y manual operacional/guias tecnicas/implementaciones/marco_ingenieria_asistentes_ai_conversacionales_declarativos/README.md
 
 ```markdown
-
-```
-
-### ASTA-KORE fundamentos y manual operacional/guias tecnicas/implementaciones/marco_ingenieria_asistentes_ai_conversacionales_declarativos/auditoria.md
-
-```markdown
-# Recomendaciones tras auditoría
-
-¡Vamos! Hice una revisión de **consistencia interna** de cada guía y de **coherencia cruzada** entre ambas. Abajo tienes un diagnóstico breve, hallazgos clave y cambios concretos propuestos (con snippets listos para pegar).
-
-> Base documental: *Master Guide – Agent Lifecycle Management (ALM) v1.3.0* y *Master Guide – Agent Definition Protocol (ADP) v2.2.0*.  
-
-## Resumen ejecutivo
-
-* **Veredicto global:** Alta coherencia estructural y terminológica entre ALM y ADP. La separación “interfaz pública” vs “implementación privada”, el **KB Guidance Pattern**, el **Minimum Guard Set** y el enfoque **categoría-teórico** están alineados en ambos documentos.
-* **Desalineaciones menores pero importantes:** (1) el ejemplo canónico en ALM (Anexo B) no muestra el **Agent Runtime Directive** que ADP exige como cabecera obligatoria; (2) diferencias en la **semántica de terminación** del workflow (uso/no uso de `S-END`); (3) la regla anti-patrón “>5 líneas” aparece normada en ALM pero no en ADP; (4) faltan checks explícitos en Gate 4.4 para el **Bootloader** cuando se opte por ejecución indirecta.
-
----
-
-## 1) Consistencia interna por documento
-
-### A. ALM (v1.3.0)
-
-**Fortalezas**
-
-* Principios de arquitectura (1.2) y “Separation of Concerns” reflejan exactamente los namespaces ADP (`public_behavior_workflows_and_states` vs `private_internal_reasoning_processes`).
-* **CM-KB-GUIDANCE obligatorio** (1.2.3) y uso de *Bootloader* (1.2.4 y Anexo E) están bien declarados y se operativizan en Fases 2–3.
-* **Gates** y **checklists**: Gate P1 valida *Minimum Guard Set*; Gate 4.4 fuerza `ADP-VALIDATION-CHECKLIST-02`.
-
-**Observaciones**
-
-* **Anexo B (ejemplo de `agent.yaml`)**: No incluye la cabecera **Agent Runtime Directive** que ADP exige como “primer contenido”. Recomendado añadirla para que el ejemplo canónico sea 100% conforme.
-
-### B. ADP (v2.2.0)
-
-**Fortalezas**
-
-* Principios 3–5 aseguran **claves en EN** / **contenido en es-CL**, **cartografía explícita de conocimiento** y **abstracción semántica**, alineados con ALM.
-* Sintaxis y léxico canónico (namespaces y rutas YAML) coinciden con lo que ALM asume; incluye **Minimum Guard Set** y **Checklist ADP**.
-* Patrones: **KB Guidance**, **Monadic Encapsulation** y **Bootloader** referencian y complementan ALM (Annex E).
-
-**Observaciones**
-
-* El ejemplo ADP define `S-END` como estado terminal; en ALM Anexo B, la finalización redirige a `S-DISPATCHER`. Conviene unificar semántica de cierre.
-
----
-
-## 2) Coherencia cruzada ALM ↔ ADP (mapa rápido)
-
-| Tema                            | En ALM                                     | En ADP                    | Estado                                             |
-| ------------------------------- | ------------------------------------------ | ------------------------- | -------------------------------------------------- |
-| Claves EN / contenido es-CL     | Gate 4.4 lo exige                          | Principio 3 lo norma      | **OK**                                             |
-| KB Guidance obligatorio         | Principio 1.2.3 + Act 3.3                  | Principio 4 + patrón      | **OK**                                             |
-| Minimum Guard Set               | Gate P1                                    | Sección 4.2 (YAML)        | **OK**                                             |
-| Bootloader (Indirect Execution) | 1.2.4 + Annex E                            | Patrón “Agent Bootloader” | **OK** (faltan checks en Gate 4.4 para Bootloader) |
-| Anti-patrón “Logic Exposure”    | Regla con umbral “>5 líneas”               | Listado sin umbral        | **Parcial** (estandarizar)                         |
-| Estado terminal del workflow    | Anexo B: termina enviando a `S-DISPATCHER` | Ejemplo: usa `S-END`      | **Parcial** (unificar)                             |
-
----
-
-## 3) Cambios mínimos recomendados (copy-paste)
-
-### 3.1 Añadir cabecera ADP al ejemplo del **Anexo B** (ALM)
-
-Inserta al inicio del YAML del Anexo B:
-
-```yaml
-## ADP Definition for GPT-ASISTENTE-IPR
-## ID: ASIS-IPR-GN-ALM-ANNEX-B
-## Ref-ADP-Guide: GUIDE-ADP-MASTER-02
-```
-
-*(Cumple ADP §2.3 “Agent Runtime Directive: debe ser el primer contenido”)*.
-
-### 3.2 Unificar semántica de terminación del workflow
-
-**Opción preferida (clara y auditables transiciones):** adoptar `S-END` también en ALM Anexo B.
-
-**Patch sugerido (ALM → Anexo B):**
-
-```yaml
-public_behavior_workflows_and_states:
-  defined_states:
-    S-FINALIZATION:
-      # ...
-      transitions:
-        - "IF user wants to start a new analysis -> S-REFINER"
-        - "IF user wants to end session -> S-END"
-
-    S-END:
-      role: "Fin de Sesión"
-      process:
-        - "Cerrar interacción con despedida."
-      transitions: []
-```
-
-*(Queda alineado con el ejemplo ADP y con el principio categorial de disponer de un objeto terminal explícito para el flujo).*
-
-### 3.3 Estándar anti-patrón “Logic Exposure” en ambos documentos
-
-- Convertir el indicador “**>5 líneas** en `process`” (hoy solo en ALM) en **regla normativa también en ADP** (sección Anti-Patterns), por ejemplo:
-  “*Los `process` públicos no deben exceder **5 pasos**; lógica de negocio detallada debe residir en `private_internal_reasoning_processes` con `_meta: { expose: false }`*.”
-
-*(Refuerza encapsulamiento monádico y evita fugas de implementación).*
-
-### 3.4 Gate 4.4 (ALM) — añadir check de **Bootloader** cuando aplique
-
-Agregar a **Gate 4.4**:
-
-- “Si el proyecto seleccionó **Indirect Execution**, validar que el **Bootloader Instruction** esté presente, con referencia cruzada al paquete KB (incluyendo `agent.yaml`) y que pase prueba de asimilación.”
-
-*(Hace operativo el patrón de Bootloader descrito en Annex E / ADP).*
-
----
-
-## 4) Checklist de verificación rápida (para CI/CD)
-
-1. `# ADP Definition…` + `# ID:` + `# Ref-ADP-Guide:` en primera línea del `agent.yaml`.
-2. **Minimum Guard Set** completo y activo.
-3. `CM-KB-GUIDANCE` presente y referenciado desde los estados que lo requieran.
-4. Ningún `process` público > **5 pasos**; lógica detallada en privados con `_meta: { expose:false }`.
-5. **Claves EN / contenido es-CL** (muestreo sobre 10 rutas del léxico canónico).
-6. Si **Indirect Execution**: Bootloader presente y validado (ensayo de asimilación).
-7. `citation_formatting: OFFICIAL_SOURCE_NAME` y `uncertainty_protocol` definidos.
-8. Estados y transiciones sin “callejones sin salida”; existencia de `S-END` o protocolo de cierre equivalente.
-9. Gate P1 y Gate 4.4 ejecutados en CI, con reporte de bloqueo si falla.
-10. Monorepo y convención de commits (Conventional Commits) aplicados.
-
----
-
-## 5) Conclusión
-
-El marco **ALM ↔ ADP** está sólido y auto-reforzado: principios, patrones y checklists se sostienen mutuamente. Con los ajustes puntuales de arriba (cabecera ADP en el ejemplo de ALM, unificación de `S-END`, regla anti-patrón armonizada y check del Bootloader en Gate 4.4) lograrán **coherencia total** y una **operacionalización más estricta** en CI/CD. ¿Quieres que te deje estos patches en un PR checklist para tu repo mono-origen o que los empaquete en un `diff` listo para aplicar?
 
 ```
 
@@ -3149,11 +5192,11 @@ safety_constraints_and_behavioral_guardrails:
 
 ### 4.3  Dynamic Correction Protocol
 
-- Rule format: `IF check '<check_name>' fails -> <ACTION>`
-- Supported actions
+* Rule format: `IF check '<check_name>' fails -> <ACTION>`
+* Supported actions
 
-  - `REFINE_DRAFT_INTERNALLY` (default)
-  - `TRANSITION_TO_STATE: <STATE_ID>` (immediate workflow pivot)
+  * `REFINE_DRAFT_INTERNALLY` (default)
+  * `TRANSITION_TO_STATE: <STATE_ID>` (immediate workflow pivot)
 
 ---
 
@@ -3178,21 +5221,21 @@ safety_constraints_and_behavioral_guardrails:
 
 ## 6. Validation & Audit Checklist `ADP-VALIDATION-CHECKLIST-02`
 
-- Principle Compliance
+* Principle Compliance
 
-  - P3 Protocol/Content separation verified.
-  - P4 explicit routing (`CM-KB-GUIDANCE`).
-  - P5 semantic abstraction (checklist + `forbid_internal_jargon`).
-  - P6 categorical coherence: states = objects; transitions = morphisms.
-- Security & Encapsulation
+  * P3 Protocol/Content separation verified.
+  * P4 explicit routing (`CM-KB-GUIDANCE`).
+  * P5 semantic abstraction (checklist + `forbid_internal_jargon`).
+  * P6 categorical coherence: states = objects; transitions = morphisms.
+* Security & Encapsulation
 
-  - No Logic Exposure; all `private_internal_reasoning_processes` models hidden.
-  - Minimum Guard Set present and configured.
-- Syntax / Lexicon
+  * No Logic Exposure; all `private_internal_reasoning_processes` models hidden.
+  * Minimum Guard Set present and configured.
+* Syntax / Lexicon
 
-  - YAML valid.
-  - Keys match the canonical lexicon (con nombres descriptivos y autoexplicativos para independencia semántica).
-  - Agent Runtime Directive present and complete.
+  * YAML valid.
+  * Keys match the canonical lexicon (con nombres descriptivos y autoexplicativos para independencia semántica).
+  * Agent Runtime Directive present and complete.
 
 ---
 
@@ -3449,8 +5492,6 @@ Tiempo para Valor: Un trimestre.
 
 Criterio de Salida: La organización ha completado su primer CVC y ha tomado una decisión de inversión explícita sobre el futuro del equipo piloto, basándose en la evidencia presentada.
 
----
-
 Al completar estos cuatro pasos, la organización habrá instalado un "sistema inmunológico" de agilidad y aprendizaje. El `Esqueleto Andante` de la metodología A-K estará operativo, y la organización estará lista para escalar la adopción a otros equipos.
 ```
 
@@ -3495,8 +5536,6 @@ Reglas generales:
 - Sesiones CVC (corte anual): 07–09 ene 2026
 - Publicación de decisiones: 10 ene 2026
 
----
-
 ## Roles y responsabilidades
 
 - Secretaría de Gobernanza:
@@ -3519,8 +5558,6 @@ Reglas generales:
 - Ajustes a OKRs del siguiente trimestre (si aplica).
 - Acciones de mejora y dueños.
 
----
-
 ## Plantillas mínimas
 
 ### Agenda CVC (60 minutos)
@@ -3538,8 +5575,6 @@ Reglas generales:
 - Salud del sistema (SLOs/SLIs, incidentes, deuda crítica)
 - Propuesta de próxima apuesta (hipótesis, riesgos, requerimientos)
 - Decisión solicitada al NFG
-
----
 
 Referencias:
 
@@ -3687,10 +5722,10 @@ ID: `EV-XXX` | Versión: `1.0` | Equipo Dueño: `<Nombre del Equipo>` | Fecha: `
 
 ### Parte 2: El Contexto Operacional
 
-| 7. Dependencias y Riesgos | 8. Gobernanza y Cumplimiento | 9. Métricas de Éxito |
+| 7. Dependencias y Riesgos | 8. Gobernanza y Cumplimiento | 9. Métricas de Éxito y OKRs Activos |
 | :--- | :--- | :--- |
 | ¿El éxito DEPENDE de alguien más? | ¿Cuáles son las REGLAS DEL JUEGO? | ¿Cómo sabremos que estamos GANANDO? |
-| • Dependencias Internas: (Otras EVs de las que dependemos)<br>• Dependencias Externas: (Proveedores, otros servicios)<br>• Riesgos de Dependencia: (Principal riesgo si una dependencia falla) | • Nodo Federado de Gobernanza (NFG): (¿Quién toma las decisiones de inversión?)<br>• Dueño de Producto/Servicio: (Persona con autoridad final)<br>• Anclaje Regulatorio (Overlays): (Leyes y normativas clave) | • Resultados Clave (KRs): (2-3 métricas de *outcome*)<br>• Objetivos de Nivel de Servicio (SLOs): (2-3 compromisos de fiabilidad)<br>• Métricas de Experiencia (UX): (CSAT, Tasa de Éxito de Tarea) |
+| • Dependencias Internas: (Otras EVs de las que dependemos)<br>• Dependencias Externas: (Proveedores, otros servicios)<br>• Riesgos de Dependencia: (Principal riesgo si una dependencia falla) | • Nodo de Gobernanza (NG): (¿Quién toma las decisiones de inversión?)<br>• Dueño de Producto/Servicio: (Persona con autoridad final)<br>• Restricciones Normativas: (Leyes y decretos clave que restringen el diseño) | **OKRs Activos (Trimestre Actual):**<br>• Objetivo: (Qué queremos lograr este trimestre)<br>• KR1: (Métrica de outcome, línea base → objetivo)<br>• KR2: (Métrica de outcome, línea base → objetivo)<br><br>**SLOs (Compromisos de Fiabilidad):**<br>• Disponibilidad: (ej. 99.9%)<br>• Latencia p95: (ej. <200ms)<br><br>**Histórico de OKRs:**<br>• Q[X-1]: [Objetivo anterior con resultados alcanzados] |
 ```
 
 ### Guía A.2.2: Mapeo de Historias (Story Mapping) (Δ-T)
@@ -3700,17 +5735,65 @@ Instrucciones: Esta es una guía para facilitar el taller de Mapeo de Historias.
 Estructura del Mapa en una Pizarra:
 
 1. La Espina Dorsal (Eje Horizontal):
-    - Use post-its de un color (ej. azul) para las Actividades del Usuario. Estas son las grandes etapas del viaje del usuario, ordenadas cronológicamente.
-    - *Ejemplo:* `Buscar Información` → `Simular Beneficio` → `Autenticarse` → `Completar Formulario` → `Subir Documentos` → `Recibir Notificación`.
+    * Use post-its de un color (ej. azul) para las Actividades del Usuario. Estas son las grandes etapas del viaje del usuario, ordenadas cronológicamente.
+    * *Ejemplo:* `Buscar Información` → `Simular Beneficio` → `Autenticarse` → `Completar Formulario` → `Subir Documentos` → `Recibir Notificación`.
 
 2. El Cuerpo (Eje Vertical):
-    - Debajo de cada Actividad, use post-its de otro color (ej. amarillo) para las Historias de Usuario. Realice una lluvia de ideas de todas las tareas que el usuario necesita realizar para completar esa actividad.
-    - Ordene verticalmente las historias por prioridad: las más esenciales arriba, las mejoras y "nice-to-haves" abajo.
+    * Debajo de cada Actividad, use post-its de otro color (ej. amarillo) para las Historias de Usuario. Realice una lluvia de ideas de todas las tareas que el usuario necesita realizar para completar esa actividad.
+    * Ordene verticalmente las historias por prioridad: las más esenciales arriba, las mejoras y "nice-to-haves" abajo.
 
 3. Las Rebanadas (Líneas Horizontales):
-    - Una vez que el mapa esté completo, use un marcador para trazar líneas horizontales que definan las Rebanadas de Entrega.
-    - Rebanada 1 (Esqueleto Andante / MVP): Es la línea más alta. Contiene el conjunto mínimo de historias de cada actividad para que un usuario pueda completar el viaje de punta a punta.
-    - Rebanada 2, 3, ...: Son los siguientes incrementos de valor.
+    * Una vez que el mapa esté completo, use un marcador para trazar líneas horizontales que definan las Rebanadas de Entrega.
+    * Rebanada 1 (Esqueleto Andante / MVP): Es la línea más alta. Contiene el conjunto mínimo de historias de cada actividad para que un usuario pueda completar el viaje de punta a punta.
+    * Rebanada 2, 3, ...: Son los siguientes incrementos de valor.
+
+### Plantilla A.2.3: Mapa de Stakeholders (Σ-T)
+
+Instrucciones: Este artefacto se construye al inicio del Protocolo "Adopción Federada" (Sección 4.5 de Protocolos). El objetivo es mapear el ecosistema político y cultural antes de ejecutar un cambio organizacional. Use esta plantilla en un taller de 1-2 horas con el equipo de cambio para identificar actores clave y diseñar estrategias diferenciadas por segmento.
+
+```markdown
+# Mapa de Stakeholders: [Nombre del Cambio]
+
+Fecha: YYYY-MM-DD
+Equipo de Cambio: [Nombres]
+EV Afectada: [Nombre de la EV]
+
+## Cuadrante 1: Campeones (Alto Poder, Alto Interés)
+
+*Estos son tus aliados críticos. Tienen poder para habilitar el cambio y están motivados para que suceda.*
+
+| Nombre | Rol | Por qué es Campeón | Estrategia de Involucramiento |
+|:---|:---|:---|:---|
+| [Nombre] | [Cargo] | [Motivación: ej. "El cambio resuelve su problema X"] | Co-diseño en Canvas de EV, líder de Ola 1 |
+| [Ejemplo: María López] | [Jefa DIPIR] | [Frustrada con proceso manual de IPR] | Involucrar en formulación de OKRs, usuario piloto |
+
+## Cuadrante 2: Guardianes (Alto Poder, Bajo Interés)
+
+*Tienen poder para bloquear pero no están motivados. Requieren gestión política cuidadosa.*
+
+| Nombre | Rol | Riesgo de Bloqueo | Estrategia de Mitigación |
+|:---|:---|:---|:---|
+| [Nombre] | [Cargo] | [Objeción probable: ej. "Teme perder control"] | Mostrar cómo resuelve su problema X, negociar contrato explícito |
+| [Ejemplo: Juan Pérez] | [Jefe DAF] | [Preocupado por cambio en proceso de rendiciones] | Demostrar reducción de observaciones CGR, darle veto sobre diseño del módulo financiero |
+
+## Cuadrante 3: Adoptantes Tempranos (Bajo Poder, Alto Interés)
+
+*Están motivados pero no tienen poder formal. Son tus evangelistas internos.*
+
+| Nombre | Rol | Por qué Adoptará Temprano | Rol en Piloto |
+|:---|:---|:---|:---|
+| [Nombre] | [Cargo] | [Motivación: ej. "Técnicamente curioso"] | Usuario beta, testimonial en video, embajador en su división |
+| [Ejemplo: Ana Torres] | [Analista DIPIR] | [Frustrada con Excel, quiere aprender nuevas herramientas] | Usuario beta Ola 1, capturar testimonio para CVC |
+
+## Cuadrante 4: Observadores (Bajo Poder, Bajo Interés)
+
+*La mayoría silenciosa. No forzar adopción, usar transparencia pasiva.*
+
+| Segmento | Tamaño Estimado | Estrategia |
+|:---|:---|:---|
+| [Descripción del segmento] | [N personas] | [Estrategia: ej. "Comunicación pasiva, transparencia en dashboard"] |
+| [Ejemplo: Funcionarios de divisiones no afectadas directamente] | [~50 personas] | Newsletter trimestral con resultados del CVC, acceso al Observatorio de Adopción |
+```
 
 ## A.3. Plantillas de Nivel Operacional (Σ-O / Δ-O)
 
@@ -3786,16 +5869,28 @@ Ejemplo: "Decidimos adoptar la opción 3: integraremos un servicio de identidad 
 *   Introduce una nueva dependencia crítica en el proveedor de identidad.
 *   Requiere una migración coordinada de todos los servicios existentes.
 *   Aumenta la complejidad inicial del flujo de autenticación.
+
+---
+
+## Artefactos Relacionados
+
+*Opcional: Si esta decisión resulta en la creación de un Contrato (API, Datos, Agente, Proceso), referenciarlo aquí.*
+
+**Contratos Generados:**
+*   `contracts/api-identidad-v1.yml` - Contrato de API del servicio de identidad federada
+
+**Otros ADRs Relacionados:**
+*   ADR-012 - Decisión de deprecar autenticación local (reemplazado por este ADR)
 ```
 
-## A.4. Checklists de Contratos Conversacionales
+## A.4. Checklists de Contratos
 
-Instrucciones: Estas no son plantillas de documentos a rellenar, sino agendas para una conversación estratégica. Utilice el checklist correspondiente para guiar una reunión entre las partes involucradas. El objetivo es alcanzar un entendimiento mutuo y un acuerdo explícito.
+Instrucciones: Estas no son plantillas de documentos a rellenar, sino agendas para una conversación estratégica. Utilice el checklist correspondiente para guiar una reunión entre las partes involucradas. El objetivo es alcanzar un entendimiento mutuo y un acuerdo explícito que se formaliza como artefacto versionado (YAML/JSON).
 
 ### Checklist A.4.1: Contrato de Datos (Σ-O)
 
-- Propósito: Guiar la conversación entre un productor de datos y un consumidor de datos.
-- Cuándo usarlo: Cada vez que una EV expone un conjunto de datos significativo.
+* Propósito: Guiar la conversación entre un productor de datos y un consumidor de datos.
+* Cuándo usarlo: Cada vez que una EV expone un conjunto de datos significativo.
 
 | Categoría | Preguntas Clave para la Conversación |
 | :--- | :--- |
@@ -3806,8 +5901,8 @@ Instrucciones: Estas no son plantillas de documentos a rellenar, sino agendas pa
 
 ### Checklist A.4.2: Contrato de Servicio / API (Σ-O)
 
-- Propósito: Guiar la conversación entre el equipo proveedor de una API y el equipo consumidor.
-- Cuándo usarlo: Para cada API o servicio expuesto por una EV.
+* Propósito: Guiar la conversación entre el equipo proveedor de una API y el equipo consumidor.
+* Cuándo usarlo: Para cada API o servicio expuesto por una EV.
 
 | Categoría | Preguntas Clave para la Conversación |
 | :--- | :--- |
@@ -3819,8 +5914,8 @@ Instrucciones: Estas no son plantillas de documentos a rellenar, sino agendas pa
 
 ### Checklist A.4.3: Contrato de Agente IA (Σ-O)
 
-- Propósito: Guiar una conversación profunda sobre la delegación de una tarea a un Agente Digital (IA).
-- Cuándo usarlo: Cada vez que se diseña o integra un componente de IA en una EV.
+* Propósito: Guiar una conversación profunda sobre la delegación de una tarea a un Agente Digital (IA).
+* Cuándo usarlo: Cada vez que se diseña o integra un componente de IA en una EV.
 
 | Categoría | Preguntas Clave para la Conversación |
 | :--- | :--- |
@@ -3841,8 +5936,6 @@ Instrucciones: Estas no son plantillas de documentos a rellenar, sino agendas pa
 ## Propósito
 
 Esta ontología formaliza los conceptos y relaciones de la metodología ASTA-Kore (A-K) para reducir la ambigüedad, asegurar la interoperabilidad semántica y servir como un modelo de referencia para la implementación y la gobernanza.
-
----
 
 ## 1. Conceptos Fundamentales (Meta-Ontología)
 
@@ -3903,28 +5996,45 @@ Estos son los elementos irreductibles que estructuran todo el marco.
   * `materializa` -> una o más `Capacidades`.
   * `es gestionada en` -> un `Portafolio de EVs`.
 
-### 1.7. `Contrato Conversacional`
+### 1.7. `Contrato`
 
-* Descripción: Un acuerdo explícito que define la interacción entre dos `Entidades de Valor`. Es el resultado de una conversación guiada, no un documento legalista. Su implementación técnica se materializa en los `Contratos Nexus` (`de Datos`, `de Proceso`, `de Agente`, etc.).
+* Descripción: Un acuerdo explícito que define la interacción entre dos `Entidades de Valor`. Es el resultado de una conversación guiada, no un documento legalista. Se implementa como artefacto versionado (YAML/JSON) que puede ser validado automáticamente.
+* Tipos:
+  * `Contrato de Datos`: Define qué datos se comparten, con qué calidad (SLOs), clasificación de seguridad y propósito.
+  * `Contrato de API`: Define endpoints, SLOs de disponibilidad/latencia, autenticación y versionado.
+  * `Contrato de Agente`: Define autonomía, herramientas permitidas, guardrails y puntos de supervisión humana (HITL).
+  * `Contrato de Proceso`: Define flujo de negocio automatizado, eventos, reglas y excepciones.
+* Atributos:
+  * `origen`: normativo (ley/decreto), negociado (acuerdo entre equipos), técnico (decisión arquitectónica)
+  * `version`: Versionado semántico para evolución controlada
+  * `slos`: Compromisos medibles de calidad/rendimiento
 
-### 1.8. `Nodo de Gobernanza`
+### 1.8. `Nodo de Gobernanza (NG)`
 
 * Descripción: Una entidad (persona o comité) responsable de la toma de decisiones estratégicas sobre un conjunto de `Entidades de Valor`.
-* Subtipos:
-  * `Nodo Central de Gobernanza (NCG)`: Responsable de la estrategia, estándares y plataformas compartidas de todo el ecosistema. *Relación:* `coordina` múltiples `Nodos Federados`.
-  * `Nodo Federado de Gobernanza (NFG)`: Responsable de la implementación de la estrategia y la gestión del portafolio en un dominio o institución específica. *Relación:* `implementa directrices de` un `NCG`.
+* Configuración por Defecto: Un solo Nodo de Gobernanza para toda la organización.
+* Configuración Federada (Opcional): Se activa solo cuando la complejidad lo justifica:
+  * **Criterios para Federación:**
+    * Múltiples organizaciones soberanas colaborando (ej. ecosistema gubernamental)
+    * Múltiples divisiones autónomas con presupuestos independientes
+    * Necesidad de autonomía local con alineamiento estratégico central
+  * **Estructura Federada:**
+    * `Nodo Central de Gobernanza (NCG)`: Responsable de estrategia, estándares y plataformas compartidas del ecosistema. *Relación:* `coordina` múltiples `Nodos Federados`.
+    * `Nodo Federado de Gobernanza (NFG)`: Responsable de implementación de estrategia y gestión del portafolio en un dominio específico. *Relación:* `implementa directrices de` un `NCG`.
+* Principio: Comenzar simple (un NG), federar solo cuando sea necesario.
 
-### 1.9. `Overlay Regulatorio`
+### 1.9. `Ciclo de Retroalimentación`
 
-* Descripción: Un conjunto de axiomas y restricciones derivados de un marco normativo (leyes, decretos) que se aplican a una o más `Entidades de Valor`.
-* Relación: Una `EV` `debe cumplir con` uno o más `Overlays Regulatorios`.
-
-### 1.10. `Proyecto Espejo`
-
-* Descripción: Un artefacto administrativo auxiliar. Es la representación de un ciclo de inversión trimestral de una `EV`, utilizada para la comunicación y cumplimiento con sistemas de gobernanza externos (ej. control presupuestario). Su alcance está definido por un `OKR Trimestral`.
-* Relación: Un `Ciclo de Valor y Capacidad (CVC)` `puede generar` un `Proyecto Espejo`.
-
----
+* Descripción: Patrón fundamental de adaptación basado en LEAN². Es el mecanismo universal para el aprendizaje y la mejora continua a cualquier escala.
+* Estructura Invariante:
+  1. **MEDIR**: Capturar evidencia objetiva del sistema
+  2. **IDENTIFICAR**: Detectar restricción, aprendizaje o desviación
+  3. **INTERVENIR**: Diseñar y ejecutar experimento o decisión
+  4. **VERIFICAR**: Medir impacto de la intervención
+* Instancias (Fractalidad):
+  * `Retrospectiva del Flujo (Δ-O)`: Cada 1-2 semanas, equipo interno, optimiza flujo operacional
+  * `Ciclo de Valor y Capacidad / CVC (Δ-E)`: Cada trimestre, equipo + gobernanza, decisiones de inversión
+* Relación: Todas las instancias siguen la misma estructura, variando solo en frecuencia, participantes y alcance de decisiones.
 
 ## 2. Taxonomía de Artefactos
 
@@ -3936,18 +6046,22 @@ Estos son los instrumentos cognitivos tangibles para visualizar, discutir y alin
 | :--- | :--- | :--- |
 | `Mapa de Capacidades` | Σ-E | Inventariar y evaluar las "habilidades" de la organización para guiar la estrategia. |
 | `Canvas de Entidad de Valor` | Σ-T | Mapear la anatomía completa de una EV de forma colaborativa. |
-| `Contratos Conversacionales` | Σ-O | Definir acuerdos explícitos de interacción entre EVs (Datos, API, IA). |
-| `Fichas de Control` | Σ-O | Especificar reglas de negocio o procedimientos operacionales de bajo nivel. |
+| `Contratos Conversacionales` | Σ-O | Definir acuerdos explícitos de interacción entre EVs (Datos, API, Agente, Proceso). |
+
+**Nota sobre Reglas de Negocio:** Las reglas operacionales de bajo nivel se gestionan mediante:
+
+* **Contratos de Proceso** (Σ-O): Para flujos entre EVs que requieren acuerdos explícitos
+* **Código con tests**: Para lógica de negocio interna de una EV
+* **ADRs** (Δ-O): Para documentar decisiones sobre reglas de negocio significativas
 
 ### 2.2. Artefactos del Eje Δ (Flujo)
 
 | Artefacto | Celda | Propósito |
 | :--- | :--- | :--- |
-| `Ciclo de Valor y Capacidad (CVC)` | Δ-E | Ritual de gobernanza estratégica para tomar decisiones de inversión basadas en evidencia. |
-| `OKRs` | Δ-E, Δ-T | Lenguaje universal para el alineamiento estratégico y la formulación de hipótesis de valor. |
-| `Mapeo de Historias` | Δ-T | Organizar visualmente el backlog para la entrega incremental de valor. |
-| `Tablero de Flujo (Xanpan)` | Δ-O | Gestionar el flujo de trabajo diario, limitando el WIP para maximizar la velocidad. |
-| `Bitácora de Decisiones (ADR)` | Δ-O | Registrar decisiones arquitectónicas significativas para combatir la amnesia organizacional. |
+| `Informe de CVC` | Δ-E | Evidencia para ritual de gobernanza: progreso de OKRs, demo, salud del sistema, próxima apuesta. |
+| `Mapeo de Historias` | Δ-T | Visualización del backlog priorizado por OKRs. Organiza trabajo en Espina Dorsal + Rebanadas incrementales. |
+| `Tablero de Flujo` | Δ-O | Gestionar flujo de trabajo diario con límites WIP. Implementa invariantes de LEAN² (Flujo, Visibilidad, Adaptación). |
+| `Bitácora de Decisiones (ADR)` | Δ-O | Registrar decisiones arquitectónicas significativas. **Referencia Contratos** cuando la decisión define una interfaz (el ADR documenta el "porqué", el Contrato especifica el "qué"). |
 
 ## 3. Léxico de Conceptos Clave
 
@@ -3957,10 +6071,9 @@ Estos conceptos se relacionan con el propósito, la dirección y la gobernanza a
 
 | Concepto | Descripción | Relaciones Clave |
 | :--- | :--- | :--- |
-| `Capacidad` | Una habilidad de la organización para lograr un resultado (ej. "Fiscalización"). Es agnóstica a la estructura. | • `es inventariada en` -> `Mapa de Capacidades` (Σ-E)<br>• `es materializada por` -> una o más `Entidades de Valor`<br>• `su madurez y criticidad son evaluadas en` -> Protocolo de Diagnóstico de Capacidades (3.1) |
-| `Portafolio de EVs` | El conjunto de todas las `Entidades de Valor` que una organización gestiona y financia. | • `es gestionado a través de` -> `Ciclo de Valor y Capacidad (CVC)` (Δ-E)<br>• `es revisado durante` -> Protocolo de Revisión del Portafolio (3.3)<br>• `contiene` -> `Entidades de Valor` |
-| `Valor Público` | El impacto positivo y medible en la ciudadanía. Es el norte ético y estratégico. | • `es el propósito último de` -> toda `Entidad de Valor` en el sector público<br>• `se mide a través de` -> `OKRs` de alto nivel |
-| `Overlay Regulatorio` | Conjunto de axiomas globales derivados de la regulación, que actúan como restricciones de diseño. | • `es traducido desde` -> Leyes y Normativas<br>• `restringe el diseño de` -> todas las `Entidades de Valor`<br>• `su cumplimiento se verifica en` -> `Contratos Conversacionales` y `CVCs` |
+| `Capacidad` | Una habilidad de la organización para lograr un resultado (ej. "Fiscalización"). Es agnóstica a la estructura. | • `es inventariada en` -> `Mapa de Capacidades` (Σ-E)<br>• `es materializada por` -> una o más `Entidades de Valor`<br>• `su madurez y criticidad son evaluadas en` -> Protocolo de Diagnóstico de Capacidades |
+| `Portafolio de EVs` | El conjunto de todas las `Entidades de Valor` que una organización gestiona y financia. | • `es gestionado a través de` -> `Ciclo de Valor y Capacidad (CVC)` (Δ-E)<br>• `es revisado durante` -> Protocolo de Revisión del Portafolio<br>• `contiene` -> `Entidades de Valor` |
+| `Valor Público` | El impacto positivo y medible en la ciudadanía. Es el norte ético y estratégico. | • `es el propósito último de` -> toda `Entidad de Valor` en el sector público<br>• `se mide a través de` -> OKRs (Caja 9 del `Canvas de EV`) |
 
 ### 3.2. Conceptos Tácticos (Nivel T)
 
@@ -3969,21 +6082,41 @@ Estos conceptos se centran en el diseño y la planificación de una `Entidad de 
 | Concepto | Descripción | Relaciones Clave |
 | :--- | :--- | :--- |
 | `#NoProjects` | Filosofía operativa que aboga por equipos estables y flujos de valor continuos en lugar de proyectos con inicio y fin. | • `es el paradigma operativo para la evolución de` -> `Entidades de Valor` |
-| `Hipótesis de Valor` | La premisa experimental detrás de un OKR: "Creemos que haciendo X, lograremos el resultado Y". | • `es formulada en` -> `OKRs Trimestrales` (Δ-T)<br>• `se valida o invalida mediante` -> la medición de `Resultados Clave (KRs)`<br>• `su resultado se reporta en` -> el `Informe de CVC` |
-| `Esqueleto Andante` | La versión más simple de un servicio que permite a un usuario completar el viaje de punta a punta. El primer incremento de valor. | • `es definido en` -> el `Mapeo de Historias` (Δ-T)<br>• `es el objetivo de entrega del` -> Protocolo "Génesis" (7.1)<br>• `es un tipo de` -> MVP (Minimum Viable Product) |
+| `Hipótesis de Valor` | La premisa experimental detrás de un OKR: "Creemos que haciendo X, lograremos el resultado Y". | • `es formulada en` -> Caja 9 del `Canvas de EV` (OKRs activos)<br>• `se valida o invalida mediante` -> la medición de `Resultados Clave (KRs)`<br>• `su resultado se reporta en` -> el `Informe de CVC` |
+| `Esqueleto Andante` | La versión más simple de un servicio que permite a un usuario completar el viaje de punta a punta. El primer incremento de valor. | • `es definido en` -> el `Mapeo de Historias` como primera rebanada horizontal<br>• `es el objetivo de entrega del` -> Protocolo "Génesis"<br>• `es un tipo de` -> MVP (Minimum Viable Product) |
 
 ### 3.3. Conceptos Operacionales (Nivel O)
 
 Estos conceptos se refieren a la ejecución, las reglas y el aprendizaje en el corto plazo.
 
+#### 3.3.1. Invariantes de Flujo (Fundamentos LEAN²)
+
+Estos son los conceptos primitivos que estructuran la gestión operacional del trabajo. Derivan de la destilación de Lean Manufacturing sin dependencias culturales.
+
 | Concepto | Descripción | Relaciones Clave |
 | :--- | :--- | :--- |
-| `Flujo` | El movimiento del trabajo a través del sistema del equipo. El objetivo es optimizar su velocidad y predictibilidad. | • `es gestionado con` -> el `Tablero de Flujo (Xanpan)` (Δ-O)<br>• `es medido por` -> Métricas de Flujo (Lead Time, Cycle Time, Throughput) |
-| `Límite de WIP` | Restricción explícita sobre la cantidad de trabajo en progreso. Es el mecanismo central de Xanpan. | • `es una política de` -> el `Tablero de Flujo (Xanpan)` (Δ-O)<br>• `su propósito es` -> mejorar el `Flujo` y hacer visibles los cuellos de botella |
-| `Humano-en-el-Bucle (HITL)` | Patrón de diseño sociotécnico donde un agente autónomo (IA) requiere validación humana en puntos críticos. | • `es un atributo de` -> la `Composición Sociotécnica` de una `EV`<br>• `se especifica en` -> el `Contrato de Agente IA` (Σ-O) |
-| `Deuda Técnica` | Metáfora para las consecuencias a largo plazo de tomar atajos en el diseño o la implementación. | • `debe ser gestionada explícitamente` -> asignando un porcentaje de capacidad (ver "Objetivo Cero")<br>• `su pago se planifica como` -> `Historias de Usuario` o `Epics` en el `Mapeo de Historias` |
+| `Flujo` | El movimiento del trabajo a través del sistema del equipo. El objetivo es optimizar su velocidad y predictibilidad. | • `es gestionado con` -> el `Tablero de Flujo (Xanpan)` (Δ-O)<br>• `es medido por` -> `Latencia`, `Throughput`, `Flow Efficiency`<br>• `es el invariante central de` -> LEAN² |
+| `Latencia` | Tiempo entre inicio y completitud de una unidad de trabajo. Métrica primitiva de flujo. | • `se mide como` -> `T_entrega - T_demanda`<br>• `es la métrica objetivo de` -> optimización de `Flujo`<br>• `se descompone en` -> Lead Time (total) y Cycle Time (trabajo activo) |
+| `Visibilidad` | Estado del sistema observable en tiempo real. Segundo invariante de LEAN². | • `se materializa en` -> `Tablero de Flujo (Xanpan)` con estados explícitos<br>• `se mide como` -> `% trabajo con estado explícito`<br>• `habilita` -> identificación de restricciones |
+| `Adaptación` | Modificación del sistema basada en medición de flujo. Tercer invariante de LEAN². | • `se ejecuta mediante` -> `Ciclo de Retroalimentación` (Medir → Identificar → Intervenir → Verificar)<br>• `se mide como` -> `Δ métrica / intervención`<br>• `se ritualiza en` -> Retrospectivas del Flujo |
+| `Límite de WIP` | Restricción explícita sobre la cantidad de trabajo en progreso. Implementa el mecanismo de Pull Constraint. | • `es una política de` -> el `Tablero de Flujo (Xanpan)` (Δ-O)<br>• `su propósito es` -> mejorar el `Flujo` y hacer visibles los cuellos de botella<br>• `su valor inicial es` -> Capacidad_equipo × 1.5 (ajustar según medición) |
+| `Restricción` | Etapa del flujo que limita la capacidad total del sistema. Cuello de botella. | • `se identifica como` -> estado con mayor acumulación de trabajo<br>• `es el objetivo de` -> intervenciones de mejora<br>• `su rotación indica` -> mejora sistémica |
+| `Desperdicio` | Actividad que no transforma trabajo hacia completitud. | • `se clasifica en` -> 7 tipos (Espera, Sobreproceso, Transporte, Inventario, Movimiento, Defectos, Sobreproducción)<br>• `se prioriza por` -> impacto en `Latencia` medida<br>• `su eliminación es` -> criterio de decisión operacional |
 
----
+#### 3.3.2. Conceptos Operacionales Generales
+
+| Concepto | Descripción | Relaciones Clave |
+| :--- | :--- | :--- |
+| `Deuda Técnica` | Metáfora para las consecuencias a largo plazo de tomar atajos en el diseño o la implementación. | • `debe ser gestionada explícitamente` -> asignando un porcentaje de capacidad (ver "Objetivo Cero")<br>• `su pago se planifica como` -> `Historias de Usuario` o `Epics` en el `Mapeo de Historias`<br>• `es un tipo de` -> `Desperdicio` (categoría: Defectos diferidos) |
+| `Humano-en-el-Bucle (HITL)` | Patrón de diseño sociotécnico donde un agente autónomo (IA) requiere validación humana en puntos críticos. | • `es un atributo de` -> la `Composición Sociotécnica` de una `EV`<br>• `se especifica en` -> el `Contrato de Agente IA` (Σ-O) |
+
+#### 3.4. Conceptos de Gestión del Cambio
+
+| Concepto | Descripción | Relaciones Clave |
+| :--- | :--- | :--- |
+| `Mapa de Stakeholders` | Artefacto que clasifica a los actores afectados por un cambio según su Poder e Interés, permitiendo diseñar estrategias diferenciadas de adopción. | • `es construido en` -> Protocolo "Adopción Federada" (4.5)<br>• `segmenta actores en` -> 4 cuadrantes (Campeones, Guardianes, Adoptantes Tempranos, Observadores)<br>• `informa la estrategia de` -> Roadmap de Adopción |
+| `Roadmap de Adopción` | Secuencia temporal de adopción de un cambio organizada en Olas (H1, H2, H3), cada una con criterios de paso basados en evidencia. | • `es integrado al` -> `Mapeo de Historias` (Δ-T)<br>• `define` -> Esqueleto Andante del Cambio<br>• `sus criterios de paso se validan en` -> `CVC` |
+| `Observatorio de Adopción` | Dashboard que muestra en tiempo real el progreso de adopción de un cambio (% equipos por ola, KPIs de valor, testimonios). | • `se actualiza en` -> `CVC` trimestral<br>• `implementa el principio de` -> Transparencia Radical<br>• `es un tipo de` -> Tablero de Métricas (Δ-O) |
 
 Ahora tenemos una estructura de tres capas:
 
@@ -4000,8 +6133,6 @@ Ahora tenemos una estructura de tres capas:
 
 **Versión:** 1.0
 **Propósito:** Este protocolo define el mecanismo formal y recurrente para la auditoría, adaptación y evolución del propio marco ASTA-Kore. Es el sistema inmunológico del marco, diseñado para mantenerlo parsimonioso, coherente y alineado con las necesidades del terreno.
-
----
 
 ## 1. Principios Fundamentales de la Evolución
 
@@ -4195,19 +6326,136 @@ Artefacto Asociado: `catalogo.md`
 
 ### 3.2. Fase 2: Gestión del Flujo de Entrega (Protocolo Δ-O)
 
-Propósito: Maximizar el flujo de valor usando Xanpan.
+Propósito: Maximizar el flujo de valor usando Xanpan, implementando los invariantes de LEAN².
 Artefacto Asociado: `catalogo.md`
+
+#### Fundamentos: Los Tres Invariantes de LEAN²
+
+Este protocolo implementa los tres invariantes operacionales destilados de Lean:
+
+1. **FLUJO**: Minimizar latencia entre demanda y entrega
+2. **VISIBILIDAD**: Estado del sistema observable en tiempo real
+3. **ADAPTACIÓN**: Modificación basada en medición de flujo
 
 #### Protocolos de Flujo
 
-1. Diseño del `Tablero de Flujo (Xanpan)`:
-    * Definir las columnas que modelan el flujo de trabajo.
-    * Establecer Límites de WIP explícitos para las columnas "en progreso".
-    * Acordar una Definición de "Hecho" rigurosa.
-2. Rituales de Flujo:
-    * Daily Standup (15 min): Sincronización diaria enfocada en el flujo (de derecha a izquierda en el tablero).
-    * Reposición Semanal (30 min): El equipo "jala" nuevas historias priorizadas al tablero.
-    * Retrospectiva del Flujo (60 min, cada 1-2 semanas): El equipo reflexiona sobre cómo mejorar su sistema de trabajo.
+##### 1. Diseño del `Tablero de Flujo (Xanpan)`
+
+**Objetivo**: Materializar el invariante de VISIBILIDAD.
+
+* **Definir columnas** que modelan el flujo de trabajo:
+  * Mínimo: `Backlog → Doing → Done`
+  * Recomendado: `Backlog → Ready → Doing → Review → Done`
+  
+* **Establecer Límites de WIP** explícitos (implementa Pull Constraint):
+  * Fórmula inicial: `WIP_max = Capacidad_equipo × 1.5`
+  * Aplicar solo a columnas "en progreso" (Doing, Review)
+  * Regla: No iniciar trabajo si WIP = WIP_max
+  
+* **Acordar Definición de "Hecho"** rigurosa:
+  * Criterios verificables (tests pasan, code review aprobado, desplegado a staging)
+  * Trabajo no "Hecho" = Inventario (desperdicio)
+
+##### 2. Métricas Primitivas de Flujo
+
+**Objetivo**: Medir el invariante de FLUJO.
+
+| Métrica | Definición | Cómo medirla | Objetivo |
+|---------|------------|--------------|----------|
+| **Lead Time** | Tiempo desde que trabajo entra a Backlog hasta Done | `T_done - T_backlog` | Minimizar |
+| **Cycle Time** | Tiempo desde que trabajo entra a Doing hasta Done | `T_done - T_doing` | Minimizar |
+| **Throughput** | Unidades completadas por semana | `count(Done) / semana` | Maximizar |
+| **Flow Efficiency** | % tiempo en trabajo activo vs. espera | `Cycle Time / Lead Time` | >40% |
+| **WIP Actual** | Trabajo en progreso en tiempo real | `count(Doing + Review)` | ≤ WIP_max |
+
+**Instrumentación**: Registrar timestamps cuando trabajo cambia de columna.
+
+##### 3. Rituales de Flujo
+
+###### 3.1. Daily Standup (15 min)
+
+**Propósito**: Sincronización diaria enfocada en desbloquear flujo.
+
+**Formato** (de derecha a izquierda en el tablero):
+
+1. ¿Qué está bloqueado en Review? → Prioridad 1: desbloquearlo
+2. ¿Qué está en Doing cerca de Done? → Prioridad 2: terminarlo
+3. ¿Hay capacidad para jalar de Ready? → Solo si WIP < WIP_max
+
+**Anti-patrón**: Reportar "qué hice ayer". El foco es el flujo, no las personas.
+
+###### 3.2. Reposición Semanal (30 min)
+
+**Propósito**: Priorizar y "jalar" trabajo al tablero.
+
+**Protocolo**:
+
+1. Revisar OKRs del trimestre (ancla de priorización)
+2. Ordenar Backlog por impacto en KRs
+3. Mover top N historias a Ready (N = capacidad esperada de la semana)
+4. Validar que historias cumplen Definition of Ready
+
+###### 3.3. Retrospectiva del Flujo (60 min, cada 1-2 semanas)
+
+**Propósito**: Implementar el invariante de ADAPTACIÓN mediante ciclo de retroalimentación.
+
+**Protocolo (Ciclo de Retroalimentación LEAN²)**:
+
+```
+1. MEDIR (15 min):
+   - Presentar métricas del período:
+     * Lead Time promedio y percentil 85
+     * Cycle Time promedio
+     * Throughput (historias completadas)
+     * Flow Efficiency
+   - Comparar con período anterior
+
+2. IDENTIFICAR (20 min):
+   - ¿Dónde se acumula trabajo? → Restricción dominante
+   - ¿Qué tipo de desperdicio observamos?
+     * Espera (aprobaciones, dependencias)
+     * Sobreproceso (documentación no consumida)
+     * Transporte (handoffs entre roles)
+     * Inventario (trabajo iniciado no terminado)
+     * Movimiento (búsqueda de información)
+     * Defectos (bugs, retrabajo)
+     * Sobreproducción (features no demandadas)
+   - Priorizar por impacto en latencia
+
+3. INTERVENIR (15 min):
+   - Diseñar experimento de mejora:
+     * Hipótesis: "Si hacemos X, entonces Y métrica mejorará Z%"
+     * Acción concreta (ej. "Reducir WIP de 8 a 6")
+     * Responsable y plazo
+   - Documentar en ADR si es cambio estructural
+
+4. VERIFICAR (10 min):
+   - Revisar resultado de experimento anterior
+   - ¿La métrica mejoró? → Mantener cambio
+   - ¿No mejoró? → Revertir o pivotar
+   - Actualizar políticas del tablero si aplica
+```
+
+**Salida**: Lista de acciones con responsables + ADR si hay cambio de política.
+
+##### 4. Criterio de Decisión Operacional (LEAN²)
+
+**Para cualquier actividad, artefacto o ritual**:
+
+```
+¿Reduce latencia O aumenta capacidad de flujo?
+├─ SÍ  → Mantener/Amplificar
+└─ NO  → Eliminar/Rediseñar
+```
+
+**Aplicaciones**:
+
+* Reunión recurrente que no desbloquea trabajo → Eliminar
+* Documento que nadie consume → Eliminar
+* Aprobación que no reduce riesgo → Eliminar
+* Automatización que reduce Cycle Time → Amplificar
+
+**Corolario**: Si no podemos medir impacto en flujo, es candidato a eliminación.
 
 ### 3.3. Fase 3: Captura del Aprendizaje (Protocolo Δ-O)
 
@@ -4220,7 +6468,13 @@ Artefacto Asociado: `catalogo.md`
     * Heurística: ¿La decisión afecta la estructura, las características no funcionales, las dependencias o las interfaces? ¿Fue un debate con múltiples opciones? ¿Es costosa de revertir? Si es así, merece un ADR.
 2. Redactar el ADR "Justo a Tiempo":
     * Usar la plantilla del `ADR` para documentar el Contexto, la Decisión y las Consecuencias (positivas y negativas).
-3. Inmutabilidad:
+3. Relación con Contratos:
+    * **Si la decisión define una interfaz** (API, datos, agente, proceso), se crea un `Contrato` separado como artefacto versionado.
+    * El ADR documenta el **"porqué"** (razonamiento, alternativas consideradas, trade-offs).
+    * El Contrato especifica el **"qué"** (interfaz técnica, SLOs, esquema de datos).
+    * El ADR **referencia** el Contrato: `"Esta decisión resultó en el Contrato de API: contracts/api-postulaciones-v1.yml"`.
+    * **Ventaja:** Separación de concerns. El ADR es inmutable (historia), el Contrato evoluciona (versionado semántico).
+4. Inmutabilidad:
     * Un ADR publicado no se edita. Si la decisión cambia, se crea un nuevo ADR que reemplaza al antiguo, creando un historial trazable.
 
 ## CAPÍTULO 4: Libro de Recetas: Protocolos para Escenarios Complejos
@@ -4258,18 +6512,457 @@ Escenario: Un sistema monolítico crítico, frágil y obsoleto que frena la inno
 3. Fase de Coexistencia y Migración:
     * El nuevo servicio y el monolito operan en paralelo. Se repite el ciclo, extrayendo capacidad por capacidad, "estrangulando" gradualmente el sistema legacy hasta que pueda ser desmantelado de forma segura.
 
-### 4.3. Protocolo "Simbiosis" (Para Orquestación de Ecosistemas)
+### 4.3. Protocolo "Orquestación" (Para Coordinación de Múltiples EVs)
 
-Escenario: Un proceso de negocio de alto valor que requiere la colaboración de múltiples entidades, sistemas o departamentos, cada uno con sus propias prioridades.
+Escenario: Un proceso de negocio de alto valor que requiere la colaboración de múltiples entidades, sistemas o departamentos. Existen dos variantes según el nivel de autonomía de los participantes.
 
-1. Fase de Mapeo Federado:
-    * Se modela a cada actor clave del ecosistema como una `EV` independiente, utilizando el `Canvas de EV` para clarificar su rol, propósito y servicios.
+#### Variante A: Orquestación Intra-Organizacional
 
-2. Fase de Negociación:
-    * Se orquesta la definición de `Contratos Conversacionales` explícitos entre las EVs. Esto reemplaza los traspasos informales, las reuniones y los correos electrónicos por acuerdos de servicio predecibles y automatizables (ej. APIs).
+**Contexto:** Múltiples EVs dentro de una misma organización, bajo un solo Nodo de Gobernanza.
 
-3. Fase de Orquestación:
-    * Se diseña una `EV Orquestadora` ligera. Su único propósito es gestionar el flujo de valor de punta a punta, llamando a los servicios de las otras EVs según lo definido en los contratos. Esta EV no contiene lógica de negocio, solo la lógica del flujo.
+**Fases:**
+
+1. **Mapeo Federado (Σ-T):**
+   * Modelar cada actor clave como una `EV` independiente usando el `Canvas de EV` para clarificar rol, propósito y servicios.
+
+2. **Negociación de Contratos (Σ-O):**
+   * Definir `Contratos` explícitos entre las EVs (APIs, Datos, Procesos).
+   * Reemplaza traspasos informales por acuerdos de servicio predecibles y automatizables.
+
+3. **Diseño de EV Orquestadora (Σ-T):**
+   * Crear una `EV Orquestadora` ligera cuyo único propósito es gestionar el flujo de valor de punta a punta.
+   * No contiene lógica de negocio, solo lógica del flujo (invoca servicios de otras EVs según contratos).
+
+#### Variante B: Orquestación Inter-Organizacional (Ecosistema Federado)
+
+**Contexto:** Múltiples organizaciones soberanas colaborando (ej. agencias gubernamentales, empresas privadas, ONGs) para crear un servicio unificado respetando autonomía de cada entidad.
+
+**Criterios para Activar:** Solo cuando hay múltiples organizaciones con presupuestos y gobernanza independientes.
+
+**Fases:**
+
+1. **Mapeo del Ecosistema Federado (Σ-E y Σ-T):**
+   * Taller de **`Mapa de Capacidades` Compartido** con representantes de organizaciones clave.
+   * Modelar solución como **`Entidad de Valor Compartida (EVC)`** usando `Canvas de EV` colaborativo.
+   * Definir propósito, actores, flujo de valor, dependencias y gobernanza compartida.
+
+2. **Negociación de Contratos Inter-Organizacionales (Σ-O):**
+   * Formalizar interacciones como `Contratos` explícitos:
+     * **Contrato de Datos:** Qué datos se comparten, calidad (SLOs), clasificación de seguridad, propósito.
+     * **Contrato de API:** Si una entidad provee capacidad compartida (ej. servicio de identidad), definir SLA.
+   * Incluir responsabilidades operativas y legales de cada parte.
+
+3. **Gobernanza Federada y Ejecución (Δ-E y Δ-O):**
+   * Establecer **Nodo de Gobernanza del Ecosistema** como coordinador (no autoridad central).
+   * Cada organización mantiene su propio Nodo de Gobernanza interno.
+   * **CVC del Ecosistema** trimestral: representantes presentan evidencia de valor generado.
+   * La EVC se mide con **OKRs compartidos** que alinean incentivos hacia valor público/negocio final.
+
+### 4.5. Protocolo "Adopción Federada" (Para Gestión del Cambio Organizacional)
+
+Escenario: Una transformación que afecta a múltiples equipos, divisiones o stakeholders con diferentes niveles de madurez, poder e interés. Requiere orquestar la adopción sin generar resistencia destructiva ni imponer cambios por mandato jerárquico.
+
+Filosofía: El cambio no se "gestiona" mediante comunicación y capacitación (eso es teatro). Se gestiona mediante valor demostrado, autonomía respetada y adopción incremental basada en evidencia. La gestión del cambio es una propiedad emergente de ejecutar correctamente los rituales de ASTA-Kore (CVC, OKRs, Demos), no un proceso paralelo.
+
+#### Fase 1: Mapeo del Ecosistema de Stakeholders (Σ-E)
+
+Propósito: Entender el campo de fuerzas políticas y culturales antes de actuar.
+
+Artefacto: `Mapa de Stakeholders` (plantilla en `catalogo.md`)
+
+Protocolo:
+
+1. Identificar Actores Clave:
+   * Listar personas, equipos o divisiones afectadas por el cambio.
+   * Clasificar por Poder (capacidad de bloquear/habilitar) e Interés (motivación para que suceda).
+
+2. Segmentar en 4 Cuadrantes:
+
+   | Poder/Interés | Alto Interés | Bajo Interés |
+   |:---|:---|:---|
+   | Alto Poder | Campeones (aliados críticos) | Guardianes (pueden bloquear) |
+   | Bajo Poder | Adoptantes Tempranos (evangelistas) | Observadores (mayoría silenciosa) |
+
+3. Estrategia Diferenciada por Segmento:
+   * Campeones: Co-diseño. Involucrarlos en `Canvas de EV` y formulación de `OKRs`. Son co-autores del cambio, no receptores pasivos.
+   * Guardianes: Gestión política. Mostrar cómo el cambio resuelve sus problemas (no solo los tuyos). Negociar `Contratos Conversacionales` explícitos sobre qué cambia y qué no.
+   * Adoptantes Tempranos: Pilotos controlados. Darles acceso temprano, capturar testimonios, convertirlos en embajadores internos.
+   * Observadores: Comunicación pasiva. Transparencia radical (dashboards públicos), pero no forzar adopción hasta que vean valor probado por otros.
+
+Salida: Documento de 1 página con mapa visual y estrategia por segmento.
+
+#### Fase 2: Diseño de la Trayectoria de Valor (Δ-T)
+
+Propósito: Secuenciar el cambio como una serie de incrementos de valor observables, no como un "big bang".
+
+Artefacto: `Roadmap de Adopción` (integrado al `Mapeo de Historias`).
+
+Protocolo:
+
+1. Identificar el "Esqueleto Andante" del Cambio:
+   * ¿Cuál es el mínimo cambio que permite a un stakeholder experimentar valor tangible?
+   * Ejemplo: En lugar de "migrar toda la organización al nuevo sistema", el Esqueleto Andante es "División-A gestiona 10 casos piloto en el nuevo sistema durante 1 trimestre y demuestra reducción del 30% en tiempo de ciclo".
+
+2. Secuenciar Adopción por Olas:
+   * Ola 1 (Horizonte H1): Campeones + Adoptantes Tempranos. Piloto controlado, alta supervisión, aprendizaje rápido.
+   * Ola 2 (Horizonte H2): Mayoría Pragmática. Escalar a equipos que vieron evidencia de valor en Ola 1.
+   * Ola 3 (Horizonte H3): Rezagados. Adopción obligatoria solo cuando el nuevo sistema es claramente superior y el viejo está siendo descontinuado.
+
+3. Definir Criterios de Paso entre Olas:
+   * No avanzar a la siguiente ola hasta que la anterior demuestre KRs cumplidos en un `CVC`.
+   * Ejemplo: "No escalar a toda la División-A hasta que el piloto de 10 casos demuestre KR: Tiempo de ciclo <90 días y CSAT >4.0/5.0".
+
+Salida: Roadmap visual de 3 olas con criterios de éxito explícitos por ola.
+
+#### Fase 3: Ejecución con Transparencia Radical (Δ-O)
+
+Propósito: Gestionar el cambio mediante observabilidad, no mediante persuasión.
+
+Mecanismos:
+
+1. Observatorio de Adopción:
+   * Dashboard público (interno a la organización) que muestra en tiempo real:
+     * % de equipos en cada ola de adopción.
+     * KPIs de valor generado (tiempo ahorrado, errores reducidos, satisfacción de usuarios).
+     * Testimonios de usuarios reales (videos de 2 min explicando cómo les cambió el trabajo).
+   * El dashboard se actualiza trimestralmente en cada `CVC`.
+
+2. Ritual de "Show & Tell" en CVC:
+   * En cada `CVC`, los equipos de la Ola actual demuestran en vivo el nuevo sistema funcionando.
+   * Invitar a stakeholders de la siguiente ola como observadores.
+   * Capturar feedback en tiempo real y ajustar el roadmap si es necesario (Pivotar).
+
+3. Protocolo de Escalamiento de Resistencia:
+   * Si un stakeholder con Alto Poder bloquea activamente (no solo es escéptico, sino que sabotea):
+     * Paso 1: Conversación 1-a-1 con líder de cambio. Entender la objeción real (a menudo es miedo a perder control, no objeción técnica).
+     * Paso 2: Proponer piloto acotado en su dominio con él/ella como co-diseñador. Darle ownership del Canvas de EV de su área.
+     * Paso 3: Si persiste bloqueo, escalar a `Nodo de Gobernanza` para decisión explícita: ¿el cambio es mandatorio o negociable? Documentar la decisión en un `ADR`.
+
+Salida: Dashboard actualizado trimestralmente + registro de resistencias y resoluciones en `ADRs`.
+
+#### Fase 4: Institucionalización (Σ-O)
+
+Propósito: Convertir el cambio en el nuevo normal mediante actualización de contratos y políticas.
+
+Protocolo:
+
+1. Actualizar Contratos Conversacionales:
+   * Una vez que una `EV` nueva alcanza adopción mayoritaria (>50% de usuarios objetivo), actualizar los `Contratos` de las EVs dependientes para que consuman sus servicios por defecto.
+   * Ejemplo: El `Contrato de Datos` de "EV-Consumidora" especifica que consume la API de "EV-Nueva", no archivos compartidos del sistema legacy.
+
+2. Deprecar el Sistema Antiguo:
+   * Declarar fecha de fin de vida del proceso/sistema legacy (6-12 meses de anticipación).
+   * Comunicar con claridad y ofrecer "clínica de migración" para rezagados.
+   * Documentar la decisión de deprecación en un `ADR`.
+
+3. Celebrar el Cierre:
+   * Ritual simbólico de "apagar el servidor viejo" o "archivar el último archivo del sistema legacy".
+   * Reconocimiento público a los equipos que lideraron la adopción.
+   * Capturar el aprendizaje en una retrospectiva final: ¿Qué funcionó? ¿Qué no? ¿Qué haríamos diferente?
+
+Salida: Políticas actualizadas, sistema legacy desmantelado, conocimiento capturado en `ADRs`.
+
+#### Integración con Artefactos Existentes de ASTA-Kore
+
+El Protocolo "Adopción Federada" no introduce rituales nuevos. Orquesta los artefactos existentes del marco para gestionar el cambio como propiedad emergente:
+
+| Artefacto ASTA-Kore | Cómo Soporta Gestión del Cambio |
+|:---|:---|
+| **Canvas de EV** | Define el propósito del cambio y sus beneficiarios. Involucrar a Campeones en su co-creación genera ownership. |
+| **OKRs Trimestrales** | Miden el progreso de adopción (ej. "KR: 50% de División-A usando nuevo sistema hacia Q2"). |
+| **CVC** | Ritual donde se presenta evidencia de valor a stakeholders escépticos. La demo en vivo es más persuasiva que cualquier presentación. |
+| **Mapeo de Historias** | Secuencia el cambio en incrementos (Olas de Adopción). El Esqueleto Andante es el primer incremento de valor. |
+| **ADRs** | Capturan decisiones sobre cómo resolver resistencias o adaptar el cambio basado en feedback. |
+| **Contratos Conversacionales** | Formalizan las nuevas interfaces entre equipos post-cambio, reemplazando procesos informales. |
+
+---
+
+### 4.6. Protocolo "Sunset" (Para Cierre Ordenado de una EV)
+
+**Propósito:** Cerrar formalmente una Entidad de Valor que ha completado su misión, ha sido reemplazada o ya no genera valor estratégico, preservando el conocimiento y liberando recursos de forma ordenada.
+
+**Cuándo Aplicar:**
+
+* La EV cumplió su propósito y no requiere evolución adicional
+* Fue reemplazada por otra EV (resultado de Metamorfosis u qOrquestación)
+* Decisión explícita de "Cerrar" en un CVC (basada en evidencia de bajo valor/alto costo)
+* Se identifica como "EV Zombie" (sin actividad, sin OKRs, sin equipo asignado)
+
+---
+
+#### Principio Rector: El Cierre como Evolución Natural
+
+El cierre de una EV **NO es fracaso organizacional**. Es el ciclo natural de activos digitales que evolucionan con el negocio. El modelo de proyectos tradicional equipara "fin" con "fracaso", pero en el modelo Continuous Digital de ASTA-Kore, el cierre ordenado libera capacidad para mayor valor y preserva aprendizaje organizacional.
+
+**Los Tres Tipos de Cierre Válidos:**
+
+1. **Misión Cumplida (Graduation):** La EV alcanzó su propósito estratégico. Celebrar logro, capturar aprendizajes.
+
+2. **Metamorfosis (Replacement):** Nueva EV con arquitectura mejorada reemplaza a la anterior. Esto es evolución técnica, no fracaso.
+
+3. **Re-priorización Estratégica:** Cambios en estrategia requieren reasignar recursos a oportunidades de mayor valor. Esto es agilidad estratégica.
+
+**Beneficios del Cierre Ordenado:**
+
+* **Libera capacidad del equipo** para nuevas EVs de mayor impacto (aumenta capacidad del sistema)
+* **Reduce carga operacional** (mantenimiento, monitoreo, soporte) permitiendo optimizar el flujo total
+* **Transparencia en portafolio:** Estado "Closed" visible en Mapa de Capacidades actualiza inventario organizacional en tiempo real
+
+**Anti-Patrón Crítico: Cierre Punitivo**
+
+**Síntoma:** Cerrar una EV como "castigo" por bajo rendimiento del equipo o KRs no cumplidos.
+
+**Por qué es destructivo:**
+
+* Crea miedo organizacional → equipos ocultan problemas
+* Destruye seguridad psicológica → inhibe experimentación
+* Oculta causas sistémicas → culpa individual en lugar de analizar restricciones
+
+**Corrección:** Si la EV tiene bajo valor, analizar en CVC **por qué** ocurrió (hipótesis incorrecta, mercado cambió, priorización errónea). El cierre debe basarse en **evidencia**, no en culpa.
+
+---
+
+**Entradas:**
+
+* Decisión formal del Nodo de Gobernanza (documentada en Informe de CVC)
+* Canvas de EV existente
+* Contratos activos con otras EVs
+* Repositorio de código, ADRs y documentación
+
+**Salidas:**
+
+* ADR de Cierre (documenta razonamiento y estado final)
+* Conocimiento archivado y recuperable
+* Recursos liberados (equipo, infraestructura, presupuesto)
+* Contratos deprecados formalmente
+
+---
+
+#### Fase 1: Declaración de Deprecación (6-12 meses anticipación)
+
+**Objetivo:** Comunicar el cierre planeado y dar tiempo a usuarios/dependientes para migrar.
+
+**Actividades:**
+
+1. **Documentar Decisión de Cierre:**
+   * Crear `ADR-Sunset-[EV-ID]` con:
+     * Contexto: ¿Por qué se cierra? (propósito cumplido, bajo valor, reemplazo disponible)
+     * Estado Final: Usuarios activos, servicios dependientes, datos críticos
+     * Alternativas: ¿Qué EV reemplaza a ésta? ¿Cómo migran los usuarios?
+     * Timeline: Fecha de deprecación de APIs, fecha de apagado final
+
+2. **Comunicar a Stakeholders:**
+   * Notificar a usuarios directos (emails, dashboards, banners en UI)
+   * Notificar a EVs dependientes (vía Contratos deprecados con versionado semántico)
+   * Publicar en CVC próximo: "EV-X entrará en modo Sunset en [fecha]"
+
+3. **Actualizar Contratos:**
+   * Marcar Contratos de API/Datos/Proceso como `deprecated: true` con `sunset_date`
+   * Ejemplo YAML:
+
+     ```yaml
+     contract:
+       id: api-postulaciones-v1
+       status: deprecated
+       sunset_date: "2026-06-30"
+       replacement: api-postulaciones-v2
+     ```
+
+4. **Proveer Clínica de Migración:**
+   * Ofrecer sesión de soporte para equipos que aún dependen de la EV
+   * Documentar guía de migración a alternativa
+
+---
+
+#### Fase 2: Archivo de Conocimiento (3 meses antes del cierre)
+
+**Objetivo:** Preservar memoria organizacional antes de desmantelar.
+
+**Actividades:**
+
+1. **Capturar Estado Final del Canvas de EV:**
+   * Actualizar Canvas con estado "As-Was" (cómo quedó al cierre)
+   * Marcar métricas finales alcanzadas
+   * Documentar aprendizajes clave en Caja 7 (Riesgos/Aprendizajes)
+
+2. **Consolidar ADRs:**
+   * Asegurar que todas las decisiones arquitectónicas significativas estén documentadas
+   * Crear índice de ADRs en README del repositorio
+
+3. **Archivar Contratos:**
+   * Mover Contratos YAML a directorio `/archive/contracts-[YYYY-MM-DD]/`
+   * Mantener versionado para referencia histórica
+
+4. **Retrospectiva Final:**
+   * Ejecutar retrospectiva del ciclo de vida completo de la EV
+   * Preguntas clave:
+     * ¿Cumplió su propósito original?
+     * ¿Qué decisiones arquitectónicas fueron acertadas/erróneas?
+     * ¿Qué aprenderíamos aplicaríamos a futuras EVs?
+   * Documentar hallazgos en `retrospectiva-final-[EV-ID].md`
+
+5. **Extraer Componentes Reutilizables:**
+   * Identificar código, patrones o configuraciones que puedan ser biblioteca compartida
+   * Extraer a repositorio de "common components" si aplica
+
+---
+
+#### Fase 3: Desmantelamiento Técnico (mes del cierre)
+
+**Objetivo:** Apagar infraestructura de forma controlada, liberando recursos.
+
+**Actividades:**
+
+1. **Deprecar APIs y Servicios:**
+   * Retornar HTTP 410 Gone en endpoints deprecados (no 404, para indicar que existieron)
+   * Redirigir a alternativa si aplica (HTTP 301/308)
+
+2. **Migrar Datos Críticos:**
+   * Si hay datos que deben preservarse:
+     * Exportar a formato portable (CSV, JSON, Parquet)
+     * Archivar en storage de largo plazo (ej. S3 Glacier)
+     * Documentar esquema y método de acceso en ADR-Sunset
+   * Si datos pueden eliminarse:
+     * Ejecutar procedimiento de eliminación segura (cumpliendo normativas GDPR, etc.)
+
+3. **Desmantelar Infraestructura:**
+   * Eliminar recursos cloud (VMs, containers, bases de datos)
+   * Cancelar suscripciones a servicios de terceros
+   * Documentar ahorros de costo en ADR-Sunset
+
+4. **Archivar Repositorio:**
+   * Marcar repositorio como "archived" en GitHub/GitLab
+   * Agregar banner en README: "Este proyecto está archivado. Fue reemplazado por [EV-X]. Ver ADR-Sunset-[ID] para detalles."
+   * Mantener repositorio en modo solo-lectura (no eliminar)
+
+5. **Actualizar Portafolio:**
+   * Marcar EV como "Closed" en Mapa de Capacidades (Σ-E)
+   * Registrar fecha de cierre y razón en inventario organizacional
+   * Liberar presupuesto asignado para reasignación en próximo CVC
+
+---
+
+#### Fase 3.5: Ritual de Graduación en CVC
+
+**Objetivo:** Enmarcar el cierre como logro organizacional, no fracaso.
+
+**Formato de Presentación en CVC:**
+
+```markdown
+## Graduación de EV-[ID]: [Nombre EV]
+
+### Contexto del Cierre
+- **Tipo:** [Misión Cumplida | Metamorfosis | Re-priorización]
+- **Razón basada en evidencia:** [Explicación con métricas CVC]
+- **Fecha de cierre efectivo:** [YYYY-MM-DD]
+
+### Impacto Alcanzado (Outcomes medidos)
+- Usuarios servidos: [número]
+- Transacciones completadas: [número]
+- Valor de negocio generado: [métrica, ej: reducción tiempo, aumento conversión]
+- KRs cumplidos históricamente: [lista de KRs completados]
+
+### Aprendizajes Clave
+1. **Decisión acertada:** [ej: API-first permitió integraciones rápidas]
+2. **Patrón exitoso:** [ej: Wizard 3 pasos mejoró completitud 40%]
+3. **Error a no repetir:** [ej: Subestimamos complejidad integración X]
+
+### Legado y Transición
+- **Componentes reutilizables:** [librerías, patrones extraídos]
+- **Conocimiento archivado:** [repo en solo-lectura con README]
+- **ADR-Sunset:** [link al ADR de cierre]
+- **Equipo transicionado a:** [nueva EV o plan disolución]
+
+### Reconocimiento
+[Agradecer públicamente al equipo por logros específicos]
+
+**Cierre simbólico:** [Ritual, ej: "Último commit archivado", "Servidor apagado ceremonialmente"]
+
+---
+
+#### Fase 4: Liberación de Recursos y Celebración
+
+**Objetivo:** Reasignar equipo y reconocer el trabajo realizado.
+
+**Actividades:**
+
+1. **Reasignar Equipo:**
+   * Si equipo era dedicado: Planificar transición a nueva EV o disolución
+   * Si equipo era compartido: Liberar % de capacidad para otras iniciativas
+   * Documentar reasignación en próximo CVC
+
+2. **Ritual de Cierre:**
+   * Presentación en CVC: "Hitos alcanzados, aprendizajes, y próximos pasos del equipo"
+   * Reconocimiento público: Agradecer al equipo por su trabajo
+   * Cierre simbólico: "Apagar el servidor" o "archivar el último commit"
+
+3. **Capturar el Legado:**
+   * Publicar entrada en blog interno/público sobre la EV:
+     * Problema que resolvió
+     * Impacto logrado (usuarios, transacciones, ahorros)
+     * Aprendizajes clave
+   * Ejemplo: "Cómo el Sistema de Postulaciones v1 sirvió a 50,000 ciudadanos y qué aprendimos para construir v2"
+
+---
+
+#### Checklist de Sunset
+
+**✓ Fase 1: Declaración (6-12 meses antes)**
+
+* [ ] ADR-Sunset creado y publicado
+* [ ] Stakeholders notificados (usuarios, EVs dependientes)
+* [ ] Contratos marcados como `deprecated`
+* [ ] Clínica de migración ofrecida
+
+**✓ Fase 2: Archivo (3 meses antes)**
+
+* [ ] Canvas de EV actualizado (estado "As-Was")
+* [ ] Todos los ADRs consolidados e indexados
+* [ ] Retrospectiva final ejecutada y documentada
+* [ ] Componentes reutilizables extraídos
+
+**✓ Fase 3: Desmantelamiento (mes del cierre)**
+
+* [ ] APIs deprecadas (HTTP 410 Gone)
+* [ ] Datos críticos migrados o eliminados
+* [ ] Infraestructura cloud desmantelada
+* [ ] Repositorio archivado (solo lectura)
+* [ ] Portafolio actualizado (EV marcada como "Closed")
+
+**✓ Fase 4: Liberación (post-cierre)**
+
+* [ ] Equipo reasignado
+* [ ] Ritual de cierre ejecutado en CVC
+* [ ] Legado documentado y publicado
+
+---
+
+#### Integración con ASTA-Kore
+
+| Artefacto | Cómo Soporta el Sunset |
+|:---|:---|
+| **Canvas de EV** | Captura estado final "As-Was" de la EV |
+| **ADR-Sunset** | Documenta razonamiento del cierre y estado final |
+| **Contratos** | Marca deprecación con `sunset_date` y `replacement` |
+| **CVC** | Ritual donde se anuncia deprecación y se celebra cierre |
+| **Mapa de Capacidades** | Actualiza inventario organizacional (EV cerrada) |
+| **Retrospectiva Final** | Captura aprendizajes del ciclo de vida completo |
+
+---
+
+#### Anti-Patrones a Evitar
+
+| Anti-Patrón | Síntoma | Solución |
+|:---|:---|:---|
+| **EV Zombie** | EV inactiva pero nunca cerrada formalmente | Aplicar Protocolo Sunset explícitamente |
+| **Apagado Sorpresa** | Cerrar sin avisar a usuarios/dependientes | Fase 1 con 6-12 meses de anticipación |
+| **Amnesia Organizacional** | No capturar aprendizajes antes de cerrar | Retrospectiva final obligatoria |
+| **Infraestructura Huérfana** | Servidores/DBs olvidados consumiendo presupuesto | Checklist de desmantelamiento completo |
+| **Cierre Punitivo** | Cerrar EV como castigo por KRs no cumplidos | Analizar causas sistémicas, basar decisión en evidencia |
+
+**Principio Rector:** Un cierre ordenado es tan importante como un lanzamiento ordenado. El Protocolo Sunset transforma el fin de una EV en una oportunidad de aprendizaje y liberación de recursos, no en deuda organizacional.
+
+---
 
 ## CAPÍTULO 5: EL META-PROTOCOLO — EVOLUCIÓN DEL MARCO
 
@@ -4289,8 +6982,6 @@ Escenario: Un proceso de negocio de alto valor que requiere la colaboración de 
 * Gestión Explícita de la Capacidad (Objetivo Cero): Los equipos deben poder dedicar un porcentaje explícito de su capacidad (ej. 20%) a actividades no directamente ligadas a los OKRs del trimestre, como la reducción de deuda técnica, la exploración de nuevas tecnologías o la mejora de sus herramientas (el "Objetivo Cero"). Esto asegura la sostenibilidad a largo plazo y previene el agotamiento del sistema.
 
 * Desvinculación de OKRs de la Compensación: Los OKRs son una herramienta de alineamiento y aprendizaje, no de evaluación de desempeño individual. Vincularlos a bonos o promociones incentiva la creación de objetivos poco ambiciosos ("sandbagging") y el miedo a fallar, destruyendo su poder como motor de innovación.
-
----
 
 ## CAPÍTULO 6: Guía de Campo: Heurísticas y Anti-Patrones
 
@@ -4320,6 +7011,24 @@ Escenario: Un proceso de negocio de alto valor que requiere la colaboración de 
 * La Última Milla Responsable: La decisión arquitectónica más importante es dónde trazar las fronteras entre sistemas (`Contratos`). Una buena frontera permite que los equipos trabajen de forma autónoma.
 * La Deuda Técnica es como un Préstamo: No toda la deuda es mala. A veces, tomar un atajo consciente para validar una hipótesis rápido es una buena decisión de negocio. Lo importante es que el "préstamo" sea explícito y se planifique su "pago" (refactorización) antes de que los "intereses" (costo del cambio) se vuelvan impagables.
 * Anti-Patrón: El ADR como Burocracia: Un ADR no es para documentar cada decisión trivial. Se usa para decisiones significativas: aquellas que son costosas de revertir, que tienen un impacto estructural o que fueron el resultado de un debate con múltiples alternativas viables. Su propósito es combatir la amnesia organizacional, no crear burocracia.
+
+### Guía 6.5: Heurísticas para Gestión del Cambio
+
+Heurísticas Correctas:
+
+* Valor Primero, Comunicación Después: No "vender" el cambio con PowerPoints. Construir el `Esqueleto Andante`, demostrarlo en un `CVC`, dejar que el valor hable por sí mismo.
+* Autonomía sobre Mandato: Permitir que equipos elijan cuándo adoptar (dentro de ventanas razonables), no si adoptar. La adopción forzada genera resistencia pasiva.
+* Pilotos Reales, No Teatros: Un piloto debe tener usuarios reales, datos reales, riesgos reales. No demos controladas que "siempre funcionan".
+* Transparencia Radical: Publicar KPIs de adopción y valor generado en un dashboard público interno. La presión de pares ("¿por qué ellos ya lo usan y nosotros no?") es más efectiva que el mandato jerárquico.
+* Co-Diseño con Guardianes: Si alguien con poder puede bloquear, involucrarlo como co-diseñador del `Canvas de EV`. Darle ownership transforma resistencia en compromiso.
+
+Anti-Patrones a Evitar:
+
+* "Change Management Theater": Contratar consultores para hacer talleres de "gestión del cambio" sin cambiar nada estructural. El cambio real viene de sistemas que funcionan, no de talleres motivacionales.
+* Big Bang Obligatorio: Forzar adopción masiva sin pilotos. Genera caos, errores y resistencia organizada.
+* Ignorar a los Guardianes: Asumir que "la autoridad decidió, todos deben obedecer". Los Guardianes tienen poder de veto tácito (pueden sabotear pasivamente). Es mejor negociar que imponer.
+* Comunicación sin Evidencia: Enviar newsletters sobre "los beneficios del cambio" sin mostrar demos funcionando ni KPIs reales. La gente confía en lo que ve, no en lo que le dicen.
+* Adopción sin Criterios de Éxito: Avanzar a la siguiente ola de adopción sin validar que la anterior cumplió sus `KRs`. Esto propaga un sistema que aún no está listo.
 
 ```
 
@@ -4612,3 +7321,4 @@ observability:
     level: "info"
     retention_days: 90
 ```
+

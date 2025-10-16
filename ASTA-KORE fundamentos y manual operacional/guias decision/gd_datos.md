@@ -1,10 +1,9 @@
 # Guía de Decisión: Diseño de Productos de Datos
 
-ID: `GD-DATA-001`
-Versión: 1.0
-Propósito: Ayudar a los equipos a tomar decisiones estratégicas sobre el diseño, la gobernanza y la operación de Productos de Datos como `Entidades de Valor (EV)`.
-
----
+**ID:** GD-DATA-001  
+**Versión:** 1.0  
+**Dominio:** Σ-T (Diseño Táctico)  
+**Propósito:** Tomar decisiones estratégicas sobre el diseño, la gobernanza y la operación de Productos de Datos como Entidades de Valor.
 
 ## Principio KORE: El Dato como un Producto, no como un Subproducto
 
